@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net; connect-src 'self' https:; worker-src 'self' blob:">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script id="cf-admin-guard">(function(){try{var ok=localStorage.getItem("cf-admin-auth")==="1"&&localStorage.getItem("cf-admin-name")&&["super","content","country","moderator"].indexOf(localStorage.getItem("cf-admin-role"))>=0;if(!ok){["cf-admin-auth","cf-admin-role","cf-admin-name","cf-admin-email","cf-admin-country","cf-admin-since"].forEach(function(k){try{localStorage.removeItem(k);}catch(_e){}});var p=(location.pathname.split("/").pop()||"admin-console.html");localStorage.setItem("cf-admin-next",p);window.location.replace("connexion-admin.html");}}catch(e){}})();</script>
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Paramètres système</title>
+<meta name="description" content="Paramètres système · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="admin-parametres.html">
+<meta property="og:title" content="Coastal Futures | Paramètres système">
+<meta property="og:description" content="Paramètres système · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Paramètres système">
+<meta name="twitter:description" content="Paramètres système · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="admin-parametres.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --warning-bg:#FBF0DC; --error:#8F2A1A; --error-bg:#FBE6E2;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:14px;font-weight:500;border-radius:var(--r-pill);padding:9px 16px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-sm{padding:7px 13px;font-size:13px;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+
+.app{display:grid;grid-template-columns:264px 1fr;min-height:100vh;}
+.side{background:#0C2420;color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.side-logo{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}.side-logo img{height:24px;width:auto;}
+.side-logo .adm{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);border:1px solid rgba(62,203,176,.4);border-radius:var(--r-pill);padding:2px 8px;}
+.side-nav{flex:1;padding:12px 14px;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:rgba(255,255,255,.7);cursor:pointer;transition:all var(--t-fast) var(--ease);margin-bottom:2px;}
+.nav-item i{font-size:20px;}
+.nav-item:hover{background:rgba(255,255,255,.08);color:#fff;}
+.nav-item.on{background:rgba(62,203,176,.16);color:var(--teal-bright);}
+.nav-item .badge{margin-left:auto;background:var(--error);color:#fff;font-size:11px;font-weight:600;border-radius:var(--r-pill);padding:1px 7px;}
+.side-user{padding:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:14px;color:#fff;}
+.side-user .ur{font-family:var(--font-sans);font-size:12px;color:rgba(255,255,255,.55);}
+.side-user .lo{margin-left:auto;color:rgba(255,255,255,.5);font-size:19px;}.side-user .lo:hover{color:#fff;}
+
+.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 32px;background:#fff;border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-l h1{font-family:var(--font-display);font-weight:500;font-size:18px;letter-spacing:-.4px;color:var(--ink);margin:0;}
+.tb-r{display:flex;align-items:center;gap:12px;}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:11.5px;font-weight:600;color:#066B52;background:#E3F9F1;border-radius:100px;padding:5px 11px;}
+.sec-badge i{font-size:14px;}
+.content{padding:24px 32px 48px;max-width:1080px;width:100%;display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:start;}
+
+.snav{position:sticky;top:90px;display:flex;flex-direction:column;gap:2px;}
+.snav a{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:13.5px;font-weight:500;color:var(--ink-2);padding:9px 13px;border-radius:var(--r-md);transition:all var(--t-fast) var(--ease);}
+.snav a:hover{background:#fff;}
+.snav a.on{background:var(--teal-bg);color:var(--teal-deep);}
+.snav a i{font-size:18px;color:var(--ink-faint);}.snav a.on i{color:var(--teal);}
+
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;margin-bottom:20px;}
+.card-h{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--ink);padding:16px 22px;border-bottom:1px solid var(--hair);display:flex;align-items:center;gap:8px;}
+.card-h i{color:var(--teal);}
+.card-b{padding:20px 22px;}
+.pf{margin-bottom:16px;}.pf:last-child{margin-bottom:0;}
+.pf label{display:block;font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--ink-2);margin-bottom:7px;}
+.pf input,.pf select,.pf textarea{width:100%;font-family:var(--font-sans);font-size:14px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:10px 12px;outline:none;}
+.pf input:focus,.pf select:focus,.pf textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:12.5px;font-weight:500;background:var(--teal-bg);color:var(--teal-deep);border-radius:var(--r-pill);padding:6px 12px;}
+.chip i{cursor:pointer;font-size:13px;opacity:.7;}
+.chip.add{background:#fff;border:1px dashed var(--hair-strong);color:var(--ink-mute);cursor:pointer;}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--hair);}
+.toggle-row:last-child{border-bottom:0;}
+.toggle-row .tt{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);}
+.toggle-row .ts{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);margin-top:2px;max-width:440px;line-height:1.5;}
+.switch{position:relative;width:42px;height:24px;border-radius:var(--r-pill);background:var(--hair-strong);cursor:pointer;flex-shrink:0;transition:background var(--t-fast) var(--ease);}
+.switch::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform var(--t-fast) var(--ease);}
+.switch.on{background:var(--teal);}.switch.on::after{transform:translateX(18px);}
+.integration{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--hair);}
+.integration:last-child{border-bottom:0;}
+.integration .ii{width:40px;height:40px;border-radius:10px;background:var(--canvas-soft);border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--teal);}
+.integration .inm{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);}
+.integration .ind{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.integration .ist{margin-left:auto;}
+.bk{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--hair);}
+.bk:last-child{border-bottom:0;}
+.bk .bi{width:36px;height:36px;border-radius:9px;background:var(--success-bg);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:17px;}
+.bk .bn{font-family:var(--font-display);font-weight:500;font-size:13.5px;color:var(--ink);}
+.bk .bd{font-family:var(--font-sans);font-size:12px;color:var(--ink-faint);}
+
+@media(max-width:1080px){.app{grid-template-columns:1fr;}.side{display:none;}.content{grid-template-columns:1fr;}.snav{position:static;flex-direction:row;flex-wrap:wrap;}.snav a{background:#fff;border:1px solid var(--hair);}}
+@media(max-width:560px){.frow{grid-template-columns:1fr;}}
+</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-rm-guard">@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}</style>
+<style id="cf-side-collapse">.cf-sidetoggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:10px;color:var(--ink-2,#244440);cursor:pointer;font-size:18px;transition:all .16s ease;flex-shrink:0;}.cf-sidetoggle:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}@media(min-width:1081px){.app.cf-collapsed{grid-template-columns:74px 1fr;}.app.cf-collapsed .side{z-index:40;}.app.cf-collapsed .side-logo{justify-content:center;}.app.cf-collapsed .side-logo img,.app.cf-collapsed .adm,.app.cf-collapsed .side-sec,.app.cf-collapsed .nav-item span:not(.badge),.app.cf-collapsed .side-user>div:not(.av),.app.cf-collapsed .side-user .lo{display:none;}.app.cf-collapsed .nav-item{justify-content:center;padding-left:0;padding-right:0;}.app.cf-collapsed .nav-item{font-size:0;}.app.cf-collapsed .nav-item i{font-size:20px;}.app.cf-collapsed .nav-item i.ti-external-link{display:none;}.app.cf-collapsed .nav-item .badge{font-size:10px;}.app.cf-collapsed .nav-item .badge{position:absolute;top:6px;right:10px;}.app.cf-collapsed .nav-item{position:relative;}.app.cf-collapsed .side-user{justify-content:center;}.app.cf-collapsed .side-nav{overflow:visible;}.app{transition:grid-template-columns .26s cubic-bezier(.4,0,.2,1);}.app.cf-collapsed .nav-item::after{content:attr(data-tip);position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:500;letter-spacing:-.1px;padding:6px 11px;border-radius:8px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .14s ease;z-index:60;box-shadow:0 8px 24px rgba(6,61,52,.18);}.app.cf-collapsed .nav-item:hover::after{opacity:1;}}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-resp-frow">@media(max-width:560px){.frow,.frow-civ3{grid-template-columns:1fr!important;}}</style>
+<style id="cf-logo-fit">.side-logo img{height:auto !important;max-height:22px;max-width:132px;width:auto !important;}.side-logo{gap:8px;}.side-logo .adm{flex-shrink:0;white-space:nowrap;}</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="admin-console.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec" data-i18n="s.pilot">Pilotage</div>
+      <a class="nav-item" data-tip="Tableau de bord" href="admin-console.html"><i class="ti ti-layout-dashboard"></i><span data-i18n="n.dash">Tableau de bord</span></a>
+      <a class="nav-item" data-tip="Gestion de contenu" href="admin-contenus.html"><i class="ti ti-news"></i><span data-i18n="n.content">Gestion de contenu</span></a>
+      <a class="nav-item" data-tip="Utilisateurs et rôles" href="admin-utilisateurs.html"><i class="ti ti-users"></i><span data-i18n="n.users">Utilisateurs et rôles</span></a>
+      <a class="nav-item" data-tip="Appels à candidatures" href="admin-appels.html"><i class="ti ti-speakerphone"></i><span>Appels à candidatures</span></a>
+      <a class="nav-item" data-tip="Candidatures18" href="admin-candidatures.html"><i class="ti ti-file-text"></i><span data-i18n="n.apps">Candidatures</span><span class="badge tnum">18</span></a>
+      <a class="nav-item" data-tip="Projets et indicateurs" href="admin-projets.html"><i class="ti ti-plant-2"></i><span data-i18n="n.proj">Projets et indicateurs</span></a>
+      <a class="nav-item" data-tip="Validation des indicateurs" href="admin-indicateurs.html"><i class="ti ti-rosette-discount-check"></i><span data-i18n="n.indval">Validation des indicateurs</span></a>
+      <a class="nav-item" data-tip="Médiathèque" href="admin-mediatheque.html"><i class="ti ti-photo"></i><span data-i18n="n.media">Médiathèque</span></a>
+      <a class="nav-item" data-tip="Carte d'impact" href="admin-carte.html"><i class="ti ti-map-2"></i><span>Carte d'impact</span></a>
+      <a class="nav-item" data-tip="Contenu et indicateurs" href="admin-site.html"><i class="ti ti-chart-bar"></i><span>Contenu et indicateurs</span></a>
+      <div class="side-sec" data-i18n="s.gov">Gouvernance</div>
+      <a class="nav-item" data-tip="Modération7" href="admin-moderation.html"><i class="ti ti-shield-check"></i><span data-i18n="n.mod">Modération</span><span class="badge tnum">7</span></a>
+      <a class="nav-item" data-tip="Permissions" href="admin-permissions.html"><i class="ti ti-key"></i><span data-i18n="n.perm">Permissions</span></a>
+      <a class="nav-item" data-tip="Journal d'audit" href="admin-journal-audit.html"><i class="ti ti-history"></i><span data-i18n="n.audit">Journal d'audit</span></a>
+      <div class="nav-item on" data-tip="Paramètres système"><i class="ti ti-settings"></i><span data-i18n="n.sys">Paramètres système</span></div>
+    </nav>
+    <div class="side-user">
+      <div class="av">SH</div>
+      <div><div class="un">Saïfi Dawalbet Hamit</div><div class="ur" data-i18n="role.super">Super administratrice</div></div>
+      <a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a>
+    </div>
+  </aside>
+
+  <main class="main" data-screen-label="Paramètres système">
+    <div class="topbar"><button class="cf-appburger" aria-label="Menu" type="button"><i class="ti ti-menu-2"></i></button><button class="cf-sidetoggle" id="cfSideToggle" aria-label="Réduire le menu" type="button"><i class="ti ti-layout-sidebar-left-collapse"></i></button>
+      <div class="tb-l"><span id="cf-main" tabindex="-1"></span><h1 data-i18n="title">Paramètres système</h1></div>
+      <div class="tb-r"><span class="caption" id="saveStatus" aria-live="polite"></span>
+        <button class="btn btn-pri btn-sm" id="btnSave"><i class="ti ti-check"></i><span data-i18n="save">Enregistrer</span></button>
+      </div>
+    </div>
+
+    <div class="content">
+      <nav class="snav">
+        <a href="#plateforme" class="on"><i class="ti ti-world"></i><span data-i18n="m.platform">Plateforme</span></a>
+        <a href="#pays"><i class="ti ti-map-2"></i><span data-i18n="m.countries">Pays et langues</span></a>
+        <a href="#cat"><i class="ti ti-tags"></i><span data-i18n="m.cat">Catégories</span></a>
+        <a href="#appels"><i class="ti ti-file-text"></i><span data-i18n="m.calls">Appels</span></a>
+        <a href="#integ"><i class="ti ti-plug"></i><span data-i18n="m.integ">Intégrations</span></a>
+        <a href="#backup"><i class="ti ti-database"></i><span data-i18n="m.backup">Sauvegardes</span></a>
+      </nav>
+
+      <div>
+        <section class="card" id="plateforme">
+          <div class="card-h"><i class="ti ti-world"></i><span data-i18n="c.platform">Informations de la plateforme</span></div>
+          <div class="card-b">
+            <div class="pf"><label data-i18n="l.name">Nom de la plateforme</label><input id="setName" value="Coastal Futures Network"></div>
+            <div class="pf"><label data-i18n="l.tagline">Accroche</label><input id="setAccroche" value="La jeunesse côtière au cœur de la transition verte"></div>
+            <div class="frow">
+              <div class="pf"><label data-i18n="l.contact">E-mail de contact</label><input id="setEmail" value="contact@africagovernanceinstitute.org"></div>
+              <div class="pf"><label data-i18n="l.tz">Fuseau horaire</label><select id="setTz"><option selected>GMT (Dakar, Accra)</option><option>GMT+1</option></select></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="pays">
+          <div class="card-h"><i class="ti ti-map-2"></i><span data-i18n="c.countries">Pays actifs et langues</span></div>
+          <div class="card-b">
+            <div class="pf"><label data-i18n="l.activepays">Pays d'intervention</label>
+              <div class="chips" id="chipsPays">
+                <span class="chip">Sénégal<i class="ti ti-x"></i></span>
+                <span class="chip">Ghana<i class="ti ti-x"></i></span>
+                <span class="chip">Guinée<i class="ti ti-x"></i></span>
+                <span class="chip">Liberia<i class="ti ti-x"></i></span>
+                <span class="chip">Sierra Leone<i class="ti ti-x"></i></span>
+                <span class="chip add"><i class="ti ti-plus"></i><span data-i18n="addpays">Ajouter</span></span>
+              </div>
+            </div>
+            <div class="pf"><label data-i18n="l.langs">Langues de la plateforme</label>
+              <div class="chips" id="chipsLangs">
+                <span class="chip">Français<i class="ti ti-x"></i></span>
+                <span class="chip">English<i class="ti ti-x"></i></span>
+                <span class="chip add"><i class="ti ti-plus"></i><span data-i18n="addlang">Ajouter</span></span>
+              </div>
+            </div>
+            <div class="toggle-row"><div><div class="tt" data-i18n="t.autolang">Détection automatique de la langue</div><div class="ts" data-i18n="t.autolangd">Selon la langue du navigateur du visiteur.</div></div><div class="switch on" data-toggle data-set="autoLang"></div></div>
+          </div>
+        </section>
+
+        <section class="card" id="cat">
+          <div class="card-h"><i class="ti ti-tags"></i><span data-i18n="c.cat">Catégories et secteurs</span></div>
+          <div class="card-b">
+            <div class="pf"><label data-i18n="l.sectors">Secteurs de projet</label>
+              <div class="chips" id="chipsSectors">
+                <span class="chip">Énergie renouvelable<i class="ti ti-x"></i></span>
+                <span class="chip">Restauration de mangroves<i class="ti ti-x"></i></span>
+                <span class="chip">Économie circulaire<i class="ti ti-x"></i></span>
+                <span class="chip">Agriculture résiliente<i class="ti ti-x"></i></span>
+                <span class="chip">Pêche durable<i class="ti ti-x"></i></span>
+                <span class="chip add"><i class="ti ti-plus"></i><span data-i18n="addsec">Ajouter</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="appels">
+          <div class="card-h"><i class="ti ti-file-text"></i><span data-i18n="c.calls">Paramètres des appels à candidatures</span></div>
+          <div class="card-b">
+            <div class="toggle-row"><div><div class="tt" data-i18n="t.autoack">Accusé de réception automatique</div><div class="ts" data-i18n="t.autoackd">E-mail envoyé à chaque dépôt de candidature.</div></div><div class="switch on" data-toggle data-set="autoAck"></div></div>
+            <div class="toggle-row"><div><div class="tt" data-i18n="t.review">Délai de revue cible</div><div class="ts" data-i18n="t.reviewd">Alerte au-delà de ce délai sans traitement.</div></div><select id="setSla" style="width:auto;font-family:var(--font-sans);font-size:13px;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:7px 10px;"><option value="7">7 jours</option><option value="14" selected>14 jours</option><option value="30">30 jours</option></select></div>
+          </div>
+        </section>
+
+        <section class="card" id="integ">
+          <div class="card-h"><i class="ti ti-plug"></i><span data-i18n="c.integ">Intégrations</span></div>
+          <div class="card-b">
+            <div class="integration"><div class="ii"><i class="ti ti-mail"></i></div><div><div class="inm">Service e-mail</div><div class="ind" data-i18n="int.email">Notifications transactionnelles</div></div><div class="ist switch on" data-toggle data-set="intEmail"></div></div>
+            <div class="integration"><div class="ii"><i class="ti ti-chart-dots"></i></div><div><div class="inm" data-i18n="int.analytics">Mesure d'audience</div><div class="ind" data-i18n="int.analyticsd">Statistiques anonymisées</div></div><div class="ist switch on" data-toggle data-set="intAnalytics"></div></div>
+            <div class="integration"><div class="ii"><i class="ti ti-map-2"></i></div><div><div class="inm" data-i18n="int.maps">Fond cartographique</div><div class="ind">CARTO · OpenStreetMap</div></div><div class="ist switch on" data-toggle data-set="intMaps"></div></div>
+            <div class="integration"><div class="ii"><i class="ti ti-language"></i></div><div><div class="inm" data-i18n="int.translate">API de traduction</div><div class="ind" data-i18n="int.translated">Aide à la traduction FR/EN</div></div><div class="ist switch" data-toggle data-set="intTranslate"></div></div>
+          </div>
+        </section>
+
+        <section class="card" id="backup">
+          <div class="card-h"><i class="ti ti-database"></i><span data-i18n="c.backup">Sauvegardes</span></div>
+          <div class="card-b">
+            <div class="bk"><div class="bi"><i class="ti ti-check"></i></div><div style="flex:1"><div class="bn" data-i18n="bk.auto">Sauvegarde automatique quotidienne</div><div class="bd" id="bkLast"></div></div><div class="switch on" data-toggle data-set="autoBackup"></div></div>
+            <div class="bk"><div class="bi" style="background:var(--canvas-soft);color:var(--ink-mute)"><i class="ti ti-download"></i></div><div style="flex:1"><div class="bn" data-i18n="bk.export">Exporter une sauvegarde manuelle</div><div class="bd" data-i18n="bk.exportd">Archive complète de la base et des médias</div></div><button class="btn btn-light btn-sm" id="btnExport"><i class="ti ti-download"></i><span data-i18n="bk.dl">Télécharger</span></button></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+ function init(){
+  var hasCol = (typeof CFCol!=='undefined');
+  function lang(){ return document.documentElement.lang==='en'?'en':'fr'; }
+
+  /* ---- toast ---- */
+  var tw=document.createElement('div'); tw.className='set-toastwrap'; tw.setAttribute('role','status'); tw.setAttribute('aria-live','polite'); document.body.appendChild(tw);
+  function toast(fr,en,rej){ var t=document.createElement('div'); t.className='set-toast'+(rej?' rej':''); t.innerHTML='<i class="ti ti-'+(rej?'alert-triangle':'check')+'"></i><span>'+(lang()==='en'?en:fr)+'</span>'; tw.appendChild(t); requestAnimationFrame(function(){t.classList.add('show');}); setTimeout(function(){t.classList.remove('show'); setTimeout(function(){t.remove();},320);},2600); }
+
+  /* ---- chips helpers ---- */
+  function chipVals(box){ if(!box) return []; return [].slice.call(box.querySelectorAll('.chip:not(.add)')).map(function(c){ return (c.childNodes[0]&&c.childNodes[0].nodeType===3)?c.childNodes[0].textContent.trim():c.textContent.replace(/\s*$/,'').trim(); }).filter(Boolean); }
+  function wireChipRemove(x){ x.addEventListener('click',function(){ x.parentNode.remove(); persist(); }); }
+  function addChip(box,val){ var add=box.querySelector('.chip.add'); var c=document.createElement('span'); c.className='chip'; c.appendChild(document.createTextNode(val)); var i=document.createElement('i'); i.className='ti ti-x'; c.appendChild(i); wireChipRemove(i); box.insertBefore(c,add); }
+  [].slice.call(document.querySelectorAll('.chip:not(.add) i.ti-x')).forEach(wireChipRemove);
+  [].slice.call(document.querySelectorAll('.chips .chip.add')).forEach(function(add){ add.addEventListener('click',function(){ var box=add.parentNode; var v=window.prompt(lang()==='en'?'Add an entry:':'Ajouter une entrée :'); if(v&&v.trim()){ addChip(box,v.trim()); persist(); } }); });
+
+  /* ---- collect the whole form into a settings object ---- */
+  function val(id){ var el=document.getElementById(id); return el?el.value:''; }
+  function on(set){ var el=document.querySelector('[data-set="'+set+'"]'); return el?el.classList.contains('on'):false; }
+  function collect(base){
+    var s=Object.assign({}, base||{}, {
+      id:'settings',
+      platformName:val('setName'),
+      accroche:val('setAccroche'),
+      email:val('setEmail'),
+      timezone:val('setTz'),
+      reviewSlaDays:parseInt(val('setSla'),10)||14,
+      countries:chipVals(document.getElementById('chipsPays')),
+      langs:chipVals(document.getElementById('chipsLangs')),
+      sectors:chipVals(document.getElementById('chipsSectors')),
+      autoLang:on('autoLang'),
+      autoAck:on('autoAck'),
+      autoBackup:on('autoBackup'),
+      integrations:{ email:on('intEmail'), analytics:on('intAnalytics'), maps:on('intMaps'), translate:on('intTranslate') }
+    });
+    return s;
+  }
+  function current(){ return (hasCol&&CFCol.single)?(CFCol.single('settings')||{}):{}; }
+  function persist(silent){
+    if(!hasCol) return;
+    var s=collect(current());
+    CFCol.saveSingle('settings', s);
+    markSaved();
+    if(!silent && typeof CFAudit!=='undefined'){ CFAudit.log({action:'settings.update', note:(lang()==='en'?'System settings updated':'Paramètres système mis à jour')}); }
+  }
+  var status=document.getElementById('saveStatus');
+  function markSaved(){ if(!status) return; var d=new Date(); status.textContent=(lang()==='en'?'Saved at ':'Enregistré à ')+d.toLocaleTimeString(lang()==='en'?'en-GB':'fr-FR',{hour:'2-digit',minute:'2-digit'}); }
+
+  /* ---- apply a saved settings object back onto the form ---- */
+  function applyVal(id,v){ var el=document.getElementById(id); if(el&&v!=null&&v!=='') el.value=v; }
+  function applyToggle(set,v){ var el=document.querySelector('[data-set="'+set+'"]'); if(el&&typeof v==='boolean') el.classList.toggle('on',v); }
+  function applyChips(boxId,arr){ var box=document.getElementById(boxId); if(!box||!Array.isArray(arr)||!arr.length) return; [].slice.call(box.querySelectorAll('.chip:not(.add)')).forEach(function(c){c.remove();}); arr.forEach(function(v){ addChip(box,v); }); }
+  function hydrate(){
+    if(!hasCol||!CFCol.overridden||!CFCol.overridden('settings')) return; // keep seed markup until first save
+    var s=current();
+    applyVal('setName',s.platformName); applyVal('setAccroche',s.accroche); applyVal('setEmail',s.email); applyVal('setTz',s.timezone);
+    if(s.reviewSlaDays){ var sla=document.getElementById('setSla'); if(sla) sla.value=String(s.reviewSlaDays); }
+    applyChips('chipsPays',s.countries); applyChips('chipsLangs',s.langs); applyChips('chipsSectors',s.sectors);
+    applyToggle('autoLang',s.autoLang); applyToggle('autoAck',s.autoAck); applyToggle('autoBackup',s.autoBackup);
+    if(s.integrations){ applyToggle('intEmail',s.integrations.email); applyToggle('intAnalytics',s.integrations.analytics); applyToggle('intMaps',s.integrations.maps); applyToggle('intTranslate',s.integrations.translate); }
+  }
+
+  /* ---- toggles : flip + persist immediately ---- */
+  [].slice.call(document.querySelectorAll('[data-toggle]')).forEach(function(s){ s.addEventListener('click',function(){ s.classList.toggle('on'); persist(true); }); });
+  /* ---- inputs : persist on change ---- */
+  ['setName','setAccroche','setEmail','setTz','setSla'].forEach(function(id){ var el=document.getElementById(id); if(el) el.addEventListener('change',function(){ persist(true); }); });
+
+  /* ---- explicit Save : persist + journal + toast ---- */
+  var btnSave=document.getElementById('btnSave');
+  if(btnSave) btnSave.addEventListener('click',function(){ persist(false); toast('Paramètres enregistrés.','Settings saved.'); });
+
+  /* ---- backup export : real JSON Blob of every collection ---- */
+  function lastBackupText(){
+    var el=document.getElementById('bkLast'); if(!el) return;
+    var s=current(); var iso=s.lastBackupAt;
+    if(iso){ var d=new Date(iso); el.textContent=(lang()==='en'?'Last download: ':'Dernier téléchargement : ')+d.toLocaleString(lang()==='en'?'en-GB':'fr-FR',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); }
+    else { el.textContent=(lang()==='en'?'No manual download yet':'Aucun téléchargement manuel à ce jour'); }
+  }
+  var btnExport=document.getElementById('btnExport');
+  if(btnExport) btnExport.addEventListener('click',function(){
+    var dump={ exportedAt:new Date().toISOString(), platform:'Coastal Futures Network', collections:{} };
+    try{
+      if(hasCol&&CFCol.SEED){ Object.keys(CFCol.SEED).forEach(function(n){ dump.collections[n]=CFCol.all(n); }); }
+    }catch(e){}
+    var blob=new Blob([JSON.stringify(dump,null,2)],{type:'application/json'});
+    var url=URL.createObjectURL(blob); var a=document.createElement('a');
+    a.href=url; a.download='coastal-futures-sauvegarde-'+new Date().toISOString().slice(0,10)+'.json';
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(function(){URL.revokeObjectURL(url);},1000);
+    persist(true); var s=current(); s.lastBackupAt=new Date().toISOString(); if(hasCol) CFCol.saveSingle('settings',s);
+    if(typeof CFAudit!=='undefined') CFAudit.log({action:'settings.backup_export', note:(lang()==='en'?'Manual backup downloaded':'Sauvegarde manuelle téléchargée')});
+    lastBackupText();
+    toast('Sauvegarde téléchargée.','Backup downloaded.');
+  });
+
+  /* ---- snav active ---- */
+  var links=[].slice.call(document.querySelectorAll('.snav a'));
+  links.forEach(function(a){a.addEventListener('click',function(){links.forEach(function(x){x.classList.remove('on');});a.classList.add('on');});});
+
+  hydrate(); lastBackupText(); markSaved();
+  // refresh language-dependent labels on language switch
+  var mo=new MutationObserver(function(){ lastBackupText(); }); mo.observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+ }
+ if(document.readyState!=='loading'){ init(); } else { document.addEventListener('DOMContentLoaded', init); }
+})();
+</script>
+<style id="set-toast-css">
+.set-toastwrap{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:24px;z-index:90;display:flex;flex-direction:column;gap:10px;}
+.set-toast{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--hair);border-left:3px solid var(--success);border-radius:var(--r-md);box-shadow:var(--shadow-2);padding:13px 17px;min-width:240px;font-family:var(--font-sans);font-size:14px;color:var(--ink);transform:translateX(120%);transition:transform 280ms var(--ease);}
+.set-toast.show{transform:translateX(0);}.set-toast i{font-size:19px;color:var(--success);}
+.set-toast.rej{border-left-color:var(--error);}.set-toast.rej i{color:var(--error);}
+@media(max-width:640px){.set-toastwrap{left:14px;right:14px;}.set-toast{min-width:0;}}
+</style>
+
+
+<script id="cf-i18n">(function(){var BYID={"adm":["Console","Console"],"s.pilot":["Pilotage","Steering"],"s.gov":["Gouvernance","Governance"],"n.dash":["Tableau de bord","Dashboard"],"n.content":["Gestion de contenu","Content management"],"n.users":["Utilisateurs et rôles","Users and roles"],"n.apps":["Candidatures","Applications"],"n.proj":["Projets et indicateurs","Projects and indicators"],"n.media":["Médiathèque","Media library"],"n.mod":["Modération","Moderation"],"n.perm":["Permissions","Permissions"],"n.audit":["Journal d'audit","Audit log"],"n.sys":["Paramètres système","System settings"],"role.super":["Super administratrice","Super administrator"],"title":["Paramètres système","System settings"],"sec":["Session sécurisée","Secure session"],"save":["Enregistrer","Save"],"m.platform":["Plateforme","Platform"],"m.countries":["Pays et langues","Countries and languages"],"m.cat":["Catégories","Categories"],"m.calls":["Appels","Calls"],"m.integ":["Intégrations","Integrations"],"m.backup":["Sauvegardes","Backups"],"c.platform":["Informations de la plateforme","Platform information"],"l.name":["Nom de la plateforme","Platform name"],"l.tagline":["Accroche","Tagline"],"l.contact":["E-mail de contact","Contact email"],"l.tz":["Fuseau horaire","Time zone"],"c.countries":["Pays actifs et langues","Active countries and languages"],"l.activepays":["Pays d'intervention","Countries of operation"],"addpays":["Ajouter","Add"],"l.langs":["Langues de la plateforme","Platform languages"],"addlang":["Ajouter","Add"],"t.autolang":["Détection automatique de la langue","Automatic language detection"],"t.autolangd":["Selon la langue du navigateur du visiteur.","Based on the visitor's browser language."],"c.cat":["Catégories et secteurs","Categories and sectors"],"l.sectors":["Secteurs de projet","Project sectors"],"addsec":["Ajouter","Add"],"c.calls":["Paramètres des appels à candidatures","Call for applications settings"],"t.autoack":["Accusé de réception automatique","Automatic acknowledgement"],"t.autoackd":["E-mail envoyé à chaque dépôt de candidature.","Email sent on each application submission."],"t.review":["Délai de revue cible","Target review time"],"t.reviewd":["Alerte au-delà de ce délai sans traitement.","Alert beyond this time without processing."],"c.integ":["Intégrations","Integrations"],"int.email":["Notifications transactionnelles","Transactional notifications"],"int.analytics":["Mesure d'audience","Audience measurement"],"int.analyticsd":["Statistiques anonymisées","Anonymised statistics"],"int.maps":["Fond cartographique","Map tiles"],"int.translate":["API de traduction","Translation API"],"int.translated":["Aide à la traduction FR/EN","FR/EN translation assistance"],"c.backup":["Sauvegardes","Backups"],"bk.auto":["Sauvegarde automatique quotidienne","Daily automatic backup"],"bk.last":["Dernière : aujourd'hui, 03h00 GMT","Last: today, 03:00 GMT"],"bk.export":["Exporter une sauvegarde manuelle","Export a manual backup"],"bk.exportd":["Archive complète de la base et des médias","Full archive of the database and media"],"bk.dl":["Télécharger","Download"]};
+var KEY="cf-lang";
+function setLang(l){
+  Object.keys(BYID).forEach(function(id){var el=document.querySelector('[data-i18n="'+id+'"]');if(el)el.textContent=l==='en'?BYID[id][1]:BYID[id][0];});
+  document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}
+}
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}setLang(s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr"));
+})();</script>
+<style id="cf-appnav">.cf-appburger{display:none;width:40px;height:40px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:10px;color:var(--ink,#0C2420);cursor:pointer;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;margin-right:4px;}.cf-appburger:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}.cf-appscrim{position:fixed;inset:0;background:rgba(8,28,24,.5);z-index:49;opacity:0;pointer-events:none;transition:opacity .28s cubic-bezier(.4,0,.2,1);}.cf-appscrim.show{opacity:1;pointer-events:auto;}@media(max-width:1080px){.app .side{display:flex !important;position:fixed;top:0;left:0;height:100vh;width:264px;z-index:50;transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);}.app .side.open{transform:translateX(0);}.cf-appburger{display:inline-flex;}}</style><script id="cf-appnav-js">(function(){var side=document.querySelector(".app .side");if(!side)return;var tb=document.querySelector(".topbar");if(!tb)return;var b=tb.querySelector(".cf-appburger");if(!b)return;var sc=document.createElement("div");sc.className="cf-appscrim";document.body.appendChild(sc);function open(){side.classList.add("open");sc.classList.add("show");}function close(){side.classList.remove("open");sc.classList.remove("show");}b.addEventListener("click",function(){side.classList.contains("open")?close():open();});sc.addEventListener("click",close);[].slice.call(side.querySelectorAll("a")).forEach(function(a){a.addEventListener("click",close);});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script id="cf-side-collapse-js">(function(){var app=document.querySelector(".app");if(!app)return;var K="cf-admin-side";try{if(localStorage.getItem(K)==="1")app.classList.add("cf-collapsed");}catch(e){}var b=document.getElementById("cfSideToggle");if(b)b.addEventListener("click",function(){app.classList.toggle("cf-collapsed");try{localStorage.setItem(K,app.classList.contains("cf-collapsed")?"1":"0");}catch(e){}});})();</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-notif.js"></script>
+<script src="assets/cf-audit.js"></script>
+<script src="assets/cf-admin-auth.js"></script>
+<script src="assets/cf-admin-chrome.js"></script>
+<script src="assets/cf-admin-session.js"></script>
+</body>
+</html>

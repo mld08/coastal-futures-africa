@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Coastal Futures | Lancement officiel</title>
+<meta name="description" content="Lancement officiel · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="evenement.html">
+<meta property="og:title" content="Coastal Futures | Lancement officiel">
+<meta property="og:description" content="Lancement officiel · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Lancement officiel">
+<meta name="twitter:description" content="Lancement officiel · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="evenement.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<link rel="stylesheet" href="assets/cf-nav.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --warning:#8A5512; --error:#8F2A1A;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --shadow-3:0 30px 60px -20px rgba(4,39,31,.45);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --t-fast:160ms; --t-base:280ms; --t-reveal:560ms;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--canvas);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.cf-mesh{position:absolute;inset:0;opacity:.92;background:radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.5) 0%,transparent 50%),radial-gradient(90% 70% at 70% 5%,rgba(18,179,150,.42) 0%,transparent 55%),radial-gradient(80% 90% at 95% 30%,rgba(201,163,94,.3) 0%,transparent 50%),radial-gradient(70% 80% at 50% 70%,rgba(10,107,94,.6) 0%,transparent 60%);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:15px;font-weight:500;border-radius:var(--r-pill);padding:11px 22px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-sm{padding:7px 15px;font-size:13px;}
+.btn-lg{padding:14px 26px;font-size:16px;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);transform:translateY(-1px);}
+.btn-sec{background:transparent;color:var(--teal);border-color:var(--hair-strong);}.btn-sec:hover{border-color:var(--teal);background:var(--teal-bg2);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair);}.btn-light:hover{border-color:var(--hair-strong);}
+.btn-glass{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.26);}.btn-glass:hover{background:rgba(255,255,255,.24);}
+.btn i{transition:transform var(--t-fast) var(--ease);}.btn:hover i.ti-arrow-right{transform:translateX(3px);}
+.bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:12px;font-weight:500;padding:4px 11px;border-radius:var(--r-pill);white-space:nowrap;}
+.bdg-glass{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(6px);}
+.bdg-glass .dot{width:6px;height:6px;border-radius:50%;background:var(--teal-bright);}
+
+/* Nav */
+.nav-outer{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);}
+.cf-nav{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;}.brand img{height:34px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-links a{font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-2);transition:color var(--t-fast) var(--ease);}
+.nav-links a:hover{color:var(--teal);}
+.nav-links a.on{color:var(--teal);}
+.nav-cta{color:#fff!important;}
+
+/* Hero */
+.evt-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden;}
+.evt-hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:0;}
+.evt-hero .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(8,28,24,.93) 0%,rgba(9,32,28,.74) 45%,rgba(6,61,52,.34) 100%);}
+.evt-hero .cf-mesh{z-index:2;opacity:.5;mix-blend-mode:screen;}
+.evt-hero-in{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:30px 28px 56px;}
+.crumb{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13px;font-weight:500;color:rgba(255,255,255,.7);margin-bottom:38px;}
+.crumb a:hover{color:#fff;}.crumb i{font-size:14px;opacity:.6;}
+.evt-head{display:grid;grid-template-columns:108px 1fr;gap:26px;align-items:start;max-width:880px;}
+.date-block{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-lg);text-align:center;padding:16px 10px;backdrop-filter:blur(6px);}
+.date-block .d{font-family:var(--font-display);font-weight:300;font-size:48px;line-height:1;letter-spacing:-2px;}
+.date-block .m{font-family:var(--font-display);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.08em;margin-top:4px;color:var(--teal-bright);}
+.date-block .y{font-family:var(--font-sans);font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}
+.evt-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.evt-title{font-family:var(--font-display);font-weight:300;font-size:52px;line-height:1.0;letter-spacing:-2.4px;margin:0;}
+.evt-lead{font-family:var(--font-sans);font-weight:300;font-size:19px;line-height:1.6;color:rgba(255,255,255,.86);margin:18px 0 0;max-width:620px;}
+.evt-meta{display:flex;gap:22px;flex-wrap:wrap;margin:26px 0 28px;}
+.evt-meta .m{display:flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:14.5px;color:rgba(255,255,255,.9);}
+.evt-meta .m i{font-size:18px;color:var(--teal-bright);}
+.evt-cta{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* Body */
+.evt-body{display:grid;grid-template-columns:1fr 360px;gap:54px;padding:56px 0 20px;align-items:start;}
+.sec{margin-bottom:44px;}
+.sec h2{font-family:var(--font-display);font-weight:500;font-size:26px;letter-spacing:-.8px;color:var(--ink);margin:0 0 18px;}
+.sec p{font-family:var(--font-sans);font-size:16.5px;line-height:1.72;color:var(--ink-2);margin:0 0 16px;}
+
+/* Programme timeline */
+.prog{position:relative;}
+.prog-row{display:grid;grid-template-columns:74px 1fr;gap:34px;padding:0 0 30px 0;position:relative;}
+.prog-row::before{content:"";position:absolute;left:96px;top:11px;bottom:-7px;width:2px;background:var(--hair);}
+.prog-row:last-child::before{display:none;}
+.prog-time{display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right;padding-top:1px;line-height:1.1;}
+.prog-time .t1{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--teal);font-feature-settings:"tnum";white-space:nowrap;}
+.prog-time .t2{font-family:var(--font-display);font-weight:500;font-size:12.5px;color:var(--ink-faint);font-feature-settings:"tnum";white-space:nowrap;}
+.prog-c{position:relative;padding-left:8px;}
+.prog-c::before{content:"";position:absolute;left:-17px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:2.5px solid var(--canvas);box-shadow:0 0 0 1.5px var(--teal);}
+.prog-c h4{font-family:var(--font-display);font-weight:600;font-size:16px;color:var(--ink);margin:0 0 5px;}
+.prog-c p{font-size:14.5px;line-height:1.6;color:var(--ink-mute);margin:0;}
+.pullq{margin:4px 0 0;padding:22px 26px;border-left:3px solid var(--teal-bright);background:var(--teal-bg);border-radius:0 var(--r-md) var(--r-md) 0;}
+.pullq p{font-family:var(--font-display);font-weight:300;font-size:20px;line-height:1.5;letter-spacing:-.3px;color:var(--teal-deep);margin:0;}
+
+/* Speakers */
+.spk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.spk{display:flex;align-items:center;gap:14px;background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-lg);padding:16px;}
+.spk .av{width:52px;height:52px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:17px;flex-shrink:0;}
+.spk .n{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);}
+.spk .r{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);margin-top:2px;}
+
+/* Sidebar */
+.side{position:sticky;top:90px;display:flex;flex-direction:column;gap:18px;}
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;}
+.card-pad{padding:22px;}
+.side-cta{background:var(--teal-bg);}
+.side-cta h3{font-family:var(--font-display);font-weight:600;font-size:18px;color:var(--ink);margin:0 0 6px;}
+.side-cta p{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-mute);line-height:1.5;margin:0 0 16px;}
+.side-cta .btn{width:100%;}
+.infolist{display:flex;flex-direction:column;}
+.infolist .ir{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--hair);}
+.infolist .ir:last-child{border-bottom:0;}
+.infolist .ir i{font-size:18px;color:var(--teal);margin-top:1px;}
+.infolist .lbl{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);}
+.infolist .val{font-family:var(--font-sans);font-size:14px;color:var(--ink-2);margin-top:2px;}
+.venue-map{height:170px;background:#0c2420;}
+.share{display:flex;gap:8px;}
+.share a{width:38px;height:38px;border-radius:50%;border:1px solid var(--hair-strong);display:flex;align-items:center;justify-content:center;color:var(--ink-mute);font-size:17px;transition:all var(--t-fast) var(--ease);}
+.share a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-bg2);}
+.side-title{font-family:var(--font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);margin:0 0 12px;}
+
+/* Related */
+.related{background:var(--canvas-soft);border-top:1px solid var(--hair);padding:56px 0 64px;}
+.related h2{font-family:var(--font-display);font-weight:400;font-size:28px;letter-spacing:-1px;color:var(--ink);margin:0 0 24px;}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.rel-card{display:block;background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;transition:all var(--t-fast) var(--ease);}
+.rel-card:hover{box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hair-strong);}
+.rel-card .rc-img{height:130px;overflow:hidden;}
+.rel-card .rc-img img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-base) var(--ease);}
+.rel-card:hover .rc-img img{transform:scale(1.05);}
+.rel-card .rc-b{padding:16px;}
+.rel-card .rc-date{font-family:var(--font-display);font-size:12px;font-weight:600;color:var(--teal);font-feature-settings:"tnum";}
+.rel-card .rc-t{font-family:var(--font-display);font-weight:600;font-size:15.5px;color:var(--ink);margin:6px 0 0;line-height:1.3;}
+.rel-card .rc-loc{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);margin-top:8px;display:flex;align-items:center;gap:5px;}
+
+/* Footer */
+.footer{position:relative;margin-top:0;overflow:hidden;color:#fff;background:var(--ink);}
+.footer .cf-mesh{opacity:.5;}
+.footer-in{position:relative;max-width:1180px;margin:0 auto;padding:60px 28px 28px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;}.footer-brand img{height:28px;margin-bottom:16px;width:auto;}
+.footer-brand p{color:rgba(255,255,255,.6);max-width:280px;font-family:var(--font-sans);font-size:13px;line-height:1.6;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 14px;}
+.footer-col a{display:block;font-family:var(--font-sans);font-size:13.5px;color:rgba(255,255,255,.62);margin-bottom:9px;transition:color var(--t-fast) var(--ease);}
+.footer-col a:hover{color:#fff;}
+.footer-base{position:relative;max-width:1180px;margin:0 auto;padding:18px 28px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.footer-base .caption{font-family:var(--font-sans);font-size:12.5px;color:rgba(255,255,255,.5);}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity var(--t-reveal) var(--ease),transform var(--t-reveal) var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;}}
+
+@media(max-width:980px){
+  .evt-body{grid-template-columns:1fr;gap:0;}
+  .side{position:static;margin-top:8px;}
+  .spk-grid{grid-template-columns:1fr;}
+  .rel-grid{grid-template-columns:1fr;}
+  .footer-in{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  .nav-links a:not(.nav-cta):not(.cf-langtog){display:none;}
+  .evt-head{grid-template-columns:1fr;gap:16px;}
+  .date-block{width:96px;}
+  .evt-title{font-size:34px;letter-spacing:-1.4px;}
+  .evt-lead{font-size:16px;}
+  .evt-meta{gap:12px;}
+  .footer-in{grid-template-columns:1fr;}
+}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}.cf-nav .nav-glob,.cf-nav .nav-icn{width:44px!important;height:44px!important;flex:0 0 auto;}}</style>
+<style id="cf-phslot">.ph-slot{position:relative;overflow:hidden;width:100%;height:100%;background:linear-gradient(150deg,var(--teal) 0%,var(--teal-deep) 72%,var(--teal-press) 100%);display:flex;align-items:center;justify-content:center;}.ph-slot::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 22% 8%,rgba(62,203,176,.22),transparent 58%),radial-gradient(80% 80% at 92% 100%,rgba(201,163,94,.16),transparent 60%);}.ph-slot .ph-lab{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.3);border-radius:100px;padding:5px 11px;background:rgba(6,30,25,.28);}.ph-slot .ph-lab i{font-size:13px;}</style>
+<style>.rc-img{position:relative;}.rc-img .ph-slot{position:absolute;inset:0;}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+<style id="cf-utilbar-css">
+.cf-utilbar{background:#fff;border-bottom:1px solid var(--hair);}
+.cf-utility{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:7px 28px;}
+.cf-util-aff{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.cf-util-aff i{font-size:15px;color:var(--teal);}
+.cf-util-aff b{font-weight:600;color:var(--ink-2);}
+.cf-util-right{display:flex;align-items:center;gap:2px;}
+.cf-util-link{font-family:var(--font-display);font-size:12px;font-weight:500;color:var(--ink-mute);padding:6px 11px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:color .16s ease;}
+.cf-util-link:hover{color:var(--teal);}
+.cf-util-sep{width:1px;height:14px;background:var(--hair-strong);margin:0 8px;}
+.cf-util-search{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:var(--ink-mute);font-size:17px;text-decoration:none;transition:color .16s ease,background .16s ease;}
+.cf-util-search:hover{color:var(--teal);background:rgba(125,150,145,.1);}
+@media(max-width:860px){.cf-util-aff,.cf-util-link,.cf-util-sep{display:none;}.cf-utility{justify-content:flex-end;padding:5px 16px;}}
+</style>
+<style id="cf-foot2">
+.footer-top{position:relative;max-width:1180px;margin:0 auto;padding:80px 28px 60px;display:grid;grid-template-columns:1.1fr 2fr;gap:80px;}
+.footer-brand img{height:30px;width:auto;margin-bottom:22px;}
+.footer-mission{color:rgba(255,255,255,.66);font-size:15px;line-height:1.7;max-width:330px;margin:0;}
+.footer-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.fcta-link{color:#fff;font-family:var(--font-display);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;}
+.fcta-link i{transition:transform .16s var(--ease);}.fcta-link:hover i{transform:translateX(3px);}
+.fcta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-family:var(--font-display);font-weight:600;font-size:14px;padding:13px 24px;border-radius:100px;}
+.fcta-btn:hover{background:var(--teal-soft);}.fcta-btn i{transition:transform .16s var(--ease);}.fcta-btn:hover i{transform:translateX(3px);}
+.footer-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 20px;letter-spacing:.01em;}
+.footer-col a,.footer-col span[role]{display:block;color:rgba(255,255,255,.7);font-size:14px;padding:9px 0;font-family:var(--font-sans);transition:color .14s var(--ease);cursor:pointer;}
+.footer-col a:hover,.footer-col span[role]:hover{color:#fff;}
+.footer-col .fnews{color:var(--teal-bright);font-family:var(--font-display);font-weight:600;margin-top:8px;display:inline-flex;align-items:center;gap:7px;}
+.footer-util{position:relative;max-width:1180px;margin:0 auto;padding:34px 28px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:16px 38px;}
+.footer-util a,.footer-util span[role]{color:rgba(255,255,255,.72);font-size:13.5px;font-family:var(--font-display);font-weight:500;cursor:pointer;transition:color .14s var(--ease);}
+.footer-util a:hover,.footer-util span[role]:hover{color:#fff;}
+.footer .footer-base{position:relative;max-width:1180px;margin:0 auto;padding:28px 28px 60px;border-top:0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+@media(max-width:980px){.footer-top{grid-template-columns:1fr;gap:40px;padding:60px 24px 40px;}.footer-cols{grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:560px){.footer-cols{grid-template-columns:1fr 1fr;gap:8px 20px;}.footer-col h4{margin:18px 0 10px;}.footer-col a,.footer-col span[role]{padding:9px 0;font-size:13.5px;}.footer-util{justify-content:center;gap:10px 22px;padding:24px 20px;}.footer .footer-base{flex-direction:column;align-items:flex-start;gap:10px;padding:22px 20px 40px;}}
+</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-nav-elevate">
+/* Public navbar — refined professional elevation (within the CF system) */
+.nav-outer{top:16px;}
+.nav-outer .cf-nav{padding:11px 14px 11px 24px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px);box-shadow:0 1px 2px rgba(6,61,52,.05),0 16px 36px -20px rgba(6,61,52,.24);transition:background .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease);}
+.nav-outer .cf-nav.scrolled{background:rgba(255,255,255,.93);border-color:var(--hair-strong);box-shadow:0 1px 2px rgba(6,61,52,.06),0 12px 28px -18px rgba(6,61,52,.3);}
+.nav-outer .cf-nav .brand img{height:30px;}
+.nav-outer .nav-links{gap:3px;}
+.nav-outer .nav-links a:not(.nav-cta){position:relative;padding:9px 15px;font-weight:500;letter-spacing:-.1px;color:var(--ink-2);border-radius:10px;transition:color .18s var(--ease),background .18s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;opacity:0;transition:transform .28s var(--ease),opacity .2s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta):hover{color:var(--ink);background:rgba(10,107,94,.06);}
+.nav-outer .nav-links a:not(.nav-cta).on{color:var(--teal-deep);}
+.nav-outer .nav-links a:not(.nav-cta).on::after{transform:scaleX(1);opacity:1;}
+.nav-outer .nav-links a.nav-cta{margin-left:12px;padding:9px 20px;border-radius:100px;box-shadow:0 1px 2px rgba(6,61,52,.12);transition:background .16s var(--ease),transform .18s var(--ease),box-shadow .22s var(--ease);}
+.nav-outer .nav-links a.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,107,94,.55);}
+.nav-outer .nav-links a.nav-cta:active{transform:translateY(0);}
+.cf-util-link{position:relative;}
+.cf-util-link::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:1.5px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;transition:transform .22s var(--ease);}
+.cf-util-link:hover::after{transform:scaleX(1);}
+@media(max-width:860px){.nav-outer .nav-links a.nav-cta{margin-left:0;}}
+</style>
+<script id="cf-nav-elevate-js">(function(){var n=document.querySelector('.nav-outer .cf-nav');if(!n)return;var f=function(){n.classList.toggle('scrolled',(window.pageYOffset||document.documentElement.scrollTop||0)>6);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
+<script type="application/ld+json" id="ld-org">{"@context":"https://schema.org","@type":"Organization","name":"Coastal Futures Network","alternateName":"Réseau Coastal Futures","url":"https://coastalfutures.africagovernanceinstitute.org/","logo":"https://coastalfutures.africagovernanceinstitute.org/assets/logos/logo-horizontal-dark.svg","email":"contact@africagovernanceinstitute.org","description":"Programme régional de l'Institut Africain de la Gouvernance accompagnant 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest : Sénégal, Ghana, Guinée, Liberia et Sierra Leone.","parentOrganization":{"@type":"Organization","name":"Institut Africain de la Gouvernance","alternateName":"Africa Governance Institute"},"areaServed":[{"@type":"Country","name":"Senegal"},{"@type":"Country","name":"Ghana"},{"@type":"Country","name":"Guinea"},{"@type":"Country","name":"Liberia"},{"@type":"Country","name":"Sierra Leone"}]}</script>
+<script type="application/ld+json" id="ld-page">{"@context":"https://schema.org","@type":"Event","name":"Coastal Futures","description":"Lancement officiel · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.","inLanguage":"fr","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","organizer":{"@type":"Organization","name":"Coastal Futures Network","url":"https://coastalfutures.africagovernanceinstitute.org/"},"image":"https://coastalfutures.africagovernanceinstitute.org/assets/og-image.jpg"}</script>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-mapskel">
+/* Map loading shimmer — visible while CARTO tiles load, opaque tiles paint over it */
+.leaflet-container{background-color:#dbeee8;}
+@media(prefers-reduced-motion:no-preference){
+  .leaflet-container{background-image:linear-gradient(100deg,rgba(255,255,255,0) 32%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 68%),linear-gradient(0deg,#dbeee8,#dbeee8)!important;background-size:220% 100%,100% 100%!important;background-repeat:no-repeat!important;animation:cfMapSkel 1.5s ease-in-out 6 forwards;}
+  @keyframes cfMapSkel{0%{background-position:150% 0,0 0;}100%{background-position:-50% 0,0 0;}}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<!-- Nav -->
+<!-- ===== Navigation unifiée ===== -->
+<div class="nav-outer">
+  <nav class="cf-nav" id="cfNav">
+    <div class="nav-inner">
+      <button class="cf-burger" id="cfBurger" aria-label="Menu" aria-expanded="false" type="button"><i class="ti ti-menu-2"></i></button>
+      <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network"></a>
+      <div class="nav-links">
+        <a href="a-propos.html" data-i18n="nav.prog">Le programme</a>
+        <a href="carte-impact.html" data-i18n="nav.map">Carte d'impact</a>
+        <a href="ecosysteme.html" data-i18n="nav.eco">Écosystème</a>
+        <a href="actualites.html" class="on" data-i18n="nav.res">Actualités</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-r">
+        <a href="recherche.html" class="nav-icn" aria-label="Rechercher"><i class="ti ti-search"></i></a>
+        <div class="nav-glob-wrap">
+          <button class="nav-glob" id="cfGlob" type="button" aria-label="Langue · Language" aria-haspopup="true" aria-expanded="false"><i class="ti ti-world"></i></button>
+          <div class="lang-pop" id="cfLangPop" hidden role="listbox" aria-label="Choisir la langue">
+            <button class="lang-opt" type="button" data-lang="fr" role="option"><span class="lang-name">Français</span><i class="ti ti-check lc" aria-hidden="true"></i></button>
+            <button class="lang-opt" type="button" data-lang="en" role="option"><span class="lang-name">English</span><i class="ti ti-check lc" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <a href="connexion.html" class="nav-cta" data-nav-espace>Mon espace</a>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Mobile drawer -->
+<div class="cf-mob" id="cfMob" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="mob-head">
+    <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network" style="height:28px;width:auto"></a>
+    <button class="mob-x" id="cfMobX" type="button" aria-label="Fermer"><i class="ti ti-x"></i></button>
+  </div>
+  <div class="mob-links">
+    <a href="index.html"><i class="ti ti-home"></i><span>Accueil</span></a>
+    <a href="a-propos.html"><i class="ti ti-info-circle"></i><span data-i18n="nav.prog">Le programme</span></a>
+    <a href="carte-impact.html"><i class="ti ti-map-2"></i><span data-i18n="nav.map">Carte d'impact</span></a>
+    <a href="ecosysteme.html"><i class="ti ti-plant-2"></i><span data-i18n="nav.eco">Écosystème</span></a>
+    <a href="actualites.html" class="on"><i class="ti ti-news"></i><span data-i18n="nav.res">Actualités</span></a>
+    <a href="contact.html"><i class="ti ti-mail"></i><span data-i18n="nav.contact">Contact</span></a>
+    <div class="mob-sep"></div>
+    <div class="mob-sec">Institut</div>
+    <a href="a-propos.html#partenaires"><i class="ti ti-heart-handshake"></i><span data-nav-espace-p="partners">Partenaires</span></a>
+    <a href="mediatheque.html"><i class="ti ti-photo"></i><span data-nav-espace-p="press">Espace presse</span></a>
+    <a href="plan-du-site.html"><i class="ti ti-sitemap"></i><span data-nav-espace-p="sitemap">Plan du site</span></a>
+  </div>
+  <div class="mob-foot">
+    <div class="mob-lang" id="cfMobLang">
+      <button type="button" class="active" data-mob-lang="fr">Français</button>
+      <button type="button" data-mob-lang="en">English</button>
+    </div>
+    <a href="connexion.html" class="mob-cta"><i class="ti ti-user-circle"></i><span data-nav-espace>Mon espace</span></a>
+  </div>
+</div>
+<div class="cf-scrim" id="cfScrim"></div>
+
+<!-- Hero -->
+<header class="evt-hero" data-screen-label="Détail événement">
+  <div class="bg" data-media="event-hero-lancement-dakar" data-w="1920" data-h="640" style="position:absolute;inset:0;background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 60%,var(--teal-press) 100%);"></div>
+  <div class="scrim"></div>
+  <div class="cf-mesh"></div>
+  <div class="cf-coastline" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path pathLength="1" d="M-10,70 C80,62 140,50 196,52 C236,53 256,76 300,78 C356,81 392,54 458,58 C540,63 586,98 668,94 C730,91 772,62 850,65 C946,69 998,104 1092,98 C1166,93 1212,64 1296,68 C1372,71 1418,96 1452,90"></path></svg></div>
+  <div class="evt-hero-in">
+    <div class="crumb"><a href="index.html">Accueil</a><i class="ti ti-chevron-right"></i><a href="evenements.html">Événements</a><i class="ti ti-chevron-right"></i><span>Lancement officiel</span></div>
+    <div class="evt-head">
+      <div class="date-block"><div class="d tnum">10</div><div class="m">Juin</div><div class="y tnum">2026</div></div>
+      <div>
+        <div class="evt-badges"><span class="bdg bdg-glass"><span class="dot"></span>Événement de lancement</span><span class="bdg bdg-glass">Présentiel</span></div>
+        <span id="cf-main" tabindex="-1"></span><h1 class="evt-title">Lancement officiel de Coastal Futures</h1>
+        <p class="evt-lead">Une journée pour lancer officiellement le programme régional, réunir les cinq pays, les institutions régionales, les partenaires techniques et financiers et de jeunes bénéficiaires du littoral sénégalais.</p>
+        <div class="evt-meta">
+          <div class="m"><i class="ti ti-calendar-event"></i><span>mercredi 10 juin 2026, 08h30 à 13h00 GMT</span></div>
+          <div class="m"><i class="ti ti-map-pin"></i><span>Hôtel Terrou-Bi, Dakar</span></div>
+          <div class="m"><i class="ti ti-users"></i><span>Sur invitation et inscription</span></div>
+        </div>
+        <div class="evt-cta">
+          <a href="inscription-evenement.html" class="btn btn-pri btn-lg">S'inscrire à l'événement <i class="ti ti-arrow-right"></i></a>
+          <a href="#programme" class="btn btn-glass btn-lg"><i class="ti ti-list-details"></i>Voir le programme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Body -->
+<div class="wrap">
+  <div class="evt-body">
+    <main>
+      <section class="sec reveal">
+        <h2>À propos de l'événement</h2>
+        <p>Le 10 juin 2026 marque le lancement officiel de Coastal Futures Network, le programme régional porté par l'Institut Africain de la Gouvernance pour placer la jeunesse au centre de la transition verte sur le littoral ouest-africain.</p>
+        <p>La cérémonie réunit à Dakar les représentants des cinq pays côtiers, les institutions régionales (CEDEAO, Commission de l'Union Africaine), les partenaires techniques et financiers, les médias et de jeunes bénéficiaires des communautés côtières du Sénégal. Une journée pour officialiser la signature des accords avec les organisations d'exécution locales, partager la vision du programme et ouvrir les appels à candidatures.</p>
+      </section>
+
+      <section class="sec reveal" id="programme">
+        <h2>Programme de la journée</h2>
+        <div class="prog">
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">08h30</span><span class="t2">09h00</span></div><div class="prog-c"><h4>Accueil et enregistrement des hautes autorités</h4><p>Installation des délégations officielles, des partenaires techniques et financiers et des participants. Le manifeste vidéo Coastal Futures est projeté en boucle.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">09h00</span><span class="t2">09h45</span></div><div class="prog-c"><h4>Ouverture officielle</h4><p>Allocution de bienvenue du directeur général de l'IAG, Dr Abdoulie Janneh, puis interventions des ministres de tutelle et des représentants de la CEDEAO et de la Commission de l'Union Africaine, suivies de la photo officielle.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">09h45</span><span class="t2">10h15</span></div><div class="prog-c"><h4>Tribune climat jeunesse : les voix du littoral</h4><p>Témoignages croisés et présentations flash de solutions portées par les jeunes leaders des communautés côtières, dont le Climate Linguère Club, ponctués d'un intermède culturel sur la résilience climatique en Afrique de l'Ouest.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">10h15</span><span class="t2">10h30</span></div><div class="prog-c"><h4>Pause-café</h4><p>Pause et échanges entre les délégations, les partenaires et les participants.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">10h40</span><span class="t2">11h30</span></div><div class="prog-c"><h4>Panel de haut niveau : axe économique</h4><p>L'entrepreneuriat vert comme levier de résilience et réponse au chômage structurel : comment transformer la vulnérabilité en opportunités de marché ? Avec la Banque africaine de développement, des décideurs publics, des chefs d'entreprise et de jeunes entrepreneurs. Focus : incubation, emplois verts locaux et alternatives à l'exode climatique.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">11h40</span><span class="t2">12h30</span></div><div class="prog-c"><h4>Panel de haut niveau : axe institutionnel et financier</h4><p>Des côtes fragilisées aux écosystèmes durables : quels cadres financiers et institutionnels pour ancrer les investissements verts des jeunes et intégrer Coastal Futures dans les politiques publiques, CDN et PNA ? Avec le Centre de suivi écologique, des diplomates, des fonds climatiques et des experts en gouvernance régionale.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">12h30</span><span class="t2">12h45</span></div><div class="prog-c"><h4>Session ouverte : questions et échanges</h4><p>Débat interactif entre l'assemblée, les panélistes et la direction de l'IAG, pour enrichir la mise en œuvre de la feuille de route 2026-2027.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">12h45</span><span class="t2">13h00</span></div><div class="prog-c"><h4>Clôture officielle</h4><p>Mot de clôture du directeur général de l'IAG : synthèse des engagements et prochaines étapes du programme, suivi du lancement de l'Appel de Dakar pour la jeunesse et le climat.</p></div></div>
+          <div class="prog-row"><div class="prog-time tnum"><span class="t1">13h00</span></div><div class="prog-c"><h4>Déjeuner offert</h4><p>Déjeuner offert à l'ensemble des participants et des délégations.</p></div></div>
+        </div>
+      </section>
+
+      <section class="sec reveal">
+        <h2>L'Appel de Dakar pour la jeunesse et le climat</h2>
+        <p>En clôture, la direction de l'IAG adresse un plaidoyer solennel aux partenaires techniques et financiers : rejoindre la coalition Coastal Futures et combler le déficit de financement de l'économie verte en Afrique de l'Ouest.</p>
+        <div class="pullq"><p>Les jeunes d'Afrique de l'Ouest ne sont pas les victimes du changement climatique : ils en sont les bâtisseurs de solutions. Coastal Futures leur en donne les moyens.</p></div>
+      </section>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="side">
+      <div class="card side-cta card-pad reveal">
+        <h3>Participer à l'événement</h3>
+        <p>Places limitées. L'inscription est gratuite et obligatoire pour accéder à la cérémonie.</p>
+        <a href="inscription-evenement.html" class="btn btn-pri">S'inscrire maintenant <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="card card-pad reveal">
+        <div class="infolist">
+          <div class="ir"><i class="ti ti-calendar-event"></i><div><div class="lbl">Date</div><div class="val">mercredi 10 juin 2026</div></div></div>
+          <div class="ir"><i class="ti ti-clock"></i><div><div class="lbl">Horaire</div><div class="val tnum">08h30 à 13h00 GMT</div></div></div>
+          <div class="ir"><i class="ti ti-map-pin"></i><div><div class="lbl">Lieu</div><div class="val">Hôtel Terrou-Bi, Dakar</div></div></div>
+          <div class="ir"><i class="ti ti-ticket"></i><div><div class="lbl">Accès</div><div class="val">Gratuit, sur inscription</div></div></div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div id="venueMap" class="venue-map"></div>
+        <div class="card-pad">
+          <div class="side-title">Lieu</div>
+          <div class="val" style="font-family:var(--font-sans);font-size:14px;color:var(--ink-2);line-height:1.5;">Hôtel Terrou-Bi, boulevard Martin Luther King, Dakar, Sénégal</div>
+        </div>
+      </div>
+      <div class="card card-pad reveal">
+        <div class="side-title">Partager</div>
+        <div class="share">
+          <a role="button" tabindex="0" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a role="button" tabindex="0" aria-label="X"><i class="ti ti-brand-x"></i></a>
+          <a role="button" tabindex="0" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a role="button" tabindex="0" aria-label="Copier le lien"><i class="ti ti-link"></i></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="wrap">
+    <h2>Événements liés</h2>
+    <div class="rel-grid">
+      <a class="rel-card reveal" href="evenements.html">
+        <div class="rc-img"><div class="ph-slot" data-media="event-rel-webinaire" data-w="360" data-h="200"></div></div>
+        <div class="rc-b"><div class="rc-date tnum">24 juin 2026</div><div class="rc-t">Webinaire : comprendre la labellisation</div><div class="rc-loc"><i class="ti ti-broadcast"></i>En ligne</div></div>
+      </a>
+      <a class="rel-card reveal" href="evenements.html">
+        <div class="rc-img"><div class="ph-slot" data-media="event-rel-atelier" data-w="360" data-h="200"></div></div>
+        <div class="rc-b"><div class="rc-date tnum">8 juillet 2026</div><div class="rc-t">Atelier mentors et entrepreneurs</div><div class="rc-loc"><i class="ti ti-map-pin"></i>Accra, Ghana</div></div>
+      </a>
+      <a class="rel-card reveal" href="evenements.html">
+        <div class="rc-img"><div class="ph-slot" data-media="event-rel-terrain" data-w="360" data-h="200"></div></div>
+        <div class="rc-b"><div class="rc-date tnum">19 juillet 2026</div><div class="rc-t">Journée terrain : restauration des mangroves</div><div class="rc-loc"><i class="ti ti-map-pin"></i>Monrovia, Liberia</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<style id="cf-news-css">.cf-news{background:#F8FBFA;border-top:1px solid #DCE9E6;padding:74px 28px;}.cf-news-in{max-width:600px;margin:0 auto;text-align:center;display:block;}.cf-news-k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.16em;color:#0A6B5E;}.cf-news h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:300;font-size:34px;line-height:1.1;letter-spacing:-1.4px;color:#0C2420;margin:14px 0 10px;}.cf-news p{font-family:'DM Sans',system-ui,sans-serif;font-size:15.5px;line-height:1.6;color:#5C7B76;margin:0 auto;max-width:470px;}.cf-news-form{margin-top:30px;}.cf-news-row{display:flex;align-items:center;max-width:440px;margin:0 auto;border-bottom:1.5px solid #B4CDC8;transition:border-color .16s ease;}.cf-news-row:focus-within{border-color:#0A6B5E;}.cf-news-form input{flex:1;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;color:#0C2420;background:transparent;border:0;padding:12px 2px;outline:none;}.cf-news-form input::placeholder{color:#5C7B76;}.cf-news-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;color:#0A6B5E;background:transparent;border:0;padding:12px 2px 12px 16px;cursor:pointer;white-space:nowrap;transition:color .16s ease;}.cf-news-btn:hover{color:#063D34;}.cf-news-btn i{transition:transform .16s ease;}.cf-news-btn:hover i{transform:translateX(3px);}.cf-news-note{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:#5C7B76;margin-top:14px;}.cf-news-err{display:none;font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:#8F2A1A;margin-top:12px;}.cf-news-err.show{display:block;}.cf-news-ok{display:none;align-items:center;justify-content:center;gap:7px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:500;color:#066B52;margin-top:14px;}.cf-news-ok.show{display:inline-flex;}@media(max-width:560px){.cf-news{padding:54px 24px;}.cf-news h2{font-size:27px;}}</style>
+<section class="cf-news" id="cf-news"><div class="cf-news-in"><div class="cf-news-txt"><div class="cf-news-k">NEWSLETTER</div><h2 id="cfnH"></h2><p id="cfnP"></p></div><form class="cf-news-form" id="cfnForm" novalidate><div class="cf-news-row"><input type="email" id="cfnEmail" autocomplete="email"><button type="submit" class="cf-news-btn" id="cfnBtn"></button></div><div class="cf-news-note" id="cfnNote"></div><div class="cf-news-err" id="cfnErr"></div><div class="cf-news-ok" id="cfnOk"></div></form></div></section>
+<footer class="footer">
+  <div class="cf-mesh"></div>
+  <div class="cf-coastline cf-coastline--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path pathLength="1" d="M-10,70 C80,62 140,50 196,52 C236,53 256,76 300,78 C356,81 392,54 458,58 C540,63 586,98 668,94 C730,91 772,62 850,65 C946,69 998,104 1092,98 C1166,93 1212,64 1296,68 C1372,71 1418,96 1452,90"></path></svg></div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures Network">
+      <p class="footer-mission">Coastal Futures Network repositionne 4 000 jeunes entrepreneurs verts au cœur de l'économie côtière d'Afrique de l'Ouest, à travers cinq nations.</p>
+      <p class="footer-affil" data-i18n="ft.affil" style="color:rgba(255,255,255,.85);font-family:var(--font-display);font-weight:600;font-size:13.5px;margin:14px 0 0;">Un programme de l'Institut Africain de la Gouvernance.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><h4>Programme</h4><a href="a-propos.html">À propos</a><a href="carte-impact.html">Carte d'impact</a><a href="actualites.html">Actualités</a><a href="evenements.html">Événements</a><a href="appels-candidatures.html">Appels à candidatures</a></div>
+      <div class="footer-col"><h4>Écosystème</h4><a href="ecosysteme.html">L'écosystème</a><a href="annuaire-entrepreneurs.html">Annuaire entrepreneurs</a><a href="annuaire-mentors.html">Annuaire mentors</a><a href="carte-impact.html">Pays d'intervention</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mediatheque.html">Médiathèque</a><a href="bibliotheque.html">Recherche-action</a><a href="methodologie-indicateurs.html">Méthodologie d'impact</a><a href="contact.html">Presse</a></div>
+      <div class="footer-col"><h4>Institut</h4><a href="a-propos.html">Institut Africain de la Gouvernance</a><a href="a-propos.html">Partenaires</a><a href="contact.html">Contact</a><a href="plan-du-site.html">Plan du site</a></div>
+      <div class="footer-col"><h4>Suivez le programme</h4><span role="button" tabindex="0">LinkedIn</span><span role="button" tabindex="0">X (Twitter)</span><span role="button" tabindex="0">YouTube</span><a href="contact.html" class="fnews">Newsletter <i class="ti ti-arrow-right"></i></a></div>
+    </div>
+  </div>
+  <div class="footer-util">
+    <a href="plan-du-site.html">Plan du site</a><a href="confidentialite.html">Confidentialité</a><a href="declaration-accessibilite.html">Accessibilité</a><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a><a href="connexion-bailleur.html">Espace bailleurs</a>
+  </div>
+  <div class="footer-base">
+    <span class="caption">© 2026 Coastal Futures Network · Institut Africain de la Gouvernance</span>
+    <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  // Leaflet venue map
+  if(document.getElementById('venueMap')){
+    var m=L.map('venueMap',{zoomControl:false,scrollWheelZoom:false,dragging:true,attributionControl:false}).setView([14.6903,-17.4622],14);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19}).addTo(m);
+    L.marker([14.6903,-17.4622],{icon:L.divIcon({className:'',html:'<div style="width:16px;height:16px;border-radius:50%;background:#3ECBB0;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(4,39,31,.5)"></div>',iconSize:[16,16],iconAnchor:[8,8]})}).addTo(m);
+    setTimeout(function(){m.invalidateSize();},300);
+  }
+  // Reveal
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce){reveals.forEach(function(el){el.classList.add('in');});}
+  else{
+    function inView(el){var r=el.getBoundingClientRect();var vh=window.innerHeight||document.documentElement.clientHeight;return r.top<vh*0.94&&r.bottom>0;}
+    function check(){reveals.forEach(function(el){if(!el.classList.contains('in')&&inView(el)){var sibs=[].slice.call(el.parentNode.children).filter(function(n){return n.classList.contains('reveal');});el.style.transitionDelay=Math.min(sibs.indexOf(el),6)*70+'ms';el.classList.add('in');}});}
+    check();window.addEventListener('scroll',check,{passive:true});window.addEventListener('resize',check);
+    setTimeout(function(){reveals.forEach(function(el){if(!el.classList.contains('in')&&inView(el)){el.style.transition='none';el.classList.add('in');}});},700);
+  }
+})();
+</script>
+
+
+<script id="cf-i18n">(function(){var D={"Un programme de l'Institut Africain de la Gouvernance.":"A programme of the Africa Governance Institute.","Méthodologie d'impact":"Impact methodology","Espace bailleurs":"Donor area",
+"Une journée pour lancer officiellement le programme régional, réunir les cinq pays, les institutions régionales, les partenaires techniques et financiers et de jeunes bénéficiaires du littoral sénégalais.":"A day to officially launch the regional programme, bringing together the five countries, regional institutions, technical and financial partners and young beneficiaries from the Senegalese coast.",
+"La cérémonie réunit à Dakar les représentants des cinq pays côtiers, les institutions régionales (CEDEAO, Commission de l'Union Africaine), les partenaires techniques et financiers, les médias et de jeunes bénéficiaires des communautés côtières du Sénégal. Une journée pour officialiser la signature des accords avec les organisations d'exécution locales, partager la vision du programme et ouvrir les appels à candidatures.":"The ceremony brings together in Dakar the representatives of the five coastal countries, regional institutions (ECOWAS, African Union Commission), technical and financial partners, the media and young beneficiaries from Senegal's coastal communities. A day to formalise the signing of agreements with local execution organisations, share the programme's vision and open the calls for applications.",
+"Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Événements":"Events","Lancement officiel":"Official launch",
+"Événement de lancement":"Launch event","Présentiel":"In person",
+"Lancement officiel de Coastal Futures":"Official launch of Coastal Futures",
+"Une journée pour lancer officiellement le programme régional, réunir les cinq pays, les institutions partenaires et la première promotion d'entrepreneurs verts.":"A day to officially launch the regional programme and bring together the five countries, partner institutions and the first cohort of green entrepreneurs.",
+"mercredi 10 juin 2026, 08h30 à 13h00 GMT":"Wednesday 10 June 2026, 08:30 to 13:00 GMT","Dakar, Sénégal":"Dakar, Senegal","Sur invitation et inscription":"By invitation and registration",
+"S'inscrire à l'événement":"Register for the event","Voir le programme":"View the programme",
+"À propos de l'événement":"About the event",
+"Le 10 juin 2026 marque le lancement officiel de Coastal Futures Network, le programme régional porté par l'Institut Africain de la Gouvernance pour placer la jeunesse au centre de la transition verte sur le littoral ouest-africain.":"10 June 2026 marks the official launch of Coastal Futures Network, the regional programme led by the Africa Governance Institute to place youth at the centre of the green transition along the West African coast.",
+"La cérémonie réunit à Dakar les représentants des cinq pays côtiers, les institutions partenaires, les bailleurs et la première promotion d'entrepreneurs sélectionnés. Une journée pour partager la vision du programme, présenter les premiers projets labellisés et ouvrir officiellement les appels à candidatures.":"The ceremony brings together in Dakar the representatives of the five coastal countries, partner institutions, donors and the first cohort of selected entrepreneurs. A day to share the programme vision, present the first certified projects and officially open the calls for applications.",
+"Programme de la journée":"Programme of the day",
+"Accueil et enregistrement des hautes autorités":"Welcome and registration of senior officials","Installation des délégations officielles, des partenaires techniques et financiers et des participants. Le manifeste vidéo Coastal Futures est projeté en boucle.":"Official delegations, technical and financial partners and participants take their seats. The Coastal Futures video manifesto plays on a loop.",
+"Ouverture officielle":"Official opening","Allocution de bienvenue du directeur général de l'IAG, Dr Abdoulie Janneh, puis interventions des ministres de tutelle et des représentants de la CEDEAO et de la Commission de l'Union Africaine, suivies de la photo officielle.":"Welcome address by the Director General of AGI, Dr Abdoulie Janneh, followed by remarks from the supervising ministers and representatives of ECOWAS and the African Union Commission, then the official photo.",
+"Tribune climat jeunesse : les voix du littoral":"Youth climate tribune: voices of the coast","Témoignages croisés et présentations flash de solutions portées par les jeunes leaders des communautés côtières, dont le Climate Linguère Club, ponctués d'un intermède culturel sur la résilience climatique en Afrique de l'Ouest.":"Shared testimonies and flash presentations of solutions led by young leaders from coastal communities, including the Climate Linguère Club, with a cultural interlude on climate resilience in West Africa.",
+"Pause-café":"Coffee break","Pause et échanges entre les délégations, les partenaires et les participants.":"A break and exchanges between delegations, partners and participants.",
+"Panel de haut niveau : axe économique":"High-level panel: economic track","L'entrepreneuriat vert comme levier de résilience et réponse au chômage structurel : comment transformer la vulnérabilité en opportunités de marché ? Avec la Banque africaine de développement, des décideurs publics, des chefs d'entreprise et de jeunes entrepreneurs. Focus : incubation, emplois verts locaux et alternatives à l'exode climatique.":"Green entrepreneurship as a lever of resilience and a response to structural unemployment: how can vulnerability become market opportunity? With the African Development Bank, public decision-makers, business leaders and young entrepreneurs. Focus: incubation, local green jobs and alternatives to climate-driven migration.",
+"Panel de haut niveau : axe institutionnel et financier":"High-level panel: institutional and financial track","Des côtes fragilisées aux écosystèmes durables : quels cadres financiers et institutionnels pour ancrer les investissements verts des jeunes et intégrer Coastal Futures dans les politiques publiques, CDN et PNA ? Avec le Centre de suivi écologique, des diplomates, des fonds climatiques et des experts en gouvernance régionale.":"From fragile coasts to lasting ecosystems: which financial and institutional frameworks can anchor young people's green investments and embed Coastal Futures in public policy, NDCs and NAPs? With the Ecological Monitoring Centre, diplomats, climate funds and regional governance experts.",
+"Session ouverte : questions et échanges":"Open session: questions and exchanges","Débat interactif entre l'assemblée, les panélistes et la direction de l'IAG, pour enrichir la mise en œuvre de la feuille de route 2026-2027.":"An interactive debate between the audience, the panellists and AGI's leadership, to enrich the roll-out of the 2026-2027 roadmap.",
+"Clôture officielle":"Official closing","Mot de clôture du directeur général de l'IAG : synthèse des engagements et prochaines étapes du programme, suivi du lancement de l'Appel de Dakar pour la jeunesse et le climat.":"Closing words from the Director General of AGI: a summary of the commitments and next steps, followed by the launch of the Dakar Call for Youth and Climate.",
+"Déjeuner offert":"Lunch offered","Déjeuner offert à l'ensemble des participants et des délégations.":"Lunch offered to all participants and delegations.",
+"L'Appel de Dakar pour la jeunesse et le climat":"The Dakar Call for Youth and Climate","En clôture, la direction de l'IAG adresse un plaidoyer solennel aux partenaires techniques et financiers : rejoindre la coalition Coastal Futures et combler le déficit de financement de l'économie verte en Afrique de l'Ouest.":"At the close, AGI's leadership makes a solemn appeal to technical and financial partners: join the Coastal Futures coalition and bridge the green-economy financing gap in West Africa.","Les jeunes d'Afrique de l'Ouest ne sont pas les victimes du changement climatique : ils en sont les bâtisseurs de solutions. Coastal Futures leur en donne les moyens.":"Young West Africans are not the victims of climate change: they are the builders of its solutions. Coastal Futures gives them the means.",
+"Directeur général, IAG":"Director General, AGI",
+"Intervenants":"Speakers","Coordination du programme, IAG":"Programme coordination, AGI","Mentor, finance verte, Accra":"Mentor, green finance, Accra","Fondatrice, Dakar Solar Solutions":"Founder, Dakar Solar Solutions","Partenariats et bailleurs":"Partnerships and donors",
+"Participer à l'événement":"Attend the event","Places limitées. L'inscription est gratuite et obligatoire pour accéder à la cérémonie.":"Limited seats. Registration is free and required to attend the ceremony.","S'inscrire maintenant":"Register now",
+"Date":"Date","mercredi 10 juin 2026":"Wednesday 10 June 2026","Horaire":"Time","08h30 à 13h00 GMT":"08:30 to 13:00 GMT","Lieu":"Venue","Hôtel Terrou-Bi, Dakar":"Terrou-Bi Hotel, Dakar","Accès":"Access","Gratuit, sur inscription":"Free, with registration",
+"Hôtel Terrou-Bi, boulevard Martin Luther King, Dakar, Sénégal":"Terrou-Bi Hotel, Boulevard Martin Luther King, Dakar, Senegal","Partager":"Share",
+"Événements liés":"Related events","Webinaire : comprendre la labellisation":"Webinar: understanding certification","En ligne":"Online","Atelier mentors et entrepreneurs":"Mentors and entrepreneurs workshop","Accra, Ghana":"Accra, Ghana","Journée terrain : restauration des mangroves":"Field day: mangrove restoration","Monrovia, Liberia":"Monrovia, Liberia",
+"À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Contact":"Contact","Programme":"Programme"
+};
+var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}
+function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");
+document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});
+setLang(l);})();</script>
+<style id="cf-auth-css">.nav-profile{display:inline-flex;align-items:center;gap:9px;padding:5px 15px 5px 6px;border-radius:100px;border:1px solid var(--hair,#DCE9E6);background:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--ink,#0C2420);cursor:pointer;transition:border-color .16s ease;text-decoration:none;}.nav-profile:hover{border-color:var(--teal,#0A6B5E);}.nav-profile .pa{width:30px;height:30px;border-radius:50%;background:var(--teal-deep,#063D34);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;}</style><script id="cf-auth-js">(function(){if(localStorage.getItem("cf-auth")==="1"){var b=document.querySelector("a.nav-cta");if(b){var nm=localStorage.getItem("cf-name")||"Mon espace";var ini=nm.split(" ").map(function(x){return x[0]||"";}).join("").slice(0,2).toUpperCase();var a=document.createElement("a");a.href="tableau-de-bord.html";a.className="nav-profile";a.innerHTML='<span class="pa">'+ini+'</span>'+nm;b.parentNode.replaceChild(a,b);}}})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+<script id="cf-news-js">(function(){
+var T={fr:{h:"Restez informé du programme",p:"Recevez les appels à candidatures, les événements et les actualités de Coastal Futures, une fois par mois.",b:"S'inscrire",ph:"Votre adresse e-mail",err:"Veuillez saisir une adresse e-mail valide.",ok:"Merci. Un e-mail de confirmation vient de vous être envoyé : ouvrez le lien pour confirmer votre inscription.",okp:"Merci, votre inscription est enregistrée.",confirm:"Confirmer mon inscription",already:"Cette adresse est déjà inscrite à la newsletter.",note:"Une fois par mois. Désinscription en un clic."},en:{h:"Stay informed about the programme",p:"Get calls for applications, events and news from Coastal Futures, once a month.",b:"Subscribe",ph:"Your email address",err:"Please enter a valid email address.",ok:"Thank you. A confirmation email has just been sent : open the link to confirm your subscription.",okp:"Thank you, your subscription is recorded.",confirm:"Confirm my subscription",already:"This address is already subscribed to the newsletter.",note:"Once a month. Unsubscribe in one click."}};
+var H=document.getElementById("cfnH"),P=document.getElementById("cfnP"),B=document.getElementById("cfnBtn"),E=document.getElementById("cfnEmail"),ER=document.getElementById("cfnErr"),OK=document.getElementById("cfnOk"),NOTE=document.getElementById("cfnNote");
+if(!H)return;
+function L(){return document.documentElement.lang==="en"?"en":"fr";}
+function render(){var t=T[L()];H.textContent=t.h;P.textContent=t.p;B.innerHTML=t.b+' <i class="ti ti-arrow-right"></i>';E.placeholder=t.ph;ER.textContent=t.err;if(NOTE)NOTE.textContent=t.note;}
+render();
+try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}
+document.getElementById("cfnForm").addEventListener("submit",function(e){
+  e.preventDefault();var v=E.value.trim().toLowerCase();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ER.classList.add("show");OK.classList.remove("show");return;}
+  ER.classList.remove("show");
+  var t=T[L()],token=null,msg=t.okp,stored=false;
+  try{
+    if(window.CFCol){
+      var subs=CFCol.all("subscribers");
+      var ex=subs.filter(function(s){return s.email===v;})[0];
+      if(ex&&ex.status!=="unsubscribed"){ token=ex.token; msg=t.already; stored=true; }
+      else{
+        token="ntk-"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+        var rec={id:(ex?ex.id:("sub-"+CFCol.slug(v)+"-"+Date.now().toString(36))),email:v,lang:L(),status:"pending",consent:true,token:token,createdAt:new Date().toISOString().slice(0,10)};
+        CFCol.upsert("subscribers",rec); stored=true; msg=t.ok;
+      }
+    }
+  }catch(err){}
+  var link=(stored&&token)?(' <a href="newsletter.html?confirm='+encodeURIComponent(token)+'" style="color:var(--teal);text-decoration:underline;font-weight:600;">'+t.confirm+'</a>'):'';
+  OK.innerHTML='<i class="ti ti-circle-check"></i>'+msg+link;
+  OK.classList.add("show");
+  E.value="";
+});
+})();</script>
+<style id="cf-mobnav">.cf-burger{display:none;width:42px;height:42px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:12px;color:var(--ink,#0C2420);cursor:pointer;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-burger:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}.cf-mdrawer{position:fixed;inset:0;z-index:120;display:none;}.cf-mdrawer.open{display:block;}.cf-mdrawer .scrim{position:absolute;inset:0;background:rgba(8,28,24,.5);opacity:0;transition:opacity .28s cubic-bezier(.4,0,.2,1);}.cf-mdrawer.show .scrim{opacity:1;}.cf-mdrawer .panel{position:absolute;top:0;right:0;height:100%;width:min(86%,360px);background:#0C2420;overflow:hidden;transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;}.cf-mdrawer.show .panel{transform:translateX(0);}.cf-mdrawer .pm{position:absolute;inset:0;opacity:.5;background:radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.45) 0%,transparent 52%),radial-gradient(80% 70% at 92% 8%,rgba(201,163,94,.22) 0%,transparent 55%),radial-gradient(70% 90% at 60% 100%,rgba(10,107,94,.5) 0%,transparent 60%);}.cf-mdrawer .ph{position:relative;display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.1);}.cf-mdrawer .ph img{height:26px;width:auto;}.cf-mdrawer .pc{width:40px;height:40px;border-radius:11px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;}.cf-mdrawer .pl{position:relative;flex:1;overflow-y:auto;padding:14px 12px;}.cf-mdrawer .pl a{display:flex;align-items:center;min-height:52px;padding:8px 16px;border-radius:12px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:19px;font-weight:500;color:rgba(255,255,255,.86);text-decoration:none;}.cf-mdrawer .pl a:hover,.cf-mdrawer .pl a.on{background:rgba(62,203,176,.16);color:var(--teal-bright,#3ECBB0);}.cf-mdrawer .pf{position:relative;padding:16px 20px 24px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px;}.cf-mdrawer .pf .ml{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:8px 14px;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}.cf-mdrawer .pf .ml img{width:22px;height:15px;border-radius:3px;object-fit:cover;}.cf-mdrawer .pf .mc{flex:1;text-align:center;background:var(--teal,#0A6B5E);color:#fff;border-radius:100px;padding:11px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;}body.cf-noscroll{overflow:hidden;}@media(max-width:1024px){.cf-nav .nav-links{display:none !important;}.cf-nav .nav-r .nav-cta,.cf-nav .nav-r .nav-profile{display:none !important;}.cf-burger{display:inline-flex;}}</style><script id="cf-mobnav-js">(function(){var nav=document.querySelector(".cf-nav");if(!nav)return;var links=nav.querySelector(".nav-links");if(!links)return;var burger=nav.querySelector(".cf-burger");if(!burger){return;}var logo=(nav.querySelector(".brand img")||{}).src||"assets/logos/logo-horizontal-dark.svg";var anchors=[].slice.call(links.querySelectorAll("a")).filter(function(a){return !a.classList.contains("nav-cta");});var cta=links.querySelector(".nav-cta");var d=document.createElement("div");d.className="cf-mdrawer";d.id="cfMdrawer";var linksHtml=anchors.map(function(a){return '<a href="'+a.getAttribute("href")+'"'+(a.classList.contains("on")?' class="on"':'')+'>'+a.textContent.trim()+'</a>';}).join("");var ctaHtml=cta?'<a class="mc" href="'+cta.getAttribute("href")+'">'+cta.textContent.trim()+'</a>':"";var flag=document.querySelector(".cf-flag");var flagSrc=flag?flag.getAttribute("src"):"assets/flags/fr.png";var lc=(document.querySelector(".cf-lc")||{}).textContent||"FR";d.innerHTML='<div class="scrim" data-close></div><div class="panel"><div class="pm"></div><div class="ph"><img loading="lazy" decoding="async" src="'+logo+'" alt=""><button class="pc" data-close aria-label="Fermer"><i class="ti ti-x"></i></button></div><div class="pl">'+linksHtml+'</div><div class="pf"><button class="ml" data-mlang><img loading="lazy" decoding="async" src="'+flagSrc+'" alt=""><b>'+lc+'</b></button>'+ctaHtml+'</div></div>';document.body.appendChild(d);function open(){d.classList.add("open");document.body.classList.add("cf-noscroll");requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add("show");});});}function close(){d.classList.remove("show");document.body.classList.remove("cf-noscroll");setTimeout(function(){d.classList.remove("open");},300);}burger.addEventListener("click",open);[].slice.call(d.querySelectorAll("[data-close]")).forEach(function(x){x.addEventListener("click",close);});var ml=d.querySelector("[data-mlang]");if(ml)ml.addEventListener("click",function(){var t=document.querySelector("[data-cf-lang]");if(t)t.click();var f=document.querySelector(".cf-flag");ml.querySelector("img").src=f?f.getAttribute("src"):ml.querySelector("img").src;ml.querySelector("b").textContent=(document.querySelector(".cf-lc")||{}).textContent||ml.querySelector("b").textContent;});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&d.classList.contains("open"))close();});})();</script>
+<script id="cf-utilbar-js">(function(){var T={fr:{aff:"Un programme de l'<b>Institut Africain de la Gouvernance</b>",partners:"Partenaires",press:"Espace presse",sitemap:"Plan du site",contact:"Contact"},en:{aff:"A programme of the <b>Africa Governance Institute</b>",partners:"Partners",press:"Press room",sitemap:"Sitemap",contact:"Contact"}};function r(){var l=document.documentElement.lang==="en"?"en":"fr";document.querySelectorAll("[data-uk]").forEach(function(e){var k=e.getAttribute("data-uk");if(T[l][k]!=null)e.innerHTML=T[l][k];});}r();try{new MutationObserver(r).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}})();</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-forms.js"></script>
+<script src="assets/cf-nav.js"></script>
+<script src="assets/cf-media.js"></script>
+<script src="assets/cf-reveal-guard.js"></script>
+<script src="assets/cf-share.js"></script>
+</body>
+</html>

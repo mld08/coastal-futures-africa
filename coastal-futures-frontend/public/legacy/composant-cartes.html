@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Cards</title>
+<meta name="description" content="Cards · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="composant-cartes.html">
+<meta property="og:title" content="Coastal Futures | Cards">
+<meta property="og:description" content="Cards · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Cards">
+<meta name="twitter:description" content="Cards · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="composant-cartes.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{--teal-deep:#063D34;--teal:#0A6B5E;--teal-soft:#12B396;--teal-bright:#3ECBB0;--teal-bg:#EAF6F3;--teal-bg2:#F4FBF9;--ink:#0C2420;--ink-2:#244440;--ink-mute:#5C7B76;--ink-faint:#5C7B76;--hair-strong:#B4CDC8;--hair:#DCE9E6;--canvas-soft:#F8FBFA;--sand-deep:#7A4F1A;--sand:#B8823A;--cream:#F5EEDF;--success:#066B52;--warning:#8A5512;--error:#8F2A1A;--font-display:'Plus Jakarta Sans',system-ui,sans-serif;--font-sans:'DM Sans',system-ui,sans-serif;--r-sm:8px;--r-md:10px;--r-lg:16px;--r-xl:24px;--r-pill:100px;--shadow-1:0 1px 3px rgba(6,61,52,.06);--shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);--ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;--t-base:280ms;}
+*{box-sizing:border-box;}
+body{margin:0;background:#EEF3F1;font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}img{display:block;max-width:100%;}
+.tnum{font-feature-settings:"tnum";}
+.page{max-width:1200px;margin:0 auto;padding:48px 28px 80px;}
+.page h1{font-family:var(--font-display);font-weight:300;font-size:38px;letter-spacing:-1.8px;color:var(--ink);margin:0;}
+.page .sub{font-size:16px;color:var(--ink-mute);margin:10px 0 8px;}
+.hint{font-family:var(--font-sans);font-size:13px;color:var(--ink-faint);margin-bottom:30px;display:flex;align-items:center;gap:7px;}
+.spec-label{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--ink-2);margin:34px 0 14px;display:flex;align-items:center;gap:9px;}
+.spec-label .tag{font-family:var(--font-sans);font-size:12px;font-weight:400;color:var(--ink-faint);background:#fff;border:1px solid var(--hair);border-radius:var(--r-pill);padding:2px 10px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-family:var(--font-display);font-size:13px;font-weight:500;border-radius:var(--r-pill);padding:8px 15px;border:1px solid transparent;transition:all var(--t-fast) var(--ease);cursor:pointer;}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:11.5px;font-weight:500;padding:3px 10px;border-radius:var(--r-pill);white-space:nowrap;}
+.bdg-live{background:#E3F9F1;color:#066B52;}.bdg-pend{background:#FBF0DC;color:#8A5512;}.bdg-teal{background:var(--teal-bg);color:var(--teal-deep);}.bdg-out{background:transparent;color:var(--ink-mute);border:1px solid var(--hair-strong);}.bdg .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;transition:all var(--t-fast) var(--ease);}
+.card.hoverable:hover,.card.forced{box-shadow:var(--shadow-2);transform:translateY(-4px);border-color:var(--hair-strong);}
+.c-img{height:150px;overflow:hidden;position:relative;}
+.c-img img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-base) var(--ease);}
+.card.hoverable:hover .c-img img,.card.forced .c-img img{transform:scale(1.05);}
+.c-img .chip{position:absolute;left:12px;top:12px;}
+.c-pad{padding:18px;}
+.meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
+.t{font-family:var(--font-display);font-weight:600;font-size:16px;letter-spacing:-.3px;color:var(--ink);margin:0;line-height:1.3;}
+.d{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);margin-top:7px;line-height:1.5;}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hair);}
+.foot .k{font-family:var(--font-sans);font-size:13px;color:var(--ink-2);}.foot .k b{font-family:var(--font-display);font-weight:600;color:var(--ink);}
+/* startup/mentor avatar */
+.row{display:flex;align-items:center;gap:13px;}
+.av{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:16px;color:#fff;flex-shrink:0;letter-spacing:-.5px;}
+.av.circ{border-radius:50%;}
+.row .nm{font-family:var(--font-display);font-weight:600;font-size:15.5px;color:var(--ink);}
+.row .sb{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);margin-top:2px;}
+.exp{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0;}
+.dispo{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:12.5px;font-weight:500;color:var(--success);}.dispo .dd{width:8px;height:8px;border-radius:50%;background:currentColor;}
+/* appel card */
+.cream{background:var(--teal-bg);border:0;}
+@media(max-width:920px){.cards{grid-template-columns:1fr 1fr;}}
+@media(max-width:620px){.cards{grid-template-columns:1fr;}}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+<main class="page" data-screen-label="Cards réutilisables">
+  <span id="cf-main" tabindex="-1"></span><h1>Cards</h1>
+  <p class="sub">Bibliothèque des cartes du système. Chaque type avec son état par défaut et son survol.</p>
+  <div class="hint"><i class="ti ti-pointer"></i>Survolez les cartes de gauche ; la colonne de droite montre l'état survolé figé.</div>
+
+  <!-- Projet -->
+  <div class="spec-label">Card projet <span class="tag">défaut · survol</span></div>
+  <div class="cards">
+    <article class="card hoverable">
+      <div class="c-img"><img loading="lazy" decoding="async" src="assets/photos/Mangrove.jpg" alt="" width="1000" height="750"><span class="chip bdg" style="background:rgba(255,255,255,.92)"><i class="ti ti-trees" style="font-size:12px;color:var(--teal)"></i>Mangroves</span></div>
+      <div class="c-pad"><div class="meta"><span class="bdg bdg-pend"><span class="dot"></span>En incubation</span></div><h3 class="t">Mangrove Restore Initiative</h3><div class="d">Monrovia, Liberia</div><div class="foot"><span class="k"><b>18 ha</b> restaurés</span><span class="btn btn-light">Voir <i class="ti ti-arrow-right"></i></span></div></div>
+    </article>
+    <article class="card forced">
+      <div class="c-img"><img loading="lazy" decoding="async" src="assets/photos/Solar.jpg" alt="" width="500" height="333"><span class="chip bdg" style="background:rgba(255,255,255,.92)"><i class="ti ti-bolt" style="font-size:12px;color:var(--teal)"></i>Énergie</span></div>
+      <div class="c-pad"><div class="meta"><span class="bdg bdg-live"><span class="dot"></span>Labellisé</span></div><h3 class="t">Mini-réseaux solaires</h3><div class="d">Petite Côte, Sénégal</div><div class="foot"><span class="k"><b>340</b> foyers</span><span class="btn btn-light">Voir <i class="ti ti-arrow-right"></i></span></div></div>
+    </article>
+    <article class="card hoverable">
+      <div class="c-img"><img loading="lazy" decoding="async" src="assets/photos/Recycling.jpg" alt="" width="1000" height="667"><span class="chip bdg" style="background:rgba(255,255,255,.92)"><i class="ti ti-recycle" style="font-size:12px;color:var(--teal)"></i>Recyclage</span></div>
+      <div class="c-pad"><div class="meta"><span class="bdg bdg-live"><span class="dot"></span>Labellisé</span></div><h3 class="t">ReCycle Accra</h3><div class="d">Accra, Ghana</div><div class="foot"><span class="k"><b>42 t</b> valorisées</span><span class="btn btn-light">Voir <i class="ti ti-arrow-right"></i></span></div></div>
+    </article>
+  </div>
+
+  <!-- Startup + Mentor -->
+  <div class="spec-label">Card startup entrepreneur · Card mentor</div>
+  <div class="cards">
+    <article class="card hoverable c-pad"><div class="row"><div class="av" style="background:#0A6B5E">DS</div><div><div class="nm">Dakar Solar Solutions</div><div class="sb">Aminata Diallo · Sénégal</div></div></div><div class="exp"><span class="bdg bdg-teal">Énergie renouvelable</span><span class="bdg bdg-live"><span class="dot"></span>Labellisé</span></div><div class="foot"><span class="k"><b>340</b> foyers raccordés</span><span class="btn btn-light">Profil</span></div></article>
+    <article class="card forced c-pad"><div class="row"><div class="av circ" style="background:#063D34">KA</div><div><div class="nm">Dr Kwame Asante</div><div class="sb">Green Economy Institute, Accra</div></div></div><div class="exp"><span class="bdg bdg-teal">Finance verte</span><span class="bdg bdg-teal">Impact investing</span></div><div class="foot"><span class="dispo"><span class="dd"></span>Disponible</span><span class="btn btn-light">Voir le profil</span></div></article>
+    <article class="card hoverable c-pad"><div class="row"><div class="av circ" style="background:#12B396">AB</div><div><div class="nm">Aïsha Bangura</div><div class="sb">Climate Adaptation Lab, Freetown</div></div></div><div class="exp"><span class="bdg bdg-teal">Agriculture</span><span class="bdg bdg-teal">Résilience</span></div><div class="foot"><span class="dispo"><span class="dd"></span>Disponible</span><span class="btn btn-light">Voir le profil</span></div></article>
+  </div>
+
+  <!-- Article + Hub + Appel -->
+  <div class="spec-label">Card article · Card hub · Card appel à candidatures</div>
+  <div class="cards">
+    <article class="card hoverable">
+      <div class="c-img"><img loading="lazy" decoding="async" src="assets/photos/Fishing.jpg" alt="" width="500" height="334"></div>
+      <div class="c-pad"><div class="meta"><span class="bdg bdg-teal">Ghana</span><span class="bdg bdg-out">Économie circulaire</span></div><h3 class="t">Accra : les coopératives de l'économie circulaire s'organisent</h3><div class="d tnum">21 mai 2026</div></div>
+    </article>
+    <article class="card hoverable">
+      <div class="c-img"><img loading="lazy" decoding="async" src="assets/photos/Agriculture.jpg" alt="" width="1000" height="563"><span class="chip bdg" style="background:rgba(255,255,255,.92)"><i class="ti ti-building-community" style="font-size:12px;color:var(--teal)"></i>Hub jeunesse</span></div>
+      <div class="c-pad"><h3 class="t">Freetown Climate Hub</h3><div class="d">Freetown, Sierra Leone</div><div class="foot"><span class="k"><b>124</b> membres</span><span class="btn btn-light">Découvrir</span></div></div>
+    </article>
+    <article class="card cream c-pad">
+      <div class="meta"><span class="bdg" style="background:#fff;color:var(--teal-deep)">Entreprise verte</span><span class="bdg bdg-pend"><span class="dot"></span>30 juin</span></div>
+      <h3 class="t">Cohorte 2 : entreprises vertes</h3><div class="d">Incubation de 12 semaines, accès au réseau de mentors et soutien à la labellisation.</div>
+      <div style="margin-top:16px;"><span class="btn btn-pri" style="width:100%">Postuler <i class="ti ti-arrow-right"></i></span></div>
+    </article>
+  </div>
+</main>
+<script id="cf-i18n">(function(){var D={"Cards":"Cards","Bibliothèque des cartes du système. Chaque type avec son état par défaut et son survol.":"Library of the system's cards. Each type with its default and hover state.","Survolez les cartes de gauche ; la colonne de droite montre l'état survolé figé.":"Hover the cards on the left; the right column shows the hover state frozen.","Card projet":"Project card","défaut · survol":"default · hover","Mangroves":"Mangroves","Monrovia, Liberia":"Monrovia, Liberia","18 ha":"18 ha","restaurés":"restored","Voir":"View","Énergie":"Energy","Mini-réseaux solaires":"Solar mini-grids","Petite Côte, Sénégal":"Petite Côte, Senegal","foyers":"households","Recyclage":"Recycling","ReCycle Accra":"ReCycle Accra","Accra, Ghana":"Accra, Ghana","42 t":"42 t","valorisées":"recovered","Card startup entrepreneur · Card mentor":"Entrepreneur startup card · Mentor card","Dakar Solar Solutions":"Dakar Solar Solutions","Aminata Diallo · Sénégal":"Aminata Diallo · Senegal","foyers raccordés":"households connected","Profil":"Profile","Green Economy Institute, Accra":"Green Economy Institute, Accra","Climate Adaptation Lab, Freetown":"Climate Adaptation Lab, Freetown","Agriculture":"Agriculture","Résilience":"Resilience","Card article · Card hub · Card appel à candidatures":"Article card · Hub card · Call for applications card","Ghana":"Ghana","Accra Green Hub valorise 42 tonnes de déchets":"Accra Green Hub recovers 42 tonnes of waste","21 mai 2026":"21 May 2026","Freetown Climate Hub":"Freetown Climate Hub","Freetown, Sierra Leone":"Freetown, Sierra Leone","membres":"members","30 juin":"30 June","Cohorte 2 : entreprises vertes":"Cohort 2: green enterprises","Incubation de 12 semaines, accès au réseau de mentors et soutien à la labellisation.":"Twelve-week incubation, access to the mentor network and support towards certification.","Postuler":"Apply","Découvrir":"Discover","Labellisé":"Certified","En incubation":"In incubation","Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Programme":"Programme","Contact":"Contact","À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Événements":"Events","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Accueil hub":"Hub home","Entrepreneurs":"Entrepreneurs","Mentors":"Mentors","Appels":"Calls","Carte":"Map","Postuler":"Apply","Postuler maintenant":"Apply now","Voir le profil":"View profile","Voir le détail":"View details","Voir la fiche":"View details","S'inscrire":"Register","Télécharger":"Download","Télécharger le PDF":"Download PDF","Tout voir":"See all","Suivant":"Next","Précédent":"Previous","Enregistrer":"Save","Annuler":"Cancel","Envoyer":"Send","Envoyer le message":"Send message","Contacter":"Contact","Découvrir":"Discover","Réinitialiser":"Reset","Continuer":"Continue","Confirmer":"Confirm","Approuver":"Approve","Décliner":"Decline","Rejeter":"Reject","Voir sur la carte":"View on map","Aperçu public":"Public preview","Nouvelle candidature":"New application","Mettre à jour":"Update","Labellisé":"Certified","En incubation":"In incubation","En revue":"Under review","Soumis":"Submitted","Brouillon":"Draft","Rejeté":"Rejected","Disponible":"Available","Indisponible":"Unavailable","Zone pilote":"Pilot zone","Hub jeunesse":"Youth hub","Présentiel":"In person","Virtuel":"Online","Hybride":"Hybrid","À la une":"Featured","À venir":"Upcoming","Passés":"Past","Clôturé":"Closed","Actif":"Active","Inactif":"Inactive","Toutes":"All","Tous":"All","Tous les pays":"All countries","Tous les secteurs":"All sectors","Tous les statuts":"All statuses","Toutes les expertises":"All areas of expertise","Tous les types":"All types","Tous les thèmes":"All themes","Toutes les années":"All years","Toutes les universités":"All universities","Disponibles uniquement":"Available only","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Recyclage et déchets":"Recycling and waste","Agriculture résiliente":"Resilient agriculture","Entreprise verte":"Green enterprise","Économie circulaire":"Circular economy","Finance verte":"Green finance","Impact investing":"Impact investing","Mentorat":"Mentoring","Entrepreneurs verts":"Green entrepreneurs","Projets actifs":"Active projects","Mangroves restaurées":"Mangroves restored","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Mentors et experts":"Mentors and experts","Partenaires engagés":"Engaged partners","Foyers raccordés":"Households connected","Emplois verts créés":"Green jobs created","Emplois créés":"Jobs created","Tableau de bord":"Dashboard","Tableau de bord impact":"Impact dashboard","Données en temps réel":"Real-time data","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Demandes":"Requests","Mes mentorés":"My mentees","Utilisateurs":"Users","Candidatures":"Applications","Projets et indicateurs":"Projects and indicators","Alertes":"Alerts","Paramètres":"Settings","Statistiques":"Statistics","Se déconnecter":"Sign out","Espace bailleurs PTF":"Donor area","Vue par pays":"By country","Vue consolidée":"Consolidated view","Exporter le rapport PDF":"Export PDF report","Mentor":"Mentor","Entrepreneur":"Entrepreneur","Partenaire":"Partner","Administratrice":"Administrator","Coordination du programme":"Programme coordination","candidatures ouvertes":"open calls","cinq pays, cinq hubs":"five countries, five hubs","une plateforme, quatre espaces":"one platform, four areas","vision et mission":"vision and mission","gouvernance":"governance","alignement stratégique":"strategic alignment","à propos du programme":"about the programme","calendrier sur douze mois, avril 2026 à mars 2027":"twelve-month calendar, april 2026 to march 2027","Page introuvable":"Page not found","Erreur serveur":"Server error","Retour à l'accueil":"Back to home","Réessayer":"Retry","Contacter le support":"Contact support","Notifications":"Notifications","Tout marquer lu":"Mark all as read","Prochains événements":"Upcoming events","Prochaines sessions":"Upcoming sessions","Mes mentorés actifs":"My active mentees","Demandes de contact":"Contact requests","Profil complété":"Profile completed","Activité récente":"Recent activity","Startups labellisées":"Certified startups","Mentors disponibles":"Available mentors"};var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});setLang(l);})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+</body>
+</html>

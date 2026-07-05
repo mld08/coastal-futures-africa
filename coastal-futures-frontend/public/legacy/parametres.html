@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Paramètres</title>
+<meta name="description" content="Paramètres · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="parametres.html">
+<meta property="og:title" content="Coastal Futures | Paramètres">
+<meta property="og:description" content="Paramètres · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Paramètres">
+<meta name="twitter:description" content="Paramètres · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="parametres.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396; --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --error:#8F2A1A; --error-bg:#FBE6E2;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif; --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06); --shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);
+  --shadow-3:0 30px 60px -20px rgba(4,39,31,.4);
+  --ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px;}
+
+.nav-outer{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:40;}
+.cf-nav{max-width:1000px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}.brand img{height:34px;width:auto;}
+.nav-mini{display:flex;align-items:center;gap:16px;}
+.nav-mini a{font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-mute);}
+
+.page{padding:34px 0 70px;}
+.page>h1{font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-1.6px;color:var(--ink);margin:0 0 28px;}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start;}
+.snav{position:sticky;top:90px;display:flex;flex-direction:column;gap:2px;}
+.snav a{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-2);padding:10px 14px;border-radius:var(--r-md);transition:all var(--t-fast) var(--ease);}
+.snav a:hover{background:#fff;}
+.snav a.on{background:var(--teal-bg);color:var(--teal-deep);}
+.snav a i{font-size:18px;color:var(--ink-faint);}
+.snav a.on i{color:var(--teal);}
+
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);padding:26px;margin-bottom:22px;}
+.card.danger{border-color:#F0D6CF;}
+.card h2{font-family:var(--font-display);font-weight:600;font-size:17px;color:var(--ink);margin:0 0 4px;}
+.card .cd{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-mute);margin:0 0 20px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field{margin-bottom:16px;}
+.field:last-child{margin-bottom:0;}
+.field label{display:block;font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-2);margin-bottom:7px;}
+.field input,.field select{width:100%;font-family:var(--font-sans);font-size:14.5px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:11px 13px;outline:none;transition:all var(--t-fast) var(--ease);}
+.field input:focus,.field select:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.avatar-row{display:flex;align-items:center;gap:16px;margin-bottom:22px;}
+.avatar-row .av{width:64px;height:64px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:24px;}
+
+/* segmented */
+.seg{display:inline-flex;background:var(--canvas-soft);border:1px solid var(--hair-strong);border-radius:var(--r-pill);padding:4px;gap:4px;}
+.seg button{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13.5px;font-weight:500;color:var(--ink-mute);background:transparent;border:0;border-radius:var(--r-pill);padding:8px 16px;cursor:pointer;}
+.seg button.on{background:#fff;color:var(--teal-deep);box-shadow:var(--shadow-1);}
+.seg button img{width:20px;height:14px;border-radius:3px;object-fit:cover;}
+
+/* toggles */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--hair);}
+.toggle-row:last-child{border-bottom:0;}
+.toggle-row .tt{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);}
+.toggle-row .ts{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);margin-top:2px;}
+.switch{position:relative;width:42px;height:24px;border-radius:var(--r-pill);background:var(--hair-strong);cursor:pointer;transition:background var(--t-fast) var(--ease);flex-shrink:0;}
+.switch::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform var(--t-fast) var(--ease);box-shadow:0 1px 3px rgba(0,0,0,.2);}
+.switch.on{background:var(--teal);}
+.switch.on::after{transform:translateX(18px);}
+
+.rgpd-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--hair);}
+.rgpd-row:last-child{border-bottom:0;}
+.rgpd-row .tt{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);}
+.rgpd-row .ts{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);margin-top:2px;max-width:420px;line-height:1.5;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:14px;font-weight:500;border-radius:var(--r-pill);padding:10px 18px;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:all var(--t-fast) var(--ease);}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn-danger{background:#fff;color:var(--error);border-color:#E6B9B0;}.btn-danger:hover{background:var(--error-bg);}
+.card-foot{display:flex;justify-content:flex-end;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--hair);}
+
+/* modal */
+.overlay{position:fixed;inset:0;z-index:60;background:rgba(12,36,32,.42);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:24px;}
+.overlay.show{display:flex;}
+.modal{background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow-3);max-width:440px;width:100%;padding:28px;}
+.modal .mi{width:52px;height:52px;border-radius:14px;background:var(--error-bg);color:var(--error);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:16px;}
+.modal h3{font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--ink);margin:0 0 8px;}
+.modal p{font-family:var(--font-sans);font-size:14px;color:var(--ink-mute);line-height:1.6;margin:0 0 18px;}
+.modal .mf{display:flex;justify-content:flex-end;gap:10px;}
+.toast{position:fixed;top:22px;right:22px;z-index:80;background:#fff;border:1px solid var(--hair);border-left:3px solid var(--success);border-radius:var(--r-md);box-shadow:var(--shadow-2);padding:14px 18px;font-family:var(--font-sans);font-size:14px;color:var(--ink);display:flex;align-items:center;gap:10px;transform:translateX(140%);transition:transform .28s var(--ease);}
+.toast.show{transform:translateX(0);}
+.toast i{color:var(--success);font-size:19px;}
+
+@media(max-width:820px){.layout{grid-template-columns:1fr;}.snav{position:static;flex-direction:row;flex-wrap:wrap;}.snav a{background:#fff;border:1px solid var(--hair);}}
+@media(max-width:560px){.nav-mini a:not(.cf-langtog){display:none;}.frow{grid-template-columns:1fr;}.rgpd-row{flex-direction:column;align-items:flex-start;}}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-resp-frow">@media(max-width:560px){.frow,.frow-civ3{grid-template-columns:1fr!important;}}</style>
+<style id="cf-nav-elevate">
+/* Public navbar — refined professional elevation (within the CF system) */
+.nav-outer{top:16px;}
+.nav-outer .cf-nav{padding:11px 14px 11px 24px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px);box-shadow:0 1px 2px rgba(6,61,52,.05),0 16px 36px -20px rgba(6,61,52,.24);transition:background .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease);}
+.nav-outer .cf-nav.scrolled{background:rgba(255,255,255,.93);border-color:var(--hair-strong);box-shadow:0 1px 2px rgba(6,61,52,.06),0 12px 28px -18px rgba(6,61,52,.3);}
+.nav-outer .cf-nav .brand img{height:30px;}
+.nav-outer .nav-links{gap:3px;}
+.nav-outer .nav-links a:not(.nav-cta){position:relative;padding:9px 15px;font-weight:500;letter-spacing:-.1px;color:var(--ink-2);border-radius:10px;transition:color .18s var(--ease),background .18s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;opacity:0;transition:transform .28s var(--ease),opacity .2s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta):hover{color:var(--ink);background:rgba(10,107,94,.06);}
+.nav-outer .nav-links a:not(.nav-cta).on{color:var(--teal-deep);}
+.nav-outer .nav-links a:not(.nav-cta).on::after{transform:scaleX(1);opacity:1;}
+.nav-outer .nav-links a.nav-cta{margin-left:12px;padding:9px 20px;border-radius:100px;box-shadow:0 1px 2px rgba(6,61,52,.12);transition:background .16s var(--ease),transform .18s var(--ease),box-shadow .22s var(--ease);}
+.nav-outer .nav-links a.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,107,94,.55);}
+.nav-outer .nav-links a.nav-cta:active{transform:translateY(0);}
+.cf-util-link{position:relative;}
+.cf-util-link::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:1.5px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;transition:transform .22s var(--ease);}
+.cf-util-link:hover::after{transform:scaleX(1);}
+@media(max-width:860px){.nav-outer .nav-links a.nav-cta{margin-left:0;}}
+</style>
+<script id="cf-nav-elevate-js">(function(){var n=document.querySelector('.nav-outer .cf-nav');if(!n)return;var f=function(){n.classList.toggle('scrolled',(window.pageYOffset||document.documentElement.scrollTop||0)>6);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="nav-outer">
+  <nav class="cf-nav">
+    <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network"></a>
+    <div class="nav-mini">
+      <a href="tableau-de-bord.html">Mon espace</a>
+      <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+    </div>
+  </nav>
+</div>
+
+<main class="wrap page" data-screen-label="Paramètres du compte">
+  <span id="cf-main" tabindex="-1"></span><h1>Paramètres du compte</h1>
+  <div class="layout">
+    <nav class="snav">
+      <a href="#profil" class="on"><i class="ti ti-user"></i>Profil</a>
+      <a href="#securite"><i class="ti ti-lock"></i>Sécurité</a>
+      <a href="#preferences"><i class="ti ti-adjustments"></i>Préférences</a>
+      <a href="#confidentialite"><i class="ti ti-shield-lock"></i>Confidentialité</a>
+    </nav>
+
+    <div>
+      <section class="card" id="profil">
+        <h2>Informations personnelles</h2>
+        <p class="cd">Ces informations apparaissent sur votre profil public.</p>
+        <div class="avatar-row"><div class="av">AD</div><div><button class="btn btn-light"><i class="ti ti-camera"></i>Changer la photo</button></div></div>
+        <div class="frow">
+          <div class="field"><label>Prénom</label><input value="Aminata"></div>
+          <div class="field"><label>Nom</label><input value="Diallo"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label>Adresse e-mail</label><input type="email" value="aminata.diallo@dakarsolar.sn"></div>
+          <div class="field"><label>Téléphone</label><input type="tel" value="+221 77 123 45 67"></div>
+        </div>
+        <div class="field"><label>Organisation</label><input value="Dakar Solar Solutions"></div>
+        <div class="card-foot"><button class="btn btn-light">Annuler</button><button class="btn btn-pri" data-save>Enregistrer</button></div>
+      </section>
+
+      <section class="card" id="securite">
+        <h2>Mot de passe</h2>
+        <p class="cd">Choisissez un mot de passe robuste, différent de vos autres comptes.</p>
+        <div class="field"><label>Mot de passe actuel</label><input type="password" value="********"></div>
+        <div class="frow">
+          <div class="field"><label>Nouveau mot de passe</label><input type="password" placeholder="••••••••"></div>
+          <div class="field"><label>Confirmer</label><input type="password" placeholder="••••••••"></div>
+        </div>
+        <div class="card-foot"><button class="btn btn-pri" data-save>Mettre à jour le mot de passe</button></div>
+      </section>
+
+      <section class="card" id="preferences">
+        <h2>Langue et notifications</h2>
+        <p class="cd">Choisissez la langue de l'interface et les alertes que vous souhaitez recevoir.</p>
+        <div style="margin-bottom:22px;">
+          <label style="display:block;font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-2);margin-bottom:10px;">Langue de l'interface</label>
+          <div class="seg" id="langSeg">
+            <button data-l="fr" class="on"><img width="1280" height="853" loading="lazy" decoding="async" src="assets/flags/fr.png" alt="">Français</button>
+            <button data-l="en"><img width="1000" height="600" loading="lazy" decoding="async" src="assets/flags/gb.svg" alt="">English</button>
+          </div>
+        </div>
+        <div class="toggle-row"><div><div class="tt">Nouvelles candidatures et statuts</div><div class="ts">Soyez notifié de l'avancement de vos dossiers.</div></div><div class="switch on" data-toggle></div></div>
+        <div class="toggle-row"><div><div class="tt">Messages et mentorat</div><div class="ts">Demandes de contact et nouveaux messages.</div></div><div class="switch on" data-toggle></div></div>
+        <div class="toggle-row"><div><div class="tt">Appels à candidatures</div><div class="ts">Nouveaux appels correspondant à votre profil.</div></div><div class="switch on" data-toggle></div></div>
+        <div class="toggle-row"><div><div class="tt">Lettre d'information mensuelle</div><div class="ts">L'essentiel du programme, une fois par mois.</div></div><div class="switch" data-toggle></div></div>
+      </section>
+
+      <section class="card danger" id="confidentialite">
+        <h2>Confidentialité et données</h2>
+        <p class="cd">Conformément au RGPD et aux législations nationales, vous gardez le contrôle de vos données.</p>
+        <div class="rgpd-row"><div><div class="tt">Exporter mes données</div><div class="ts">Recevez une copie de toutes vos données personnelles au format lisible.</div></div><button class="btn btn-light"><i class="ti ti-download"></i>Exporter</button></div>
+        <div class="rgpd-row"><div><div class="tt">Supprimer mon compte</div><div class="ts">Cette action est définitive. Votre profil, vos candidatures et vos données seront supprimés.</div></div><button class="btn btn-danger" id="delBtn"><i class="ti ti-trash"></i>Supprimer</button></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Boîte de dialogue">
+    <div class="mi"><i class="ti ti-alert-triangle"></i></div>
+    <h3>Supprimer votre compte ?</h3>
+    <p>Cette action est irréversible. Toutes vos données, candidatures et mises en relation seront définitivement supprimées.</p>
+    <div class="mf"><button class="btn btn-light" id="cancelDel">Annuler</button><button class="btn btn-danger" id="confirmDel">Supprimer définitivement</button></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"><i class="ti ti-circle-check"></i><span id="toastMsg">Modifications enregistrées</span></div>
+
+<script>
+(function(){
+  function toast(msg){var t=document.getElementById('toast');document.getElementById('toastMsg').textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2600);}
+  [].slice.call(document.querySelectorAll('[data-save]')).forEach(function(b){b.addEventListener('click',function(){toast(document.documentElement.lang==='en'?'Changes saved':'Modifications enregistrées');});});
+  [].slice.call(document.querySelectorAll('[data-toggle]')).forEach(function(s){s.addEventListener('click',function(){s.classList.toggle('on');});});
+  // snav active on scroll
+  var links=[].slice.call(document.querySelectorAll('.snav a'));
+  links.forEach(function(a){a.addEventListener('click',function(){links.forEach(function(x){x.classList.remove('on');});a.classList.add('on');});});
+  // delete modal
+  var ov=document.getElementById('overlay');
+  document.getElementById('delBtn').addEventListener('click',function(){ov.classList.add('show');});
+  document.getElementById('cancelDel').addEventListener('click',function(){ov.classList.remove('show');});
+  ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('show');});
+  document.getElementById('confirmDel').addEventListener('click',function(){ov.classList.remove('show');toast(document.documentElement.lang==='en'?'Account scheduled for deletion':'Compte programmé pour suppression');});
+  // language segmented syncs global lang
+  document.querySelectorAll('#langSeg button').forEach(function(b){b.addEventListener('click',function(){if(window.__cfSetLang)window.__cfSetLang(b.getAttribute('data-l'));});});
+})();
+</script>
+
+
+<script id="cf-i18n">(function(){var D={"Modifications enregistrées":"Changes saved",
+"Mon espace":"My space","Paramètres du compte":"Account settings","Profil":"Profile","Sécurité":"Security","Préférences":"Preferences","Confidentialité":"Privacy",
+"Informations personnelles":"Personal information","Ces informations apparaissent sur votre profil public.":"This information appears on your public profile.","Changer la photo":"Change photo","Prénom":"First name","Nom":"Last name","Adresse e-mail":"Email address","Téléphone":"Phone","Organisation":"Organisation","Annuler":"Cancel","Enregistrer":"Save",
+"Mot de passe":"Password","Choisissez un mot de passe robuste, différent de vos autres comptes.":"Choose a strong password, different from your other accounts.","Mot de passe actuel":"Current password","Nouveau mot de passe":"New password","Confirmer":"Confirm","Mettre à jour le mot de passe":"Update password",
+"Langue et notifications":"Language and notifications","Choisissez la langue de l'interface et les alertes que vous souhaitez recevoir.":"Choose the interface language and the alerts you want to receive.","Langue de l'interface":"Interface language",
+"Nouvelles candidatures et statuts":"New applications and statuses","Soyez notifié de l'avancement de vos dossiers.":"Be notified about the progress of your applications.","Messages et mentorat":"Messages and mentoring","Demandes de contact et nouveaux messages.":"Contact requests and new messages.","Appels à candidatures":"Calls for applications","Nouveaux appels correspondant à votre profil.":"New calls matching your profile.","Lettre d'information mensuelle":"Monthly newsletter","L'essentiel du programme, une fois par mois.":"The programme essentials, once a month.",
+"Confidentialité et données":"Privacy and data","Conformément au RGPD et aux législations nationales, vous gardez le contrôle de vos données.":"In accordance with GDPR and national laws, you keep control of your data.","Exporter mes données":"Export my data","Recevez une copie de toutes vos données personnelles au format lisible.":"Receive a copy of all your personal data in a readable format.","Exporter":"Export","Supprimer mon compte":"Delete my account","Cette action est définitive. Votre profil, vos candidatures et vos données seront supprimés.":"This action is permanent. Your profile, applications and data will be deleted.","Supprimer":"Delete",
+"Supprimer votre compte ?":"Delete your account?","Cette action est irréversible. Toutes vos données, candidatures et mises en relation seront définitivement supprimées.":"This action is irreversible. All your data, applications and connections will be permanently deleted.","Supprimer définitivement":"Delete permanently"
+};
+var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}
+function ph(l){document.querySelectorAll('[placeholder]').forEach(function(el){var p=el.getAttribute('placeholder');if(!el.__fp)el.__fp=p;if(D[el.__fp])el.setAttribute('placeholder',l==='en'?D[el.__fp]:el.__fp);});}
+function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});ph(l);document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});document.querySelectorAll('#langSeg button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===l);});}
+window.__cfSetLang=setLang;
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");
+document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});
+setLang(l);})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+</body>
+</html>

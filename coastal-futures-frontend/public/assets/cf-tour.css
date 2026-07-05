@@ -1,0 +1,73 @@
+/* Coastal Futures — guided walkthrough (first login). Shared across dashboards.
+   Engine in cf-tour.js; steps declared per page via window.CF_TOUR. */
+.cf-tour-root{position:fixed;inset:0;z-index:120;font-family:var(--font-sans,'DM Sans',system-ui,sans-serif);}
+.cf-tour-root[hidden]{display:none;}
+
+/* dim layer for centered (no-target) steps */
+.cf-tour-scrim{position:fixed;inset:0;background:rgba(8,28,24,.62);opacity:0;transition:opacity .28s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-tour-scrim.show{opacity:1;}
+
+/* spotlight ring — dims everything except the cut-out via a huge box-shadow */
+.cf-tour-ring{position:absolute;border-radius:14px;box-shadow:0 0 0 9999px rgba(8,28,24,.62);
+  outline:2px solid var(--teal-bright,#3ECBB0);outline-offset:3px;pointer-events:none;
+  opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1)),
+    top .42s var(--ease,cubic-bezier(.4,0,.2,1)),left .42s var(--ease,cubic-bezier(.4,0,.2,1)),
+    width .42s var(--ease,cubic-bezier(.4,0,.2,1)),height .42s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-tour-ring.show{opacity:1;}
+
+/* popover card */
+.cf-tour-pop{position:absolute;width:340px;max-width:calc(100vw - 32px);background:#fff;
+  border:1px solid var(--hair,#DCE9E6);border-radius:18px;box-shadow:0 24px 60px -16px rgba(4,39,31,.45),0 4px 12px rgba(6,61,52,.08);
+  padding:22px 22px 18px;opacity:0;transform:translateY(8px);
+  transition:opacity .28s var(--ease,cubic-bezier(.4,0,.2,1)),transform .28s var(--ease,cubic-bezier(.4,0,.2,1)),
+    top .42s var(--ease,cubic-bezier(.4,0,.2,1)),left .42s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-tour-pop.show{opacity:1;transform:none;}
+.cf-tour-pop.center{position:fixed;left:50%;top:50%;transform:translate(-50%,calc(-50% + 8px));}
+.cf-tour-pop.center.show{transform:translate(-50%,-50%);}
+
+/* little pointer arrow */
+.cf-tour-arrow{position:absolute;width:14px;height:14px;background:#fff;border:1px solid var(--hair,#DCE9E6);transform:rotate(45deg);}
+.cf-tour-pop.center .cf-tour-arrow{display:none;}
+.cf-tour-pop[data-place="bottom"] .cf-tour-arrow{top:-8px;border-right:0;border-bottom:0;}
+.cf-tour-pop[data-place="top"] .cf-tour-arrow{bottom:-8px;border-left:0;border-top:0;}
+.cf-tour-pop[data-place="right"] .cf-tour-arrow{left:-8px;border-right:0;border-top:0;}
+.cf-tour-pop[data-place="left"] .cf-tour-arrow{right:-8px;border-left:0;border-bottom:0;}
+
+.cf-tour-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
+.cf-tour-step{font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-size:11px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint,#5C7B76);font-feature-settings:"tnum";}
+.cf-tour-dots{display:flex;align-items:center;gap:5px;}
+.cf-tour-dots b{width:6px;height:6px;border-radius:50%;background:var(--hair-strong,#B4CDC8);transition:all .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-tour-dots b.on{background:var(--teal,#0A6B5E);width:18px;border-radius:3px;}
+
+.cf-tour-ic{width:40px;height:40px;border-radius:12px;background:var(--teal-bg,#EAF6F3);color:var(--teal,#0A6B5E);
+  display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:13px;}
+.cf-tour-pop h3{font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:600;font-size:18px;
+  letter-spacing:-.4px;color:var(--ink,#0C2420);margin:0 0 7px;}
+.cf-tour-pop p{font-family:var(--font-sans,'DM Sans',sans-serif);font-size:14px;line-height:1.6;color:var(--ink-2,#244440);margin:0;text-wrap:pretty;}
+
+.cf-tour-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;}
+.cf-tour-skip{font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-size:13px;font-weight:500;
+  color:var(--ink-mute,#5C7B76);background:none;border:0;padding:6px 2px;cursor:pointer;transition:color .16s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-tour-skip:hover{color:var(--ink,#0C2420);}
+.cf-tour-nav{display:flex;align-items:center;gap:8px;}
+.cf-tour-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);
+  font-size:13.5px;font-weight:500;letter-spacing:-.1px;border-radius:100px;padding:9px 16px;cursor:pointer;
+  border:1px solid transparent;transition:all .16s var(--ease,cubic-bezier(.4,0,.2,1));white-space:nowrap;}
+.cf-tour-btn i{font-size:16px;transition:transform .16s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-tour-back{background:#fff;color:var(--ink,#0C2420);border-color:var(--hair-strong,#B4CDC8);}
+.cf-tour-back:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}
+.cf-tour-next{background:var(--teal,#0A6B5E);color:#fff;}
+.cf-tour-next:hover{background:var(--teal-deep,#063D34);}
+.cf-tour-next:hover i.ti-arrow-right{transform:translateX(3px);}
+
+/* restart pill (used in help menu) inherits .tb-link styling on the page */
+
+@media(max-width:640px){
+  .cf-tour-pop{width:calc(100vw - 24px);}
+  .cf-tour-pop:not(.center){position:fixed;left:12px !important;right:12px;top:auto !important;bottom:14px;width:auto;}
+  .cf-tour-pop:not(.center) .cf-tour-arrow{display:none;}
+}
+@media(prefers-reduced-motion:reduce){
+  .cf-tour-ring,.cf-tour-pop,.cf-tour-scrim{transition:opacity .001s;}
+}

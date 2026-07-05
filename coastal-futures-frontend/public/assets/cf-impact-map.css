@@ -1,0 +1,50 @@
+/* Coastal Futures — shared impact-map format (canonical v4, from carte-impact.html).
+   Type-coloured icon pins, flat country tags, clusters, on-brand popups.
+   Load AFTER leaflet.css and the page's token stylesheet. */
+
+/* Project pin — icon disc, coloured by type */
+.cf-pin2{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid var(--c,#0A6B5E);box-shadow:0 3px 9px -2px rgba(4,39,31,.42);color:var(--c,#0A6B5E);transition:transform var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1)),box-shadow var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1)),background var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-pin2 i{font-size:16px;line-height:1;}
+.cf-pin2.big{transform:scale(1.24);background:var(--c,#0A6B5E);color:#fff;box-shadow:0 6px 16px -3px rgba(4,39,31,.5);}
+
+/* Country tag — flat, institutional */
+.ctry-tag{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--hair-strong,#B4CDC8);border-radius:var(--r-pill,100px);box-shadow:0 4px 14px -6px rgba(6,61,52,.32);padding:4px 12px 4px 5px;cursor:pointer;white-space:nowrap;transition:transform var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1)),box-shadow var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1)),border-color var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1));}
+.ctry-tag:hover,.ctry-tag.big{transform:translateY(-1px);box-shadow:0 9px 22px -7px rgba(6,61,52,.42);border-color:var(--teal,#0A6B5E);}
+.ctry-tag .cc{display:flex;align-items:center;justify-content:center;min-width:25px;height:25px;padding:0 7px;border-radius:var(--r-pill,100px);background:var(--teal,#0A6B5E);color:#fff;font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:600;font-size:13px;line-height:1;font-feature-settings:"tnum";}
+.ctry-tag.big .cc{background:var(--teal-deep,#063D34);}
+.ctry-tag .cl{font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:600;font-size:12.5px;letter-spacing:-.2px;color:var(--ink,#0C2420);}
+
+/* Clusters */
+.cf-cluster{display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--teal,#0A6B5E);color:#fff;border:2.5px solid #fff;box-shadow:0 3px 10px -2px rgba(4,39,31,.5);font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:600;font-feature-settings:"tnum";transition:transform var(--t-fast,160ms) var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-cluster:hover{transform:scale(1.06);}
+.cf-cluster.s{width:34px;height:34px;font-size:13px;}
+.cf-cluster.m{width:40px;height:40px;font-size:14px;background:var(--teal-deep,#063D34);}
+.cf-cluster.l{width:48px;height:48px;font-size:15.5px;background:var(--teal-press,#04271F);}
+.leaflet-marker-icon.marker-cluster{background:transparent;border:0;}
+
+/* Mangrove thematic label + extent */
+.mang-lab{font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:600;font-size:11px;color:var(--teal-deep,#063D34);background:rgba(255,255,255,.9);border:1px solid var(--teal-bright,#3ECBB0);border-radius:var(--r-pill,100px);padding:2px 9px;white-space:nowrap;box-shadow:0 2px 6px -2px rgba(6,61,52,.3);display:inline-flex;align-items:center;gap:5px;}
+.mang-lab i{font-size:12px;color:var(--teal-soft,#12B396);}
+
+/* On-brand popups */
+.leaflet-popup-content-wrapper{border-radius:var(--r-lg,16px);box-shadow:var(--shadow-2,0 8px 24px rgba(6,61,52,.08));padding:2px;}
+.leaflet-popup-content{margin:14px 16px;font-family:var(--font-sans,'DM Sans',sans-serif);}
+.pop .pt{font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:600;font-size:15px;color:var(--ink,#0C2420);letter-spacing:-.2px;margin-bottom:5px;}
+.pop .pll{font-family:var(--font-sans,'DM Sans',sans-serif);font-size:12.5px;color:var(--ink-mute,#5C7B76);margin-bottom:10px;display:flex;align-items:center;gap:5px;}
+.pop .pll i{font-size:13px;}
+.pop .prow{display:flex;align-items:center;gap:7px;margin-bottom:10px;flex-wrap:wrap;}
+.pop .pimp{display:flex;align-items:center;gap:6px;font-family:var(--font-sans,'DM Sans',sans-serif);font-size:12px;color:var(--ink-2,#244440);margin-bottom:12px;}
+.pop .pimp i{color:var(--teal,#0A6B5E);font-size:14px;}
+.pop a.pbtn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-weight:500;font-size:13px;color:var(--teal,#0A6B5E);}
+.pop a.pbtn:hover{color:var(--teal-deep,#063D34);}
+.proj-type{font-family:var(--font-sans,'DM Sans',sans-serif);font-size:11.5px;color:var(--ink-2,#244440);display:inline-flex;align-items:center;gap:5px;}
+
+/* Status badges (used in popups) */
+.pop .bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display,'Plus Jakarta Sans',sans-serif);font-size:11.5px;font-weight:500;padding:3px 10px;border-radius:var(--r-pill,100px);letter-spacing:-.1px;white-space:nowrap;}
+.pop .bdg-live{background:#E3F9F1;color:#066B52;}
+.pop .bdg-pend{background:#FBF0DC;color:#8A5512;}
+.pop .bdg-teal{background:var(--teal-bg,#EAF6F3);color:var(--teal-deep,#063D34);}
+.pop .bdg .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+/* Loading shimmer under CARTO tiles */
+.leaflet-container{background-color:#dbeee8;}

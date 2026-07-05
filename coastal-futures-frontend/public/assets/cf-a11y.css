@@ -1,0 +1,43 @@
+/* Coastal Futures — accessibilité (P0). Indicateur de focus clavier visible.
+   Inclus sur les 5 surfaces PTF. WCAG 2.4.7 / 2.4.11. L'anneau ne s'affiche
+   qu'à la navigation clavier (:focus-visible), jamais au clic souris. */
+
+:focus-visible{
+  outline:2px solid var(--teal,#0A6B5E);
+  outline-offset:2px;
+}
+/* champs de saisie : conserver l'anneau box-shadow existant ET un outline net au clavier */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--teal,#0A6B5E);
+  outline-offset:2px;
+}
+/* surfaces sombres (hero mesh, en-têtes teal) : anneau clair pour le contraste */
+.greet :focus-visible,
+.bhero :focus-visible,
+.cf-mesh :focus-visible,
+.mesh :focus-visible,
+[data-dark] :focus-visible{
+  outline-color:var(--teal-bright,#3ECBB0);
+}
+
+/* contenu réservé aux technologies d'assistance (titres de structure, légendes de tableau) */
+.sr-only{
+  position:absolute !important;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* Bascule de langue dans la barre supérieure de l'espace bailleurs : icône globe seule
+   (le libellé FR/EN est retiré visuellement ; l'aria-label reste pour les lecteurs d'écran). */
+.topbar .cf-langtog .cf-seg{display:none;}
+.topbar .cf-langtog{gap:0;padding:8px;}
+/* Le rôle « Espace bailleurs PTF » reste sur une seule ligne (cohérence du topbar). */
+.tb-role{white-space:nowrap;}
+/* Boutons d'action des en-têtes bailleurs : pas de retour à la ligne disgracieux. */
+.org-act .btn{white-space:nowrap;}

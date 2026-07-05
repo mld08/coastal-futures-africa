@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Neutralise le rejet bénin "Transition was skipped" des view-transitions.
+      window.addEventListener('unhandledrejection', function (e) {
+        var r = e && e.reason;
+        var m = ((r && (r.message || r)) || '') + '';
+        if (m.indexOf('Transition was skipped') >= 0) e.preventDefault();
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#063D34" />
+    <meta
+      name="description"
+      content="Coastal Futures Network, programme de l'Institut Africain de la Gouvernance : former et connecter 4 000 jeunes entrepreneurs verts dans cinq pays côtiers d'Afrique de l'Ouest."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Coastal Futures Network</title>
+
+    <!-- Design system d'origine, chargé globalement (polices, icônes, navbar) -->
+    <link rel="stylesheet" href="/assets/cf-fonts.css" />
+    <link rel="stylesheet" href="/assets/cf-icons.css" />
+    <link rel="stylesheet" href="/assets/cf-nav.css" />
+    <!-- Leaflet (cartes d'impact) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

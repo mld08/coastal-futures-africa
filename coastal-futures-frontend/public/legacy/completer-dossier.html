@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Coastal Futures | Candidature</title>
+<meta name="description" content="Candidature · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="candidature.html">
+<meta property="og:title" content="Coastal Futures | Candidature">
+<meta property="og:description" content="Candidature · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Candidature">
+<meta name="twitter:description" content="Candidature · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="candidature.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396; --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --error:#8F2A1A; --error-bg:#FBE6E2;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif; --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06); --shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px;}
+
+.nav-outer{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);}
+.cf-nav{max-width:980px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}.brand img{height:34px;width:auto;}
+.nav-mini{display:flex;align-items:center;gap:16px;font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-mute);}
+
+.page{padding:36px 0 70px;}
+.ph{text-align:center;margin-bottom:28px;}
+.ph .l{font-family:var(--font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);}
+.ph h1{font-family:var(--font-display);font-weight:300;font-size:34px;letter-spacing:-1.4px;color:var(--ink);margin:6px 0 0;}
+
+.stepper{display:flex;align-items:flex-start;margin:0 auto 30px;max-width:560px;}
+.stp{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;}
+.stp .sc{width:36px;height:36px;border-radius:50%;background:#fff;border:2px solid var(--hair-strong);color:var(--ink-faint);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;z-index:2;transition:all .3s var(--ease);font-feature-settings:"tnum";}
+.stp .sl{font-family:var(--font-display);font-size:12px;font-weight:500;color:var(--ink-faint);margin-top:8px;transition:color .3s var(--ease);text-align:center;}
+.stp::before{content:"";position:absolute;top:17px;left:-50%;width:100%;height:2px;background:var(--hair);z-index:1;transition:background .3s var(--ease);}
+.stp:first-child::before{display:none;}
+.stp.active .sc{border-color:var(--teal);background:var(--teal);color:#fff;box-shadow:0 0 0 4px var(--teal-bg);}
+.stp.active .sl{color:var(--teal);}
+.stp.done .sc{border-color:var(--teal);background:var(--teal);color:#fff;}
+.stp.done .sl{color:var(--ink-2);}
+.stp.done::before,.stp.active::before{background:var(--teal);}
+
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);padding:30px;}
+.panel{display:none;}
+.panel.show{display:block;animation:fade .3s var(--ease);}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.panel h2{font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--ink);margin:0 0 4px;}
+.panel .pd{font-family:var(--font-sans);font-size:14px;color:var(--ink-mute);margin:0 0 22px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-2);margin-bottom:7px;}
+.field label .req{color:var(--error);}
+.field input,.field select,.field textarea{width:100%;font-family:var(--font-sans);font-size:14.5px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:11px 13px;outline:none;transition:all var(--t-fast) var(--ease);}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.field textarea{resize:vertical;min-height:96px;line-height:1.5;}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--error);box-shadow:0 0 0 3px var(--error-bg);}
+.field .err{display:none;font-size:12.5px;color:var(--error);margin-top:6px;}.field.invalid .err{display:block;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.hint{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-faint);margin-top:4px;}
+.drop{border:1.5px dashed var(--hair-strong);border-radius:var(--r-md);padding:20px;text-align:center;cursor:pointer;transition:all var(--t-fast) var(--ease);margin-bottom:12px;}
+.drop:hover{border-color:var(--teal);background:var(--teal-bg2);}
+.drop.filled{border-style:solid;border-color:var(--teal);background:var(--teal-bg2);}
+.drop i{font-size:24px;color:var(--teal);}
+.drop .dt{font-family:var(--font-display);font-size:13.5px;font-weight:500;color:var(--ink);margin-top:6px;}
+.drop .ds{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);margin-top:2px;}
+.drop{position:relative;display:block;}
+.drop.invalid{border-color:var(--error);background:var(--error-bg);}
+.drop .derr{display:none;font-family:var(--font-sans);font-size:12.5px;color:var(--error);margin-top:6px;}
+.drop.invalid .derr{display:block;}
+.optlbl{font-family:var(--font-sans);font-size:12px;font-weight:400;color:var(--ink-faint);}
+.extra-list{display:flex;flex-direction:column;gap:8px;margin:2px 0 12px;}
+.extra-item{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--hair);border-radius:var(--r-sm);padding:9px 12px;font-family:var(--font-sans);font-size:13px;color:var(--ink-2);}
+.extra-item i.fic{color:var(--teal);font-size:18px;}
+.extra-item .xnm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.extra-item .xsz{color:var(--ink-faint);font-size:12px;white-space:nowrap;}
+.extra-item .xrm{cursor:pointer;color:var(--ink-faint);font-size:17px;}.extra-item .xrm:hover{color:var(--error);}
+.field input[readonly]{background:var(--canvas-soft);color:var(--ink-mute);cursor:not-allowed;}
+.lockhint{display:flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:12px;color:var(--ink-faint);margin-top:6px;}
+.charcount{font-family:var(--font-sans);font-size:12px;color:var(--ink-faint);margin-top:6px;text-align:right;}
+.charcount.bad{color:var(--error);}
+
+/* recap */
+.recap-grid{display:flex;flex-direction:column;gap:6px;}
+.recap-row{display:grid;grid-template-columns:170px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--hair);}
+.recap-row:last-child{border-bottom:0;}
+.recap-row .rk{font-family:var(--font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);}
+.recap-row .rv{font-family:var(--font-sans);font-size:14px;color:var(--ink-2);}
+.recap-row .redit{font-family:var(--font-display);font-size:12.5px;font-weight:500;color:var(--teal);cursor:pointer;}
+.consent{display:flex;gap:11px;align-items:flex-start;margin-top:18px;}
+.consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--teal);}
+.consent label{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-mute);line-height:1.5;}
+
+.foot{display:flex;justify-content:space-between;gap:12px;margin-top:26px;}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:15px;font-weight:500;border-radius:var(--r-pill);padding:12px 24px;border:1px solid transparent;cursor:pointer;transition:all var(--t-fast) var(--ease);}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn[disabled]{opacity:.4;pointer-events:none;}
+.btn i{transition:transform var(--t-fast) var(--ease);}.btn:hover i.ti-arrow-right{transform:translateX(3px);}
+.savenote{text-align:center;font-family:var(--font-sans);font-size:12.5px;color:var(--ink-faint);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;}
+
+@media(max-width:560px){.frow{grid-template-columns:1fr;}.stp .sl{font-size:11px;}.card{padding:22px;}.recap-row{grid-template-columns:1fr;gap:2px;}.recap-row .redit{justify-self:start;}}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-resp-frow">@media(max-width:560px){.frow,.frow-civ3{grid-template-columns:1fr!important;}}</style>
+<style id="cf-nav-elevate">
+/* Public navbar — refined professional elevation (within the CF system) */
+.nav-outer{top:16px;}
+.nav-outer .cf-nav{padding:11px 14px 11px 24px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px);box-shadow:0 1px 2px rgba(6,61,52,.05),0 16px 36px -20px rgba(6,61,52,.24);transition:background .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease);}
+.nav-outer .cf-nav.scrolled{background:rgba(255,255,255,.93);border-color:var(--hair-strong);box-shadow:0 1px 2px rgba(6,61,52,.06),0 12px 28px -18px rgba(6,61,52,.3);}
+.nav-outer .cf-nav .brand img{height:30px;}
+.nav-outer .nav-links{gap:3px;}
+.nav-outer .nav-links a:not(.nav-cta){position:relative;padding:9px 15px;font-weight:500;letter-spacing:-.1px;color:var(--ink-2);border-radius:10px;transition:color .18s var(--ease),background .18s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;opacity:0;transition:transform .28s var(--ease),opacity .2s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta):hover{color:var(--ink);background:rgba(10,107,94,.06);}
+.nav-outer .nav-links a:not(.nav-cta).on{color:var(--teal-deep);}
+.nav-outer .nav-links a:not(.nav-cta).on::after{transform:scaleX(1);opacity:1;}
+.nav-outer .nav-links a.nav-cta{margin-left:12px;padding:9px 20px;border-radius:100px;box-shadow:0 1px 2px rgba(6,61,52,.12);transition:background .16s var(--ease),transform .18s var(--ease),box-shadow .22s var(--ease);}
+.nav-outer .nav-links a.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,107,94,.55);}
+.nav-outer .nav-links a.nav-cta:active{transform:translateY(0);}
+.cf-util-link{position:relative;}
+.cf-util-link::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:1.5px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;transition:transform .22s var(--ease);}
+.cf-util-link:hover::after{transform:scaleX(1);}
+@media(max-width:860px){.nav-outer .nav-links a.nav-cta{margin-left:0;}}
+</style>
+<script id="cf-nav-elevate-js">(function(){var n=document.querySelector('.nav-outer .cf-nav');if(!n)return;var f=function(){n.classList.toggle('scrolled',(window.pageYOffset||document.documentElement.scrollTop||0)>6);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
+<script type="application/ld+json" id="ld-org">{"@context":"https://schema.org","@type":"Organization","name":"Coastal Futures Network","alternateName":"Réseau Coastal Futures","url":"https://coastalfutures.africagovernanceinstitute.org/","logo":"https://coastalfutures.africagovernanceinstitute.org/assets/logos/logo-horizontal-dark.svg","email":"contact@africagovernanceinstitute.org","description":"Programme régional de l'Institut Africain de la Gouvernance accompagnant 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest : Sénégal, Ghana, Guinée, Liberia et Sierra Leone.","parentOrganization":{"@type":"Organization","name":"Institut Africain de la Gouvernance","alternateName":"Africa Governance Institute"},"areaServed":[{"@type":"Country","name":"Senegal"},{"@type":"Country","name":"Ghana"},{"@type":"Country","name":"Guinea"},{"@type":"Country","name":"Liberia"},{"@type":"Country","name":"Sierra Leone"}]}</script>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-shellb-css">
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh;min-height:100dvh;}
+.app>.side{background:#fff;border-right:1px solid var(--hair);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;height:100dvh;}
+.side-logo{padding:22px 24px;border-bottom:1px solid var(--hair);}.side-logo img{height:26px;width:auto;}
+.side-nav{flex:1;padding:16px 14px;overflow-y:auto;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-mute);cursor:pointer;transition:all var(--t-fast) var(--ease);margin-bottom:2px;position:relative;}
+.nav-item i{font-size:20px;}
+.nav-item:hover{background:var(--canvas-soft);color:var(--ink);}
+.nav-item.on{background:var(--teal-bg);color:var(--teal-deep);}
+.side-user{padding:14px;border-top:1px solid var(--hair);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);}
+.side-user .ur{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.side-user .lo{margin-left:auto;color:var(--ink-faint);font-size:19px;cursor:pointer;}
+.side-user .lo:hover{color:var(--error);}
+.app>.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:flex-start;gap:16px;padding:14px 32px;background:rgba(248,251,250,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-bc{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-faint);display:flex;align-items:center;gap:8px;margin-right:auto;}
+.tb-bc a{color:var(--ink-mute);}.tb-bc a:hover{color:var(--teal);}.tb-bc i{font-size:14px;}
+.tb-right{display:flex;align-items:center;gap:10px;}
+.tb-user{display:flex;align-items:center;gap:9px;padding:5px 6px 5px 12px;border-radius:var(--r-pill);border:1px solid var(--hair);background:#fff;}
+.tb-user .un{font-family:var(--font-display);font-weight:500;font-size:13.5px;color:var(--ink);}
+.tb-user .av{width:30px;height:30px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:12px;}
+.content{padding:28px 32px 56px;max-width:1080px;width:100%;}
+.cf-sidetoggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--hair);background:#fff;border-radius:10px;color:var(--ink-2);cursor:pointer;font-size:18px;transition:all .16s ease;flex-shrink:0;}
+.cf-sidetoggle:hover{border-color:var(--teal);color:var(--teal);}
+.cf-appburger{display:none;width:40px;height:40px;border:1px solid var(--hair);background:#fff;border-radius:10px;color:var(--ink);cursor:pointer;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;}
+.cf-appburger:hover{border-color:var(--teal);color:var(--teal);}
+.cf-appscrim{position:fixed;inset:0;background:rgba(8,28,24,.5);z-index:49;opacity:0;pointer-events:none;transition:opacity .28s var(--ease);}
+.cf-appscrim.show{opacity:1;pointer-events:auto;}
+@media(min-width:1081px){.app.cf-collapsed{grid-template-columns:74px 1fr;}.app.cf-collapsed .side-logo{display:flex;justify-content:center;}.app.cf-collapsed .side-sec,.app.cf-collapsed .nav-item span,.app.cf-collapsed .side-user>div:not(.av),.app.cf-collapsed .side-user .lo{display:none;}.app.cf-collapsed .nav-item{justify-content:center;}.app.cf-collapsed .side-user{justify-content:center;}.app{transition:grid-template-columns .26s var(--ease);}}
+@media(max-width:1080px){.cf-sidetoggle{display:none;}.app{grid-template-columns:1fr;}.app>.side{display:flex!important;position:fixed;top:0;left:0;height:100vh;height:100dvh;width:264px;z-index:50;transform:translateX(-100%);transition:transform .28s var(--ease);}.app>.side.open{transform:translateX(0);}.cf-appburger{display:inline-flex;}}
+@media(max-width:640px){.topbar{padding:12px 18px;}.content{padding:22px 18px 44px;}.tb-user .un{display:none;}}
+</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<script id="cf-member-guard">(function(){try{if(localStorage.getItem("cf-auth")!=="1"){try{localStorage.setItem("cf-after-login",(location.pathname.split("/").pop()||""));}catch(e){}location.replace("connexion.html");}}catch(e){}})();</script>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="tableau-de-bord.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec">Mon espace</div>
+      <a class="nav-item" data-tip="Tableau de bord" href="tableau-de-bord.html"><i class="ti ti-layout-dashboard"></i><span>Tableau de bord</span></a>
+      <a class="nav-item" data-tip="Mon profil" href="mon-profil.html"><i class="ti ti-user"></i><span>Mon profil</span></a>
+      <a class="nav-item on" data-tip="Mes candidatures" href="mes-candidatures.html"><i class="ti ti-file-text"></i><span>Mes candidatures</span></a>
+      <a class="nav-item" data-tip="Mes projets" href="espace-projets.html"><i class="ti ti-plant-2"></i><span>Mes projets</span></a>
+      <a class="nav-item" data-tip="Messages" href="messagerie-entrepreneur.html"><i class="ti ti-message-2"></i><span>Messages</span></a>
+      <a class="nav-item" data-tip="Paramètres" href="espace-parametres.html"><i class="ti ti-settings"></i><span>Paramètres</span></a>
+      <div class="side-sec">Explorer</div>
+      <a class="nav-item" data-tip="Carte d'impact" href="espace-carte.html"><i class="ti ti-map-2"></i><span>Carte d'impact</span></a>
+      <a class="nav-item" data-tip="Appels ouverts" href="espace-appels.html"><i class="ti ti-speakerphone"></i><span>Appels ouverts</span></a>
+      <a class="nav-item" data-tip="Mentors" href="espace-mentors.html"><i class="ti ti-users"></i><span>Mentors</span></a>
+      <a class="nav-item" data-tip="Ressources" href="espace-ressources.html"><i class="ti ti-folder"></i><span>Ressources</span></a>
+    </nav>
+    <div class="side-user">
+      <div class="av">AD</div>
+      <div><div class="un">Aminata Diallo</div><div class="ur">Entrepreneur</div></div>
+      <a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a>
+    </div>
+  </aside>
+
+  <main class="main" data-screen-label="Compléter mon dossier">
+    <div class="topbar">
+      <button class="cf-appburger" aria-label="Menu" type="button"><i class="ti ti-menu-2"></i></button>
+      <button class="cf-sidetoggle" id="cfSideToggle" aria-label="Réduire le menu" type="button"><i class="ti ti-layout-sidebar-left-collapse"></i></button>
+      <div class="tb-bc"><a href="mes-candidatures.html">Mes candidatures</a><i class="ti ti-chevron-right"></i><span>Compléter le dossier</span></div>
+      <div class="tb-right">
+        <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+        <div class="tb-user"><span class="un">Aminata</span><span class="av">AD</span></div>
+      </div>
+    </div>
+    <div class="content">
+<section class="wrap page" data-screen-label="Compléter mon dossier">
+  <style>
+  .cd-app{display:flex;gap:14px;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--hair);margin-bottom:18px;}
+  .cd-ic{width:44px;height:44px;border-radius:12px;background:var(--teal-bg);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:22px;flex:none;}
+  .cd-app-n{font-family:var(--font-display);font-weight:600;font-size:16px;color:var(--ink);}
+  .cd-app-m{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);margin-top:4px;}
+  .cd-app-m .sep{width:3px;height:3px;border-radius:50%;background:var(--hair-strong);}
+  .cd-req{background:var(--teal-bg);border:1px solid var(--hair);border-radius:var(--r-md);padding:16px 18px;margin-bottom:24px;}
+  .cd-req-h{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:600;font-size:13.5px;color:var(--teal-deep);margin-bottom:8px;}
+  .cd-req p{font-family:var(--font-sans);font-size:14.5px;line-height:1.55;color:var(--ink-2);margin:0 0 10px;}
+  .cd-req-meta{display:flex;align-items:center;gap:7px;font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);}
+  .cd-okic{width:64px;height:64px;border-radius:50%;background:var(--success-bg);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto;}
+  .bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-pill);}
+  .bdg-pend{background:#FBF0DC;color:#8A5512;}.bdg .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+  </style>
+  <div class="ph">
+    <div class="l"><a href="mes-candidatures.html" style="color:var(--teal);">Mes candidatures</a> · précision demandée</div>
+    <span id="cf-main" tabindex="-1"></span><h1>Compléter mon dossier</h1>
+  </div>
+
+  <div class="card" id="cmpCard">
+    <div class="cd-app">
+      <div class="cd-ic"><i class="ti ti-bolt"></i></div>
+      <div class="cd-app-id">
+        <div class="cd-app-n">Fonds énergie renouvelable jeunesse</div>
+        <div class="cd-app-m"><span>Subvention</span><span class="sep"></span><span>Réf. CF-2026-0388</span><span class="sep"></span><span class="bdg bdg-pend"><span class="dot"></span>En revue</span></div>
+      </div>
+    </div>
+
+    <div class="cd-req">
+      <div class="cd-req-h"><i class="ti ti-message-2"></i>Précision demandée par le comité</div>
+      <p>Dossier solide et impact bien documenté. Merci de préciser le plan de financement sur 24 mois avant la décision finale.</p>
+      <div class="cd-req-meta"><i class="ti ti-clock"></i>Demandée le 2 juin 2026 · réponse attendue sous 10 jours</div>
+    </div>
+
+    <form id="cmpForm" novalidate>
+      <div class="field"><label>Votre réponse au comité <span class="req">*</span></label><textarea data-req data-min="100" id="resp" aria-required="true" placeholder="Répondez précisément à la demande du comité : détaillez votre plan de financement sur 24 mois... (100 caractères minimum)"></textarea><div class="charcount" id="respCount">0 / 100 caractères minimum</div><div class="err">Veuillez répondre à la demande du comité (100 caractères minimum).</div></div>
+
+      <div class="field"><label>Documents complémentaires <span class="optlbl">(optionnel)</span></label>
+        <label class="drop"><input type="file" hidden multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"><i class="ti ti-paperclip"></i><div class="dt">Ajouter des pièces</div><div class="ds">PDF, JPG, PNG · 15 Mo maximum par fichier</div><div class="derr"></div></label>
+        <div class="extra-list" id="extraList"></div>
+      </div>
+
+      <div class="foot">
+        <a href="mes-candidatures.html" class="btn btn-light"><i class="ti ti-arrow-left"></i>Retour</a>
+        <button type="button" class="btn btn-pri" id="sendBtn">Envoyer ma réponse <i class="ti ti-send"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card" id="cmpSuccess" style="display:none;text-align:center;padding:48px 30px;">
+    <div class="cd-okic"><i class="ti ti-circle-check"></i></div>
+    <h2 style="margin:14px 0 6px;">Réponse envoyée au comité</h2>
+    <p class="pd" style="max-width:440px;margin:0 auto 22px;">Votre précision a bien été transmise. Le comité reprendra l'évaluation de votre dossier. Vous serez notifié dès qu'une décision est prise.</p>
+    <div class="foot" style="justify-content:center;">
+      <a href="mes-candidatures.html" class="btn btn-light">Mes candidatures</a>
+      <a href="tableau-de-bord.html" class="btn btn-pri">Retour au tableau de bord</a>
+    </div>
+  </div>
+  <div class="savenote"><i class="ti ti-device-floppy"></i>Brouillon enregistré automatiquement</div>
+</section>
+    </div>
+  </main>
+</div>
+
+<script id="cf-appnav-js">(function(){var app=document.querySelector(".app");if(!app||app.classList.contains("app--focus"))return;var side=app.querySelector(":scope > .side");if(!side)return;var tb=document.querySelector(".topbar");if(!tb)return;var b=tb.querySelector(".cf-appburger");if(!b)return;var sc=document.createElement("div");sc.className="cf-appscrim";document.body.appendChild(sc);function open(){side.classList.add("open");sc.classList.add("show");}function close(){side.classList.remove("open");sc.classList.remove("show");}b.addEventListener("click",function(){side.classList.contains("open")?close():open();});sc.addEventListener("click",close);[].slice.call(side.querySelectorAll("a")).forEach(function(a){a.addEventListener("click",close);});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script id="cf-side-collapse-js">(function(){var app=document.querySelector(".app");if(!app)return;var K="cf-member-side";try{if(localStorage.getItem(K)==="1")app.classList.add("cf-collapsed");}catch(e){}var b=document.getElementById("cfSideToggle");if(b)b.addEventListener("click",function(){app.classList.toggle("cf-collapsed");try{localStorage.setItem(K,app.classList.contains("cf-collapsed")?"1":"0");}catch(e){}});})();</script>
+<script>
+(function(){
+  var resp=document.getElementById('resp'), respC=document.getElementById('respCount');
+  function updC(){ var n=resp.value.trim().length; respC.textContent=n+' / 100 caractères minimum'; respC.classList.toggle('bad',n>0&&n<100); }
+  resp.addEventListener('input',function(){ updC(); resp.closest('.field').classList.remove('invalid'); });
+  updC();
+  var MAXB=15*1024*1024, OKTYPE=/\.(pdf|jpe?g|png)$/i;
+  function fmtSize(b){ if(b<1024)return b+' o'; if(b<1048576)return Math.round(b/1024)+' Ko'; return (b/1048576).toFixed(1).replace('.',',')+' Mo'; }
+  function validFile(f){ if(!OKTYPE.test(f.name)) return 'Format non accepté : PDF, JPG ou PNG uniquement.'; if(f.size>MAXB) return 'Fichier trop volumineux : 15 Mo maximum.'; return null; }
+  var extraFiles=[], extraList=document.getElementById('extraList');
+  function renderExtra(){ extraList.innerHTML=extraFiles.map(function(f,i){return '<div class="extra-item"><i class="ti ti-file-text fic"></i><span class="xnm">'+f.name.replace(/</g,'&lt;')+'</span><span class="xsz">'+fmtSize(f.size)+'</span><i class="ti ti-x xrm" data-i="'+i+'" role="button" tabindex="0" aria-label="Retirer ce document"></i></div>';}).join(''); [].slice.call(extraList.querySelectorAll('.xrm')).forEach(function(b){b.addEventListener('click',function(){extraFiles.splice(parseInt(b.getAttribute('data-i'),10),1);renderExtra();});}); }
+  var drop=document.querySelector('.drop'), inp=drop.querySelector('input[type=file]');
+  function take(files){ if(!files||!files.length)return; [].slice.call(files).forEach(function(f){ var err=validFile(f); if(err){ var e=drop.querySelector('.derr'); drop.classList.add('invalid'); if(e)e.textContent=f.name+' : '+err; return; } extraFiles.push(f); }); renderExtra(); }
+  inp.addEventListener('change',function(){ take(inp.files); inp.value=''; });
+  drop.addEventListener('dragover',function(e){e.preventDefault();drop.style.borderColor='var(--teal)';});
+  drop.addEventListener('dragleave',function(){drop.style.borderColor='';});
+  drop.addEventListener('drop',function(e){e.preventDefault();drop.style.borderColor=''; take(e.dataTransfer.files);});
+  document.getElementById('sendBtn').addEventListener('click',function(){
+    var v=resp.value.trim(); var bad=!v||v.length<100;
+    resp.closest('.field').classList.toggle('invalid',bad);
+    if(bad){ resp.focus(); return; }
+    if(window.CFCol){
+      var ex=CFCol.get('applications','app-aminata-diallo');
+      if(ex){
+        var comps=(ex.complements||[]).concat([{at:new Date().toISOString(), text:v, by:'Aminata Diallo'}]);
+        var hist=(ex.history||[]).concat([{at:new Date().toISOString(), by:'Aminata Diallo', action:'review', note:v.slice(0,240)}]);
+        CFCol.patch('applications','app-aminata-diallo',{status:'review', complements:comps, history:hist});
+        try{ if(window.CFNotif) CFNotif.push({kind:'application',target:{role:'super'},title:{fr:'Complément reçu : Dakar Solar Solutions (Aminata Diallo)',en:'Complement received: Dakar Solar Solutions (Aminata Diallo)'},href:'admin-candidatures.html'}); }catch(e){}
+        try{ if(window.CFAudit) CFAudit.log({actor:{name:'Aminata Diallo',role:'entrepreneur'},action:'application.complement',target:{kind:'application',id:'app-aminata-diallo',label:'Aminata Diallo'}}); }catch(e){}
+      }
+    }
+    document.getElementById('cmpCard').style.display='none';
+    document.getElementById('cmpSuccess').style.display='';
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-notif.js"></script>
+<script src="assets/cf-audit.js"></script>
+<script id="cf-i18n">(function(){var D={"Mon espace":"My space","Tableau de bord":"Dashboard","Mon profil":"My profile","Mes projets":"My projects","Messages":"Messages","Paramètres":"Settings","Explorer":"Explore","Carte d'impact":"Impact map","Appels ouverts":"Open calls","Mentors":"Mentors","Ressources":"Resources","Entrepreneur":"Entrepreneur","Compléter le dossier":"Complete the application",
+"Compléter mon dossier":"Complete my application","Mes candidatures":"My applications","précision demandée":"clarification requested","Fonds énergie renouvelable jeunesse":"Youth renewable energy fund","Précision demandée par le comité":"Clarification requested by the committee","Dossier solide et impact bien documenté. Merci de préciser le plan de financement sur 24 mois avant la décision finale.":"Strong application with well-documented impact. Please clarify the 24-month financing plan before the final decision.","Demandée le 2 juin 2026 · réponse attendue sous 10 jours":"Requested on 2 June 2026 · response expected within 10 days","Votre réponse au comité":"Your response to the committee","Documents complémentaires":"Additional documents","(optionnel)":"(optional)","Ajouter des pièces":"Add files","PDF, JPG, PNG · 15 Mo maximum par fichier":"PDF, JPG, PNG · 15 MB maximum per file","Veuillez répondre à la demande du comité (100 caractères minimum).":"Please respond to the committee request (100 characters minimum).","Retour":"Back","Envoyer ma réponse":"Send my response","Réponse envoyée au comité":"Response sent to the committee","Votre précision a bien été transmise. Le comité reprendra l\u2019évaluation de votre dossier. Vous serez notifié dès qu\u2019une décision est prise.":"Your clarification has been submitted. The committee will resume reviewing your application. You will be notified once a decision is made.","Retour au tableau de bord":"Back to dashboard","En revue":"Under review","Subvention":"Grant",
+"Liée à votre compte Coastal Futures. Pour la modifier, passez par vos paramètres.":"Linked to your Coastal Futures account. To change it, go to your settings.",
+"Joignez les pièces de votre dossier. Formats acceptés : PDF, JPG, PNG. 15 Mo maximum par fichier.":"Attach your application documents. Accepted formats: PDF, JPG, PNG. 15 MB maximum per file.",
+"Présentation du projet (PDF)":"Project presentation (PDF)","Pièce d'identité":"ID document","Justificatif de la structure":"Proof of organisation","Autres documents":"Other documents","(optionnel)":"(optional)",
+"Ajoutez tout document complémentaire utile à votre dossier":"Add any additional document useful to your application",
+"Quels sont vos besoins prioritaires ?":"What are your priority needs?",
+"Veuillez décrire vos besoins prioritaires (100 caractères minimum).":"Please describe your priority needs (100 characters minimum).","Ce document est requis.":"This document is required.",
+"Mon dossier de candidature":"Cohort 2: green enterprises","Appel à candidatures":"Call for applications","Déposer ma candidature":"Submit my application",
+"Profil":"Profile","Projet":"Project","Motivation":"Motivation","Documents":"Documents","Récapitulatif":"Summary",
+"Votre profil":"Your profile","Présentez-vous en tant que porteur de projet.":"Introduce yourself as the project lead.","Prénom":"First name","Nom":"Last name","Adresse e-mail":"Email address","Pays":"Country","Sélectionner":"Select",
+"Votre projet":"Your project","Décrivez la structure et le secteur de votre projet vert.":"Describe the structure and sector of your green project.","Nom du projet":"Project name","Secteur":"Sector","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Économie circulaire":"Circular economy","Agriculture résiliente":"Resilient agriculture","Stade":"Stage","Amorçage":"Seed","En croissance":"Growth","Idéation":"Ideation","Description courte":"Short description",
+"Votre motivation":"Your motivation","Expliquez pourquoi vous candidatez et ce que vous attendez du programme.":"Explain why you are applying and what you expect from the programme.","Pourquoi rejoindre Coastal Futures ?":"Why join Coastal Futures?","Quels sont vos besoins prioritaires ?":"What are your priority needs?",
+"Vos documents":"Your documents","Joignez les pièces de votre dossier. Formats acceptés : PDF, JPG, PNG.":"Attach your application documents. Accepted formats: PDF, JPG, PNG.","Présentation du projet (PDF)":"Project presentation (PDF)","Glissez un fichier ou cliquez pour sélectionner":"Drag a file or click to select","Pièce d'identité":"ID document","Justificatif de la structure (optionnel)":"Proof of structure (optional)",
+"Vérifiez vos informations avant de soumettre votre candidature.":"Check your information before submitting your application.","Je certifie l'exactitude des informations fournies et j'accepte le règlement du programme et la politique de confidentialité.":"I certify the accuracy of the information provided and accept the programme rules and the privacy policy.",
+"Précédent":"Previous","Suivant":"Next","Brouillon enregistré automatiquement":"Draft saved automatically",
+"Champ obligatoire.":"Required field.","E-mail valide requis.":"A valid email is required.","Veuillez choisir un pays.":"Please choose a country.","Veuillez choisir.":"Please choose."
+};
+var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}
+function ph(l){document.querySelectorAll('[placeholder]').forEach(function(el){var p=el.getAttribute('placeholder');if(!el.__fp)el.__fp=p;if(D[el.__fp])el.setAttribute('placeholder',l==='en'?D[el.__fp]:el.__fp);});}
+function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});ph(l);document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");
+document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});
+setLang(l);})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+<script id="cf-member-logout">(function(){function bind(el){el.addEventListener("click",function(e){e.preventDefault();try{localStorage.removeItem("cf-auth");localStorage.removeItem("cf-name");}catch(_){}location.href="deconnexion.html";});}[].slice.call(document.querySelectorAll("a,button")).forEach(function(el){if(/^\s*Se d\u00e9connecter\s*$/.test(el.textContent||""))bind(el);});[].slice.call(document.querySelectorAll(".side-user .lo,[data-cf-logout]")).forEach(bind);})();</script>
+<script src="assets/cf-session-name.js"></script>
+</body>
+</html>

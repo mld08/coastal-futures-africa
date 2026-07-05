@@ -1,0 +1,15 @@
+# Coastal Futures Network — robots.txt
+# DÉPLOIEMENT : confirmer/remplacer le domaine ci-dessous (ligne Sitemap) par le domaine de production réel.
+User-agent: *
+Allow: /
+
+# Espaces internes (console d'administration, catalogues et démos de composants) : hors index public.
+Disallow: /admin-
+Disallow: /sitemap-admin.html
+Disallow: /manifeste-media.html
+Disallow: /composant-
+
+# Les écrans connectés (tableaux de bord, espaces, paramètres) et les pages bailleurs
+# portent une balise meta robots "noindex" ; ils restent explorables pour que ce signal soit respecté.
+
+Sitemap: https://coastalfutures.africagovernanceinstitute.org/sitemap.xml

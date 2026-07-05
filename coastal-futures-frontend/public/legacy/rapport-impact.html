@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- COQUILLE : GABARIT DOCUMENT (exception assumée — livraison 15, §2.4).
+     Cette page n'appartient PAS aux 3 coquilles d'application (A public / B connecté / C auth).
+     C'est un document d'export print-first (class="doc") : rapport d'impact imprimable / PDF.
+     Ne pas lui ajouter de navbar publique ni de sidebar app. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Rapport d'impact consolidé n° 1</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --ink:#10130F; --ink-2:#33403B; --mute:#5C6B66; --faint:#7E8C87;
+  --line:#C9D2CF; --line-2:#E4E9E7; --teal:#0A6B5E; --teal-deep:#063D34;
+  --paper:#FFFFFF; --soft:#F4F6F5;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:#54605c;}
+body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;}
+.tnum{font-variant-numeric:tabular-nums;font-feature-settings:"tnum";}
+
+/* ---- screen-only toolbar ---- */
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#10130F;color:#fff;padding:11px 18px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;}
+.bar .bt{font-size:13.5px;font-weight:600;letter-spacing:-.1px;}
+.bar .sp{flex:1;}
+.bar button,.bar a{font-family:inherit;font-size:13px;font-weight:600;border-radius:8px;padding:8px 14px;cursor:pointer;border:1px solid rgba(255,255,255,.24);background:transparent;color:#fff;display:inline-flex;align-items:center;gap:7px;text-decoration:none;transition:background .15s;}
+.bar button:hover,.bar a:hover{background:rgba(255,255,255,.12);}
+.bar .pri{background:#0A6B5E;border-color:#0A6B5E;}
+.bar .pri:hover{background:#063D34;}
+.bar i{font-size:16px;}
+
+/* ---- the document ---- */
+.doc{max-width:210mm;margin:18px auto;background:var(--paper);padding:22mm 18mm;box-shadow:0 8px 40px rgba(0,0,0,.28);}
+.doc p{margin:0 0 9px;font-size:11.4px;line-height:1.62;color:var(--ink-2);}
+.doc h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;letter-spacing:-.2px;color:var(--ink);margin:0 0 11px;padding-bottom:6px;border-bottom:2px solid var(--teal);display:flex;align-items:baseline;gap:9px;}
+.doc h2 .n{font-size:11px;font-weight:700;color:var(--teal);min-width:18px;}
+.doc h3{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:12px;color:var(--ink);margin:16px 0 7px;}
+.sec{margin-top:26px;}
+.sec.brk{break-before:page;}
+.lead{font-size:12px;color:var(--ink-2);}
+
+/* cover */
+.cover{display:flex;flex-direction:column;min-height:60mm;}
+.cover .top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:16px;}
+.cover .lg img{height:30px;width:auto;display:block;}
+.cover .cls{text-align:right;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);line-height:1.5;max-width:62mm;}
+.cover .ttl{margin-top:30px;}
+.cover .kick{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);}
+.cover h1{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:300;font-size:30px;letter-spacing:-1.1px;line-height:1.1;color:var(--ink);margin:8px 0 6px;}
+.cover .sub{font-size:12.5px;color:var(--ink-2);max-width:130mm;}
+
+/* control cartouche */
+.ctrl{margin-top:26px;border:1px solid var(--line);}
+.ctrl .ch{background:var(--soft);border-bottom:1px solid var(--line);padding:7px 12px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-2);}
+.ctrl .cg{display:grid;grid-template-columns:1fr 1fr;}
+.ctrl .ci{display:flex;gap:8px;padding:8px 12px;border-top:1px solid var(--line-2);}
+.ctrl .cg .ci:nth-child(-n+2){border-top:0;}
+.ctrl .ci:nth-child(odd){border-right:1px solid var(--line-2);}
+.ctrl .k{flex:0 0 42mm;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);}
+.ctrl .v{font-size:11px;color:var(--ink);font-weight:500;}
+.sign{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--line);border-top:0;}
+.sign .si{padding:10px 12px;border-right:1px solid var(--line-2);}
+.sign .si:last-child{border-right:0;}
+.sign .sl{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);}
+.sign .sn{font-size:11px;color:var(--ink);font-weight:600;margin-top:3px;}
+.sign .sr{font-size:10px;color:var(--mute);}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:10.2px;margin:6px 0 4px;}
+caption{text-align:left;font-size:10px;color:var(--mute);margin-bottom:5px;}
+th,td{border:1px solid var(--line-2);padding:6px 8px;text-align:left;vertical-align:top;}
+thead th{background:var(--soft);font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:8.8px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-2);}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;}
+tbody th{font-weight:600;color:var(--ink);background:#fff;font-family:'DM Sans',system-ui,sans-serif;font-size:10.2px;}
+tr.sub th{font-weight:400;color:var(--mute);padding-left:18px;font-style:italic;}
+tr.sub td{color:var(--mute);}
+.eval{font-weight:600;}
+.eval.ok{color:var(--teal-deep);}
+
+/* misc */
+ul.cf{margin:4px 0 10px;padding:0;list-style:none;}
+ul.cf li{position:relative;padding:3px 0 3px 16px;font-size:11.2px;line-height:1.55;color:var(--ink-2);}
+ul.cf li::before{content:"";position:absolute;left:2px;top:10px;width:4px;height:4px;background:var(--teal);}
+.legend{margin-top:6px;font-size:9.6px;color:var(--faint);}
+.note{margin-top:8px;padding:9px 12px;border-left:2px solid var(--teal);background:var(--soft);font-size:10.4px;color:var(--ink-2);line-height:1.55;}
+.kvs{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;}
+.kv{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid var(--line-2);font-size:11px;}
+.kv .k{flex:0 0 46mm;color:var(--mute);font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:10px;font-weight:600;}
+.kv .v{color:var(--ink);font-weight:500;}
+.foot-src{margin-top:30px;padding-top:10px;border-top:1px solid var(--line);font-size:9.4px;color:var(--faint);line-height:1.5;}
+
+/* running header / footer for print */
+.run{display:none;}
+
+@media print{
+  html,body{background:#fff;}
+  .bar{display:none !important;}
+  .doc{margin:0;max-width:none;box-shadow:none;padding:0;}
+  .run{display:block;position:fixed;left:0;right:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#5C6B66;font-size:8.2px;}
+  .run.rh{top:0;border-bottom:.5px solid #C9D2CF;padding-bottom:3px;display:flex;justify-content:space-between;}
+  .run.rf{bottom:0;border-top:.5px solid #C9D2CF;padding-top:3px;display:flex;justify-content:space-between;}
+  .sec{break-inside:avoid;}
+  table,tr,thead,tbody{break-inside:avoid;}
+  h2,h3{break-after:avoid;}
+}
+@page{
+  size:A4;
+  margin:16mm 15mm 15mm;
+}
+@media(max-width:560px){.doc{padding:16mm 7mm;}.ctrl .cg,.sign,.kvs{grid-template-columns:1fr;}.ctrl .ci:nth-child(odd){border-right:0;}.sign .si{border-right:0;border-bottom:1px solid var(--line-2);}}
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <span class="bt">Rapport d'impact consolidé</span>
+  <span class="sp"></span>
+  <button type="button" id="langBtn" aria-label="Changer de langue"><i class="ti ti-world"></i><span id="langLabel">English</span></button>
+  <a href="tableau-de-bord-partenaire.html" id="backBtn"><i class="ti ti-arrow-left"></i><span>Tableau de bord</span></a>
+  <button type="button" class="pri" id="printBtn"><i class="ti ti-printer"></i><span id="printLabel">Imprimer en PDF</span></button>
+</div>
+
+<!-- running header / footer (print only) -->
+<div class="run rh" aria-hidden="true"><span id="rhL">Coastal Futures Network · Rapport d'impact consolidé n° 1</span><span id="rhR">Données : collecte non démarrée</span></div>
+<div class="run rf" aria-hidden="true"><span id="rfL">CFN-RPT-2026-001 · Diffusion : partenaires techniques et financiers</span><span id="rfR">Institut Africain de la Gouvernance</span></div>
+
+<main class="doc" id="doc">
+
+  <!-- COVER + DOCUMENT CONTROL -->
+  <section class="cover">
+    <div class="top">
+      <div class="lg"><img decoding="async" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network"></div>
+      <div class="cls" id="clsBox">Diffusion : partenaires techniques et financiers<br>Document de redevabilité · ne pas rediffuser sans accord de l'IAG</div>
+    </div>
+    <div class="ttl">
+      <div class="kick">Institut Africain de la Gouvernance · Coastal Futures Network</div>
+      <h1>Rapport d'impact consolidé n° 1</h1>
+      <div class="sub">Programme régional pour 4 000 jeunes entrepreneurs verts · Sénégal, Ghana, Guinée, Liberia, Sierra Leone · rapport d'ouverture</div>
+    </div>
+
+    <div class="ctrl">
+      <div class="ch">Contrôle documentaire</div>
+      <div class="cg">
+        <div class="ci"><span class="k">Référence</span><span class="v">CFN-RPT-2026-001</span></div>
+        <div class="ci"><span class="k">Version</span><span class="v">1.0</span></div>
+        <div class="ci"><span class="k">Rapport n°</span><span class="v">1 · rapport d'ouverture</span></div>
+        <div class="ci"><span class="k">Fréquence</span><span class="v">Semestrielle</span></div>
+        <div class="ci"><span class="k">Période couverte</span><span class="v">10 juin 2026 au 30 juin 2026</span></div>
+        <div class="ci"><span class="k">Prochain rapport</span><span class="v">T4 2026</span></div>
+        <div class="ci"><span class="k">Date d'arrêté des données</span><span class="v" id="cutoffVal">collecte non démarrée</span></div>
+        <div class="ci"><span class="k">Date d'émission</span><span class="v" id="issueDate">—</span></div>
+        <div class="ci"><span class="k">Destinataire</span><span class="v" data-ptf-org-value>Partenaire technique et financier</span></div>
+        <div class="ci"><span class="k">Langue</span><span class="v" id="docLang">Français</span></div>
+      </div>
+    </div>
+    <div class="sign">
+      <div class="si"><div class="sl">Préparé par</div><div class="sn">Équipe suivi &amp; évaluation</div><div class="sr">Coastal Futures</div></div>
+      <div class="si"><div class="sl">Revu par</div><div class="sn">Fanta Camara</div><div class="sr">Programme et partenariats</div></div>
+      <div class="si"><div class="sl">Approuvé par</div><div class="sn">Saïfi Dawalbet Hamit</div><div class="sr">Coordination du programme</div></div>
+    </div>
+    <p class="legend">Symboles : 0 = valeur de référence au lancement · « à définir » = cible non encore arrêtée avec les partenaires · « n.d. » = non disponible à ce stade. Toutes les valeurs sont validées et publiées par la console programme. Contact suivi et évaluation : suivi@africagovernanceinstitute.org.</p>
+  </section>
+
+  <!-- 1. EXEC SUMMARY -->
+  <section class="sec">
+    <h2><span class="n">1.</span>Résumé exécutif et actions proposées</h2>
+    <p>Coastal Futures Network a été lancé officiellement le 10 juin 2026 à Dakar, sous l'égide de la Journée mondiale de l'environnement. Le programme, porté par l'Institut Africain de la Gouvernance, vise à former 4 000 jeunes entrepreneurs verts dans cinq pays côtiers d'Afrique de l'Ouest, sur une feuille de route d'avril 2026 à mars 2027.</p>
+    <p>À la date de ce rapport, le programme est en phase de démarrage : la gouvernance est en place, les accords avec les organisations d'exécution locales sont signés, le dispositif de suivi et évaluation est opérationnel et les inscriptions de la première cohorte sont ouvertes. Les activités de terrain n'ont pas encore produit de données d'impact mesurées : la première collecte est prévue au troisième trimestre 2026. Ce rapport d'ouverture établit donc le cadre de résultats complet à progression nulle, avec ses valeurs de référence et ses cibles.</p>
+    <h3>Actions proposées et prochaines étapes</h3>
+    <table>
+      <caption>Tableau 1 — Actions et échéances</caption>
+      <thead><tr><th>Action</th><th>Responsable</th><th>Échéance</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Ouverture et accompagnement de la cohorte 1</th><td>Hubs jeunesse · coordination</td><td class="num">T3 2026</td></tr>
+        <tr><th scope="row">Première collecte de terrain des indicateurs</th><td>Équipe S&amp;E · coordinateurs pays</td><td class="num">T3 2026</td></tr>
+        <tr><th scope="row">Première publication d'indicateurs mesurés</th><td>Console programme</td><td class="num">T3 2026</td></tr>
+        <tr><th scope="row">Rapport d'impact consolidé n° 2</th><td>Équipe S&amp;E</td><td class="num">T4 2026</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 2. PROGRAMME DATA -->
+  <section class="sec">
+    <h2><span class="n">2.</span>Données du programme</h2>
+    <div class="kvs">
+      <div class="kv"><span class="k">Intitulé</span><span class="v">Coastal Futures Network</span></div>
+      <div class="kv"><span class="k">Porteur</span><span class="v">Institut Africain de la Gouvernance</span></div>
+      <div class="kv"><span class="k">Alignement institutionnel</span><span class="v">CEDEAO · Commission de l'Union Africaine</span></div>
+      <div class="kv"><span class="k">Pays</span><span class="v">Sénégal, Ghana, Guinée, Liberia, Sierra Leone</span></div>
+      <div class="kv"><span class="k">Hubs d'exécution</span><span class="v">Un hub jeunesse par pays</span></div>
+      <div class="kv"><span class="k">Feuille de route</span><span class="v">Avril 2026 au mars 2027</span></div>
+      <div class="kv"><span class="k">ODD couverts</span><span class="v">1, 4, 8, 13, 14, 15, 17</span></div>
+      <div class="kv"><span class="k">Objectif principal</span><span class="v">4 000 jeunes entrepreneurs verts formés</span></div>
+    </div>
+    <p class="note"><strong>Financement :</strong> le reporting financier (engagements, décaissements, taux d'exécution, cofinancement) est transmis séparément, conformément aux conventions de financement. Il ne figure pas dans le présent rapport d'impact.</p>
+  </section>
+
+  <!-- 3. EXECUTION STATUS -->
+  <section class="sec">
+    <h2><span class="n">3.</span>État d'exécution</h2>
+    <h3>Gouvernance et dispositif de mise en œuvre</h3>
+    <p>La gouvernance du programme est assurée par l'équipe de coordination de l'Institut Africain de la Gouvernance, avec un comité de pilotage réunissant les partenaires. Le suivi et évaluation est porté par une équipe dédiée : les coordinateurs pays renseignent les données, le suivi et évaluation régional valide, la console programme publie. Chaque indicateur régional est la somme des cinq pays.</p>
+    <h3>Jalons franchis</h3>
+    <table>
+      <caption>Tableau 2 — Jalons d'exécution</caption>
+      <thead><tr><th>Jalon</th><th>Date</th><th>Statut</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Lancement officiel à Dakar</th><td class="num">10 juin 2026</td><td class="eval ok">Réalisé</td></tr>
+        <tr><th scope="row">Signature des accords avec les organisations d'exécution</th><td class="num">10 juin 2026</td><td class="eval ok">Réalisé</td></tr>
+        <tr><th scope="row">Mise en place du dispositif suivi et évaluation</th><td class="num">Juin 2026</td><td class="eval ok">Réalisé</td></tr>
+        <tr><th scope="row">Ouverture des inscriptions de la cohorte 1</th><td class="num">Juin 2026</td><td class="eval ok">En cours</td></tr>
+        <tr><th scope="row">Première collecte de terrain</th><td class="num">T3 2026</td><td>À venir</td></tr>
+      </tbody>
+    </table>
+    <p>Appréciation qualitative : le démarrage est conforme au calendrier. Le principal enjeu de la période à venir est la qualité de la première collecte, condition de toutes les mesures d'impact ultérieures.</p>
+  </section>
+
+  <!-- 4. RESULTS FRAMEWORK : OUTCOMES -->
+  <section class="sec brk">
+    <h2><span class="n">4.</span>Cadre de résultats : effets et impact</h2>
+    <p class="lead">Référence établie au lancement (10 juin 2026). La collecte n'ayant pas démarré, la valeur courante égale la référence et la progression est nulle, ce qui est attendu et commenté. Les cibles arrêtées figurent ; les autres seront fixées avec les partenaires à l'issue du cadrage.</p>
+    <table>
+      <caption>Tableau 3 — Indicateurs d'effet et d'impact</caption>
+      <thead><tr><th>Indicateur</th><th class="num">Réf. (10/06/26)</th><th class="num">Courant</th><th class="num">Cible (03/27)</th><th class="num">Progrès</th><th>Évaluation</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Entrepreneurs verts accompagnés <span style="color:var(--mute);font-weight:400;">· personnes · ODD 8</span></th><td class="num">0</td><td class="num" data-derive="entrepreneurs">0</td><td class="num" id="tgtEnt">4 000</td><td class="num">0 %</td><td class="eval ok">En bonne voie : collecte non démarrée</td></tr>
+        <tr class="sub"><th scope="row">dont femmes</th><td class="num">0</td><td class="num">0</td><td class="num">n.d.</td><td class="num">—</td><td>Cible genre à arrêter au cadrage</td></tr>
+        <tr class="sub"><th scope="row">ventilation par pays</th><td class="num">0</td><td class="num">0</td><td class="num">n.d.</td><td class="num">—</td><td>Structure prête, données dès la collecte</td></tr>
+        <tr><th scope="row">Bénéficiaires directs <span style="color:var(--mute);font-weight:400;">· personnes · ODD 1, 8</span></th><td class="num">0</td><td class="num" data-site="kpi.beneficiaires">0</td><td>à définir</td><td class="num">—</td><td>Cible à arrêter avec les partenaires</td></tr>
+        <tr class="sub"><th scope="row">dont femmes</th><td class="num">0</td><td class="num">0</td><td class="num">n.d.</td><td class="num">—</td><td>Désagrégation prévue</td></tr>
+        <tr><th scope="row">Mangroves restaurées <span style="color:var(--mute);font-weight:400;">· hectares · ODD 13, 14, 15</span></th><td class="num">0</td><td class="num" data-site="kpi.mangroves">0</td><td>à définir</td><td class="num">—</td><td>Mesure semestrielle, liée aux saisons</td></tr>
+      </tbody>
+    </table>
+    <p class="legend">Première mesure prévue : troisième trimestre 2026, après la collecte de terrain et la fin du premier cycle d'incubation.</p>
+  </section>
+
+  <!-- 5. RESULTS FRAMEWORK : OUTPUTS -->
+  <section class="sec">
+    <h2><span class="n">5.</span>Cadre de résultats : produits</h2>
+    <table>
+      <caption>Tableau 4 — Indicateurs de produit</caption>
+      <thead><tr><th>Indicateur</th><th class="num">Courant</th><th class="num">Cible finale</th><th class="num">Fréquence</th><th>Évaluation</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Hubs jeunesse conventionnés <span style="color:var(--mute);font-weight:400;">· ODD 17</span></th><td class="num">5</td><td class="num">5</td><td>—</td><td class="eval ok">Accords signés au lancement</td></tr>
+        <tr><th scope="row">Appels à candidatures ouverts (cohorte 1)</th><td>ouverts</td><td class="num">—</td><td>—</td><td class="eval ok">En cours</td></tr>
+        <tr><th scope="row">Candidatures reçues</th><td class="num" data-derive="candidatures">0</td><td>à définir</td><td>trimestrielle</td><td>Dès l'ouverture effective</td></tr>
+        <tr><th scope="row">Projets labellisés <span style="color:var(--mute);font-weight:400;">· ODD 8, 13</span></th><td class="num" data-derive="labellises">0</td><td>à définir</td><td>trimestrielle</td><td>Première session de labellisation à venir</td></tr>
+        <tr><th scope="row">Déchets recyclés <span style="color:var(--mute);font-weight:400;">· tonnes · ODD 13</span></th><td class="num" data-site="kpi.dechets">0</td><td>à définir</td><td>trimestrielle</td><td>Mesure dès la collecte</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 6. ISSUES, RISKS -->
+  <section class="sec">
+    <h2><span class="n">6.</span>Problèmes, risques et mesures</h2>
+    <h3>Problèmes affectant l'exécution</h3>
+    <table>
+      <caption>Tableau 5 — Problèmes et mesures correctives</caption>
+      <thead><tr><th>Problème</th><th>Mesure corrective</th><th>Responsable</th><th>Échéance</th><th>Statut</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Aucun problème majeur à la date du rapport</th><td>Sans objet</td><td>—</td><td>—</td><td class="eval ok">N/A</td></tr>
+      </tbody>
+    </table>
+    <h3>Risques principaux et atténuation</h3>
+    <table>
+      <caption>Tableau 6 — Risques</caption>
+      <thead><tr><th>Risque</th><th>Niveau</th><th>Atténuation</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Retard ou qualité insuffisante de la première collecte</th><td>Moyen</td><td>Protocole de collecte, formation des coordinateurs pays, contrôle qualité au S&amp;E régional</td></tr>
+        <tr><th scope="row">Hétérogénéité des données entre les cinq pays</th><td>Moyen</td><td>Définitions communes, règle de consolidation Σ 5 pays, circuit de validation</td></tr>
+        <tr><th scope="row">Aléas climatiques sur les activités de terrain</th><td>Moyen</td><td>Calendrier semestriel aligné sur les saisons pour les indicateurs de terrain</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 7. SAFEGUARDS & GENDER -->
+  <section class="sec">
+    <h2><span class="n">7.</span>Sauvegardes et genre</h2>
+    <p>Le programme cible explicitement la participation des jeunes femmes : les indicateurs d'effet prévoient une désagrégation par sexe, structurée dès ce rapport et renseignée dès la première collecte.</p>
+    <p>Les données des bénéficiaires sont traitées de façon agrégée et anonymisée : aucun bénéficiaire n'est identifié individuellement dans le reporting des partenaires, conformément à la politique de confidentialité publiée. Le cadre de sauvegardes environnementales et sociales et le mécanisme de gestion des plaintes sont en cours de formalisation avec les partenaires.</p>
+  </section>
+
+  <!-- 8. ANNEXES -->
+  <section class="sec">
+    <h2><span class="n">8.</span>Annexes</h2>
+    <h3>A. Définitions et méthodologie</h3>
+    <p>Les définitions, sources, fréquences et niveaux de chaque indicateur, ainsi que les conventions de formats et l'alignement ODD, sont publiés dans la méthodologie d'impact du programme (methodologie-indicateurs.html).</p>
+    <h3>B. Note de réconciliation</h3>
+    <p>Chaque indicateur régional est la somme des valeurs du Sénégal, du Ghana, de la Guinée, du Liberia et de la Sierra Leone. Les valeurs suivent le circuit brouillon, soumis, validé, publié de la console programme et sont tracées au journal d'audit.</p>
+    <h3>C. Journal des mises à jour des données</h3>
+    <table>
+      <caption>Tableau 7 — Journal des mises à jour</caption>
+      <thead><tr><th>Date</th><th>Indicateur</th><th class="num">Ancienne valeur</th><th class="num">Nouvelle valeur</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td colspan="5" style="text-align:center;color:var(--mute);">Aucune mise à jour publiée à ce jour. Le journal se remplira dès la première validation.</td></tr>
+      </tbody>
+    </table>
+    <h3>D. Calendrier de rapportage</h3>
+    <table>
+      <caption>Tableau 8 — Calendrier des douze prochains mois</caption>
+      <thead><tr><th>Échéance</th><th>Publication</th><th>Contenu</th></tr></thead>
+      <tbody>
+        <tr><td class="num">T3 2026</td><th scope="row">Indicateurs n° 1</th><td>Premiers indicateurs mesurés, cohorte 1</td></tr>
+        <tr><td class="num">T4 2026</td><th scope="row">Rapport n° 2</th><td>Mise à jour semestrielle</td></tr>
+        <tr><td class="num">T1 2027</td><th scope="row">Indicateurs n° 3</th><td>Premières désagrégations sexe, âge, pays</td></tr>
+        <tr><td class="num">T2 2027</td><th scope="row">Rapport n° 3 · clôture</th><td>Bilan de la feuille de route</td></tr>
+      </tbody>
+    </table>
+    <div class="foot-src">Source : plateforme Coastal Futures Network · indicateurs validés et publiés par la console programme · données arrêtées : collecte non démarrée (première mesure prévue T3 2026) · Institut Africain de la Gouvernance. Référence du document : CFN-RPT-2026-001, version 1.0.</div>
+  </section>
+
+</main>
+
+<script src="assets/cf-site.js"></script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-derive.js"></script>
+<script id="cf-rapport-js">(function(){
+  // date d'émission
+  function fmt(l){var d=new Date();return d.toLocaleDateString(l==='en'?'en-GB':'fr-FR',{day:'numeric',month:'long',year:'numeric'});}
+  function num(n,l){var v=Number(n);if(isNaN(v))return ''+n;return v.toLocaleString(l==='en'?'en-US':'fr-FR');}
+  // Audit v7 §V7-4 : the export reads the SAME single source as the screen (cf-site + the
+  // derived counts), so the report can never show a different truth than the dashboard.
+  // The target comes from cf-site.target (it can no longer diverge), the current values
+  // from the published KPIs and the derived collection counts. The data cut-off becomes a
+  // real date the moment any impact value is published; until then it stays honest.
+  function impactStarted(){
+    try{
+      var d=window.CFSite&&CFSite.get(); if(!d) return false;
+      var dv=window.CFDerive?CFDerive.values():{};
+      var f=['mangroves','dechets','beneficiaires'];
+      for(var i=0;i<f.length;i++){ if(parseInt((''+(d.kpi[f[i]]||'0')).replace(/[^0-9]/g,''),10)>0) return true; }
+      if((dv.entrepreneurs||0)>0||(dv.labellises||0)>0) return true;
+    }catch(e){}
+    return false;
+  }
+  function hydrateData(l){
+    try{ if(window.CFDerive) CFDerive.recompute(); }catch(e){}
+    try{
+      var d=window.CFSite&&CFSite.get();
+      var tgt=document.getElementById('tgtEnt');
+      if(tgt&&d&&d.target&&d.target.entrepreneurs) tgt.textContent=num(d.target.entrepreneurs,l);
+      var started=impactStarted();
+      var cut=started?fmt(l):(l==='en'?'collection not started':'collecte non démarrée');
+      var cv=document.getElementById('cutoffVal'); if(cv) cv.textContent=cut;
+      var rhR=document.getElementById('rhR'); if(rhR) rhR.textContent=(l==='en'?'Data: ':'Données : ')+cut;
+    }catch(e){}
+  }
+  // destinataire depuis l'identité PTF
+  try{var org=(localStorage.getItem('cf-ptf-org')||'').trim();if(org){document.querySelectorAll('[data-ptf-org-value]').forEach(function(e){e.textContent=org;});}}catch(e){}
+  // boutons
+  var pb=document.getElementById('printBtn'); if(pb) pb.addEventListener('click',function(){window.print();});
+  // i18n
+  var D={
+    "Rapport d'impact consolidé":"Consolidated impact report","English":"Français","Tableau de bord":"Dashboard","Imprimer en PDF":"Print to PDF",
+    "Diffusion : partenaires techniques et financiers":"Distribution: technical and financial partners","Document de redevabilité · ne pas rediffuser sans accord de l'IAG":"Accountability document · do not redistribute without AGI approval",
+    "Institut Africain de la Gouvernance · Coastal Futures Network":"Africa Governance Institute · Coastal Futures Network",
+    "Rapport d'impact consolidé n° 1":"Consolidated impact report no. 1",
+    "Programme régional pour 4 000 jeunes entrepreneurs verts · Sénégal, Ghana, Guinée, Liberia, Sierra Leone · rapport d'ouverture":"Regional programme for 4,000 young green entrepreneurs · Senegal, Ghana, Guinea, Liberia, Sierra Leone · opening report",
+    "Contrôle documentaire":"Document control","Référence":"Reference","Version":"Version","Rapport n°":"Report no.","1 · rapport d'ouverture":"1 · opening report","Fréquence":"Frequency","Semestrielle":"Half-yearly","Période couverte":"Reporting period","10 juin 2026 au 30 juin 2026":"10 June 2026 to 30 June 2026","Prochain rapport":"Next report","Date d'arrêté des données":"Data cut-off","collecte non démarrée":"collection not started","Date d'émission":"Issued on","Destinataire":"Recipient","Partenaire technique et financier":"Technical and financial partner","Langue":"Language","Français":"French",
+    "Préparé par":"Prepared by","Équipe suivi & évaluation":"Monitoring & evaluation team","Revu par":"Reviewed by","Programme et partenariats":"Programme and partnerships","Approuvé par":"Approved by","Coordination du programme":"Programme coordination",
+    "Symboles : 0 = valeur de référence au lancement · « à définir » = cible non encore arrêtée avec les partenaires · « n.d. » = non disponible à ce stade. Toutes les valeurs sont validées et publiées par la console programme. Contact suivi et évaluation : suivi@africagovernanceinstitute.org.":"Symbols: 0 = baseline at launch · “to be defined” = target not yet set with partners · “n/a” = not available at this stage. All values are validated and published by the programme console. Monitoring and evaluation contact: suivi@africagovernanceinstitute.org.",
+    "Résumé exécutif et actions proposées":"Executive summary and proposed actions",
+    "Coastal Futures Network a été lancé officiellement le 10 juin 2026 à Dakar, sous l'égide de la Journée mondiale de l'environnement. Le programme, porté par l'Institut Africain de la Gouvernance, vise à former 4 000 jeunes entrepreneurs verts dans cinq pays côtiers d'Afrique de l'Ouest, sur une feuille de route d'avril 2026 à mars 2027.":"Coastal Futures Network was officially launched on 10 June 2026 in Dakar, under the banner of World Environment Day. The programme, led by the Africa Governance Institute, aims to train 4,000 young green entrepreneurs across five coastal countries of West Africa, over a roadmap running from April 2026 to March 2027.",
+    "À la date de ce rapport, le programme est en phase de démarrage : la gouvernance est en place, les accords avec les organisations d'exécution locales sont signés, le dispositif de suivi et évaluation est opérationnel et les inscriptions de la première cohorte sont ouvertes. Les activités de terrain n'ont pas encore produit de données d'impact mesurées : la première collecte est prévue au troisième trimestre 2026. Ce rapport d'ouverture établit donc le cadre de résultats complet à progression nulle, avec ses valeurs de référence et ses cibles.":"As of this report, the programme is in its start-up phase: governance is in place, the agreements with local execution organisations are signed, the monitoring and evaluation system is operational and registration for the first cohort is open. Field activities have not yet produced measured impact data: the first collection is planned for the third quarter of 2026. This opening report therefore sets out the full results framework at zero progress, with its baselines and targets.",
+    "Actions proposées et prochaines étapes":"Proposed actions and next steps","Tableau 1 — Actions et échéances":"Table 1 — Actions and deadlines","Action":"Action","Responsable":"Owner","Échéance":"Deadline",
+    "Ouverture et accompagnement de la cohorte 1":"Opening and support of cohort 1","Hubs jeunesse · coordination":"Youth hubs · coordination","Première collecte de terrain des indicateurs":"First field collection of indicators","Équipe S&E · coordinateurs pays":"M&E team · country coordinators","Première publication d'indicateurs mesurés":"First publication of measured indicators","Console programme":"Programme console","Rapport d'impact consolidé n° 2":"Consolidated impact report no. 2","Équipe S&E":"M&E team",
+    "Données du programme":"Programme data","Intitulé":"Title","Porteur":"Lead","Alignement institutionnel":"Institutional alignment","CEDEAO · Commission de l'Union Africaine":"ECOWAS · African Union Commission","Pays":"Countries","Sénégal, Ghana, Guinée, Liberia, Sierra Leone":"Senegal, Ghana, Guinea, Liberia, Sierra Leone","Hubs d'exécution":"Execution hubs","Un hub jeunesse par pays":"One youth hub per country","Feuille de route":"Roadmap","Avril 2026 au mars 2027":"April 2026 to March 2027","ODD couverts":"SDGs covered","Objectif principal":"Main objective","4 000 jeunes entrepreneurs verts formés":"4,000 young green entrepreneurs trained",
+    "Financement :":"Financing:","le reporting financier (engagements, décaissements, taux d'exécution, cofinancement) est transmis séparément, conformément aux conventions de financement. Il ne figure pas dans le présent rapport d'impact.":"financial reporting (commitments, disbursements, execution rates, co-financing) is transmitted separately, in accordance with the financing agreements. It is not included in this impact report.",
+    "État d'exécution":"Execution status","Gouvernance et dispositif de mise en œuvre":"Governance and implementation arrangements",
+    "La gouvernance du programme est assurée par l'équipe de coordination de l'Institut Africain de la Gouvernance, avec un comité de pilotage réunissant les partenaires. Le suivi et évaluation est porté par une équipe dédiée : les coordinateurs pays renseignent les données, le suivi et évaluation régional valide, la console programme publie. Chaque indicateur régional est la somme des cinq pays.":"Programme governance is provided by the Africa Governance Institute coordination team, with a steering committee bringing together the partners. Monitoring and evaluation is led by a dedicated team: country coordinators enter the data, regional M&E validates, the programme console publishes. Each regional indicator is the sum of the five countries.",
+    "Jalons franchis":"Milestones reached","Tableau 2 — Jalons d'exécution":"Table 2 — Execution milestones","Jalon":"Milestone","Date":"Date","Statut":"Status",
+    "Lancement officiel à Dakar":"Official launch in Dakar","10 juin 2026":"10 June 2026","Réalisé":"Completed","Signature des accords avec les organisations d'exécution":"Signing of agreements with execution organisations","Mise en place du dispositif suivi et évaluation":"Setting up the monitoring and evaluation system","Juin 2026":"June 2026","Ouverture des inscriptions de la cohorte 1":"Opening of cohort 1 registration","En cours":"In progress","Première collecte de terrain":"First field collection","À venir":"Upcoming",
+    "Appréciation qualitative : le démarrage est conforme au calendrier. Le principal enjeu de la période à venir est la qualité de la première collecte, condition de toutes les mesures d'impact ultérieures.":"Qualitative assessment: the start-up is on schedule. The main challenge for the coming period is the quality of the first collection, a precondition for all later impact measurements.",
+    "Cadre de résultats : effets et impact":"Results framework: outcomes and impact",
+    "Référence établie au lancement (10 juin 2026). La collecte n'ayant pas démarré, la valeur courante égale la référence et la progression est nulle, ce qui est attendu et commenté. Les cibles arrêtées figurent ; les autres seront fixées avec les partenaires à l'issue du cadrage.":"Baseline established at launch (10 June 2026). As collection has not started, the current value equals the baseline and progress is nil, which is expected and commented. Set targets are shown; the others will be fixed with partners after framing.",
+    "Tableau 3 — Indicateurs d'effet et d'impact":"Table 3 — Outcome and impact indicators","Indicateur":"Indicator","Courant":"Current","Progrès":"Progress","Évaluation":"Assessment",
+    "Entrepreneurs verts accompagnés":"Green entrepreneurs supported","En bonne voie : collecte non démarrée":"On track: collection not started","dont femmes":"of which women","Cible genre à arrêter au cadrage":"Gender target to be set at framing","ventilation par pays":"breakdown by country","Structure prête, données dès la collecte":"Structure ready, data from first collection","Bénéficiaires directs":"Direct beneficiaries","à définir":"to be defined","Cible à arrêter avec les partenaires":"Target to be set with partners","Désagrégation prévue":"Disaggregation planned","Mangroves restaurées":"Mangroves restored","Mesure semestrielle, liée aux saisons":"Half-yearly measure, linked to seasons",
+    "Première mesure prévue : troisième trimestre 2026, après la collecte de terrain et la fin du premier cycle d'incubation.":"First measure planned: third quarter 2026, after field collection and the end of the first incubation cycle.",
+    "Cadre de résultats : produits":"Results framework: outputs","Tableau 4 — Indicateurs de produit":"Table 4 — Output indicators","Cible finale":"Final target",
+    "Hubs jeunesse conventionnés":"Youth hubs under agreement","Accords signés au lancement":"Agreements signed at launch","Appels à candidatures ouverts (cohorte 1)":"Calls for applications open (cohort 1)","ouverts":"open","Candidatures reçues":"Applications received","Dès l'ouverture effective":"From effective opening","Projets labellisés":"Certified projects","Première session de labellisation à venir":"First certification session upcoming","Déchets recyclés":"Waste recycled","Mesure dès la collecte":"Measured from first collection","trimestrielle":"quarterly",
+    "Problèmes, risques et mesures":"Issues, risks and measures","Problèmes affectant l'exécution":"Issues affecting execution","Tableau 5 — Problèmes et mesures correctives":"Table 5 — Issues and corrective measures","Problème":"Issue","Mesure corrective":"Corrective measure",
+    "Aucun problème majeur à la date du rapport":"No major issue as of the report date","Sans objet":"Not applicable","Risques principaux et atténuation":"Main risks and mitigation","Tableau 6 — Risques":"Table 6 — Risks","Risque":"Risk","Niveau":"Level","Atténuation":"Mitigation","Moyen":"Medium",
+    "Retard ou qualité insuffisante de la première collecte":"Delay or insufficient quality of the first collection","Protocole de collecte, formation des coordinateurs pays, contrôle qualité au S&E régional":"Collection protocol, training of country coordinators, quality control at regional M&E","Hétérogénéité des données entre les cinq pays":"Data heterogeneity across the five countries","Définitions communes, règle de consolidation Σ 5 pays, circuit de validation":"Common definitions, sum-of-five-countries consolidation rule, validation flow","Aléas climatiques sur les activités de terrain":"Climate hazards affecting field activities","Calendrier semestriel aligné sur les saisons pour les indicateurs de terrain":"Half-yearly schedule aligned with seasons for field indicators",
+    "Sauvegardes et genre":"Safeguards and gender",
+    "Le programme cible explicitement la participation des jeunes femmes : les indicateurs d'effet prévoient une désagrégation par sexe, structurée dès ce rapport et renseignée dès la première collecte.":"The programme explicitly targets the participation of young women: outcome indicators provide for disaggregation by sex, structured from this report and populated from the first collection.",
+    "Les données des bénéficiaires sont traitées de façon agrégée et anonymisée : aucun bénéficiaire n'est identifié individuellement dans le reporting des partenaires, conformément à la politique de confidentialité publiée. Le cadre de sauvegardes environnementales et sociales et le mécanisme de gestion des plaintes sont en cours de formalisation avec les partenaires.":"Beneficiary data is processed in an aggregated and anonymised way: no beneficiary is individually identified in partner reporting, in line with the published privacy policy. The environmental and social safeguards framework and the grievance mechanism are being formalised with partners.",
+    "Annexes":"Annexes","A. Définitions et méthodologie":"A. Definitions and methodology",
+    "Les définitions, sources, fréquences et niveaux de chaque indicateur, ainsi que les conventions de formats et l'alignement ODD, sont publiés dans la méthodologie d'impact du programme (methodologie-indicateurs.html).":"The definitions, sources, frequencies and levels of each indicator, together with the format conventions and SDG alignment, are published in the programme's impact methodology (methodologie-indicateurs.html).",
+    "B. Note de réconciliation":"B. Reconciliation note",
+    "Chaque indicateur régional est la somme des valeurs du Sénégal, du Ghana, de la Guinée, du Liberia et de la Sierra Leone. Les valeurs suivent le circuit brouillon, soumis, validé, publié de la console programme et sont tracées au journal d'audit.":"Each regional indicator is the sum of the values for Senegal, Ghana, Guinea, Liberia and Sierra Leone. Values follow the draft, submitted, validated, published flow of the programme console and are traced in the audit log.",
+    "C. Journal des mises à jour des données":"C. Data update log","Tableau 7 — Journal des mises à jour":"Table 7 — Update log","Ancienne valeur":"Previous value","Nouvelle valeur":"New value","Source":"Source",
+    "Aucune mise à jour publiée à ce jour. Le journal se remplira dès la première validation.":"No update published to date. The log will fill in from the first validation.",
+    "D. Calendrier de rapportage":"D. Reporting calendar","Tableau 8 — Calendrier des douze prochains mois":"Table 8 — Calendar for the next twelve months","Publication":"Publication","Contenu":"Content",
+    "Indicateurs n° 1":"Indicators no. 1","Premiers indicateurs mesurés, cohorte 1":"First measured indicators, cohort 1","Rapport n° 2":"Report no. 2","Mise à jour semestrielle":"Half-yearly update","Indicateurs n° 3":"Indicators no. 3","Premières désagrégations sexe, âge, pays":"First disaggregations by sex, age, country","Rapport n° 3 · clôture":"Report no. 3 · closing","Bilan de la feuille de route":"Roadmap review",
+    "Source : plateforme Coastal Futures Network · indicateurs validés et publiés par la console programme · données arrêtées : collecte non démarrée (première mesure prévue T3 2026) · Institut Africain de la Gouvernance. Référence du document : CFN-RPT-2026-001, version 1.0.":"Source: Coastal Futures Network platform · indicators validated and published by the programme console · data cut-off: collection not started (first measure planned Q3 2026) · Africa Governance Institute. Document reference: CFN-RPT-2026-001, version 1.0.",
+    "Coastal Futures Network · Rapport d'impact consolidé n° 1":"Coastal Futures Network · Consolidated impact report no. 1","Données : collecte non démarrée":"Data: collection not started","CFN-RPT-2026-001 · Diffusion : partenaires techniques et financiers":"CFN-RPT-2026-001 · Distribution: technical and financial partners","Institut Africain de la Gouvernance":"Africa Governance Institute"
+  };
+  var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}
+  function setLang(l){
+    arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==='en')?n.__fr.replace(k,D[k]):n.__fr;});
+    document.documentElement.lang=l;
+    try{localStorage.setItem('cf-lang',l);}catch(e){}
+    document.getElementById('issueDate').textContent=fmt(l);
+    hydrateData(l);
+    var dl=document.getElementById('docLang'); if(dl) dl.textContent=(l==='en')?'English':'Français';
+    var ll=document.getElementById('langLabel'); if(ll) ll.textContent=(l==='en')?'Français':'English';
+  }
+  document.getElementById('langBtn').addEventListener('click',function(){setLang(document.documentElement.lang==='en'?'fr':'en');});
+  var s=null;try{s=localStorage.getItem('cf-lang');}catch(e){}
+  setLang(s==='en'?'en':'fr');
+})();</script>
+</body>
+</html>

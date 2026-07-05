@@ -1,0 +1,12 @@
+/* Coastal Futures — self-hosted typefaces (M-series)
+   Replaces the Google Fonts CDN. woff2 supplied with the design system.
+   Plus Jakarta Sans 300/400/500/600/700 (display) · DM Sans 300/400/500 (interface).
+   font-display:swap keeps text visible during load. Zero external dependency. */
+@font-face{font-family:'Plus Jakarta Sans';font-weight:300;font-style:normal;font-display:swap;src:url('fonts/PlusJakartaSans-Light.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:400;font-style:normal;font-display:swap;src:url('fonts/PlusJakartaSans-Regular.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:500;font-style:normal;font-display:swap;src:url('fonts/PlusJakartaSans-Medium.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:600;font-style:normal;font-display:swap;src:url('fonts/PlusJakartaSans-SemiBold.woff2') format('woff2');}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:700;font-style:normal;font-display:swap;src:url('fonts/PlusJakartaSans-Bold.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-weight:300;font-style:normal;font-display:swap;src:url('fonts/DMSans-Light.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-weight:400;font-style:normal;font-display:swap;src:url('fonts/DMSans-Regular.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-weight:500;font-style:normal;font-display:swap;src:url('fonts/DMSans-Medium.woff2') format('woff2');}

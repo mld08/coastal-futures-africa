@@ -1,0 +1,38 @@
+# Coastal Futures — pile backend sur le VPS : PostgreSQL + API Flask.
+# nginx + Certbot tournent sur l'HÔTE (voir DEPLOYMENT.md) et proxifient
+# vers 127.0.0.1:8000. La base n'est jamais exposée à l'extérieur.
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # Pas de `ports:` -> la base reste privée au réseau Docker.
+
+  backend:
+    build: .
+    restart: unless-stopped
+    env_file: .env.production
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      # Écoute UNIQUEMENT sur la boucle locale : nginx (hôte) proxifie dessus.
+      - "127.0.0.1:8000:8000"
+    volumes:
+      # Persiste l'outbox e-mail en dev-sans-SMTP (inutile si SMTP configuré).
+      - outbox:/app/instance/outbox
+
+volumes:
+  pgdata:
+  outbox:

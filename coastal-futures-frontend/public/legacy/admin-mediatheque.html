@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net; connect-src 'self' https:; worker-src 'self' blob:">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script id="cf-admin-guard">(function(){try{var ok=localStorage.getItem("cf-admin-auth")==="1"&&localStorage.getItem("cf-admin-name")&&["super","content","country","moderator"].indexOf(localStorage.getItem("cf-admin-role"))>=0;if(!ok){["cf-admin-auth","cf-admin-role","cf-admin-name","cf-admin-email","cf-admin-country","cf-admin-since"].forEach(function(k){try{localStorage.removeItem(k);}catch(_e){}});var p=(location.pathname.split("/").pop()||"admin-console.html");localStorage.setItem("cf-admin-next",p);window.location.replace("connexion-admin.html");}}catch(e){}})();</script>
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Médiathèque admin</title>
+<meta name="description" content="Médiathèque admin · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="admin-mediatheque.html">
+<meta property="og:title" content="Coastal Futures | Médiathèque admin">
+<meta property="og:description" content="Médiathèque admin · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Médiathèque admin">
+<meta name="twitter:description" content="Médiathèque admin · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="admin-mediatheque.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --warning-bg:#FBF0DC; --error:#8F2A1A; --error-bg:#FBE6E2;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:14px;font-weight:500;border-radius:var(--r-pill);padding:9px 16px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-sm{padding:7px 13px;font-size:13px;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+
+.app{display:grid;grid-template-columns:264px 1fr;min-height:100vh;}
+.side{background:#0C2420;color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.side-logo{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}.side-logo img{height:24px;width:auto;}
+.side-logo .adm{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);border:1px solid rgba(62,203,176,.4);border-radius:var(--r-pill);padding:2px 8px;}
+.side-nav{flex:1;padding:12px 14px;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:rgba(255,255,255,.7);cursor:pointer;transition:all var(--t-fast) var(--ease);margin-bottom:2px;}
+.nav-item i{font-size:20px;}
+.nav-item:hover{background:rgba(255,255,255,.08);color:#fff;}
+.nav-item.on{background:rgba(62,203,176,.16);color:var(--teal-bright);}
+.nav-item .badge{margin-left:auto;background:var(--error);color:#fff;font-size:11px;font-weight:600;border-radius:var(--r-pill);padding:1px 7px;}
+.side-user{padding:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:14px;color:#fff;}
+.side-user .ur{font-family:var(--font-sans);font-size:12px;color:rgba(255,255,255,.55);}
+.side-user .lo{margin-left:auto;color:rgba(255,255,255,.5);font-size:19px;}.side-user .lo:hover{color:#fff;}
+
+.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 32px;background:#fff;border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-l h1{font-family:var(--font-display);font-weight:500;font-size:18px;letter-spacing:-.4px;color:var(--ink);margin:0;}
+.tb-r{display:flex;align-items:center;gap:12px;}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:11.5px;font-weight:600;color:#066B52;background:#E3F9F1;border-radius:100px;padding:5px 11px;}
+.sec-badge i{font-size:14px;}
+.content{padding:24px 32px 48px;max-width:1320px;width:100%;}
+
+/* upload dropzone */
+.dropzone{border:1.5px dashed var(--hair-strong);border-radius:var(--r-lg);background:#fff;padding:26px;text-align:center;margin-bottom:22px;cursor:pointer;transition:all var(--t-fast) var(--ease);}
+.dropzone:hover,.dropzone.drag{border-color:var(--teal);background:var(--teal-bg2);}
+.dropzone .di{width:50px;height:50px;border-radius:14px;background:var(--teal-bg);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:25px;margin:0 auto 12px;}
+.dropzone .dt{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);}
+.dropzone .ds{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);margin-top:4px;}
+
+.toolbar{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+.tabs{display:flex;gap:4px;background:#fff;border:1px solid var(--hair);border-radius:var(--r-pill);padding:4px;}
+.tabs button{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-mute);background:transparent;border:0;border-radius:var(--r-pill);padding:7px 14px;cursor:pointer;transition:all var(--t-fast) var(--ease);}
+.tabs button.on{background:var(--teal);color:#fff;}
+.search{position:relative;flex:1;min-width:200px;max-width:320px;}
+.search i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-faint);font-size:18px;}
+.search input{width:100%;font-size:14px;font-family:var(--font-sans);border:1px solid var(--hair);border-radius:var(--r-pill);padding:9px 14px 9px 38px;outline:none;}
+.search input:focus{border-color:var(--teal);}
+.selwrap{position:relative;}
+.sel{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-2);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-pill);padding:9px 32px 9px 14px;outline:none;cursor:pointer;appearance:none;}
+.selwrap::after{content:"";position:absolute;right:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;pointer-events:none;background-color:var(--ink-faint);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E") center/contain no-repeat;}
+
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;}
+.media{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;transition:all var(--t-fast) var(--ease);}
+.media:hover{box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hair-strong);}
+.media.sel{border-color:var(--teal);box-shadow:0 0 0 2px var(--teal);}
+.media .thumb{position:relative;height:130px;overflow:hidden;background:var(--canvas-soft);}
+.media .thumb img{width:100%;height:100%;object-fit:cover;}
+.media .typ{position:absolute;top:8px;left:8px;background:rgba(12,36,32,.78);color:#fff;font-family:var(--font-display);font-size:10.5px;font-weight:600;border-radius:var(--r-pill);padding:2px 8px;display:inline-flex;align-items:center;gap:4px;}
+.media .doc-thumb{display:flex;align-items:center;justify-content:center;height:100%;color:var(--teal);font-size:42px;}
+.media .mb{padding:11px 13px;}
+.media .mn{font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.media .md{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-faint);margin-top:3px;}
+
+/* detail drawer */
+.drawer{position:fixed;top:0;right:0;width:360px;height:100vh;background:#fff;border-left:1px solid var(--hair);box-shadow:-12px 0 40px rgba(6,61,52,.1);transform:translateX(100%);transition:transform .28s var(--ease);z-index:40;display:flex;flex-direction:column;}
+.drawer.open{transform:translateX(0);}
+.drawer-h{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--hair);}
+.drawer-h h3{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--ink);margin:0;}
+.drawer-h .x{width:32px;height:32px;border-radius:8px;border:1px solid var(--hair);background:#fff;color:var(--ink-mute);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;}
+.drawer-b{padding:18px 20px;overflow-y:auto;flex:1;}
+.drawer-b .prev{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--hair);margin-bottom:16px;}
+.drawer-b .prev img{width:100%;height:180px;object-fit:cover;}
+.dfield{margin-bottom:14px;}
+.dfield label{display:block;font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:6px;}
+.dfield input,.dfield textarea,.dfield select{width:100%;font-family:var(--font-sans);font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:9px 11px;outline:none;}
+.dfield input:focus,.dfield textarea:focus{border-color:var(--teal);}
+.dmeta{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);line-height:1.7;background:var(--canvas-soft);border-radius:var(--r-sm);padding:11px 13px;}
+.drawer-f{padding:14px 20px;border-top:1px solid var(--hair);display:flex;gap:10px;}
+.drawer-f .btn{flex:1;}
+.overlay{position:fixed;inset:0;background:rgba(12,36,32,.3);opacity:0;pointer-events:none;transition:opacity .28s var(--ease);z-index:39;}
+.overlay.open{opacity:1;pointer-events:auto;}
+
+@media(max-width:1080px){.app{grid-template-columns:1fr;}.side{display:none;}.content{padding:20px 16px 40px;}.drawer{width:100%;}}
+</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-rm-guard">@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}</style>
+<style id="cf-side-collapse">.cf-sidetoggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:10px;color:var(--ink-2,#244440);cursor:pointer;font-size:18px;transition:all .16s ease;flex-shrink:0;}.cf-sidetoggle:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}@media(min-width:1081px){.app.cf-collapsed{grid-template-columns:74px 1fr;}.app.cf-collapsed .side{z-index:40;}.app.cf-collapsed .side-logo{justify-content:center;}.app.cf-collapsed .side-logo img,.app.cf-collapsed .adm,.app.cf-collapsed .side-sec,.app.cf-collapsed .nav-item span:not(.badge),.app.cf-collapsed .side-user>div:not(.av),.app.cf-collapsed .side-user .lo{display:none;}.app.cf-collapsed .nav-item{justify-content:center;padding-left:0;padding-right:0;}.app.cf-collapsed .nav-item{font-size:0;}.app.cf-collapsed .nav-item i{font-size:20px;}.app.cf-collapsed .nav-item i.ti-external-link{display:none;}.app.cf-collapsed .nav-item .badge{font-size:10px;}.app.cf-collapsed .nav-item .badge{position:absolute;top:6px;right:10px;}.app.cf-collapsed .nav-item{position:relative;}.app.cf-collapsed .side-user{justify-content:center;}.app.cf-collapsed .side-nav{overflow:visible;}.app{transition:grid-template-columns .26s cubic-bezier(.4,0,.2,1);}.app.cf-collapsed .nav-item::after{content:attr(data-tip);position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:500;letter-spacing:-.1px;padding:6px 11px;border-radius:8px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .14s ease;z-index:60;box-shadow:0 8px 24px rgba(6,61,52,.18);}.app.cf-collapsed .nav-item:hover::after{opacity:1;}}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-logo-fit">.side-logo img{height:auto !important;max-height:22px;max-width:132px;width:auto !important;}.side-logo{gap:8px;}.side-logo .adm{flex-shrink:0;white-space:nowrap;}</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="admin-console.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec" data-i18n="s.pilot">Pilotage</div>
+      <a class="nav-item" data-tip="Tableau de bord" href="admin-console.html"><i class="ti ti-layout-dashboard"></i><span data-i18n="n.dash">Tableau de bord</span></a>
+      <a class="nav-item" data-tip="Gestion de contenu" href="admin-contenus.html"><i class="ti ti-news"></i><span data-i18n="n.content">Gestion de contenu</span></a>
+      <a class="nav-item" data-tip="Utilisateurs et rôles" href="admin-utilisateurs.html"><i class="ti ti-users"></i><span data-i18n="n.users">Utilisateurs et rôles</span></a>
+      <a class="nav-item" data-tip="Appels à candidatures" href="admin-appels.html"><i class="ti ti-speakerphone"></i><span>Appels à candidatures</span></a>
+      <a class="nav-item" data-tip="Candidatures18" href="admin-candidatures.html"><i class="ti ti-file-text"></i><span data-i18n="n.apps">Candidatures</span><span class="badge tnum">18</span></a>
+      <a class="nav-item" data-tip="Projets et indicateurs" href="admin-projets.html"><i class="ti ti-plant-2"></i><span data-i18n="n.proj">Projets et indicateurs</span></a>
+      <a class="nav-item" data-tip="Validation des indicateurs" href="admin-indicateurs.html"><i class="ti ti-rosette-discount-check"></i><span data-i18n="n.indval">Validation des indicateurs</span></a>
+      <div class="nav-item on" data-tip="Médiathèque"><i class="ti ti-photo"></i><span data-i18n="n.media">Médiathèque</span></div>
+      <div class="side-sec" data-i18n="s.gov">Gouvernance</div>
+      <a class="nav-item" data-tip="Modération7" href="admin-moderation.html"><i class="ti ti-shield-check"></i><span data-i18n="n.mod">Modération</span><span class="badge tnum">7</span></a>
+      <a class="nav-item" data-tip="Permissions" href="admin-permissions.html"><i class="ti ti-key"></i><span data-i18n="n.perm">Permissions</span></a>
+      <a class="nav-item" data-tip="Journal d'audit" href="admin-journal-audit.html"><i class="ti ti-history"></i><span data-i18n="n.audit">Journal d'audit</span></a>
+      <a class="nav-item" data-tip="Paramètres système" href="admin-parametres.html"><i class="ti ti-settings"></i><span data-i18n="n.sys">Paramètres système</span></a>
+    </nav>
+    <div class="side-user">
+      <div class="av">SH</div>
+      <div><div class="un">Saïfi Dawalbet Hamit</div><div class="ur" data-i18n="role.super">Super administratrice</div></div>
+      <a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a>
+    </div>
+  </aside>
+
+  <main class="main" data-screen-label="Médiathèque back-office">
+    <div class="topbar"><button class="cf-appburger" aria-label="Menu" type="button"><i class="ti ti-menu-2"></i></button><button class="cf-sidetoggle" id="cfSideToggle" aria-label="Réduire le menu" type="button"><i class="ti ti-layout-sidebar-left-collapse"></i></button>
+      <div class="tb-l"><span id="cf-main" tabindex="-1"></span><h1 data-i18n="title">Médiathèque</h1></div>
+      <div class="tb-r"><span class="sec-badge"><i class="ti ti-shield-lock"></i><span data-i18n="sec">Session sécurisée</span></span>
+        <button class="btn btn-pri btn-sm"><i class="ti ti-upload"></i><span data-i18n="cta">Téléverser</span></button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="dropzone" id="drop">
+        <div class="di"><i class="ti ti-cloud-upload"></i></div>
+        <div class="dt" data-i18n="dz.t">Glissez vos fichiers ici</div>
+        <div class="ds" data-i18n="dz.s">ou cliquez pour parcourir · JPG, PNG, MP4, PDF · 50 Mo max</div>
+      </div>
+
+      <div class="toolbar">
+        <div class="tabs" id="tabs">
+          <button class="on" data-f="all" data-i18n="f.all">Tout</button>
+          <button data-f="photo" data-i18n="f.photo">Photos</button>
+          <button data-f="video" data-i18n="f.video">Vidéos</button>
+          <button data-f="doc" data-i18n="f.doc">Documents</button>
+        </div>
+        <div class="search"><i class="ti ti-search"></i><input id="q" data-i18n-ph="search" placeholder="Rechercher un média..."></div>
+        <div class="selwrap"><select class="sel" id="paysSel">
+          <option value="" data-i18n="allpays">Tous les pays</option>
+          <option>Sénégal</option><option>Ghana</option><option>Guinée</option><option>Liberia</option><option>Sierra Leone</option>
+        </select></div>
+      </div>
+
+      <div class="media-grid" id="grid"></div>
+    </div>
+  </main>
+</div>
+
+<div class="overlay" id="ov"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Panneau de détails">
+  <div class="drawer-h"><h3 data-i18n="d.title">Détails du média</h3><button class="x" id="closeDrawer" aria-label="Fermer"><i class="ti ti-x"></i></button></div>
+  <div class="drawer-b">
+    <div class="prev"><img loading="lazy" decoding="async" id="dPrev" src="assets/photos/Hero.jpg" alt="" width="2400" height="1600"></div>
+    <div class="dfield"><label data-i18n="d.name">Nom du fichier</label><input id="dName" value="hero-littoral.jpg"></div>
+    <div class="dfield"><label data-i18n="d.alt">Texte alternatif (accessibilité)</label><textarea id="dAlt" rows="2">Vue du littoral atlantique au lever du jour</textarea></div>
+    <div class="dfield"><label data-i18n="d.pays">Pays</label><select><option>Régional</option><option selected>Sénégal</option><option>Ghana</option></select></div>
+    <div class="dfield"><label data-i18n="d.coll">Collection</label><select><option data-i18n="coll.launch" selected>Lancement</option><option data-i18n="coll.field">Terrain</option><option data-i18n="coll.portraits">Portraits</option></select></div>
+    <div class="dmeta" id="dMeta">JPG · 1 600 × 1 067 · 487 Ko<br>Téléversé le 2 juin 2026 par Saïfi Dawalbet Hamit<br>Utilisé dans 3 contenus</div>
+  </div>
+  <div class="drawer-f">
+    <button class="btn btn-light" id="delMedia"><i class="ti ti-trash"></i><span data-i18n="d.del">Supprimer</span></button>
+    <button class="btn btn-pri"><i class="ti ti-check"></i><span data-i18n="d.save">Enregistrer</span></button>
+  </div>
+</aside>
+
+<input type="file" id="fileInput" accept="image/*,video/*,application/pdf" multiple style="display:none">
+<style id="cf-media-admin-css">
+.set-toastwrap{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:24px;z-index:90;display:flex;flex-direction:column;gap:10px;}
+.set-toast{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--hair);border-left:3px solid var(--success);border-radius:var(--r-md);box-shadow:var(--shadow-2);padding:13px 17px;min-width:240px;font-family:var(--font-sans);font-size:14px;color:var(--ink);transform:translateX(120%);transition:transform 280ms var(--ease);}
+.set-toast.show{transform:translateX(0);}.set-toast i{font-size:19px;color:var(--success);}
+.set-toast.rej{border-left-color:var(--error);}.set-toast.rej i{color:var(--error);}
+.m-empty{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:54px 20px;color:var(--ink-mute);font-family:var(--font-sans);font-size:14px;}
+.m-empty i{font-size:32px;color:var(--ink-faint);}
+.dropzone.drag{border-color:var(--teal);background:var(--teal-bg);}
+@media(max-width:640px){.set-toastwrap{left:14px;right:14px;}.set-toast{min-width:0;}}
+</style>
+<script>
+var MED=[
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-bolong-pirogue.webp',n:'agrotrip-bolong-pirogue.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-baobab-gathering.webp',n:'agrotrip-baobab-gathering.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-reforestation-volunteer.webp',n:'agrotrip-reboisement-toubacouta.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-mangrove-flavours.webp',n:'agrotrip-saveurs-mangrove.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-oyster-harvest.webp',n:'agrotrip-recolte-huitres.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-agrotalk-panel.webp',n:'agrotrip-agrotalk-fimela.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-women-bond.webp',n:'agrotrip-leadership-feminin.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-singuiyam-pirogue.webp',n:'agrotrip-pirogue-bolong.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-straw-hat-portrait.webp',n:'agrotrip-portrait-saloum.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-pirogue-joy.webp',n:'agrotrip-pirogue-sourire.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-welcome-saloum.webp',n:'agrotrip-welcome-saloum.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/media/10-agrotrip/agrotrip-dusk-shore.webp',n:'agrotrip-rive-saloum.webp',meta:'WEBP · 0,3 Mo',pays:'Sénégal'},
+ {f:'photo',img:'assets/photos/Hero.jpg',n:'hero-littoral.jpg',meta:'JPG · 487 Ko',pays:'Sénégal'},
+ {f:'photo',img:'assets/photos/Mangrove.jpg',n:'mangrove-monrovia.jpg',meta:'JPG · 192 Ko',pays:'Liberia'},
+ {f:'photo',img:'assets/photos/Solar.jpg',n:'solaire-petite-cote.jpg',meta:'JPG · 46 Ko',pays:'Sénégal'},
+ {f:'photo',img:'assets/photos/Recycling.jpg',n:'recyclage-accra.jpg',meta:'JPG · 113 Ko',pays:'Ghana'},
+ {f:'video',img:'assets/photos/Hero-2.jpg',n:'teaser-lancement.mp4',meta:'MP4 · 48 Mo',pays:'Régional'},
+ {f:'photo',img:'assets/photos/Fishing.jpg',n:'peche-saint-louis.jpg',meta:'JPG · 41 Ko',pays:'Sénégal'},
+ {f:'photo',img:'assets/photos/Agriculture.jpg',n:'agriculture-freetown.jpg',meta:'JPG · 98 Ko',pays:'Sierra Leone'},
+ {f:'video',img:'assets/photos/Young-Entrepreneur.jpg',n:'temoignage-entrepreneur.mp4',meta:'MP4 · 62 Mo',pays:'Ghana'},
+ {f:'doc',img:'',n:'note-cadrage-phase1.pdf',meta:'PDF · 1,2 Mo',pays:'Régional'},
+ {f:'doc',img:'',n:'criteres-labellisation.pdf',meta:'PDF · 0,9 Mo',pays:'Régional'},
+ {f:'doc',img:'',n:'bilan-impact-t1.pdf',meta:'PDF · 2,4 Mo',pays:'Régional'},
+ {f:'photo',img:'assets/photos/Mangrove.jpg',n:'mangrove-delta.jpg',meta:'JPG · 1,7 Mo',pays:'Sierra Leone'}
+];
+var TYP={photo:{fr:'Photo',en:'Photo',i:'ti-photo'},video:{fr:'Vidéo',en:'Video',i:'ti-video'},doc:{fr:'PDF',en:'PDF',i:'ti-file-text'}};
+var curF='all',curPays='';
+function lang(){return document.documentElement.lang==='en'?'en':'fr';}
+function slug(s){return (window.CFCol&&CFCol.slug)?CFCol.slug(s):(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+var SEED_MED=MED.map(function(m){return Object.assign({},m,{id:'seed-'+slug(m.n)});});
+var HKEY='cf-media-hidden';
+function hiddenSet(){try{return JSON.parse(localStorage.getItem(HKEY)||'[]');}catch(e){return [];}}
+function hide(id){var h=hiddenSet();if(h.indexOf(id)<0){h.push(id);try{localStorage.setItem(HKEY,JSON.stringify(h));}catch(e){}}}
+function sizeText(b){if(!b)return '';if(b<1024)return b+' o';if(b<1048576)return (Math.round(b/102.4)/10).toLocaleString(lang()==='en'?'en-GB':'fr-FR')+' Ko';return (Math.round(b/104857.6)/10).toLocaleString(lang()==='en'?'en-GB':'fr-FR')+' Mo';}
+function metaText(m){var ext=(m.name||'').split('.').pop().toUpperCase();return ext+(m.size?(' · '+sizeText(m.size)):'');}
+function altText(m){var a=m.alt;if(!a)return '';if(typeof a==='string')return a;return (lang()==='en'&&a.en)?a.en:(a.fr||a.en||'');}
+function uploaded(){try{return (window.CFCol?CFCol.all('media'):[]).map(function(m){return {id:m.id,f:(m.kind==='video'?'video':(m.kind==='doc'?'doc':'photo')),img:(m.dataUrl||m.src||''),n:m.name,meta:metaText(m),pays:(Array.isArray(m.pays)?(m.pays[0]||'Régional'):(m.pays||'Régional')),alt:m.alt,_col:true,raw:m};});}catch(e){return [];}}
+function allMedia(){var up=uploaded();var ids=up.map(function(x){return x.id;});var h=hiddenSet();var seed=SEED_MED.filter(function(m){return ids.indexOf(m.id)<0;});return up.concat(seed).filter(function(m){return h.indexOf(m.id)<0;});}
+function toast(fr,en,rej){var w=document.getElementById('mToastWrap');if(!w){w=document.createElement('div');w.id='mToastWrap';w.className='set-toastwrap';w.setAttribute('role','status');document.body.appendChild(w);}var t=document.createElement('div');t.className='set-toast'+(rej?' rej':'');t.innerHTML='<i class="ti ti-'+(rej?'alert-triangle':'check')+'"></i><span>'+(lang()==='en'?en:fr)+'</span>';w.appendChild(t);requestAnimationFrame(function(){t.classList.add('show');});setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},320);},2600);}
+function render(){
+  var l=lang(),q=(document.getElementById('q').value||'').toLowerCase();
+  var g=document.getElementById('grid');g.innerHTML='';
+  var list=allMedia().filter(function(m){if(curF!=='all'&&m.f!==curF)return false;if(curPays&&String(m.pays).indexOf(curPays)<0)return false;if(q&&m.n.toLowerCase().indexOf(q)<0)return false;return true;});
+  if(!list.length){g.innerHTML='<div class="m-empty"><i class="ti ti-photo"></i>'+(l==='en'?'No media in this view.':'Aucun média dans cette vue.')+'</div>';return;}
+  list.forEach(function(m){
+    var t=TYP[m.f];var thumb=(m.f==='doc'||!m.img)?'<div class="doc-thumb"><i class="ti '+(m.f==='video'?'ti-video':'ti-file-text')+'"></i></div>':'<img loading="lazy" decoding="async" src="'+m.img+'" alt="">';
+    var el=document.createElement('div');el.className='media';
+    el.innerHTML='<div class="thumb">'+thumb+'<span class="typ"><i class="ti '+t.i+'"></i>'+t[l]+'</span></div><div class="mb"><div class="mn">'+m.n+'</div><div class="md">'+m.meta+' · '+m.pays+'</div></div>';
+    el.addEventListener('click',function(){openDrawer(m);});
+    g.appendChild(el);
+  });
+}
+var curItem=null;
+function openDrawer(m){
+  curItem=m;
+  document.getElementById('dName').value=m.n;
+  document.getElementById('dAlt').value=altText(m);
+  var prev=document.getElementById('dPrev');
+  if(m.img){prev.src=m.img;prev.style.display='';}else{prev.style.display='none';}
+  var paysSel=document.querySelector('#drawer .dfield select');
+  if(paysSel){var pv=Array.isArray(m.pays)?m.pays[0]:m.pays;[].slice.call(paysSel.options).forEach(function(o){o.selected=(o.value||o.textContent)===pv;});}
+  document.getElementById('dMeta').innerHTML=(m.meta||'')+(m.raw&&m.raw.addedAt?('<br>'+(lang()==='en'?'Uploaded on ':'Téléversé le ')+m.raw.addedAt+(m.raw.addedBy?(' · '+m.raw.addedBy):'')):'');
+  document.getElementById('drawer').classList.add('open');document.getElementById('ov').classList.add('open');
+}
+function closeD(){document.getElementById('drawer').classList.remove('open');document.getElementById('ov').classList.remove('open');curItem=null;}
+function saveDrawer(){
+  if(!curItem||!window.CFCol)return closeD();
+  var name=document.getElementById('dName').value.trim()||curItem.n;
+  var altv=document.getElementById('dAlt').value.trim();
+  var paysSel=document.querySelector('#drawer .dfield select');var pays=paysSel?(paysSel.value||paysSel.options[paysSel.selectedIndex].textContent):'Régional';
+  var base=curItem.raw||{id:curItem.id,kind:(curItem.f==='video'?'video':(curItem.f==='doc'?'doc':'photo')),src:curItem.img,size:0,addedBy:'Saïfi Dawalbet Hamit',addedAt:new Date().toISOString().slice(0,10)};
+  var prevAlt=(base.alt&&typeof base.alt==='object')?base.alt:{fr:'',en:''};
+  var alt=Object.assign({},prevAlt);alt[lang()]=altv;if(!alt.fr)alt.fr=altv;if(!alt.en)alt.en=altv;
+  var rec=Object.assign({},base,{id:curItem.id,name:name,pays:[pays],alt:alt});
+  CFCol.upsert('media',rec);
+  if(typeof CFAudit!=='undefined')CFAudit.log({action:'media.edit',target:{kind:'media',id:rec.id,label:name},note:(lang()==='en'?'Media metadata updated':'Métadonnées du média mises à jour')});
+  closeD();render();toast('Média enregistré.','Media saved.');
+}
+function delMedia(){
+  if(!curItem)return;
+  if(!window.confirm(lang()==='en'?'Delete this media?':'Supprimer ce média ?'))return;
+  if(window.CFCol&&curItem._col)CFCol.remove('media',curItem.id);
+  hide(curItem.id);
+  if(typeof CFAudit!=='undefined')CFAudit.log({action:'media.delete',target:{kind:'media',id:curItem.id,label:curItem.n},note:(lang()==='en'?'Media deleted':'Média supprimé')});
+  closeD();render();toast('Média supprimé.','Media deleted.');
+}
+/* real upload : downscale images to a sane dataURL, store in CFCol('media'). */
+function downscale(file,cb){
+  var img=new Image();var url=URL.createObjectURL(file);
+  img.onload=function(){var max=1600;var w=img.width,h=img.height;if(w>max||h>max){if(w>=h){h=Math.round(h*max/w);w=max;}else{w=Math.round(w*max/h);h=max;}}var c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(url);try{cb(c.toDataURL('image/jpeg',0.82));}catch(e){cb('');}};
+  img.onerror=function(){URL.revokeObjectURL(url);cb('');};img.src=url;
+}
+function handleFiles(files){
+  var arr=[].slice.call(files);if(!arr.length)return;var done=0;var added=0;
+  arr.forEach(function(file){
+    var kind=file.type.indexOf('image')===0?'photo':(file.type.indexOf('video')===0?'video':'doc');
+    function store(dataUrl){
+      var rec={id:'m-up-'+slug(file.name.replace(/\.[^.]+$/,''))+'-'+Date.now().toString(36)+'-'+(done),name:file.name,kind:kind,collection:'',pays:['Régional'],size:file.size,addedBy:'Saïfi Dawalbet Hamit',addedAt:new Date().toISOString().slice(0,10),alt:{fr:'',en:''}};
+      if(dataUrl)rec.dataUrl=dataUrl;
+      if(window.CFCol)CFCol.upsert('media',rec);
+      if(typeof CFAudit!=='undefined')CFAudit.log({action:'media.create',target:{kind:'media',id:rec.id,label:file.name},note:(lang()==='en'?'Media uploaded':'Média téléversé')});
+      added++;done++;if(done===arr.length)finish(added);
+    }
+    if(kind==='photo'&&file.size<=12*1048576){downscale(file,store);}
+    else if(file.size<=2.5*1048576){var r=new FileReader();r.onload=function(){store(r.result);};r.onerror=function(){store('');};r.readAsDataURL(file);}
+    else{store('');}
+  });
+  function finish(n){render();toast((n>1?(n+' médias téléversés.'):'Média téléversé.'),(n>1?(n+' media uploaded.'):'Media uploaded.'));}
+}
+window.__cfRender=render;
+document.getElementById('q').addEventListener('input',render);
+document.getElementById('paysSel').addEventListener('change',function(){curPays=this.value;render();});
+[].slice.call(document.querySelectorAll('#tabs button')).forEach(function(b){b.addEventListener('click',function(){[].slice.call(document.querySelectorAll('#tabs button')).forEach(function(x){x.classList.remove('on');});b.classList.add('on');curF=b.getAttribute('data-f');render();});});
+document.getElementById('closeDrawer').addEventListener('click',closeD);
+document.getElementById('ov').addEventListener('click',closeD);
+document.getElementById('delMedia').addEventListener('click',delMedia);
+var saveBtn=document.querySelector('#drawer .drawer-f .btn-pri');if(saveBtn)saveBtn.addEventListener('click',saveDrawer);
+var fileInput=document.getElementById('fileInput');
+fileInput.addEventListener('change',function(){handleFiles(this.files);this.value='';});
+var drop=document.getElementById('drop');
+drop.addEventListener('click',function(){fileInput.click();});
+drop.addEventListener('dragover',function(e){e.preventDefault();drop.classList.add('drag');});
+drop.addEventListener('dragleave',function(){drop.classList.remove('drag');});
+drop.addEventListener('drop',function(e){e.preventDefault();drop.classList.remove('drag');if(e.dataTransfer&&e.dataTransfer.files)handleFiles(e.dataTransfer.files);});
+var upBtn=document.querySelector('.topbar .btn-pri');if(upBtn)upBtn.addEventListener('click',function(){fileInput.click();});
+if(window.CFCol&&CFCol.onError)CFCol.onError(function(t){toast(t==='quota'?'Espace de stockage plein : média non enregistré.':'Échec d\'enregistrement du média.',t==='quota'?'Storage full: media not saved.':'Failed to save media.',true);});
+function boot(){if(window.CFCol&&CFCol.onError)CFCol.onError(function(t){toast(t==='quota'?'Espace de stockage plein : média non enregistré.':'Échec d\'enregistrement du média.',t==='quota'?'Storage full: media not saved.':'Failed to save media.',true);});render();}
+if(window.CFCol){boot();}else{document.addEventListener('DOMContentLoaded',boot);}
+</script>
+
+
+<script id="cf-i18n">(function(){var BYID={"adm":["Console","Console"],"s.pilot":["Pilotage","Steering"],"s.gov":["Gouvernance","Governance"],"n.dash":["Tableau de bord","Dashboard"],"n.content":["Gestion de contenu","Content management"],"n.users":["Utilisateurs et rôles","Users and roles"],"n.apps":["Candidatures","Applications"],"n.proj":["Projets et indicateurs","Projects and indicators"],"n.media":["Médiathèque","Media library"],"n.mod":["Modération","Moderation"],"n.perm":["Permissions","Permissions"],"n.audit":["Journal d'audit","Audit log"],"n.sys":["Paramètres système","System settings"],"role.super":["Super administratrice","Super administrator"],"title":["Médiathèque","Media library"],"sec":["Session sécurisée","Secure session"],"cta":["Téléverser","Upload"],"dz.t":["Glissez vos fichiers ici","Drag your files here"],"dz.s":["ou cliquez pour parcourir · JPG, PNG, MP4, PDF · 50 Mo max","or click to browse · JPG, PNG, MP4, PDF · 50 MB max"],"f.all":["Tout","All"],"f.photo":["Photos","Photos"],"f.video":["Vidéos","Videos"],"f.doc":["Documents","Documents"],"allpays":["Tous les pays","All countries"],"d.title":["Détails du média","Media details"],"d.name":["Nom du fichier","File name"],"d.alt":["Texte alternatif (accessibilité)","Alt text (accessibility)"],"d.pays":["Pays","Country"],"d.coll":["Collection","Collection"],"coll.launch":["Lancement","Launch"],"coll.field":["Terrain","Field"],"coll.portraits":["Portraits","Portraits"],"d.del":["Supprimer","Delete"],"d.save":["Enregistrer","Save"]};
+var KEY="cf-lang";
+function setLang(l){
+  Object.keys(BYID).forEach(function(id){var el=document.querySelector('[data-i18n="'+id+'"]');if(el)el.textContent=l==='en'?BYID[id][1]:BYID[id][0];});
+  var phm={"search":["Rechercher un média...","Search media..."]};document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var k=el.getAttribute('data-i18n-ph');if(phm[k])el.placeholder=l==='en'?phm[k][1]:phm[k][0];});
+  var po=document.querySelectorAll('#paysSel option');if(po[0])po[0].textContent=l==='en'?'All countries':'Tous les pays';
+  document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}
+  if(window.__cfRender)window.__cfRender();
+}
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}setLang(s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr"));
+})();</script>
+<style id="cf-appnav">.cf-appburger{display:none;width:40px;height:40px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:10px;color:var(--ink,#0C2420);cursor:pointer;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;margin-right:4px;}.cf-appburger:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}.cf-appscrim{position:fixed;inset:0;background:rgba(8,28,24,.5);z-index:49;opacity:0;pointer-events:none;transition:opacity .28s cubic-bezier(.4,0,.2,1);}.cf-appscrim.show{opacity:1;pointer-events:auto;}@media(max-width:1080px){.app .side{display:flex !important;position:fixed;top:0;left:0;height:100vh;width:264px;z-index:50;transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);}.app .side.open{transform:translateX(0);}.cf-appburger{display:inline-flex;}}</style><script id="cf-appnav-js">(function(){var side=document.querySelector(".app .side");if(!side)return;var tb=document.querySelector(".topbar");if(!tb)return;var b=tb.querySelector(".cf-appburger");if(!b)return;var sc=document.createElement("div");sc.className="cf-appscrim";document.body.appendChild(sc);function open(){side.classList.add("open");sc.classList.add("show");}function close(){side.classList.remove("open");sc.classList.remove("show");}b.addEventListener("click",function(){side.classList.contains("open")?close():open();});sc.addEventListener("click",close);[].slice.call(side.querySelectorAll("a")).forEach(function(a){a.addEventListener("click",close);});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script id="cf-side-collapse-js">(function(){var app=document.querySelector(".app");if(!app)return;var K="cf-admin-side";try{if(localStorage.getItem(K)==="1")app.classList.add("cf-collapsed");}catch(e){}var b=document.getElementById("cfSideToggle");if(b)b.addEventListener("click",function(){app.classList.toggle("cf-collapsed");try{localStorage.setItem(K,app.classList.contains("cf-collapsed")?"1":"0");}catch(e){}});})();</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-notif.js"></script>
+<script src="assets/cf-audit.js"></script>
+<script src="assets/cf-admin-auth.js"></script>
+<script src="assets/cf-admin-chrome.js"></script>
+<script src="assets/cf-admin-session.js"></script>
+</body>
+</html>

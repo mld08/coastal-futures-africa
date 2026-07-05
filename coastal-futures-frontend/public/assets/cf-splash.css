@@ -1,0 +1,67 @@
+/* Coastal Futures — splash de connexion (styles). Voir cf-splash.js. */
+.cf-splash{
+  position:fixed; inset:0; z-index:99999;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background:#FFFFFF;
+  opacity:1; transition:opacity .52s cubic-bezier(.4,0,.2,1);
+}
+.cf-splash::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 50% 42%, rgba(62,203,176,.10) 0%, transparent 70%),
+    radial-gradient(70% 60% at 50% 100%, rgba(10,107,94,.06) 0%, transparent 72%);
+}
+.cf-splash--out{ opacity:0; pointer-events:none; }
+
+.cf-splash-logo{ position:relative; width:min(360px,62vw); }
+.cf-splash-logo svg{ display:block; width:100%; height:auto; overflow:visible; }
+
+/* mark : tracé révélé via les masques (pathLength=1) */
+.cf-splash .bm{
+  stroke-dasharray:1; stroke-dashoffset:1;
+  animation:cfSplashDraw .92s cubic-bezier(.45,0,.2,1) forwards;
+}
+.cf-splash .b1{ animation-delay:0s; }
+.cf-splash .b2{ animation-delay:.10s; }
+.cf-splash .b5{ animation-delay:.20s; }
+.cf-splash .b4{ animation-delay:.28s; }
+.cf-splash .b3{ animation-delay:.34s; }
+@keyframes cfSplashDraw{ to{ stroke-dashoffset:0; } }
+
+/* le mark, en plus du tracé, apparaît en fondu/zoom (filet de sécurité cross-browser) */
+.cf-splash .cfmark{
+  opacity:0; transform-box:fill-box; transform-origin:left center;
+  animation:cfSplashMark .8s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes cfSplashMark{ from{ opacity:0; transform:scale(.92); } to{ opacity:1; transform:scale(1); } }
+
+/* wordmark + network : montée en fondu */
+.cf-splash .wordmark{ opacity:0; transform:translateY(9px); animation:cfSplashRise .6s cubic-bezier(.4,0,.2,1) forwards; animation-delay:.5s; }
+.cf-splash .network{ opacity:0; transform:translateY(7px); animation:cfSplashRise .55s cubic-bezier(.4,0,.2,1) forwards; animation-delay:.68s; }
+@keyframes cfSplashRise{ to{ opacity:1; transform:translateY(0); } }
+
+/* la pastille : pop */
+.cf-splash .dot{ opacity:0; transform-box:fill-box; transform-origin:center; transform:scale(0); animation:cfSplashPop .42s cubic-bezier(.34,1.56,.64,1) forwards; animation-delay:.86s; }
+@keyframes cfSplashPop{ to{ opacity:1; transform:scale(1); } }
+
+/* barre de progression fluide en bas */
+.cf-splash-bar{
+  position:absolute; left:50%; bottom:max(34px, env(safe-area-inset-bottom, 0px));
+  transform:translateX(-50%);
+  width:min(180px,40vw); height:3px; border-radius:100px;
+  background:rgba(10,107,94,.12); overflow:hidden;
+}
+.cf-splash-bar span{
+  position:absolute; left:0; top:0; height:100%; width:40%; border-radius:100px;
+  background:linear-gradient(90deg, var(--teal-soft,#12B396), var(--teal-bright,#3ECBB0));
+  animation:cfSplashBar 1.5s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes cfSplashBar{ 0%{ left:-42%; width:42%; } 60%{ width:54%; } 100%{ left:100%; width:30%; } }
+
+/* reduced-motion : on montre le logo sans tracé, fondu rapide */
+.cf-splash--reduce .bm{ animation:none; stroke-dashoffset:0; }
+.cf-splash--reduce .cfmark,
+.cf-splash--reduce .wordmark,
+.cf-splash--reduce .network,
+.cf-splash--reduce .dot{ animation:none; opacity:1; transform:none; }
+.cf-splash--reduce .cf-splash-bar span{ animation:none; left:0; width:100%; }

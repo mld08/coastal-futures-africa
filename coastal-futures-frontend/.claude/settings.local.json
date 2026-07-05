@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($dest = \"C:\\\\Users\\\\LAMINE\\\\Downloads\\\\_cf_extract\"; Write-Output \"=== index.html HEAD \\(first 120 lines\\) ===\"; Get-Content \"$dest\\\\index.html\" -TotalCount 120)",
+      "PowerShell($fe = \"C:\\\\Users\\\\LAMINE\\\\Documents\\\\Codes\\\\coastal-futures\\\\coastal-futures-frontend\"; Write-Output \"=== package.json ===\"; Get-Content \"$fe\\\\package.json\"; Write-Output \"`n=== src tree ===\"; Get-ChildItem -Recurse $fe\\\\src | Select-Object @{n='P';e={$_.FullName.Substring\\($fe.Length+1\\)}} | Format-Table -AutoSize; Write-Output \"`n=== public tree ===\"; Get-ChildItem -Recurse $fe\\\\public | Select-Object @{n='P';e={$_.FullName.Substring\\($fe.Length+1\\)}} | Format-Table -AutoSize; Write-Output \"`n=== vite.config.js ===\"; Get-Content \"$fe\\\\vite.config.js\")"
+    ]
+  }
+}

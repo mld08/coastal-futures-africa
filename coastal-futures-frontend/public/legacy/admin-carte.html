@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net; connect-src 'self' https:; worker-src 'self' blob:">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script id="cf-admin-guard">(function(){try{var ok=localStorage.getItem("cf-admin-auth")==="1"&&localStorage.getItem("cf-admin-name")&&["super","content","country","moderator"].indexOf(localStorage.getItem("cf-admin-role"))>=0;if(!ok){["cf-admin-auth","cf-admin-role","cf-admin-name","cf-admin-email","cf-admin-country","cf-admin-since"].forEach(function(k){try{localStorage.removeItem(k);}catch(_e){}});var p=(location.pathname.split("/").pop()||"admin-console.html");localStorage.setItem("cf-admin-next",p);window.location.replace("connexion-admin.html");}}catch(e){}})();</script>
+<meta name="description" content="Console d'administration : gestion des points et paramètres de la carte d'impact Coastal Futures Network.">
+<title>Coastal Futures | Console · Carte d'impact</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="admin-carte.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#92ACA7;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --warning-bg:#FBF0DC; --error:#8F2A1A; --error-bg:#FBEBE7;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --shadow-3:0 24px 60px -18px rgba(4,39,31,.4);
+  --ease:cubic-bezier(.4,0,.2,1); --t-fast:160ms; --t-base:280ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh;}
+.side{background:#0C2420;color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;}
+.side-logo{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}.side-logo img{height:24px;width:auto;}
+.side-logo .adm{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);border:1px solid rgba(62,203,176,.4);border-radius:var(--r-pill);padding:2px 9px;}
+.side-nav{flex:1;padding:16px 14px;overflow-y:auto;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:rgba(255,255,255,.7);cursor:pointer;}
+.nav-item i{font-size:20px;}.nav-item:hover{background:rgba(255,255,255,.08);color:#fff;}
+.nav-item.on{background:rgba(62,203,176,.16);color:var(--teal-bright);}
+.nav-item .badge{margin-left:auto;background:var(--error);color:#fff;font-size:11px;font-weight:600;border-radius:var(--r-pill);padding:1px 7px;}
+.side-user{padding:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:13.5px;color:#fff;}
+.side-user .ur{font-family:var(--font-sans);font-size:11.5px;color:rgba(255,255,255,.55);}
+.side-user .lo{margin-left:auto;color:rgba(255,255,255,.55);font-size:20px;display:flex;}.side-user .lo:hover{color:#fff;}
+
+.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{height:66px;display:flex;align-items:center;gap:14px;padding:0 28px;background:#fff;border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-l h1{font-family:var(--font-display);font-weight:500;font-size:18px;letter-spacing:-.4px;color:var(--ink);margin:0;}
+.tb-l .crumb{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);margin-bottom:1px;}
+.tb-r{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.tb-role{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--teal-deep);background:var(--teal-bg);border:1px solid var(--hair);border-radius:var(--r-pill);padding:6px 13px;}
+.tb-role i{font-size:15px;color:var(--teal);}
+.content{padding:26px 28px 56px;max-width:1180px;width:100%;}
+.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px;}
+.pagehead .kk{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:lowercase;color:var(--ink-faint);}
+.pagehead h2{font-family:var(--font-display);font-weight:300;font-size:30px;letter-spacing:-1.2px;color:var(--ink);margin:6px 0 6px;}
+.pagehead p{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-mute);margin:0;max-width:560px;line-height:1.55;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:13.5px;font-weight:500;border-radius:var(--r-pill);padding:9px 17px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn i{font-size:17px;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn-ghost{background:transparent;color:var(--ink-mute);}.btn-ghost:hover{color:var(--teal);background:var(--canvas-soft);}
+.btn-danger{background:#fff;color:var(--error);border-color:var(--hair-strong);}.btn-danger:hover{border-color:var(--error);background:var(--error-bg);}
+
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);margin-bottom:20px;overflow:hidden;}
+.card-h{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--hair);flex-wrap:wrap;}
+.card-h h3{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);margin:0;}
+.card-h .cn{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);}
+.card-h .sp{flex:1;}
+.fsearch{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:0 11px;width:240px;max-width:100%;}
+.fsearch:focus-within{border-color:var(--teal);}
+.fsearch i{font-size:16px;color:var(--ink-faint);}
+.fsearch input{flex:1;min-width:0;border:0;outline:0;background:none;font-family:var(--font-sans);font-size:13.5px;color:var(--ink);padding:8px 0;}
+
+.tbl-wrap{overflow-x:auto;}
+table.tbl{width:100%;border-collapse:collapse;min-width:720px;}
+.tbl thead th{font-family:var(--font-display);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);text-align:left;padding:11px 18px;border-bottom:1px solid var(--hair);background:var(--canvas-soft);white-space:nowrap;}
+.tbl tbody td{padding:12px 18px;border-bottom:1px solid var(--hair);font-family:var(--font-sans);font-size:13px;color:var(--ink-2);vertical-align:middle;}
+.tbl tbody tr:last-child td{border-bottom:0;}
+.tbl tbody tr:hover{background:var(--canvas-soft);}
+.tbl .pn{font-family:var(--font-display);font-weight:600;font-size:13.5px;color:var(--ink);}
+.tbl .loc{color:var(--ink-mute);font-size:12px;}
+.tdot{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}
+.tdot .d{width:10px;height:10px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);flex-shrink:0;}
+.bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill);white-space:nowrap;}
+.bdg-live{background:#E3F9F1;color:#066B52;}.bdg-pend{background:#FBF0DC;color:#8A5512;}.bdg-teal{background:var(--teal-bg);color:var(--teal-deep);}
+.rowact{display:flex;gap:6px;justify-content:flex-end;}
+.iact{width:32px;height:32px;border-radius:8px;border:1px solid var(--hair);background:#fff;color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all var(--t-fast) var(--ease);}
+.iact:hover{border-color:var(--teal);color:var(--teal);}
+.iact.del:hover{border-color:var(--error);color:var(--error);}
+.coords{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-faint);font-feature-settings:"tnum";white-space:nowrap;}
+.empty{padding:44px 20px;text-align:center;color:var(--ink-mute);}
+.empty i{font-size:32px;color:var(--ink-faint);display:block;margin-bottom:10px;}
+
+/* settings */
+.setgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:18px 20px;}
+.field label{font-family:var(--font-display);font-size:12.5px;font-weight:500;color:var(--ink-2);margin-bottom:6px;display:block;}
+.field input,.field select,.field textarea{width:100%;font-family:var(--font-sans);font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:9px 11px;outline:none;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.field .hint{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-faint);margin-top:5px;}
+.sw{position:relative;width:42px;height:24px;flex-shrink:0;cursor:pointer;}
+.sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;}
+.sw .tr{position:absolute;inset:0;background:var(--hair-strong);border-radius:var(--r-pill);transition:background var(--t-fast) var(--ease);}
+.sw .tr::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform var(--t-fast) var(--ease);}
+.sw input:checked+.tr{background:var(--teal);}.sw input:checked+.tr::after{transform:translateX(18px);}
+.swrow{display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.swrow .l{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-2);}
+
+/* drawer form */
+.drawer{position:fixed;inset:0;z-index:120;display:none;}
+.drawer.open{display:block;}
+.drawer .scrim{position:absolute;inset:0;background:rgba(8,28,24,.5);opacity:0;transition:opacity var(--t-base) var(--ease);}
+.drawer.show .scrim{opacity:1;}
+.drawer .panel{position:absolute;top:0;right:0;height:100%;width:min(460px,100%);background:#fff;box-shadow:var(--shadow-3);transform:translateX(100%);transition:transform var(--t-base) var(--ease);display:flex;flex-direction:column;}
+.drawer.show .panel{transform:translateX(0);}
+.drawer .ph{display:flex;align-items:center;gap:12px;padding:20px 22px;border-bottom:1px solid var(--hair);}
+.drawer .ph h3{font-family:var(--font-display);font-weight:600;font-size:16px;color:var(--ink);margin:0;}
+.drawer .px{margin-left:auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--hair);background:#fff;color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.drawer .pb{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:15px;}
+.drawer .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.drawer .pf{display:flex;gap:10px;padding:16px 22px;border-top:1px solid var(--hair);}
+.drawer .pf .btn{flex:1;}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140%);background:var(--ink);color:#fff;font-family:var(--font-sans);font-size:13.5px;padding:12px 20px;border-radius:var(--r-pill);box-shadow:var(--shadow-3);z-index:200;display:flex;align-items:center;gap:9px;transition:transform var(--t-base) var(--ease);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.toast i{color:var(--teal-bright);font-size:18px;}
+.cf-appburger,.cf-sidetoggle{display:none;}
+@media(max-width:1080px){.app{grid-template-columns:1fr;}.side{display:none;}.content{padding:20px 16px 48px;}.setgrid{grid-template-columns:1fr;}}
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+<style id="cf-logo-fit">.side-logo img{height:auto !important;max-height:22px;max-width:132px;width:auto !important;}.side-logo{gap:8px;}.side-logo .adm{flex-shrink:0;white-space:nowrap;}</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="admin-console.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec">Pilotage</div>
+      <a class="nav-item" href="admin-console.html"><i class="ti ti-layout-dashboard"></i><span>Tableau de bord</span></a>
+      <a class="nav-item" href="admin-contenus.html"><i class="ti ti-news"></i><span>Gestion de contenu</span></a>
+      <a class="nav-item" href="admin-utilisateurs.html"><i class="ti ti-users"></i><span>Utilisateurs et rôles</span></a>
+      <a class="nav-item" data-tip="Appels à candidatures" href="admin-appels.html"><i class="ti ti-speakerphone"></i><span>Appels à candidatures</span></a>
+      <a class="nav-item" href="admin-candidatures.html"><i class="ti ti-file-text"></i><span>Candidatures</span><span class="badge tnum">18</span></a>
+      <a class="nav-item" href="admin-projets.html"><i class="ti ti-plant-2"></i><span>Projets et indicateurs</span></a>
+      <a class="nav-item" href="admin-indicateurs.html"><i class="ti ti-rosette-discount-check"></i><span>Validation des indicateurs</span></a>
+      <a class="nav-item" href="admin-mediatheque.html"><i class="ti ti-photo"></i><span>Médiathèque</span></a>
+      <div class="nav-item on"><i class="ti ti-map-2"></i><span>Carte d'impact</span></div>
+      <div class="side-sec">Gouvernance</div>
+      <a class="nav-item" href="admin-moderation.html"><i class="ti ti-shield-check"></i><span>Modération</span><span class="badge tnum">7</span></a>
+      <a class="nav-item" href="admin-permissions.html"><i class="ti ti-key"></i><span>Permissions</span></a>
+      <a class="nav-item" href="admin-journal-audit.html"><i class="ti ti-history"></i><span>Journal d'audit</span></a>
+      <a class="nav-item" href="admin-parametres.html"><i class="ti ti-settings"></i><span>Paramètres système</span></a>
+    </nav>
+    <div class="side-user"><div class="av">SH</div><div><div class="un">Saïfi Dawalbet Hamit</div><div class="ur">Super administratrice</div></div><a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a></div>
+  </aside>
+
+  <main class="main" data-screen-label="Console carte d'impact">
+    <div class="topbar">
+      <div class="tb-l"><div class="crumb">Pilotage · Carte d'impact</div><h1>Carte d'impact</h1></div>
+      <div class="tb-r">
+        <span class="tb-role"><i class="ti ti-rosette-discount-check"></i>Super administratrice</span>
+        <a class="btn btn-light" href="carte-impact.html" target="_self"><i class="ti ti-external-link"></i>Voir la carte publique</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="pagehead">
+        <div>
+          <div class="kk">gestion des points de la carte</div>
+          <h2>Projets cartographiés</h2>
+          <p>Ajoutez, modifiez ou retirez les points affichés sur la carte d'impact publique. Chaque modification est appliquée immédiatement à la carte. Au lancement, la carte présente les cinq hubs jeunesse ; les projets s'y ajouteront à mesure qu'ils sont labellisés.</p>
+        </div>
+        <button class="btn btn-pri" id="addBtn"><i class="ti ti-plus"></i>Ajouter un projet</button>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <h3>Points de la carte</h3>
+          <span class="cn"><b id="cnt" class="tnum">0</b> projets cartographiés</span>
+          <span class="sp"></span>
+          <div class="fsearch"><i class="ti ti-search"></i><input type="text" id="search" placeholder="Rechercher…" aria-label="Rechercher"></div>
+        </div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>Projet</th><th>Type</th><th>Pays</th><th>Statut</th><th>Coordonnées</th><th style="text-align:right">Actions</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><h3>Paramètres de la carte</h3><span class="cn">appliqués à la vue publique</span></div>
+        <div class="setgrid">
+          <div class="field">
+            <label>Texte d'introduction (panneau latéral)</label>
+            <textarea id="setIntro" rows="3"></textarea>
+            <div class="hint">Affiché sous le titre de la carte publique.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="swrow"><span class="l">Calque « Couvert de mangrove » affiché par défaut</span><label class="sw"><input type="checkbox" id="setMang" checked><span class="tr"></span></label></div>
+            <div class="field">
+              <label>Pays mis en avant à l'ouverture</label>
+              <select id="setFocus">
+                <option value="all">Vue régionale (5 pays)</option>
+                <option value="Sénégal">Sénégal</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Guinée-Conakry">Guinée-Conakry</option>
+                <option value="Liberia">Liberia</option>
+              </select>
+            </div>
+            <button class="btn btn-pri" id="saveSet" style="align-self:flex-start;"><i class="ti ti-device-floppy"></i>Enregistrer les paramètres</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-ghost" id="resetBtn"><i class="ti ti-refresh"></i>Réinitialiser aux valeurs par défaut</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Drawer form -->
+<div class="drawer" id="drawer">
+  <div class="scrim" data-close></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-label="Édition de projet">
+    <div class="ph"><h3 id="drTitle">Ajouter un projet</h3><button class="px" data-close aria-label="Fermer"><i class="ti ti-x"></i></button></div>
+    <div class="pb">
+      <div class="field"><label>Nom du projet</label><input type="text" id="fName" placeholder="ex. Dakar Solar Solutions"></div>
+      <div class="row2">
+        <div class="field"><label>Type</label><select id="fType">
+          <option value="entreprise">Entreprise verte</option>
+          <option value="hub">Hub jeunesse</option>
+          <option value="mangroves">Restauration de mangroves</option>
+          <option value="recyclage">Recyclage et déchets</option>
+          <option value="energie">Énergie renouvelable</option>
+        </select></div>
+        <div class="field"><label>Statut</label><select id="fStatut">
+          <option value="Labellisé">Labellisé</option>
+          <option value="En incubation">En incubation</option>
+          <option value="Soumis">Soumis</option>
+        </select></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Pays</label><select id="fPays">
+          <option value="Sénégal">Sénégal</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Sierra Leone">Sierra Leone</option>
+          <option value="Guinée-Conakry">Guinée-Conakry</option>
+          <option value="Liberia">Liberia</option>
+        </select></div>
+        <div class="field"><label>Ville</label><input type="text" id="fVille" placeholder="ex. Dakar"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Latitude</label><input type="number" step="0.0001" id="fLat" placeholder="14.6900"></div>
+        <div class="field"><label>Longitude</label><input type="number" step="0.0001" id="fLng" placeholder="-17.0400"></div>
+      </div>
+      <div class="field"><label>Indicateur d'impact</label><input type="text" id="fImpact" placeholder="ex. 210 foyers raccordés"><div class="hint">Court résumé affiché dans la fiche au survol du point.</div></div>
+    </div>
+    <div class="pf">
+      <button class="btn btn-light" data-close>Annuler</button>
+      <button class="btn btn-pri" id="saveBtn"><i class="ti ti-check"></i>Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="ti ti-circle-check"></i><span id="toastMsg">Enregistré</span></div>
+
+<script>
+(function(){
+  var KEY='cf-map-projects', SKEY='cf-map-settings';
+  var TYPE={entreprise:{label:'Entreprise verte',color:'#063D34',icon:'ti-leaf'},hub:{label:'Hub jeunesse',color:'#3ECBB0',icon:'ti-building-community'},mangroves:{label:'Restauration de mangroves',color:'#12B396',icon:'ti-trees'},recyclage:{label:'Recyclage et déchets',color:'#B8823A',icon:'ti-recycle'},energie:{label:'Énergie renouvelable',color:'#0A6B5E',icon:'ti-bolt'}};
+  var STCLS={'Labellisé':'bdg-live','En incubation':'bdg-pend','Soumis':'bdg-teal'};
+  var SEED=[
+    {id:1,name:'Climate Linguère Club',type:'hub',pays:'Sénégal',ville:'Linguère',statut:'Partenaire d\'exécution',lat:15.40,lng:-15.12,impact:'Hub jeunesse · partenaire d\'exécution'},
+    {id:2,name:'Craving 4 Development',type:'hub',pays:'Sierra Leone',ville:'Freetown',statut:'Partenaire d\'exécution',lat:8.48,lng:-13.23,impact:'Hub jeunesse · partenaire d\'exécution'},
+    {id:3,name:'Hub jeunesse Coastal Futures — Ghana',type:'hub',pays:'Ghana',ville:'Accra',statut:'Accord en cours',lat:5.61,lng:-0.18,impact:'Accord d\'exécution en cours de signature'},
+    {id:4,name:'Hub jeunesse Coastal Futures — Guinée',type:'hub',pays:'Guinée-Conakry',ville:'Conakry',statut:'Accord en cours',lat:9.64,lng:-13.58,impact:'Accord d\'exécution en cours de signature'},
+    {id:5,name:'Hub jeunesse Coastal Futures — Liberia',type:'hub',pays:'Liberia',ville:'Monrovia',statut:'Accord en cours',lat:6.33,lng:-10.76,impact:'Accord d\'exécution en cours de signature'}
+  ];
+  var DEFSET={intro:"Cinq nations côtières, cinq hubs jeunesse : le réseau Coastal Futures au lancement. Les projets s'afficheront sur la carte à mesure qu'ils sont labellisés.",mangroveDefault:true,focus:'all'};
+
+  function load(){ try{var s=localStorage.getItem(KEY); if(s){var a=JSON.parse(s); if(Array.isArray(a)) return a;}}catch(e){} return SEED.map(function(p){return Object.assign({},p);}); }
+  function save(){ try{localStorage.setItem(KEY, JSON.stringify(projects));}catch(e){} }
+  function loadSet(){ try{var s=localStorage.getItem(SKEY); if(s) return Object.assign({},DEFSET,JSON.parse(s));}catch(e){} return Object.assign({},DEFSET); }
+  function saveSet(s){ try{localStorage.setItem(SKEY, JSON.stringify(s));}catch(e){} }
+
+  var projects=load();
+  var rowsEl=document.getElementById('rows'), cntEl=document.getElementById('cnt'), searchEl=document.getElementById('search');
+  function esc(s){return (''+s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  function render(){
+    var q=(searchEl.value||'').trim().toLowerCase();
+    var list=projects.filter(function(p){ if(!q) return true; return (p.name+' '+p.ville+' '+p.pays).toLowerCase().indexOf(q)>=0; });
+    cntEl.textContent=projects.length;
+    if(!list.length){ rowsEl.innerHTML='<tr><td colspan="6"><div class="empty"><i class="ti ti-map-pin-off"></i>Aucun projet ne correspond.</div></td></tr>'; return; }
+    rowsEl.innerHTML=list.map(function(p){
+      var t=TYPE[p.type]||TYPE.entreprise, st=STCLS[p.statut]||'bdg-teal';
+      return '<tr data-id="'+p.id+'">'+
+        '<td><div class="pn">'+esc(p.name)+'</div><div class="loc">'+esc(p.ville)+', '+esc(p.pays)+'</div></td>'+
+        '<td><span class="tdot"><span class="d" style="background:'+t.color+'"></span>'+t.label+'</span></td>'+
+        '<td>'+esc(p.pays)+'</td>'+
+        '<td><span class="bdg '+st+'">'+esc(p.statut)+'</span></td>'+
+        '<td><span class="coords">'+(+p.lat).toFixed(3)+', '+(+p.lng).toFixed(3)+'</span></td>'+
+        '<td><div class="rowact"><button class="iact ed" data-id="'+p.id+'" aria-label="Modifier"><i class="ti ti-pencil"></i></button><button class="iact del" data-id="'+p.id+'" aria-label="Supprimer"><i class="ti ti-trash"></i></button></div></td>'+
+      '</tr>';
+    }).join('');
+  }
+
+  // Drawer
+  var drawer=document.getElementById('drawer'), editId=null;
+  var F={name:'fName',type:'fType',statut:'fStatut',pays:'fPays',ville:'fVille',lat:'fLat',lng:'fLng',impact:'fImpact'};
+  function openDrawer(p){
+    editId=p?p.id:null;
+    document.getElementById('drTitle').textContent=p?'Modifier le projet':'Ajouter un projet';
+    Object.keys(F).forEach(function(k){ document.getElementById(F[k]).value=p?(p[k]!=null?p[k]:''):(k==='type'?'energie':k==='statut'?'Labellisé':k==='pays'?'Sénégal':''); });
+    drawer.classList.add('open'); requestAnimationFrame(function(){drawer.classList.add('show');});
+    setTimeout(function(){document.getElementById('fName').focus();},120);
+  }
+  function closeDrawer(){ drawer.classList.remove('show'); setTimeout(function(){drawer.classList.remove('open');},280); }
+  drawer.addEventListener('click',function(e){ if(e.target.hasAttribute('data-close')) closeDrawer(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeDrawer(); });
+  document.getElementById('addBtn').addEventListener('click',function(){ openDrawer(null); });
+
+  rowsEl.addEventListener('click',function(e){
+    var ed=e.target.closest('.ed'), del=e.target.closest('.del');
+    if(ed){ var p=projects.filter(function(x){return x.id==ed.getAttribute('data-id');})[0]; if(p) openDrawer(p); }
+    else if(del){ var id=del.getAttribute('data-id'); var p=projects.filter(function(x){return x.id==id;})[0];
+      if(p && confirm('Supprimer « '+p.name+' » de la carte ?')){ projects=projects.filter(function(x){return x.id!=id;}); save(); render(); toast('Projet supprimé de la carte'); } }
+  });
+
+  document.getElementById('saveBtn').addEventListener('click',function(){
+    var v={};
+    Object.keys(F).forEach(function(k){ v[k]=document.getElementById(F[k]).value.trim(); });
+    if(!v.name){ document.getElementById('fName').focus(); return; }
+    v.lat=parseFloat(v.lat); v.lng=parseFloat(v.lng);
+    if(isNaN(v.lat)||isNaN(v.lng)){ alert('Latitude et longitude valides requises.'); return; }
+    if(editId!=null){ projects.forEach(function(p){ if(p.id==editId) Object.assign(p,v,{id:p.id}); }); toast('Projet mis à jour'); }
+    else { var nid=projects.reduce(function(m,p){return Math.max(m,+p.id||0);},0)+1; v.id=nid; projects.push(v); toast('Projet ajouté à la carte'); }
+    save(); render(); closeDrawer();
+  });
+
+  // Settings
+  var set=loadSet();
+  document.getElementById('setIntro').value=set.intro;
+  document.getElementById('setMang').checked=!!set.mangroveDefault;
+  document.getElementById('setFocus').value=set.focus||'all';
+  document.getElementById('saveSet').addEventListener('click',function(){
+    var ns={intro:document.getElementById('setIntro').value.trim()||DEFSET.intro,mangroveDefault:document.getElementById('setMang').checked,focus:document.getElementById('setFocus').value};
+    saveSet(ns); toast('Paramètres de la carte enregistrés');
+  });
+
+  document.getElementById('resetBtn').addEventListener('click',function(){
+    if(!confirm('Réinitialiser les projets et paramètres de la carte aux valeurs par défaut ?')) return;
+    try{localStorage.removeItem(KEY);localStorage.removeItem(SKEY);}catch(e){}
+    projects=load(); set=loadSet();
+    document.getElementById('setIntro').value=set.intro; document.getElementById('setMang').checked=!!set.mangroveDefault; document.getElementById('setFocus').value=set.focus;
+    render(); toast('Réinitialisé aux valeurs par défaut');
+  });
+
+  searchEl.addEventListener('input',render);
+
+  var toastEl=document.getElementById('toast'), toastT;
+  function toast(msg){ document.getElementById('toastMsg').textContent=msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(function(){toastEl.classList.remove('show');},2600); }
+
+  render();
+})();
+</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-notif.js"></script>
+<script src="assets/cf-audit.js"></script>
+<script src="assets/cf-admin-auth.js"></script>
+<script src="assets/cf-admin-chrome.js"></script>
+<script src="assets/cf-admin-session.js"></script>
+</body>
+</html>

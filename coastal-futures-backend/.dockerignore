@@ -1,0 +1,17 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+instance/
+*.db
+*.sqlite3
+.env
+.env.local
+.env.production
+.git/
+.gitignore
+README.md
+smoke_test.py

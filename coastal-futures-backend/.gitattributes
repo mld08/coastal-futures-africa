@@ -1,0 +1,4 @@
+# Les scripts shell doivent garder des fins de ligne LF (sinon l'entrypoint
+# casse dans le conteneur Linux : "#!/bin/sh\r").
+*.sh text eol=lf
+docker-entrypoint.sh text eol=lf

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Skeletons</title>
+<meta name="description" content="Skeletons · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="composant-chargement.html">
+<meta property="og:title" content="Coastal Futures | Skeletons">
+<meta property="og:description" content="Skeletons · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Skeletons">
+<meta name="twitter:description" content="Skeletons · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="composant-chargement.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{--teal:#0A6B5E;--teal-deep:#063D34;--teal-bg:#EAF6F3;--ink:#0C2420;--ink-2:#244440;--ink-mute:#5C7B76;--ink-faint:#5C7B76;--hair-strong:#B4CDC8;--hair:#DCE9E6;--canvas-soft:#F8FBFA;--font-display:'Plus Jakarta Sans',system-ui,sans-serif;--font-sans:'DM Sans',system-ui,sans-serif;--r-sm:8px;--r-md:10px;--r-lg:16px;--r-pill:100px;--shadow-1:0 1px 3px rgba(6,61,52,.06);--shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);--ease:cubic-bezier(.4,0,.2,1);}
+*{box-sizing:border-box;}
+body{margin:0;background:#EEF3F1;font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+.page{max-width:1200px;margin:0 auto;padding:48px 28px 80px;}
+.page h1{font-family:var(--font-display);font-weight:300;font-size:38px;letter-spacing:-1.8px;color:var(--ink);margin:0;}
+.page .sub{font-size:16px;color:var(--ink-mute);margin:10px 0 20px;}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:14px;font-weight:500;border-radius:var(--r-pill);padding:11px 20px;border:1px solid var(--hair-strong);background:#fff;color:var(--ink);cursor:pointer;transition:all .16s var(--ease);}
+.btn:hover{border-color:var(--teal);color:var(--teal);}
+.spec-label{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--ink-2);margin:32px 0 14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;}
+
+/* skeleton primitives */
+.sk{position:relative;overflow:hidden;background:#E7EEEC;border-radius:6px;}
+.sk::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);animation:sh 1.4s infinite;}
+@keyframes sh{100%{transform:translateX(100%);}}
+.sk-img{height:150px;border-radius:0;}
+.sk-line{height:13px;margin-bottom:9px;}
+.sk-line.w40{width:40%;}.sk-line.w60{width:60%;}.sk-line.w80{width:80%;}.sk-line.w90{width:90%;}
+.sk-circ{width:46px;height:46px;border-radius:50%;flex-shrink:0;}
+.sk-sq{width:46px;height:46px;border-radius:13px;flex-shrink:0;}
+.sk-btn{height:30px;width:80px;border-radius:var(--r-pill);}
+.sk-num{height:34px;width:64px;border-radius:8px;margin-bottom:10px;}
+.pad{padding:18px;}
+.row{display:flex;align-items:center;gap:13px;}
+.rowline{display:flex;align-items:center;gap:14px;padding:16px;border-bottom:1px solid var(--hair);}
+.rowline:last-child{border-bottom:0;}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid var(--hair);}
+@media(max-width:920px){.grid3{grid-template-columns:1fr 1fr;}.grid4{grid-template-columns:1fr 1fr;}}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+<main class="page" data-screen-label="Skeletons loading">
+  <span id="cf-main" tabindex="-1"></span><h1>Skeletons</h1>
+  <p class="sub">États de chargement par pulsation lumineuse, pour chaque composant principal.</p>
+  <button class="btn" id="replay"><i class="ti ti-refresh"></i>Rejouer l'animation</button>
+
+  <div class="spec-label">Card projet · skeleton</div>
+  <div class="grid3" id="zone1">
+    <div class="card"><div class="sk sk-img"></div><div class="pad"><div class="sk sk-line w40" style="height:18px"></div><div class="sk sk-line w80"></div><div class="sk sk-line w60"></div><div class="foot"><div class="sk sk-line w40" style="width:90px;margin:0"></div><div class="sk sk-btn"></div></div></div></div>
+    <div class="card"><div class="sk sk-img"></div><div class="pad"><div class="sk sk-line w40" style="height:18px"></div><div class="sk sk-line w80"></div><div class="sk sk-line w60"></div><div class="foot"><div class="sk sk-line w40" style="width:90px;margin:0"></div><div class="sk sk-btn"></div></div></div></div>
+    <div class="card"><div class="sk sk-img"></div><div class="pad"><div class="sk sk-line w40" style="height:18px"></div><div class="sk sk-line w80"></div><div class="sk sk-line w60"></div><div class="foot"><div class="sk sk-line w40" style="width:90px;margin:0"></div><div class="sk sk-btn"></div></div></div></div>
+  </div>
+
+  <div class="spec-label">Card entrepreneur / mentor · skeleton</div>
+  <div class="grid3">
+    <div class="card pad"><div class="row"><div class="sk sk-sq"></div><div style="flex:1"><div class="sk sk-line w60" style="height:15px"></div><div class="sk sk-line w40" style="margin:0"></div></div></div><div class="sk sk-line w80" style="margin-top:16px;height:24px;border-radius:100px;width:160px"></div></div>
+    <div class="card pad"><div class="row"><div class="sk sk-circ"></div><div style="flex:1"><div class="sk sk-line w60" style="height:15px"></div><div class="sk sk-line w40" style="margin:0"></div></div></div><div class="sk sk-line w80" style="margin-top:16px;height:24px;border-radius:100px;width:160px"></div></div>
+    <div class="card pad"><div class="row"><div class="sk sk-circ"></div><div style="flex:1"><div class="sk sk-line w60" style="height:15px"></div><div class="sk sk-line w40" style="margin:0"></div></div></div><div class="sk sk-line w80" style="margin-top:16px;height:24px;border-radius:100px;width:160px"></div></div>
+  </div>
+
+  <div class="spec-label">Ligne de liste / annuaire · skeleton</div>
+  <div class="card">
+    <div class="rowline"><div class="sk sk-sq"></div><div style="flex:1"><div class="sk sk-line w40" style="height:15px"></div><div class="sk sk-line w60" style="margin:0"></div></div><div class="sk sk-line" style="width:90px;height:22px;border-radius:100px;margin:0"></div></div>
+    <div class="rowline"><div class="sk sk-sq"></div><div style="flex:1"><div class="sk sk-line w40" style="height:15px"></div><div class="sk sk-line w60" style="margin:0"></div></div><div class="sk sk-line" style="width:90px;height:22px;border-radius:100px;margin:0"></div></div>
+    <div class="rowline"><div class="sk sk-sq"></div><div style="flex:1"><div class="sk sk-line w40" style="height:15px"></div><div class="sk sk-line w60" style="margin:0"></div></div><div class="sk sk-line" style="width:90px;height:22px;border-radius:100px;margin:0"></div></div>
+  </div>
+
+  <div class="spec-label">Stat dashboard · skeleton</div>
+  <div class="grid4">
+    <div class="card pad"><div class="sk sk-sq" style="width:38px;height:38px;margin-bottom:16px"></div><div class="sk sk-num"></div><div class="sk sk-line w80" style="margin:0"></div></div>
+    <div class="card pad"><div class="sk sk-sq" style="width:38px;height:38px;margin-bottom:16px"></div><div class="sk sk-num"></div><div class="sk sk-line w80" style="margin:0"></div></div>
+    <div class="card pad"><div class="sk sk-sq" style="width:38px;height:38px;margin-bottom:16px"></div><div class="sk sk-num"></div><div class="sk sk-line w80" style="margin:0"></div></div>
+    <div class="card pad"><div class="sk sk-sq" style="width:38px;height:38px;margin-bottom:16px"></div><div class="sk sk-num"></div><div class="sk sk-line w80" style="margin:0"></div></div>
+  </div>
+</main>
+<script>
+document.getElementById('replay').addEventListener('click',function(){
+  document.querySelectorAll('.sk').forEach(function(s){ s.style.animation='none'; void s.offsetWidth; s.style.animation=''; });
+});
+</script>
+<script id="cf-i18n">(function(){var D={"Skeletons":"Skeletons","États de chargement par pulsation lumineuse, pour chaque composant principal.":"Shimmer loading states for each main component.","Rejouer l'animation":"Replay the animation","Card projet · skeleton":"Project card · skeleton","Card entrepreneur / mentor · skeleton":"Entrepreneur / mentor card · skeleton","Ligne de liste / annuaire · skeleton":"List row / directory · skeleton","Stat dashboard · skeleton":"Dashboard stat · skeleton","Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Programme":"Programme","Contact":"Contact","À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Événements":"Events","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Accueil hub":"Hub home","Entrepreneurs":"Entrepreneurs","Mentors":"Mentors","Appels":"Calls","Carte":"Map","Postuler":"Apply","Postuler maintenant":"Apply now","Voir le profil":"View profile","Voir le détail":"View details","Voir la fiche":"View details","S'inscrire":"Register","Télécharger":"Download","Télécharger le PDF":"Download PDF","Tout voir":"See all","Suivant":"Next","Précédent":"Previous","Enregistrer":"Save","Annuler":"Cancel","Envoyer":"Send","Envoyer le message":"Send message","Contacter":"Contact","Découvrir":"Discover","Réinitialiser":"Reset","Continuer":"Continue","Confirmer":"Confirm","Approuver":"Approve","Décliner":"Decline","Rejeter":"Reject","Voir sur la carte":"View on map","Aperçu public":"Public preview","Nouvelle candidature":"New application","Mettre à jour":"Update","Labellisé":"Certified","En incubation":"In incubation","En revue":"Under review","Soumis":"Submitted","Brouillon":"Draft","Rejeté":"Rejected","Disponible":"Available","Indisponible":"Unavailable","Zone pilote":"Pilot zone","Hub jeunesse":"Youth hub","Présentiel":"In person","Virtuel":"Online","Hybride":"Hybrid","À la une":"Featured","À venir":"Upcoming","Passés":"Past","Clôturé":"Closed","Actif":"Active","Inactif":"Inactive","Toutes":"All","Tous":"All","Tous les pays":"All countries","Tous les secteurs":"All sectors","Tous les statuts":"All statuses","Toutes les expertises":"All areas of expertise","Tous les types":"All types","Tous les thèmes":"All themes","Toutes les années":"All years","Toutes les universités":"All universities","Disponibles uniquement":"Available only","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Recyclage et déchets":"Recycling and waste","Agriculture résiliente":"Resilient agriculture","Entreprise verte":"Green enterprise","Économie circulaire":"Circular economy","Finance verte":"Green finance","Impact investing":"Impact investing","Mentorat":"Mentoring","Entrepreneurs verts":"Green entrepreneurs","Projets actifs":"Active projects","Mangroves restaurées":"Mangroves restored","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Mentors et experts":"Mentors and experts","Partenaires engagés":"Engaged partners","Foyers raccordés":"Households connected","Emplois verts créés":"Green jobs created","Emplois créés":"Jobs created","Tableau de bord":"Dashboard","Tableau de bord impact":"Impact dashboard","Données en temps réel":"Real-time data","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Demandes":"Requests","Mes mentorés":"My mentees","Utilisateurs":"Users","Candidatures":"Applications","Projets et indicateurs":"Projects and indicators","Alertes":"Alerts","Paramètres":"Settings","Statistiques":"Statistics","Se déconnecter":"Sign out","Espace bailleurs PTF":"Donor area","Vue par pays":"By country","Vue consolidée":"Consolidated view","Exporter le rapport PDF":"Export PDF report","Mentor":"Mentor","Entrepreneur":"Entrepreneur","Partenaire":"Partner","Administratrice":"Administrator","Coordination du programme":"Programme coordination","candidatures ouvertes":"open calls","cinq pays, cinq hubs":"five countries, five hubs","une plateforme, quatre espaces":"one platform, four areas","vision et mission":"vision and mission","gouvernance":"governance","alignement stratégique":"strategic alignment","à propos du programme":"about the programme","calendrier sur douze mois, avril 2026 à mars 2027":"twelve-month calendar, april 2026 to march 2027","Page introuvable":"Page not found","Erreur serveur":"Server error","Retour à l'accueil":"Back to home","Réessayer":"Retry","Contacter le support":"Contact support","Notifications":"Notifications","Tout marquer lu":"Mark all as read","Prochains événements":"Upcoming events","Prochaines sessions":"Upcoming sessions","Mes mentorés actifs":"My active mentees","Demandes de contact":"Contact requests","Profil complété":"Profile completed","Activité récente":"Recent activity","Startups labellisées":"Certified startups","Mentors disponibles":"Available mentors"};var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});setLang(l);})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+</body>
+</html>

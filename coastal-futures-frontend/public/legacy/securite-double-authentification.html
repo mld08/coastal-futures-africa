@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Double authentification</title>
+<meta name="description" content="Double authentification · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="securite-double-authentification.html">
+<meta property="og:title" content="Coastal Futures | Double authentification">
+<meta property="og:description" content="Double authentification · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Double authentification">
+<meta name="twitter:description" content="Double authentification · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="securite-double-authentification.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --error:#8F2A1A; --error-bg:#FBE6E2;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);
+  --shadow-3:0 30px 60px -20px rgba(4,39,31,.4);
+  --ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;min-height:100vh;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;}
+img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";}
+.cf-mesh{position:absolute;inset:0;background:radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.5) 0%,transparent 50%),radial-gradient(90% 70% at 70% 5%,rgba(18,179,150,.42) 0%,transparent 55%),radial-gradient(70% 80% at 50% 70%,rgba(10,107,94,.6) 0%,transparent 60%);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:15px;font-weight:500;border-radius:var(--r-pill);padding:12px 22px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-block{width:100%;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn[disabled]{opacity:.45;pointer-events:none;}
+.btn i{transition:transform var(--t-fast) var(--ease);}.btn:hover i.ti-arrow-right{transform:translateX(3px);}
+
+.nav-outer{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair);}
+.cf-nav{max-width:980px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}.brand img{height:32px;width:auto;}
+.nav-mini{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-mute);display:flex;align-items:center;gap:7px;}
+.nav-mini i{color:var(--teal);}
+
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 24px;}
+.card{max-width:520px;width:100%;background:#fff;border:1px solid var(--hair);border-radius:var(--r-xl);box-shadow:var(--shadow-3);overflow:hidden;}
+.card-top{position:relative;color:#fff;background:var(--ink);padding:30px 32px;overflow:hidden;}
+.card-top .cf-mesh{opacity:.5;}
+.card-top .ic{position:relative;width:54px;height:54px;border-radius:15px;background:rgba(62,203,176,.18);border:1px solid rgba(62,203,176,.5);color:var(--teal-bright);display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:16px;}
+.card-top h1{position:relative;font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:-.5px;margin:0;}
+.card-top p{position:relative;font-family:var(--font-sans);font-size:13.5px;color:rgba(255,255,255,.78);margin:7px 0 0;line-height:1.55;}
+.card-b{padding:28px 32px;}
+.step{display:none;}.step.on{display:block;}
+
+/* method choice */
+.method{display:flex;gap:13px;border:1px solid var(--hair-strong);border-radius:var(--r-md);padding:15px;cursor:pointer;margin-bottom:12px;transition:all var(--t-fast) var(--ease);align-items:flex-start;}
+.method:hover{border-color:var(--teal);}
+.method.sel{border-color:var(--teal);background:var(--teal-bg2);box-shadow:0 0 0 1px var(--teal);}
+.method .mi{width:42px;height:42px;border-radius:11px;background:var(--teal-bg);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;}
+.method .mt{font-family:var(--font-display);font-weight:600;font-size:14.5px;color:var(--ink);}
+.method .md{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);margin-top:3px;line-height:1.45;}
+.method .rad{width:20px;height:20px;border-radius:50%;border:2px solid var(--hair-strong);flex-shrink:0;margin-left:auto;position:relative;}
+.method.sel .rad{border-color:var(--teal);}
+.method.sel .rad::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--teal);}
+
+/* qr + code */
+.qr-row{display:flex;gap:20px;align-items:center;margin-bottom:18px;}
+.qr-row img{width:128px;height:128px;border:1px solid var(--hair);border-radius:var(--r-md);}
+.qr-row .qt{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);line-height:1.55;}
+.qr-row .qt b{font-family:var(--font-display);color:var(--ink);}
+.otp{display:flex;gap:9px;justify-content:center;margin:8px 0 4px;}
+.otp input{width:48px;height:56px;text-align:center;font-family:var(--font-display);font-weight:600;font-size:22px;color:var(--ink);border:1.5px solid var(--hair-strong);border-radius:var(--r-md);outline:none;font-feature-settings:"tnum";}
+.otp input:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.lbl{font-family:var(--font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:9px;display:block;}
+.hint{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);text-align:center;margin-top:12px;}
+.hint a{color:var(--teal);font-weight:500;cursor:pointer;}
+.foot-act{margin-top:20px;display:flex;gap:10px;}
+
+/* backup codes */
+.codes{display:grid;grid-template-columns:1fr 1fr;gap:9px;background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-md);padding:16px;margin:14px 0;}
+.codes span{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);text-align:center;letter-spacing:1px;font-feature-settings:"tnum";}
+.warnbox{display:flex;gap:9px;background:#FBF0DC;border-radius:var(--r-md);padding:12px 14px;font-family:var(--font-sans);font-size:12.5px;color:#6E4912;line-height:1.5;}
+.warnbox i{color:var(--sand-deep);flex-shrink:0;margin-top:1px;}
+.success-state{text-align:center;padding:8px 0;}
+.success-state .si{width:64px;height:64px;border-radius:50%;background:var(--success-bg);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 16px;}
+.success-state h3{font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--ink);margin:0 0 8px;}
+.success-state p{font-family:var(--font-sans);font-size:14px;color:var(--ink-mute);line-height:1.6;margin:0 auto 18px;max-width:360px;}
+
+.cf-mesh{position:absolute;inset:0;opacity:.5;background:radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.5) 0%,transparent 50%),radial-gradient(90% 70% at 70% 5%,rgba(18,179,150,.42) 0%,transparent 55%),radial-gradient(70% 80% at 50% 70%,rgba(10,107,94,.6) 0%,transparent 60%);}
+.footer{position:relative;overflow:hidden;background:var(--ink);color:rgba(255,255,255,.55);}
+.footer-base{max-width:980px;margin:0 auto;padding:18px 28px;font-family:var(--font-sans);font-size:12.5px;text-align:center;}
+
+@media(max-width:560px){.qr-row{flex-direction:column;text-align:center;}.otp input{width:42px;height:50px;font-size:19px;}}
+</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-rm-guard">@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+<style id="cf-foot2">
+.footer-top{position:relative;max-width:1180px;margin:0 auto;padding:80px 28px 60px;display:grid;grid-template-columns:1.1fr 2fr;gap:80px;}
+.footer-brand img{height:30px;width:auto;margin-bottom:22px;}
+.footer-mission{color:rgba(255,255,255,.66);font-size:15px;line-height:1.7;max-width:330px;margin:0;}
+.footer-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.fcta-link{color:#fff;font-family:var(--font-display);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;}
+.fcta-link i{transition:transform .16s var(--ease);}.fcta-link:hover i{transform:translateX(3px);}
+.fcta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-family:var(--font-display);font-weight:600;font-size:14px;padding:13px 24px;border-radius:100px;}
+.fcta-btn:hover{background:var(--teal-soft);}.fcta-btn i{transition:transform .16s var(--ease);}.fcta-btn:hover i{transform:translateX(3px);}
+.footer-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 20px;letter-spacing:.01em;}
+.footer-col a,.footer-col span[role]{display:block;color:rgba(255,255,255,.7);font-size:14px;padding:9px 0;font-family:var(--font-sans);transition:color .14s var(--ease);cursor:pointer;}
+.footer-col a:hover,.footer-col span[role]:hover{color:#fff;}
+.footer-col .fnews{color:var(--teal-bright);font-family:var(--font-display);font-weight:600;margin-top:8px;display:inline-flex;align-items:center;gap:7px;}
+.footer-util{position:relative;max-width:1180px;margin:0 auto;padding:34px 28px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:16px 38px;}
+.footer-util a,.footer-util span[role]{color:rgba(255,255,255,.72);font-size:13.5px;font-family:var(--font-display);font-weight:500;cursor:pointer;transition:color .14s var(--ease);}
+.footer-util a:hover,.footer-util span[role]:hover{color:#fff;}
+.footer .footer-base{position:relative;max-width:1180px;margin:0 auto;padding:28px 28px 60px;border-top:0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+@media(max-width:980px){.footer-top{grid-template-columns:1fr;gap:40px;padding:60px 24px 40px;}.footer-cols{grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:560px){.footer-cols{grid-template-columns:1fr 1fr;gap:8px 20px;}.footer-col h4{margin:18px 0 10px;}.footer-col a,.footer-col span[role]{padding:9px 0;font-size:13.5px;}.footer-util{justify-content:center;gap:10px 22px;padding:24px 20px;}.footer .footer-base{flex-direction:column;align-items:flex-start;gap:10px;padding:22px 20px 40px;}}
+</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-resp-page">@media(max-width:480px){.codes{grid-template-columns:1fr;}}</style>
+<style id="cf-nav-elevate">
+/* Public navbar — refined professional elevation (within the CF system) */
+.nav-outer{top:16px;}
+.nav-outer .cf-nav{padding:11px 14px 11px 24px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px);box-shadow:0 1px 2px rgba(6,61,52,.05),0 16px 36px -20px rgba(6,61,52,.24);transition:background .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease);}
+.nav-outer .cf-nav.scrolled{background:rgba(255,255,255,.93);border-color:var(--hair-strong);box-shadow:0 1px 2px rgba(6,61,52,.06),0 12px 28px -18px rgba(6,61,52,.3);}
+.nav-outer .cf-nav .brand img{height:30px;}
+.nav-outer .nav-links{gap:3px;}
+.nav-outer .nav-links a:not(.nav-cta){position:relative;padding:9px 15px;font-weight:500;letter-spacing:-.1px;color:var(--ink-2);border-radius:10px;transition:color .18s var(--ease),background .18s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;opacity:0;transition:transform .28s var(--ease),opacity .2s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta):hover{color:var(--ink);background:rgba(10,107,94,.06);}
+.nav-outer .nav-links a:not(.nav-cta).on{color:var(--teal-deep);}
+.nav-outer .nav-links a:not(.nav-cta).on::after{transform:scaleX(1);opacity:1;}
+.nav-outer .nav-links a.nav-cta{margin-left:12px;padding:9px 20px;border-radius:100px;box-shadow:0 1px 2px rgba(6,61,52,.12);transition:background .16s var(--ease),transform .18s var(--ease),box-shadow .22s var(--ease);}
+.nav-outer .nav-links a.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,107,94,.55);}
+.nav-outer .nav-links a.nav-cta:active{transform:translateY(0);}
+.cf-util-link{position:relative;}
+.cf-util-link::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:1.5px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;transition:transform .22s var(--ease);}
+.cf-util-link:hover::after{transform:scaleX(1);}
+@media(max-width:860px){.nav-outer .nav-links a.nav-cta{margin-left:0;}}
+</style>
+<script id="cf-nav-elevate-js">(function(){var n=document.querySelector('.nav-outer .cf-nav');if(!n)return;var f=function(){n.classList.toggle('scrolled',(window.pageYOffset||document.documentElement.scrollTop||0)>6);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="nav-outer">
+  <nav class="cf-nav">
+    <a class="brand" href="parametres.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures"></a>
+    <div class="nav-mini"><i class="ti ti-shield-lock"></i><span data-i18n="navsec">Sécurité du compte</span></div>
+  </nav>
+</div>
+<main id="cf-content">
+
+<div class="main" data-screen-label="Double authentification">
+  <div class="card">
+    <div class="card-top">
+      <div class="cf-mesh"></div>
+      <div class="ic"><i class="ti ti-shield-lock"></i></div>
+      <span id="cf-main" tabindex="-1"></span><h1 data-i18n="title">Double authentification</h1>
+      <p data-i18n="sub">Renforcez la sécurité de votre compte. Obligatoire pour les administrateurs et les bailleurs PTF.</p>
+    </div>
+    <div class="card-b">
+
+      <!-- Step 1: choose method -->
+      <div class="step on" data-step="0">
+        <span class="lbl" data-i18n="l.method">Choisissez une méthode</span>
+        <div class="method sel" data-m="app">
+          <div class="mi"><i class="ti ti-device-mobile"></i></div>
+          <div><div class="mt" data-i18n="m.app">Application d'authentification</div><div class="md" data-i18n="m.appd">Google Authenticator, Authy ou équivalent. Recommandé.</div></div>
+          <span class="rad"></span>
+        </div>
+        <div class="method" data-m="sms">
+          <div class="mi"><i class="ti ti-message-2"></i></div>
+          <div><div class="mt" data-i18n="m.sms">SMS</div><div class="md" data-i18n="m.smsd">Code envoyé par message sur votre téléphone.</div></div>
+          <span class="rad"></span>
+        </div>
+        <div class="foot-act"><button class="btn btn-pri btn-block" id="toStep1"><span data-i18n="continue">Continuer</span> <i class="ti ti-arrow-right"></i></button></div>
+      </div>
+
+      <!-- Step 2: scan + verify -->
+      <div class="step" data-step="1">
+        <div class="qr-row">
+          <img loading="lazy" decoding="async" src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&margin=0&data=otpauth://totp/CoastalFutures:saifi.dawalbethamit?secret=JBSWY3DPEHPK3PXP&issuer=CoastalFutures" alt="QR code 2FA">
+          <div class="qt"><span data-i18n="scan">Scannez ce code avec votre application d'authentification, ou saisissez la clé manuellement :</span><br><br><b class="tnum">JBSW Y3DP EHPK 3PXP</b></div>
+        </div>
+        <span class="lbl" data-i18n="l.code">Saisissez le code à 6 chiffres</span>
+        <div class="otp" id="otp">
+          <input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric">
+        </div>
+        <div class="hint"><span data-i18n="noapp">Pas reçu ?</span> <a data-i18n="resend">Renvoyer le code</a></div>
+        <div class="foot-act"><button class="btn btn-light" id="back1" aria-label="Retour"><i class="ti ti-arrow-left"></i></button><button class="btn btn-pri btn-block" id="toStep2" disabled data-i18n="verify">Vérifier</button></div>
+      </div>
+
+      <!-- Step 3: backup codes + done -->
+      <div class="step" data-step="2">
+        <div class="success-state">
+          <div class="si"><i class="ti ti-shield-check"></i></div>
+          <h3 data-i18n="done.t">Double authentification activée</h3>
+          <p data-i18n="done.p">Votre compte est maintenant protégé. Conservez vos codes de secours en lieu sûr : ils permettent de vous connecter si vous perdez votre téléphone.</p>
+        </div>
+        <span class="lbl" data-i18n="l.backup">Codes de secours</span>
+        <div class="codes">
+          <span>4F9K-2QX7</span><span>8MZP-1WD3</span>
+          <span>6RT5-9LBN</span><span>3HSV-7KC9</span>
+          <span>0PWE-5XQ2</span><span>1ADU-8YMK</span>
+        </div>
+        <div class="warnbox"><i class="ti ti-alert-triangle"></i><span data-i18n="warn">Chaque code ne fonctionne qu'une seule fois. Ne les partagez avec personne.</span></div>
+        <div class="foot-act"><button class="btn btn-light" id="dlCodes"><i class="ti ti-download"></i><span data-i18n="dl">Télécharger</span></button><a href="admin-console.html" class="btn btn-pri btn-block" data-i18n="finish">Terminer</a></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="cf-mesh"></div>
+  <div class="cf-coastline cf-coastline--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path pathLength="1" d="M-10,70 C80,62 140,50 196,52 C236,53 256,76 300,78 C356,81 392,54 458,58 C540,63 586,98 668,94 C730,91 772,62 850,65 C946,69 998,104 1092,98 C1166,93 1212,64 1296,68 C1372,71 1418,96 1452,90"></path></svg></div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures Network">
+      <p class="footer-mission">Coastal Futures Network repositionne 4 000 jeunes entrepreneurs verts au cœur de l'économie côtière d'Afrique de l'Ouest, à travers cinq nations.</p>
+      <p class="footer-affil" data-i18n="ft.affil" style="color:rgba(255,255,255,.85);font-family:var(--font-display);font-weight:600;font-size:13.5px;margin:14px 0 0;">Un programme de l'Institut Africain de la Gouvernance.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><h4>Programme</h4><a href="a-propos.html">À propos</a><a href="carte-impact.html">Carte d'impact</a><a href="actualites.html">Actualités</a><a href="evenements.html">Événements</a><a href="appels-candidatures.html">Appels à candidatures</a></div>
+      <div class="footer-col"><h4>Écosystème</h4><a href="ecosysteme.html">L'écosystème</a><a href="annuaire-entrepreneurs.html">Annuaire entrepreneurs</a><a href="annuaire-mentors.html">Annuaire mentors</a><a href="carte-impact.html">Pays d'intervention</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mediatheque.html">Médiathèque</a><a href="bibliotheque.html">Recherche-action</a><a href="methodologie-indicateurs.html">Méthodologie d'impact</a><a href="contact.html">Presse</a></div>
+      <div class="footer-col"><h4>Institut</h4><a href="a-propos.html">Institut Africain de la Gouvernance</a><a href="a-propos.html">Partenaires</a><a href="contact.html">Contact</a><a href="plan-du-site.html">Plan du site</a></div>
+      <div class="footer-col"><h4>Suivez le programme</h4><span role="button" tabindex="0">LinkedIn</span><span role="button" tabindex="0">X (Twitter)</span><span role="button" tabindex="0">YouTube</span><a href="contact.html" class="fnews">Newsletter <i class="ti ti-arrow-right"></i></a></div>
+    </div>
+  </div>
+  <div class="footer-util">
+    <a href="plan-du-site.html">Plan du site</a><a href="confidentialite.html">Confidentialité</a><a href="declaration-accessibilite.html">Accessibilité</a><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a><a href="connexion-bailleur.html">Espace bailleurs</a>
+  </div>
+  <div class="footer-base">
+    <span class="caption">© 2026 Coastal Futures Network · Institut Africain de la Gouvernance</span>
+    <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // method select
+  [].slice.call(document.querySelectorAll('.method')).forEach(function(m){m.addEventListener('click',function(){[].slice.call(document.querySelectorAll('.method')).forEach(function(x){x.classList.remove('sel');});m.classList.add('sel');});});
+  function go(n){[].slice.call(document.querySelectorAll('.step')).forEach(function(s){s.classList.toggle('on',+s.getAttribute('data-step')===n);});}
+  document.getElementById('toStep1').addEventListener('click',function(){go(1);var f=document.querySelector('#otp input');if(f)f.focus();});
+  document.getElementById('back1').addEventListener('click',function(){go(0);});
+  document.getElementById('toStep2').addEventListener('click',function(){go(2);});
+  // otp behaviour
+  var inputs=[].slice.call(document.querySelectorAll('#otp input'));
+  function check(){var full=inputs.every(function(i){return i.value.length===1;});document.getElementById('toStep2').disabled=!full;}
+  inputs.forEach(function(inp,i){
+    inp.addEventListener('input',function(){inp.value=inp.value.replace(/[^0-9]/g,'');if(inp.value&&i<inputs.length-1)inputs[i+1].focus();check();});
+    inp.addEventListener('keydown',function(e){if(e.key==='Backspace'&&!inp.value&&i>0)inputs[i-1].focus();});
+  });
+  document.getElementById('dlCodes').addEventListener('click',function(){this.innerHTML='<i class="ti ti-check"></i>'+(document.documentElement.lang==='en'?'Downloaded':'Téléchargé');});
+})();
+</script>
+
+
+<script id="cf-i18n">(function(){var BYID={"navsec":["Sécurité du compte","Account security"],"title":["Double authentification","Two-factor authentication"],"sub":["Renforcez la sécurité de votre compte. Obligatoire pour les administrateurs et les bailleurs PTF.","Strengthen your account security. Required for administrators and donors."],"l.method":["Choisissez une méthode","Choose a method"],"m.app":["Application d'authentification","Authenticator app"],"m.appd":["Google Authenticator, Authy ou équivalent. Recommandé.","Google Authenticator, Authy or equivalent. Recommended."],"m.sms":["SMS","SMS"],"m.smsd":["Code envoyé par message sur votre téléphone.","Code sent by message to your phone."],"continue":["Continuer","Continue"],"scan":["Scannez ce code avec votre application d'authentification, ou saisissez la clé manuellement :","Scan this code with your authenticator app, or enter the key manually:"],"l.code":["Saisissez le code à 6 chiffres","Enter the 6-digit code"],"noapp":["Pas reçu ?","Didn't get it?"],"resend":["Renvoyer le code","Resend code"],"verify":["Vérifier","Verify"],"done.t":["Double authentification activée","Two-factor authentication enabled"],"done.p":["Votre compte est maintenant protégé. Conservez vos codes de secours en lieu sûr : ils permettent de vous connecter si vous perdez votre téléphone.","Your account is now protected. Keep your backup codes safe: they let you sign in if you lose your phone."],"l.backup":["Codes de secours","Backup codes"],"warn":["Chaque code ne fonctionne qu'une seule fois. Ne les partagez avec personne.","Each code works only once. Do not share them with anyone."],"dl":["Télécharger","Download"],"finish":["Terminer","Finish"]};
+var KEY="cf-lang";
+function setLang(l){Object.keys(BYID).forEach(function(id){var el=document.querySelector('[data-i18n="'+id+'"]');if(el)el.textContent=l==='en'?BYID[id][1]:BYID[id][0];});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}}
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}setLang(s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr"));
+})();</script>
+</body>
+</html>

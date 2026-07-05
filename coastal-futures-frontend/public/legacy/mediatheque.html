@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Coastal Futures | Médiathèque</title>
+<meta name="description" content="Médiathèque · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="mediatheque.html">
+<meta property="og:title" content="Coastal Futures | Médiathèque">
+<meta property="og:description" content="Médiathèque · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Médiathèque">
+<meta name="twitter:description" content="Médiathèque · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="mediatheque.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<link rel="stylesheet" href="assets/cf-nav.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --warning:#8A5512; --error:#8F2A1A;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --t-micro:100ms; --t-fast:160ms; --t-base:280ms; --t-page:420ms; --t-reveal:560ms;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--canvas);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+
+.display-xl{font-family:var(--font-display);font-size:40px;font-weight:300;line-height:1.05;letter-spacing:-1.7px;color:var(--ink);}
+.display-lg{font-family:var(--font-display);font-size:30px;font-weight:400;line-height:1.1;letter-spacing:-1px;color:var(--ink);}
+.display-md{font-family:var(--font-display);font-size:22px;font-weight:500;line-height:1.18;letter-spacing:-.5px;color:var(--ink);}
+.lead{font-family:var(--font-sans);font-size:18px;font-weight:300;line-height:1.6;letter-spacing:-.1px;color:var(--ink-2);}
+.body{font-family:var(--font-sans);font-size:16px;font-weight:400;line-height:1.65;color:var(--ink-2);}
+.body-sm{font-family:var(--font-sans);font-size:14px;font-weight:400;line-height:1.6;color:var(--ink-2);}
+.caption{font-family:var(--font-sans);font-size:13px;font-weight:400;line-height:1.5;color:var(--ink-mute);}
+.kicker{font-family:var(--font-display);font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--ink-faint);text-transform:lowercase;}
+
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:15px;font-weight:500;letter-spacing:-.1px;border-radius:var(--r-pill);padding:11px 22px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-sm{padding:8px 16px;font-size:13px;}
+.btn-pri{background:var(--teal);color:#fff;}
+.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}
+.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+
+.cf-mesh{position:absolute;inset:0;opacity:.92;background:
+  radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.55) 0%,transparent 50%),
+  radial-gradient(90% 70% at 70% 5%,rgba(18,179,150,.45) 0%,transparent 55%),
+  radial-gradient(80% 90% at 95% 30%,rgba(201,163,94,.32) 0%,transparent 50%),
+  radial-gradient(70% 80% at 50% 65%,rgba(10,107,94,.60) 0%,transparent 60%);}
+.cf-mesh-surface{position:relative;background:var(--ink);color:#fff;overflow:hidden;}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+/* Nav */
+.nav-outer{position:sticky;top:14px;z-index:30;}
+.cf-nav{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;border:1px solid var(--hair);border-radius:14px;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);max-width:1180px;margin:14px auto 0;box-shadow:var(--shadow-1);}.brand img{height:28px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-links a{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink-mute);transition:color var(--t-micro) var(--ease);}
+.nav-links a:hover,.nav-links a.on{color:var(--ink);}
+.nav-links a.nav-cta{color:#fff;}
+.lang{display:flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:13px;font-weight:500;cursor:pointer;user-select:none;}
+.lang b{color:var(--ink-faint);font-weight:500;}
+.lang b.on{color:var(--teal);}
+.lang .sep{color:var(--hair-strong);}
+
+/* Page head */
+.page-head{padding:48px 0 24px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-faint);margin-bottom:20px;}
+.breadcrumb a{color:var(--ink-mute);}
+.breadcrumb a:hover{color:var(--teal);}
+.breadcrumb i{font-size:14px;}
+.ph-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.page-head h1{margin:6px 0 0;}
+.page-head .ph-sub{margin:12px 0 0;max-width:500px;}
+
+/* Search */
+.search{position:relative;min-width:300px;}
+.search i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--ink-faint);font-size:18px;}
+.search input{width:100%;font-family:var(--font-sans);font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-pill);padding:11px 16px 11px 42px;outline:none;transition:all var(--t-micro) var(--ease);}
+.search input:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.search input::placeholder{color:var(--ink-faint);}
+
+/* Toolbar (tabs + pays select) */
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--hair);padding-bottom:0;margin-top:18px;}
+.tabs{display:flex;gap:4px;}
+.tab{font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-mute);background:transparent;border:0;border-bottom:2px solid transparent;padding:12px 16px;cursor:pointer;transition:all var(--t-fast) var(--ease);display:inline-flex;align-items:center;gap:7px;}
+.tab i{font-size:17px;}
+.tab:hover{color:var(--ink);}
+.tab.active{color:var(--teal);border-bottom-color:var(--teal);}
+.tab .cnt{font-size:12px;color:var(--ink-faint);font-feature-settings:"tnum";}
+.tab.active .cnt{color:var(--teal);}
+.pays-select{display:flex;align-items:center;gap:9px;padding-bottom:8px;}
+.pays-select label{font-family:var(--font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);}
+.pays-select select{font-family:var(--font-sans);font-size:14px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:8px 30px 8px 12px;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235C7B76' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;}
+.pays-select select:focus{border-color:var(--teal);}
+
+/* Gallery, clean cards with caption below */
+.gallery-sec{padding:28px 0 0;}
+.media-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.m-card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;transition:box-shadow var(--t-fast) var(--ease),transform var(--t-fast) var(--ease);}
+.m-card:hover{box-shadow:var(--shadow-2);transform:translateY(-3px);}
+.m-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--canvas-soft);}
+.m-thumb img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-base) var(--ease);}
+.m-card:hover .m-thumb img{transform:scale(1.04);}
+.m-chip{position:absolute;left:10px;top:10px;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.94);color:var(--ink-2);font-family:var(--font-display);font-size:11px;font-weight:600;padding:4px 9px;border-radius:var(--r-pill);box-shadow:var(--shadow-1);}
+.m-chip i{font-size:12px;color:var(--teal);}
+.m-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:var(--teal-deep);font-size:22px;box-shadow:var(--shadow-2);transition:transform var(--t-fast) var(--ease);}
+.m-card:hover .m-play{transform:translate(-50%,-50%) scale(1.08);}
+.m-dur{position:absolute;right:10px;bottom:10px;background:rgba(8,32,28,.82);color:#fff;font-family:var(--font-display);font-size:11px;font-weight:500;padding:3px 8px;border-radius:var(--r-sm);font-feature-settings:"tnum";}
+.m-cap{padding:13px 15px 15px;}
+.m-cap .t{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-.2px;color:var(--ink);line-height:1.3;}
+.m-cap .l{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);margin-top:5px;display:flex;align-items:center;gap:5px;}
+.m-cap .l i{font-size:14px;color:var(--ink-faint);}
+
+/* Reports */
+.reports-sec{padding:56px 0 0;}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px;}
+.sec-h h3{margin:0;}
+.sec-h .count{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-mute);}
+.report-list{border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;}
+.report-row{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;padding:18px 22px;border-bottom:1px solid var(--hair);transition:background var(--t-fast) var(--ease);}
+.report-row:last-child{border-bottom:0;}
+.report-row:hover{background:var(--canvas-soft);}
+.report-ic{width:44px;height:44px;border-radius:10px;background:#FBE6E2;color:#8F2A1A;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.report-main h4{font-family:var(--font-display);font-weight:600;font-size:16px;letter-spacing:-.3px;color:var(--ink);margin:0 0 5px;}
+.report-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.report-meta span{display:flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);}
+.report-meta i{font-size:14px;color:var(--ink-faint);}
+.report-dl{display:flex;align-items:center;gap:14px;}
+.report-size{font-family:var(--font-display);font-weight:500;font-size:13px;color:var(--ink-mute);font-feature-settings:"tnum";white-space:nowrap;}
+
+.empty-state{display:none;padding:56px 0;text-align:center;color:var(--ink-mute);}
+.empty-state i{font-size:32px;color:var(--ink-faint);display:block;margin-bottom:10px;}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:60;background:rgba(6,30,26,.86);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out;}
+.lightbox.open{display:flex;}
+.lb-inner{max-width:980px;width:100%;}
+.lb-inner{display:flex;flex-direction:column;align-items:center;}
+.lb-inner img{width:auto;max-width:100%;max-height:74vh;object-fit:contain;border-radius:var(--r-lg);cursor:default;}
+.lb-cap{color:#fff;font-family:var(--font-sans);font-size:14px;margin-top:16px;text-align:center;}
+.lb-cap b{font-family:var(--font-display);font-weight:600;}
+.lb-close{position:absolute;right:24px;top:24px;z-index:3;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background var(--t-fast) var(--ease);}
+.lb-close:hover{background:rgba(255,255,255,.26);}
+
+/* Footer */
+.footer{position:relative;margin-top:80px;overflow:hidden;color:#fff;background:var(--ink);}
+.footer .cf-mesh{opacity:.5;}
+.footer-in{position:relative;max-width:1180px;margin:0 auto;padding:64px 28px 30px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;}.footer-brand img{height:28px;margin-bottom:16px;width:auto;}
+.footer-brand p{color:rgba(255,255,255,.6);max-width:280px;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 14px;}
+.footer-col a{display:block;color:rgba(255,255,255,.72);font-size:14px;padding:5px 0;transition:color var(--t-micro) var(--ease);}
+.footer-col a:hover{color:#fff;}
+.footer-base{position:relative;max-width:1180px;margin:0 auto;padding:18px 28px 30px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.footer-base .caption{color:rgba(255,255,255,.5);}
+
+@media(max-width:980px){ .media-grid{grid-template-columns:repeat(3,1fr);} }
+@media(max-width:860px){
+  .nav-links a:not(.nav-cta){display:none;}
+  .media-grid{grid-template-columns:repeat(2,1fr);}
+  .search{min-width:0;width:100%;}
+  .report-row{grid-template-columns:auto 1fr;gap:14px;}
+  .report-dl{grid-column:2;justify-content:flex-start;margin-top:4px;}
+  .footer-in{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:520px){ .media-grid{grid-template-columns:1fr 1fr;} }
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}.cf-nav .nav-glob,.cf-nav .nav-icn{width:44px!important;height:44px!important;flex:0 0 auto;}}</style>
+<style id="cf-phslot">.ph-slot{position:relative;overflow:hidden;width:100%;height:100%;background:linear-gradient(150deg,var(--teal) 0%,var(--teal-deep) 72%,var(--teal-press) 100%);display:flex;align-items:center;justify-content:center;}.ph-slot::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 22% 8%,rgba(62,203,176,.22),transparent 58%),radial-gradient(80% 80% at 92% 100%,rgba(201,163,94,.16),transparent 60%);}.ph-slot .ph-lab{position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.3);border-radius:100px;padding:5px 11px;background:rgba(6,30,25,.28);}.ph-slot .ph-lab i{font-size:13px;}.lb-ph{width:min(80vw,720px);aspect-ratio:16/10;border-radius:16px;}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+<style id="cf-utilbar-css">
+.cf-utilbar{background:#fff;border-bottom:1px solid var(--hair);}
+.cf-utility{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:7px 28px;}
+.cf-util-aff{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.cf-util-aff i{font-size:15px;color:var(--teal);}
+.cf-util-aff b{font-weight:600;color:var(--ink-2);}
+.cf-util-right{display:flex;align-items:center;gap:2px;}
+.cf-util-link{font-family:var(--font-display);font-size:12px;font-weight:500;color:var(--ink-mute);padding:6px 11px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:color .16s ease;}
+.cf-util-link:hover{color:var(--teal);}
+.cf-util-sep{width:1px;height:14px;background:var(--hair-strong);margin:0 8px;}
+.cf-util-search{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:var(--ink-mute);font-size:17px;text-decoration:none;transition:color .16s ease,background .16s ease;}
+.cf-util-search:hover{color:var(--teal);background:rgba(125,150,145,.1);}
+@media(max-width:860px){.cf-util-aff,.cf-util-link,.cf-util-sep{display:none;}.cf-utility{justify-content:flex-end;padding:5px 16px;}}
+</style>
+<style id="cf-foot2">
+.footer-top{position:relative;max-width:1180px;margin:0 auto;padding:80px 28px 60px;display:grid;grid-template-columns:1.1fr 2fr;gap:80px;}
+.footer-brand img{height:30px;width:auto;margin-bottom:22px;}
+.footer-mission{color:rgba(255,255,255,.66);font-size:15px;line-height:1.7;max-width:330px;margin:0;}
+.footer-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.fcta-link{color:#fff;font-family:var(--font-display);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;}
+.fcta-link i{transition:transform .16s var(--ease);}.fcta-link:hover i{transform:translateX(3px);}
+.fcta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-family:var(--font-display);font-weight:600;font-size:14px;padding:13px 24px;border-radius:100px;}
+.fcta-btn:hover{background:var(--teal-soft);}.fcta-btn i{transition:transform .16s var(--ease);}.fcta-btn:hover i{transform:translateX(3px);}
+.footer-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 20px;letter-spacing:.01em;}
+.footer-col a,.footer-col span[role]{display:block;color:rgba(255,255,255,.7);font-size:14px;padding:9px 0;font-family:var(--font-sans);transition:color .14s var(--ease);cursor:pointer;}
+.footer-col a:hover,.footer-col span[role]:hover{color:#fff;}
+.footer-col .fnews{color:var(--teal-bright);font-family:var(--font-display);font-weight:600;margin-top:8px;display:inline-flex;align-items:center;gap:7px;}
+.footer-util{position:relative;max-width:1180px;margin:0 auto;padding:34px 28px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:16px 38px;}
+.footer-util a,.footer-util span[role]{color:rgba(255,255,255,.72);font-size:13.5px;font-family:var(--font-display);font-weight:500;cursor:pointer;transition:color .14s var(--ease);}
+.footer-util a:hover,.footer-util span[role]:hover{color:#fff;}
+.footer .footer-base{position:relative;max-width:1180px;margin:0 auto;padding:28px 28px 60px;border-top:0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+@media(max-width:980px){.footer-top{grid-template-columns:1fr;gap:40px;padding:60px 24px 40px;}.footer-cols{grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:560px){.footer-cols{grid-template-columns:1fr 1fr;gap:8px 20px;}.footer-col h4{margin:18px 0 10px;}.footer-col a,.footer-col span[role]{padding:9px 0;font-size:13.5px;}.footer-util{justify-content:center;gap:10px 22px;padding:24px 20px;}.footer .footer-base{flex-direction:column;align-items:flex-start;gap:10px;padding:22px 20px 40px;}}
+</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-nav-elevate">
+/* Public navbar — refined professional elevation (within the CF system) */
+.nav-outer{top:16px;}
+.nav-outer .cf-nav{padding:11px 14px 11px 24px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px);box-shadow:0 1px 2px rgba(6,61,52,.05),0 16px 36px -20px rgba(6,61,52,.24);transition:background .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease);}
+.nav-outer .cf-nav.scrolled{background:rgba(255,255,255,.93);border-color:var(--hair-strong);box-shadow:0 1px 2px rgba(6,61,52,.06),0 12px 28px -18px rgba(6,61,52,.3);}
+.nav-outer .cf-nav .brand img{height:30px;}
+.nav-outer .nav-links{gap:3px;}
+.nav-outer .nav-links a:not(.nav-cta){position:relative;padding:9px 15px;font-weight:500;letter-spacing:-.1px;color:var(--ink-2);border-radius:10px;transition:color .18s var(--ease),background .18s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;opacity:0;transition:transform .28s var(--ease),opacity .2s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta):hover{color:var(--ink);background:rgba(10,107,94,.06);}
+.nav-outer .nav-links a:not(.nav-cta).on{color:var(--teal-deep);}
+.nav-outer .nav-links a:not(.nav-cta).on::after{transform:scaleX(1);opacity:1;}
+.nav-outer .nav-links a.nav-cta{margin-left:12px;padding:9px 20px;border-radius:100px;box-shadow:0 1px 2px rgba(6,61,52,.12);transition:background .16s var(--ease),transform .18s var(--ease),box-shadow .22s var(--ease);}
+.nav-outer .nav-links a.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,107,94,.55);}
+.nav-outer .nav-links a.nav-cta:active{transform:translateY(0);}
+.cf-util-link{position:relative;}
+.cf-util-link::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:1.5px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;transition:transform .22s var(--ease);}
+.cf-util-link:hover::after{transform:scaleX(1);}
+@media(max-width:860px){.nav-outer .nav-links a.nav-cta{margin-left:0;}}
+</style>
+<script id="cf-nav-elevate-js">(function(){var n=document.querySelector('.nav-outer .cf-nav');if(!n)return;var f=function(){n.classList.toggle('scrolled',(window.pageYOffset||document.documentElement.scrollTop||0)>6);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
+<script type="application/ld+json" id="ld-org">{"@context":"https://schema.org","@type":"Organization","name":"Coastal Futures Network","alternateName":"Réseau Coastal Futures","url":"https://coastalfutures.africagovernanceinstitute.org/","logo":"https://coastalfutures.africagovernanceinstitute.org/assets/logos/logo-horizontal-dark.svg","email":"contact@africagovernanceinstitute.org","description":"Programme régional de l'Institut Africain de la Gouvernance accompagnant 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest : Sénégal, Ghana, Guinée, Liberia et Sierra Leone.","parentOrganization":{"@type":"Organization","name":"Institut Africain de la Gouvernance","alternateName":"Africa Governance Institute"},"areaServed":[{"@type":"Country","name":"Senegal"},{"@type":"Country","name":"Ghana"},{"@type":"Country","name":"Guinea"},{"@type":"Country","name":"Liberia"},{"@type":"Country","name":"Sierra Leone"}]}</script>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<!-- ===== Nav ===== -->
+<!-- ===== Navigation unifiée ===== -->
+<div class="nav-outer">
+  <nav class="cf-nav" id="cfNav">
+    <div class="nav-inner">
+      <button class="cf-burger" id="cfBurger" aria-label="Menu" aria-expanded="false" type="button"><i class="ti ti-menu-2"></i></button>
+      <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network"></a>
+      <div class="nav-links">
+        <a href="a-propos.html" data-i18n="nav.prog">Le programme</a>
+        <a href="carte-impact.html" data-i18n="nav.map">Carte d'impact</a>
+        <a href="ecosysteme.html" data-i18n="nav.eco">Écosystème</a>
+        <a href="actualites.html" class="on" data-i18n="nav.res">Actualités</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-r">
+        <a href="recherche.html" class="nav-icn" aria-label="Rechercher"><i class="ti ti-search"></i></a>
+        <div class="nav-glob-wrap">
+          <button class="nav-glob" id="cfGlob" type="button" aria-label="Langue · Language" aria-haspopup="true" aria-expanded="false"><i class="ti ti-world"></i></button>
+          <div class="lang-pop" id="cfLangPop" hidden role="listbox" aria-label="Choisir la langue">
+            <button class="lang-opt" type="button" data-lang="fr" role="option"><span class="lang-name">Français</span><i class="ti ti-check lc" aria-hidden="true"></i></button>
+            <button class="lang-opt" type="button" data-lang="en" role="option"><span class="lang-name">English</span><i class="ti ti-check lc" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <a href="connexion.html" class="nav-cta" data-nav-espace>Mon espace</a>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Mobile drawer -->
+<div class="cf-mob" id="cfMob" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="mob-head">
+    <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network" style="height:28px;width:auto"></a>
+    <button class="mob-x" id="cfMobX" type="button" aria-label="Fermer"><i class="ti ti-x"></i></button>
+  </div>
+  <div class="mob-links">
+    <a href="index.html"><i class="ti ti-home"></i><span>Accueil</span></a>
+    <a href="a-propos.html"><i class="ti ti-info-circle"></i><span data-i18n="nav.prog">Le programme</span></a>
+    <a href="carte-impact.html"><i class="ti ti-map-2"></i><span data-i18n="nav.map">Carte d'impact</span></a>
+    <a href="ecosysteme.html"><i class="ti ti-plant-2"></i><span data-i18n="nav.eco">Écosystème</span></a>
+    <a href="actualites.html" class="on"><i class="ti ti-news"></i><span data-i18n="nav.res">Actualités</span></a>
+    <a href="contact.html"><i class="ti ti-mail"></i><span data-i18n="nav.contact">Contact</span></a>
+    <div class="mob-sep"></div>
+    <div class="mob-sec">Institut</div>
+    <a href="a-propos.html#partenaires"><i class="ti ti-heart-handshake"></i><span data-nav-espace-p="partners">Partenaires</span></a>
+    <a href="mediatheque.html"><i class="ti ti-photo"></i><span data-nav-espace-p="press">Espace presse</span></a>
+    <a href="plan-du-site.html"><i class="ti ti-sitemap"></i><span data-nav-espace-p="sitemap">Plan du site</span></a>
+  </div>
+  <div class="mob-foot">
+    <div class="mob-lang" id="cfMobLang">
+      <button type="button" class="active" data-mob-lang="fr">Français</button>
+      <button type="button" data-mob-lang="en">English</button>
+    </div>
+    <a href="connexion.html" class="mob-cta"><i class="ti ti-user-circle"></i><span data-nav-espace>Mon espace</span></a>
+  </div>
+</div>
+<div class="cf-scrim" id="cfScrim"></div>
+<main id="cf-content">
+
+<!-- ===== Page head ===== -->
+<div class="wrap" data-screen-label="Médiathèque">
+  <div class="page-head">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><i class="ti ti-chevron-right"></i><span>Médiathèque</span></div>
+    <div class="ph-row">
+      <div>
+        <span id="cf-main" tabindex="-1"></span><h1 class="display-xl">Médiathèque</h1>
+        <p class="ph-sub body">Photos, vidéos et documents de référence du programme Coastal Futures.</p>
+      </div>
+      <div class="search">
+        <i class="ti ti-search"></i>
+        <input type="text" id="searchInput" placeholder="Rechercher un média...">
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-type="all">Tout <span class="cnt" id="cnt-all">52</span></button>
+        <button class="tab" data-type="photo"><i class="ti ti-photo"></i>Photos <span class="cnt" id="cnt-photo">46</span></button>
+        <button class="tab" data-type="video"><i class="ti ti-video"></i>Vidéos <span class="cnt" id="cnt-video">2</span></button>
+        <button class="tab" data-type="rapport"><i class="ti ti-file-text"></i>Rapports <span class="cnt" id="cnt-rapport">4</span></button>
+      </div>
+      <div class="pays-select">
+        <label for="paysSelect">Pays</label>
+        <select id="paysSelect">
+          <option value="all">Tous les pays</option>
+          <option value="senegal">Sénégal</option>
+          <option value="ghana">Ghana</option>
+          <option value="guinee">Guinée-Conakry</option>
+          <option value="liberia">Liberia</option>
+          <option value="sierraleone">Sierra Leone</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section class="gallery-sec" id="gallerySec">
+    <div class="media-grid" id="mediaGrid">
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-arrivee-cohorte.webp" data-cap="AgroTrip : Arrivée de la cohorte" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-arrivee-cohorte.webp" alt="Arrivée de la cohorte"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Arrivée de la cohorte</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-chemin-mangrove.webp" data-cap="AgroTrip : Sur le chemin de la mangrove" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-chemin-mangrove.webp" alt="Sur le chemin de la mangrove"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Sur le chemin de la mangrove</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-welcome-saloum.webp" data-cap="AgroTrip : Bienvenue au Saloum" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-welcome-saloum.webp" alt="Bienvenue au Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Bienvenue au Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-retrouvailles.webp" data-cap="AgroTrip : Retrouvailles" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-retrouvailles.webp" alt="Retrouvailles"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Retrouvailles</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-bolong-pirogue-2.webp" data-cap="AgroTrip : Balade en pirogue sur les bolongs" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-bolong-pirogue-2.webp" alt="Balade en pirogue sur les bolongs"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Balade en pirogue sur les bolongs</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="video" data-pays="all" data-img="assets/media/01-events/launch-ceremony-wide.webp" data-cap="Teaser du lancement du programme" data-loc="Régional">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/01-events/launch-ceremony-wide.webp" alt=""><span class="m-chip"><i class="ti ti-video"></i>Vidéo</span><span class="m-play"><i class="ti ti-player-play-filled"></i></span><span class="m-dur">2:14</span></div>
+        <figcaption class="m-cap"><div class="t">Teaser du lancement</div><div class="l"><i class="ti ti-world"></i>Régional</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-embarquement.webp" data-cap="AgroTrip : Embarquement à Ndangane" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-embarquement.webp" alt="Embarquement à Ndangane"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Embarquement à Ndangane</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-debarcadere.webp" data-cap="AgroTrip : Au débarcadère" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-debarcadere.webp" alt="Au débarcadère"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Au débarcadère</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-pirogues-saloum.webp" data-cap="AgroTrip : Les pirogues du Saloum" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-pirogues-saloum.webp" alt="Les pirogues du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Les pirogues du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-traversee-pirogue.webp" data-cap="AgroTrip : Traversée en pirogue" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-traversee-pirogue.webp" alt="Traversée en pirogue"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Traversée en pirogue</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-au-fil-des-bolongs.webp" data-cap="AgroTrip : Au fil des bolongs" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-au-fil-des-bolongs.webp" alt="Au fil des bolongs"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Au fil des bolongs</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-pirogue-glide.webp" data-cap="AgroTrip : Glisse sur les bolongs" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-pirogue-glide.webp" alt="Glisse sur les bolongs"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Glisse sur les bolongs</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-ombre-pirogue.webp" data-cap="AgroTrip : À l'ombre de la pirogue" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-ombre-pirogue.webp" alt="À l'ombre de la pirogue"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">À l'ombre de la pirogue</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-excursion-delta.webp" data-cap="AgroTrip : Excursion sur le delta" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-excursion-delta.webp" alt="Excursion sur le delta"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Excursion sur le delta</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-pirogue-joy.webp" data-cap="AgroTrip : Joie en pirogue" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-pirogue-joy.webp" alt="Joie en pirogue"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Joie en pirogue</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-singuiyam-pirogue.webp" data-cap="AgroTrip : Au fil du bolong" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-singuiyam-pirogue.webp" alt="Au fil du bolong"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Au fil du bolong</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-au-fil-de-leau.webp" data-cap="AgroTrip : Au fil de l'eau" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-au-fil-de-leau.webp" alt="Au fil de l'eau"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Au fil de l'eau</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-ponton-bolong.webp" data-cap="AgroTrip : Le ponton sur le bolong" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-ponton-bolong.webp" alt="Le ponton sur le bolong"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Le ponton sur le bolong</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-point-de-vue.webp" data-cap="AgroTrip : Point de vue sur le delta" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-point-de-vue.webp" alt="Point de vue sur le delta"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Point de vue sur le delta</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-plage-saloum.webp" data-cap="AgroTrip : Sur la plage du Saloum" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-plage-saloum.webp" alt="Sur la plage du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Sur la plage du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-echanges-rive.webp" data-cap="AgroTrip : Échanges au bord de l'eau" data-loc="Ndangane, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-echanges-rive.webp" alt="Échanges au bord de l'eau"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Échanges au bord de l'eau</div><div class="l"><i class="ti ti-map-pin"></i>Ndangane, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-dusk-shore.webp" data-cap="AgroTrip : Crépuscule sur la rive" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-dusk-shore.webp" alt="Crépuscule sur la rive"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Crépuscule sur la rive</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-mangrove-walk.webp" data-cap="AgroTrip : Marche en mangrove" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-mangrove-walk.webp" alt="Marche en mangrove"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Marche en mangrove</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-reforestation-volunteer.webp" data-cap="AgroTrip : Reboisement à Toubacouta" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-reforestation-volunteer.webp" alt="Reboisement à Toubacouta"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Reboisement à Toubacouta</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-mangrove-flavours.webp" data-cap="AgroTrip : Saveurs de la mangrove" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-mangrove-flavours.webp" alt="Saveurs de la mangrove"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Saveurs de la mangrove</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-oyster-harvest.webp" data-cap="AgroTrip : Récolte des huîtres" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-oyster-harvest.webp" alt="Récolte des huîtres"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Récolte des huîtres</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="video" data-pays="senegal" data-img="assets/media/08-portraits/portrait-testimonial.webp" data-cap="Témoignage d'un entrepreneur de la cohorte 1" data-loc="Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/08-portraits/portrait-testimonial.webp" alt=""><span class="m-chip"><i class="ti ti-video"></i>Vidéo</span><span class="m-play"><i class="ti ti-player-play-filled"></i></span><span class="m-dur">4:02</span></div>
+        <figcaption class="m-cap"><div class="t">Témoignage d'un entrepreneur</div><div class="l"><i class="ti ti-map-pin"></i>Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-tasting-workshop.webp" data-cap="AgroTrip : Atelier dégustation" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-tasting-workshop.webp" alt="Atelier dégustation"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Atelier dégustation</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-womens-restaurant.webp" data-cap="AgroTrip : Au restaurant des femmes" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-womens-restaurant.webp" alt="Au restaurant des femmes"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Au restaurant des femmes</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-dejeuner-partage.webp" data-cap="AgroTrip : Déjeuner partagé" data-loc="Mar Lodj, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-dejeuner-partage.webp" alt="Déjeuner partagé"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Déjeuner partagé</div><div class="l"><i class="ti ti-map-pin"></i>Mar Lodj, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-pause-abri.webp" data-cap="AgroTrip : Pause sous l'abri" data-loc="Mar Lodj, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-pause-abri.webp" alt="Pause sous l'abri"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Pause sous l'abri</div><div class="l"><i class="ti ti-map-pin"></i>Mar Lodj, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-agrotalk-panel.webp" data-cap="AgroTrip : AgroTalk : la parole aux porteurs" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-agrotalk-panel.webp" alt="AgroTalk : la parole aux porteurs"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">AgroTalk : la parole aux porteurs</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-circle-gathering.webp" data-cap="AgroTrip : Cercle de parole" data-loc="Mar Lodj, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-circle-gathering.webp" alt="Cercle de parole"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Cercle de parole</div><div class="l"><i class="ti ti-map-pin"></i>Mar Lodj, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-baobab-gathering.webp" data-cap="AgroTrip : Sous le baobab du Saloum" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-baobab-gathering.webp" alt="Sous le baobab du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Sous le baobab du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-halte-rive.webp" data-cap="AgroTrip : Halte sur la rive" data-loc="Mar Lodj, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-halte-rive.webp" alt="Halte sur la rive"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Halte sur la rive</div><div class="l"><i class="ti ti-map-pin"></i>Mar Lodj, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-women-bond.webp" data-cap="AgroTrip : Leadership féminin au Saloum" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-women-bond.webp" alt="Leadership féminin au Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Leadership féminin au Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-entre-participantes.webp" data-cap="AgroTrip : Entre participantes" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-entre-participantes.webp" alt="Entre participantes"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Entre participantes</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-esprit-cohorte.webp" data-cap="AgroTrip : Esprit de cohorte" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-esprit-cohorte.webp" alt="Esprit de cohorte"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Esprit de cohorte</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-complicite.webp" data-cap="AgroTrip : Complicité" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-complicite.webp" alt="Complicité"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Complicité</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-eclats-de-rire.webp" data-cap="AgroTrip : Éclats de rire" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-eclats-de-rire.webp" alt="Éclats de rire"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Éclats de rire</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-sourire-saloum.webp" data-cap="AgroTrip : Sourire du Saloum" data-loc="Fimela, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-sourire-saloum.webp" alt="Sourire du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Sourire du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Fimela, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-regard-cohorte.webp" data-cap="AgroTrip : Regards de la cohorte" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-regard-cohorte.webp" alt="Regards de la cohorte"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Regards de la cohorte</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-straw-hat-portrait.webp" data-cap="AgroTrip : Un visage du Saloum" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-straw-hat-portrait.webp" alt="Un visage du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Un visage du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-pink-portrait.webp" data-cap="AgroTrip : Regards du Saloum" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-pink-portrait.webp" alt="Regards du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Regards du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-portrait-village.webp" data-cap="AgroTrip : Portrait au village" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-portrait-village.webp" alt="Portrait au village"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Portrait au village</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-encadrant.webp" data-cap="AgroTrip : Encadrant de l'AgroTrip" data-loc="Saloum, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-encadrant.webp" alt="Encadrant de l'AgroTrip"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Encadrant de l'AgroTrip</div><div class="l"><i class="ti ti-map-pin"></i>Saloum, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-elder-portrait.webp" data-cap="AgroTrip : Doyen du village" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-elder-portrait.webp" alt="Doyen du village"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Doyen du village</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+      <figure class="m-card" data-mtype="photo" data-pays="senegal" data-img="assets/media/10-agrotrip/agrotrip-doyenne-saloum.webp" data-cap="AgroTrip : Doyenne du Saloum" data-loc="Toubacouta, Sénégal">
+        <div class="m-thumb"><img loading="lazy" decoding="async" src="assets/media/10-agrotrip/agrotrip-doyenne-saloum.webp" alt="Doyenne du Saloum"><span class="m-chip"><i class="ti ti-photo"></i>Photo</span></div>
+        <figcaption class="m-cap"><div class="t">Doyenne du Saloum</div><div class="l"><i class="ti ti-map-pin"></i>Toubacouta, Sénégal</div></figcaption>
+      </figure>
+    </div>
+    <div class="empty-state" id="galEmpty"><i class="ti ti-photo-off"></i>Aucun média ne correspond à votre recherche.</div>
+  </section>
+
+  <!-- Reports -->
+  <section class="reports-sec" id="reportsSec">
+    <div class="sec-h">
+      <h3 class="display-md">Documents et rapports</h3>
+      <span class="count"><b id="repCount">4</b> documents</span>
+    </div>
+    <div class="report-list" id="reportList">
+      <div class="report-row" data-pays="all" data-cap="Note de cadrage Coastal Futures">
+        <div class="report-ic"><i class="ti ti-file-type-pdf"></i></div>
+        <div class="report-main">
+          <h4>Note de cadrage Coastal Futures</h4>
+          <div class="report-meta"><span><i class="ti ti-calendar"></i>avril 2026</span><span><i class="ti ti-file"></i>PDF</span><span><i class="ti ti-world"></i>Régional</span></div>
+        </div>
+        <div class="report-dl"><span class="report-size">2,4 Mo</span><a href="publication.html" class="btn btn-light btn-sm"><i class="ti ti-download"></i>Télécharger</a></div>
+      </div>
+      <div class="report-row" data-pays="all" data-cap="Critères de labellisation des projets verts">
+        <div class="report-ic"><i class="ti ti-file-type-pdf"></i></div>
+        <div class="report-main">
+          <h4>Critères de labellisation des projets verts</h4>
+          <div class="report-meta"><span><i class="ti ti-calendar"></i>mai 2026</span><span><i class="ti ti-file"></i>PDF</span><span><i class="ti ti-world"></i>Régional</span></div>
+        </div>
+        <div class="report-dl"><span class="report-size">1,1 Mo</span><a href="publication.html" class="btn btn-light btn-sm"><i class="ti ti-download"></i>Télécharger</a></div>
+      </div>
+      <div class="report-row" data-pays="all" data-cap="Premier bilan d'impact trimestriel">
+        <div class="report-ic"><i class="ti ti-file-type-pdf"></i></div>
+        <div class="report-main">
+          <h4>Premier bilan d'impact trimestriel</h4>
+          <div class="report-meta"><span><i class="ti ti-calendar"></i>juin 2026</span><span><i class="ti ti-file"></i>PDF</span><span><i class="ti ti-world"></i>Régional</span></div>
+        </div>
+        <div class="report-dl"><span class="report-size">3,8 Mo</span><a href="publication.html" class="btn btn-light btn-sm"><i class="ti ti-download"></i>Télécharger</a></div>
+      </div>
+      <div class="report-row" data-pays="all" data-cap="Méthodologie de mesure d'impact">
+        <div class="report-ic"><i class="ti ti-file-type-pdf"></i></div>
+        <div class="report-main">
+          <h4>Méthodologie de mesure d'impact</h4>
+          <div class="report-meta"><span><i class="ti ti-calendar"></i>mai 2026</span><span><i class="ti ti-file"></i>PDF</span><span><i class="ti ti-world"></i>Régional</span></div>
+        </div>
+        <div class="report-dl"><span class="report-size">0,9 Mo</span><a href="publication.html" class="btn btn-light btn-sm"><i class="ti ti-download"></i>Télécharger</a></div>
+      </div>
+    </div>
+    <div class="empty-state" id="repEmpty"><i class="ti ti-file-off"></i>Aucun document ne correspond à votre recherche.</div>
+  </section>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" id="lbClose"><i class="ti ti-x"></i></span>
+  <div class="lb-inner">
+    <img loading="lazy" decoding="async" id="lbImg" alt="">
+    <div class="lb-cap"><b id="lbTitle"></b> · <span id="lbLoc"></span></div>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<style id="cf-news-css">.cf-news{background:#F8FBFA;border-top:1px solid #DCE9E6;padding:74px 28px;}.cf-news-in{max-width:600px;margin:0 auto;text-align:center;display:block;}.cf-news-k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.16em;color:#0A6B5E;}.cf-news h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:300;font-size:34px;line-height:1.1;letter-spacing:-1.4px;color:#0C2420;margin:14px 0 10px;}.cf-news p{font-family:'DM Sans',system-ui,sans-serif;font-size:15.5px;line-height:1.6;color:#5C7B76;margin:0 auto;max-width:470px;}.cf-news-form{margin-top:30px;}.cf-news-row{display:flex;align-items:center;max-width:440px;margin:0 auto;border-bottom:1.5px solid #B4CDC8;transition:border-color .16s ease;}.cf-news-row:focus-within{border-color:#0A6B5E;}.cf-news-form input{flex:1;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;color:#0C2420;background:transparent;border:0;padding:12px 2px;outline:none;}.cf-news-form input::placeholder{color:#5C7B76;}.cf-news-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;color:#0A6B5E;background:transparent;border:0;padding:12px 2px 12px 16px;cursor:pointer;white-space:nowrap;transition:color .16s ease;}.cf-news-btn:hover{color:#063D34;}.cf-news-btn i{transition:transform .16s ease;}.cf-news-btn:hover i{transform:translateX(3px);}.cf-news-note{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:#5C7B76;margin-top:14px;}.cf-news-err{display:none;font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:#8F2A1A;margin-top:12px;}.cf-news-err.show{display:block;}.cf-news-ok{display:none;align-items:center;justify-content:center;gap:7px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:500;color:#066B52;margin-top:14px;}.cf-news-ok.show{display:inline-flex;}@media(max-width:560px){.cf-news{padding:54px 24px;}.cf-news h2{font-size:27px;}}</style>
+<section class="cf-news" id="cf-news"><div class="cf-news-in"><div class="cf-news-txt"><div class="cf-news-k">NEWSLETTER</div><h2 id="cfnH"></h2><p id="cfnP"></p></div><form class="cf-news-form" id="cfnForm" novalidate><div class="cf-news-row"><input type="email" id="cfnEmail" autocomplete="email"><button type="submit" class="cf-news-btn" id="cfnBtn"></button></div><div class="cf-news-note" id="cfnNote"></div><div class="cf-news-err" id="cfnErr"></div><div class="cf-news-ok" id="cfnOk"></div></form></div></section>
+</main>
+<footer class="footer">
+  <div class="cf-mesh"></div>
+  <div class="cf-coastline cf-coastline--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path pathLength="1" d="M-10,70 C80,62 140,50 196,52 C236,53 256,76 300,78 C356,81 392,54 458,58 C540,63 586,98 668,94 C730,91 772,62 850,65 C946,69 998,104 1092,98 C1166,93 1212,64 1296,68 C1372,71 1418,96 1452,90"></path></svg></div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures Network">
+      <p class="footer-mission">Coastal Futures Network repositionne 4 000 jeunes entrepreneurs verts au cœur de l'économie côtière d'Afrique de l'Ouest, à travers cinq nations.</p>
+      <p class="footer-affil" data-i18n="ft.affil" style="color:rgba(255,255,255,.85);font-family:var(--font-display);font-weight:600;font-size:13.5px;margin:14px 0 0;">Un programme de l'Institut Africain de la Gouvernance.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><h4>Programme</h4><a href="a-propos.html">À propos</a><a href="carte-impact.html">Carte d'impact</a><a href="actualites.html">Actualités</a><a href="evenements.html">Événements</a><a href="appels-candidatures.html">Appels à candidatures</a></div>
+      <div class="footer-col"><h4>Écosystème</h4><a href="ecosysteme.html">L'écosystème</a><a href="annuaire-entrepreneurs.html">Annuaire entrepreneurs</a><a href="annuaire-mentors.html">Annuaire mentors</a><a href="carte-impact.html">Pays d'intervention</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mediatheque.html">Médiathèque</a><a href="bibliotheque.html">Recherche-action</a><a href="methodologie-indicateurs.html">Méthodologie d'impact</a><a href="contact.html">Presse</a></div>
+      <div class="footer-col"><h4>Institut</h4><a href="a-propos.html">Institut Africain de la Gouvernance</a><a href="a-propos.html">Partenaires</a><a href="contact.html">Contact</a><a href="plan-du-site.html">Plan du site</a></div>
+      <div class="footer-col"><h4>Suivez le programme</h4><span role="button" tabindex="0">LinkedIn</span><span role="button" tabindex="0">X (Twitter)</span><span role="button" tabindex="0">YouTube</span><a href="contact.html" class="fnews">Newsletter <i class="ti ti-arrow-right"></i></a></div>
+    </div>
+  </div>
+  <div class="footer-util">
+    <a href="plan-du-site.html">Plan du site</a><a href="confidentialite.html">Confidentialité</a><a href="declaration-accessibilite.html">Accessibilité</a><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a><a href="connexion-bailleur.html">Espace bailleurs</a>
+  </div>
+  <div class="footer-base">
+    <span class="caption">© 2026 Coastal Futures Network · Institut Africain de la Gouvernance</span>
+    <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var state = { type:'all', pays:'all', q:'' };
+  var tiles = [].slice.call(document.querySelectorAll('.m-card'));
+  var reports = [].slice.call(document.querySelectorAll('.report-row'));
+  var gallerySec = document.getElementById('gallerySec');
+  var reportsSec = document.getElementById('reportsSec');
+  var galEmpty = document.getElementById('galEmpty');
+  var repEmpty = document.getElementById('repEmpty');
+  var repCount = document.getElementById('repCount');
+
+  function norm(s){ return (s||'').toLowerCase(); }
+  function paysOk(el){ var p=el.getAttribute('data-pays'); return state.pays==='all'||p===state.pays||p==='all'; }
+  function qOk(el){ if(!state.q) return true; var hay=norm(el.getAttribute('data-cap')+' '+(el.getAttribute('data-loc')||'')); return hay.indexOf(state.q)>-1; }
+
+  function apply(){
+    var showGallery = (state.type==='all'||state.type==='photo'||state.type==='video');
+    var showReports = (state.type==='all'||state.type==='rapport');
+    gallerySec.style.display = showGallery ? '' : 'none';
+    reportsSec.style.display = showReports ? '' : 'none';
+
+    var g=0;
+    tiles.forEach(function(t){
+      var typeOk=(state.type==='all')||(t.getAttribute('data-mtype')===state.type);
+      var show=typeOk&&paysOk(t)&&qOk(t);
+      t.style.display=show?'':'none'; if(show)g++;
+    });
+    galEmpty.style.display=(showGallery&&g===0)?'block':'none';
+
+    var r=0;
+    reports.forEach(function(rep){
+      var show=paysOk(rep)&&qOk(rep);
+      rep.style.display=show?'':'none'; if(show)r++;
+    });
+    repCount.textContent=r;
+    repEmpty.style.display=(showReports&&r===0)?'block':'none';
+  }
+
+  // Tabs
+  [].slice.call(document.querySelectorAll('.tab')).forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      state.type=tab.getAttribute('data-type');
+      apply();
+    });
+  });
+  // Pays select
+  document.getElementById('paysSelect').addEventListener('change', function(){ state.pays=this.value; apply(); });
+  // Search
+  document.getElementById('searchInput').addEventListener('input', function(){ state.q=norm(this.value).trim(); apply(); });
+
+  // Lightbox
+  var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg'),
+      lbTitle=document.getElementById('lbTitle'), lbLoc=document.getElementById('lbLoc');
+  tiles.forEach(function(t){
+    t.addEventListener('click', function(){
+      var img=t.getAttribute('data-img'); var ph=document.getElementById('lbPh');
+      if(img){ if(ph) ph.remove(); lbImg.src=img; lbImg.style.display=''; }
+      else { lbImg.style.display='none'; if(!ph){ ph=document.createElement('div'); ph.id='lbPh'; ph.className='ph-slot lb-ph'; ph.innerHTML=''; lbImg.parentNode.insertBefore(ph,lbImg);} }
+      lbTitle.textContent=t.getAttribute('data-cap'); lbLoc.textContent=t.getAttribute('data-loc');
+      lb.classList.add('open');
+    });
+  });
+  function closeLb(){ lb.classList.remove('open'); }
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  // close on any click that is not the image itself (backdrop, sides, caption, close button)
+  lb.addEventListener('click', function(e){ if(e.target!==lbImg) closeLb(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
+})();
+</script>
+
+<script id="cf-i18n">(function(){var D={"Un programme de l'Institut Africain de la Gouvernance.":"A programme of the Africa Governance Institute.","Méthodologie d'impact":"Impact methodology","Espace bailleurs":"Donor area","Photos, vidéos et documents de référence du programme Coastal Futures.":"Photos, videos and reference documents of the Coastal Futures programme.","Tout":"All","Photos":"Photos","Vidéos":"Videos","Rapports":"Reports","Pays":"Country","Sénégal":"Senegal","Guinée-Conakry":"Guinea","Photo":"Photo","Vidéo":"Video","Régional":"Regional","Monrovia, Liberia":"Monrovia, Liberia","Teaser du lancement":"Launch teaser","Mini-réseau solaire":"Solar mini-grid","Petite Côte, Sénégal":"Petite Côte, Senegal","Collecte et recyclage":"Collection and recycling","Accra, Ghana":"Accra, Ghana","Communauté de pêche":"Fishing community","Saint-Louis, Sénégal":"Saint-Louis, Senegal","Témoignage d'un entrepreneur":"Entrepreneur testimonial","Freetown, Sierra Leone":"Freetown, Sierra Leone","Littoral atlantique":"Atlantic coast","Côte ouest-africaine":"West African coast","Balade en pirogue sur les bolongs":"Pirogue ride on the bolongs","Ndagane, Sénégal":"Ndagane, Senegal","Reboisement à Toubacouta":"Reforestation in Toubacouta","Toubacouta, Sénégal":"Toubacouta, Senegal","Saveurs de la mangrove":"Flavours of the mangrove","Sous le baobab du Saloum":"Under the Saloum baobab","Leadership féminin au Saloum":"Women leadership in the Saloum","Fimela, Sénégal":"Fimela, Senegal","Un visage du Saloum":"A face of the Saloum","Saloum, Sénégal":"Saloum, Senegal","Pirogue sur le bolong":"Pirogue on the bolong","Récolte des profondeurs":"Harvest of the depths","Welcome to Saloum":"Welcome to Saloum","AgroTrip, regards":"AgroTrip, faces","Aucun média ne correspond à votre recherche.":"No media matches your search.","Documents et rapports":"Documents and reports","documents":"documents","Note de cadrage Coastal Futures":"Coastal Futures framing note, phase 1","avril 2026":"April 2026","mai 2026":"May 2026","juin 2026":"June 2026","Critères de labellisation des projets verts":"Certification criteria for green projects","Premier bilan d'impact trimestriel":"First quarterly impact review","Méthodologie de mesure d'impact":"Impact measurement methodology","Aucun document ne correspond à votre recherche.":"No document matches your search.","Un programme de l'Institut Africain de la Gouvernance, qui repositionne la jeunesse au centre de la transition verte en Afrique de l'Ouest.":"A programme of the Africa Governance Institute, placing youth at the heart of the green transition in West Africa.","Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Programme":"Programme","Contact":"Contact","À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Événements":"Events","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Accueil hub":"Hub home","Entrepreneurs":"Entrepreneurs","Mentors":"Mentors","Appels":"Calls","Carte":"Map","Postuler":"Apply","Postuler maintenant":"Apply now","Voir le profil":"View profile","Voir le détail":"View details","Voir la fiche":"View details","S'inscrire":"Register","Télécharger":"Download","Télécharger le PDF":"Download PDF","Tout voir":"See all","Suivant":"Next","Précédent":"Previous","Enregistrer":"Save","Annuler":"Cancel","Envoyer":"Send","Envoyer le message":"Send message","Contacter":"Contact","Découvrir":"Discover","Réinitialiser":"Reset","Continuer":"Continue","Confirmer":"Confirm","Approuver":"Approve","Décliner":"Decline","Rejeter":"Reject","Voir sur la carte":"View on map","Aperçu public":"Public preview","Nouvelle candidature":"New application","Mettre à jour":"Update","Labellisé":"Certified","En incubation":"In incubation","En revue":"Under review","Soumis":"Submitted","Brouillon":"Draft","Rejeté":"Rejected","Disponible":"Available","Indisponible":"Unavailable","Zone pilote":"Pilot zone","Hub jeunesse":"Youth hub","Présentiel":"In person","Virtuel":"Online","Hybride":"Hybrid","À la une":"Featured","À venir":"Upcoming","Passés":"Past","Clôturé":"Closed","Actif":"Active","Inactif":"Inactive","Toutes":"All","Tous":"All","Tous les pays":"All countries","Tous les secteurs":"All sectors","Tous les statuts":"All statuses","Toutes les expertises":"All areas of expertise","Tous les types":"All types","Tous les thèmes":"All themes","Toutes les années":"All years","Toutes les universités":"All universities","Disponibles uniquement":"Available only","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Recyclage et déchets":"Recycling and waste","Agriculture résiliente":"Resilient agriculture","Entreprise verte":"Green enterprise","Économie circulaire":"Circular economy","Finance verte":"Green finance","Impact investing":"Impact investing","Mentorat":"Mentoring","Entrepreneurs verts":"Green entrepreneurs","Projets actifs":"Active projects","Mangroves restaurées":"Mangroves restored","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Mentors et experts":"Mentors and experts","Partenaires engagés":"Engaged partners","Foyers raccordés":"Households connected","Emplois verts créés":"Green jobs created","Emplois créés":"Jobs created","Tableau de bord":"Dashboard","Tableau de bord impact":"Impact dashboard","Données en temps réel":"Real-time data","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Demandes":"Requests","Mes mentorés":"My mentees","Utilisateurs":"Users","Candidatures":"Applications","Projets et indicateurs":"Projects and indicators","Alertes":"Alerts","Paramètres":"Settings","Statistiques":"Statistics","Se déconnecter":"Sign out","Espace bailleurs PTF":"Donor area","Vue par pays":"By country","Vue consolidée":"Consolidated view","Exporter le rapport PDF":"Export PDF report","Mentor":"Mentor","Entrepreneur":"Entrepreneur","Partenaire":"Partner","Administratrice":"Administrator","Coordination du programme":"Programme coordination","candidatures ouvertes":"open calls","cinq pays, cinq hubs":"five countries, five hubs","une plateforme, quatre espaces":"one platform, four areas","vision et mission":"vision and mission","gouvernance":"governance","alignement stratégique":"strategic alignment","à propos du programme":"about the programme","calendrier sur douze mois, avril 2026 à mars 2027":"twelve-month calendar, april 2026 to march 2027","Page introuvable":"Page not found","Erreur serveur":"Server error","Retour à l'accueil":"Back to home","Réessayer":"Retry","Contacter le support":"Contact support","Notifications":"Notifications","Tout marquer lu":"Mark all as read","Prochains événements":"Upcoming events","Prochaines sessions":"Upcoming sessions","Mes mentorés actifs":"My active mentees","Demandes de contact":"Contact requests","Profil complété":"Profile completed","Activité récente":"Recent activity","Startups labellisées":"Certified startups","Mentors disponibles":"Available mentors"};var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});setLang(l);})();</script>
+<style id="cf-auth-css">.nav-profile{display:inline-flex;align-items:center;gap:9px;padding:5px 15px 5px 6px;border-radius:100px;border:1px solid var(--hair,#DCE9E6);background:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--ink,#0C2420);cursor:pointer;transition:border-color .16s ease;text-decoration:none;}.nav-profile:hover{border-color:var(--teal,#0A6B5E);}.nav-profile .pa{width:30px;height:30px;border-radius:50%;background:var(--teal-deep,#063D34);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;}</style><script id="cf-auth-js">(function(){if(localStorage.getItem("cf-auth")==="1"){var b=document.querySelector("a.nav-cta");if(b){var nm=localStorage.getItem("cf-name")||"Mon espace";var ini=nm.split(" ").map(function(x){return x[0]||"";}).join("").slice(0,2).toUpperCase();var a=document.createElement("a");a.href="tableau-de-bord.html";a.className="nav-profile";a.innerHTML='<span class="pa">'+ini+'</span>'+nm;b.parentNode.replaceChild(a,b);}}})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+<script id="cf-news-js">(function(){
+var T={fr:{h:"Restez informé du programme",p:"Recevez les appels à candidatures, les événements et les actualités de Coastal Futures, une fois par mois.",b:"S'inscrire",ph:"Votre adresse e-mail",err:"Veuillez saisir une adresse e-mail valide.",ok:"Merci. Un e-mail de confirmation vient de vous être envoyé : ouvrez le lien pour confirmer votre inscription.",okp:"Merci, votre inscription est enregistrée.",confirm:"Confirmer mon inscription",already:"Cette adresse est déjà inscrite à la newsletter.",note:"Une fois par mois. Désinscription en un clic."},en:{h:"Stay informed about the programme",p:"Get calls for applications, events and news from Coastal Futures, once a month.",b:"Subscribe",ph:"Your email address",err:"Please enter a valid email address.",ok:"Thank you. A confirmation email has just been sent : open the link to confirm your subscription.",okp:"Thank you, your subscription is recorded.",confirm:"Confirm my subscription",already:"This address is already subscribed to the newsletter.",note:"Once a month. Unsubscribe in one click."}};
+var H=document.getElementById("cfnH"),P=document.getElementById("cfnP"),B=document.getElementById("cfnBtn"),E=document.getElementById("cfnEmail"),ER=document.getElementById("cfnErr"),OK=document.getElementById("cfnOk"),NOTE=document.getElementById("cfnNote");
+if(!H)return;
+function L(){return document.documentElement.lang==="en"?"en":"fr";}
+function render(){var t=T[L()];H.textContent=t.h;P.textContent=t.p;B.innerHTML=t.b+' <i class="ti ti-arrow-right"></i>';E.placeholder=t.ph;ER.textContent=t.err;if(NOTE)NOTE.textContent=t.note;}
+render();
+try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}
+document.getElementById("cfnForm").addEventListener("submit",function(e){
+  e.preventDefault();var v=E.value.trim().toLowerCase();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ER.classList.add("show");OK.classList.remove("show");return;}
+  ER.classList.remove("show");
+  var t=T[L()],token=null,msg=t.okp,stored=false;
+  try{
+    if(window.CFCol){
+      var subs=CFCol.all("subscribers");
+      var ex=subs.filter(function(s){return s.email===v;})[0];
+      if(ex&&ex.status!=="unsubscribed"){ token=ex.token; msg=t.already; stored=true; }
+      else{
+        token="ntk-"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+        var rec={id:(ex?ex.id:("sub-"+CFCol.slug(v)+"-"+Date.now().toString(36))),email:v,lang:L(),status:"pending",consent:true,token:token,createdAt:new Date().toISOString().slice(0,10)};
+        CFCol.upsert("subscribers",rec); stored=true; msg=t.ok;
+      }
+    }
+  }catch(err){}
+  var link=(stored&&token)?(' <a href="newsletter.html?confirm='+encodeURIComponent(token)+'" style="color:var(--teal);text-decoration:underline;font-weight:600;">'+t.confirm+'</a>'):'';
+  OK.innerHTML='<i class="ti ti-circle-check"></i>'+msg+link;
+  OK.classList.add("show");
+  E.value="";
+});
+})();</script>
+<style id="cf-mobnav">.cf-burger{display:none;width:42px;height:42px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:12px;color:var(--ink,#0C2420);cursor:pointer;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-burger:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}.cf-mdrawer{position:fixed;inset:0;z-index:120;display:none;}.cf-mdrawer.open{display:block;}.cf-mdrawer .scrim{position:absolute;inset:0;background:rgba(8,28,24,.5);opacity:0;transition:opacity .28s cubic-bezier(.4,0,.2,1);}.cf-mdrawer.show .scrim{opacity:1;}.cf-mdrawer .panel{position:absolute;top:0;right:0;height:100%;width:min(86%,360px);background:#0C2420;overflow:hidden;transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;}.cf-mdrawer.show .panel{transform:translateX(0);}.cf-mdrawer .pm{position:absolute;inset:0;opacity:.5;background:radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.45) 0%,transparent 52%),radial-gradient(80% 70% at 92% 8%,rgba(201,163,94,.22) 0%,transparent 55%),radial-gradient(70% 90% at 60% 100%,rgba(10,107,94,.5) 0%,transparent 60%);}.cf-mdrawer .ph{position:relative;display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.1);}.cf-mdrawer .ph img{height:26px;width:auto;}.cf-mdrawer .pc{width:40px;height:40px;border-radius:11px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;}.cf-mdrawer .pl{position:relative;flex:1;overflow-y:auto;padding:14px 12px;}.cf-mdrawer .pl a{display:flex;align-items:center;min-height:52px;padding:8px 16px;border-radius:12px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:19px;font-weight:500;color:rgba(255,255,255,.86);text-decoration:none;}.cf-mdrawer .pl a:hover,.cf-mdrawer .pl a.on{background:rgba(62,203,176,.16);color:var(--teal-bright,#3ECBB0);}.cf-mdrawer .pf{position:relative;padding:16px 20px 24px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px;}.cf-mdrawer .pf .ml{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:8px 14px;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}.cf-mdrawer .pf .ml img{width:22px;height:15px;border-radius:3px;object-fit:cover;}.cf-mdrawer .pf .mc{flex:1;text-align:center;background:var(--teal,#0A6B5E);color:#fff;border-radius:100px;padding:11px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;}body.cf-noscroll{overflow:hidden;}@media(max-width:1024px){.cf-nav .nav-links{display:none !important;}.cf-nav .nav-r .nav-cta,.cf-nav .nav-r .nav-profile{display:none !important;}.cf-burger{display:inline-flex;}}</style><script id="cf-mobnav-js">(function(){var nav=document.querySelector(".cf-nav");if(!nav)return;var links=nav.querySelector(".nav-links");if(!links)return;var burger=nav.querySelector(".cf-burger");if(!burger){return;}var logo=(nav.querySelector(".brand img")||{}).src||"assets/logos/logo-horizontal-dark.svg";var anchors=[].slice.call(links.querySelectorAll("a")).filter(function(a){return !a.classList.contains("nav-cta");});var cta=links.querySelector(".nav-cta");var d=document.createElement("div");d.className="cf-mdrawer";d.id="cfMdrawer";var linksHtml=anchors.map(function(a){return '<a href="'+a.getAttribute("href")+'"'+(a.classList.contains("on")?' class="on"':'')+'>'+a.textContent.trim()+'</a>';}).join("");var ctaHtml=cta?'<a class="mc" href="'+cta.getAttribute("href")+'">'+cta.textContent.trim()+'</a>':"";var flag=document.querySelector(".cf-flag");var flagSrc=flag?flag.getAttribute("src"):"assets/flags/fr.png";var lc=(document.querySelector(".cf-lc")||{}).textContent||"FR";d.innerHTML='<div class="scrim" data-close></div><div class="panel"><div class="pm"></div><div class="ph"><img loading="lazy" decoding="async" src="'+logo+'" alt=""><button class="pc" data-close aria-label="Fermer"><i class="ti ti-x"></i></button></div><div class="pl">'+linksHtml+'</div><div class="pf"><button class="ml" data-mlang><img loading="lazy" decoding="async" src="'+flagSrc+'" alt=""><b>'+lc+'</b></button>'+ctaHtml+'</div></div>';document.body.appendChild(d);function open(){d.classList.add("open");document.body.classList.add("cf-noscroll");requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add("show");});});}function close(){d.classList.remove("show");document.body.classList.remove("cf-noscroll");setTimeout(function(){d.classList.remove("open");},300);}burger.addEventListener("click",open);[].slice.call(d.querySelectorAll("[data-close]")).forEach(function(x){x.addEventListener("click",close);});var ml=d.querySelector("[data-mlang]");if(ml)ml.addEventListener("click",function(){var t=document.querySelector("[data-cf-lang]");if(t)t.click();var f=document.querySelector(".cf-flag");ml.querySelector("img").src=f?f.getAttribute("src"):ml.querySelector("img").src;ml.querySelector("b").textContent=(document.querySelector(".cf-lc")||{}).textContent||ml.querySelector("b").textContent;});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&d.classList.contains("open"))close();});})();</script>
+<script id="cf-utilbar-js">(function(){var T={fr:{aff:"Un programme de l'<b>Institut Africain de la Gouvernance</b>",partners:"Partenaires",press:"Espace presse",sitemap:"Plan du site",contact:"Contact"},en:{aff:"A programme of the <b>Africa Governance Institute</b>",partners:"Partners",press:"Press room",sitemap:"Sitemap",contact:"Contact"}};function r(){var l=document.documentElement.lang==="en"?"en":"fr";document.querySelectorAll("[data-uk]").forEach(function(e){var k=e.getAttribute("data-uk");if(T[l][k]!=null)e.innerHTML=T[l][k];});}r();try{new MutationObserver(r).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}})();</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-forms.js"></script>
+<script src="assets/cf-nav.js"></script>
+<script src="assets/cf-media.js"></script>
+<script src="assets/cf-reveal-guard.js"></script>
+</body>
+</html>

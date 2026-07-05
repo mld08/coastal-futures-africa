@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net; connect-src 'self' https:; worker-src 'self' blob:">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script id="cf-admin-guard">(function(){try{var ok=localStorage.getItem("cf-admin-auth")==="1"&&localStorage.getItem("cf-admin-name")&&["super","content","country","moderator"].indexOf(localStorage.getItem("cf-admin-role"))>=0;if(!ok){["cf-admin-auth","cf-admin-role","cf-admin-name","cf-admin-email","cf-admin-country","cf-admin-since"].forEach(function(k){try{localStorage.removeItem(k);}catch(_e){}});var p=(location.pathname.split("/").pop()||"admin-console.html");localStorage.setItem("cf-admin-next",p);window.location.replace("connexion-admin.html");}}catch(e){}})();</script>
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Projets et indicateurs</title>
+<meta name="description" content="Projets et indicateurs · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="admin-projets.html">
+<meta property="og:title" content="Coastal Futures | Projets et indicateurs">
+<meta property="og:description" content="Projets et indicateurs · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Projets et indicateurs">
+<meta name="twitter:description" content="Projets et indicateurs · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="admin-projets.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-press:#04271F;--teal-deep:#063D34;--teal:#0A6B5E;--teal-soft:#12B396;--teal-bright:#3ECBB0;--teal-bg:#EAF6F3;--teal-bg2:#F4FBF9;
+  --ink:#0C2420;--ink-2:#244440;--ink-mute:#5C7B76;--ink-faint:#5C7B76;--hair-strong:#B4CDC8;--hair:#DCE9E6;--canvas-soft:#F8FBFA;--canvas:#FFFFFF;
+  --sand-deep:#7A4F1A;--sand:#B8823A;--cream:#F5EEDF;--success:#066B52;--success-bg:#E3F9F1;--warning:#8A5512;--error:#8F2A1A;
+  --font-display:'Plus Jakarta Sans',system-ui,sans-serif;--font-sans:'DM Sans',system-ui,sans-serif;
+  --r-sm:8px;--r-md:10px;--r-lg:16px;--r-xl:24px;--r-pill:100px;--shadow-1:0 1px 3px rgba(6,61,52,.06);--shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);--ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}img{display:block;max-width:100%;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+.display-sm{font-family:var(--font-display);font-size:17px;font-weight:600;letter-spacing:-.3px;color:var(--ink);}
+.caption{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:14px;font-weight:500;border-radius:var(--r-pill);padding:9px 16px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-sm{padding:7px 13px;font-size:12.5px;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:11.5px;font-weight:500;padding:3px 10px;border-radius:var(--r-pill);white-space:nowrap;}
+.bdg-live{background:#E3F9F1;color:#066B52;}.bdg-pend{background:#FBF0DC;color:#8A5512;}.bdg-teal{background:var(--teal-bg);color:var(--teal-deep);}.bdg .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh;}
+.side{background:#0C2420;color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;}
+.side-logo{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}.side-logo img{height:24px;width:auto;}
+.side-logo .adm{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);border:1px solid rgba(62,203,176,.4);border-radius:var(--r-pill);padding:2px 8px;}
+.side-nav{flex:1;padding:16px 14px;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:rgba(255,255,255,.7);cursor:pointer;transition:all var(--t-fast) var(--ease);margin-bottom:2px;}
+.nav-item i{font-size:20px;}.nav-item:hover{background:rgba(255,255,255,.08);color:#fff;}
+.nav-item.on{background:rgba(62,203,176,.16);color:var(--teal-bright);}
+.nav-item .badge{margin-left:auto;background:var(--error);color:#fff;font-size:11px;font-weight:600;border-radius:var(--r-pill);padding:1px 7px;}
+.side-user{padding:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:14px;color:#fff;}
+.side-user .ur{font-family:var(--font-sans);font-size:12px;color:rgba(255,255,255,.55);}
+.side-user .lo{margin-left:auto;color:rgba(255,255,255,.5);font-size:19px;}
+
+.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 32px;background:#fff;border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-l h1{font-family:var(--font-display);font-weight:500;font-size:18px;letter-spacing:-.4px;color:var(--ink);margin:0;}
+.content{padding:26px 32px 48px;max-width:1320px;width:100%;}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start;}
+
+.toolbar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+.fsel select{font-family:var(--font-sans);font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-pill);padding:9px 32px 9px 14px;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235C7B76' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;}
+.fsel select.set{background-color:var(--teal-bg);border-color:var(--teal-bright);color:var(--teal-deep);}
+.toolbar .spacer{flex:1;}
+
+.proj{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);padding:22px 24px;margin-bottom:16px;}
+.proj-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.proj-id .pn{font-family:var(--font-display);font-weight:600;font-size:16.5px;letter-spacing:-.2px;color:var(--ink);}
+.proj-id .pm{display:flex;align-items:center;gap:8px;margin-top:7px;flex-wrap:wrap;}
+.proj-id .pm .pt{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);display:flex;align-items:center;gap:5px;}
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px;}
+.ind-cell{background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-md);padding:13px 14px;transition:all var(--t-fast) var(--ease);}
+.ind-cell.changed{border-color:var(--teal-bright);background:var(--teal-bg2);}
+.ind-cell label{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);display:block;margin-bottom:7px;}
+.ind-cell .ie{display:flex;align-items:baseline;gap:5px;}
+.ind-cell input{width:100%;font-family:var(--font-display);font-weight:400;font-size:22px;letter-spacing:-.6px;color:var(--ink);border:0;background:transparent;outline:none;padding:0;font-feature-settings:"tnum";}
+.ind-cell input:focus{color:var(--teal-deep);}
+.ind-cell .u{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-mute);}
+.proj-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hair);}
+.proj-foot .lu{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-faint);display:flex;align-items:center;gap:6px;}
+.proj-foot .pa{display:flex;gap:9px;}
+.save-state{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--success);display:none;align-items:center;gap:6px;}
+.save-state.show{display:inline-flex;}
+
+/* history */
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;position:sticky;top:90px;}
+.card-h{padding:18px 20px;border-bottom:1px solid var(--hair);}
+.card-h h3{margin:0;}
+.card-b{padding:6px 20px 14px;max-height:520px;overflow-y:auto;}
+.hist{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--hair);}
+.hist:last-child{border-bottom:0;}
+.hist .hi{width:30px;height:30px;border-radius:8px;background:var(--teal-bg);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.hist .ht{font-family:var(--font-sans);font-size:13px;color:var(--ink-2);line-height:1.45;}
+.hist .ht b{font-family:var(--font-display);font-weight:600;color:var(--ink);}
+.hist .hd{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-faint);margin-top:2px;}
+
+.toast-wrap{position:fixed;top:74px;right:24px;z-index:80;display:flex;flex-direction:column;gap:10px;}
+.toast{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--hair);border-left:3px solid var(--success);border-radius:var(--r-md);box-shadow:var(--shadow-2);padding:14px 18px;min-width:280px;font-family:var(--font-sans);font-size:14px;color:var(--ink);transform:translateX(120%);transition:transform 280ms var(--ease);}
+.toast.show{transform:translateX(0);}.toast i{font-size:20px;color:var(--success);}
+
+@media(max-width:1080px){ .app{grid-template-columns:1fr;} .side{display:none;} .grid{grid-template-columns:1fr;} .card{position:static;} .ind-grid{grid-template-columns:1fr 1fr;} }
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-sec">.sec-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:11.5px;font-weight:600;color:#066B52;background:#E3F9F1;border-radius:100px;padding:5px 11px;white-space:nowrap;}.sec-badge i{font-size:14px;}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-side-collapse">.cf-sidetoggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:10px;color:var(--ink-2,#244440);cursor:pointer;font-size:18px;transition:all .16s ease;flex-shrink:0;}.cf-sidetoggle:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}@media(min-width:1081px){.app.cf-collapsed{grid-template-columns:74px 1fr;}.app.cf-collapsed .side{z-index:40;}.app.cf-collapsed .side-logo{justify-content:center;}.app.cf-collapsed .side-logo img,.app.cf-collapsed .adm,.app.cf-collapsed .side-sec,.app.cf-collapsed .nav-item span:not(.badge),.app.cf-collapsed .side-user>div:not(.av),.app.cf-collapsed .side-user .lo{display:none;}.app.cf-collapsed .nav-item{justify-content:center;padding-left:0;padding-right:0;}.app.cf-collapsed .nav-item{font-size:0;}.app.cf-collapsed .nav-item i{font-size:20px;}.app.cf-collapsed .nav-item i.ti-external-link{display:none;}.app.cf-collapsed .nav-item .badge{font-size:10px;}.app.cf-collapsed .nav-item .badge{position:absolute;top:6px;right:10px;}.app.cf-collapsed .nav-item{position:relative;}.app.cf-collapsed .side-user{justify-content:center;}.app.cf-collapsed .side-nav{overflow:visible;}.app{transition:grid-template-columns .26s cubic-bezier(.4,0,.2,1);}.app.cf-collapsed .nav-item::after{content:attr(data-tip);position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:500;letter-spacing:-.1px;padding:6px 11px;border-radius:8px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .14s ease;z-index:60;box-shadow:0 8px 24px rgba(6,61,52,.18);}.app.cf-collapsed .nav-item:hover::after{opacity:1;}}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-logo-fit">.side-logo img{height:auto !important;max-height:22px;max-width:132px;width:auto !important;}.side-logo{gap:8px;}.side-logo .adm{flex-shrink:0;white-space:nowrap;}</style>
+<style id="cf-projedit">
+.pe-grid{display:grid;grid-template-columns:1fr 240px;gap:14px;margin-top:18px;}
+.pe-cell{background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-md);padding:12px 14px;transition:all var(--t-fast) var(--ease);}
+.pe-cell.changed{border-color:var(--teal-bright);background:var(--teal-bg2);}
+.pe-cell label{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);display:block;margin-bottom:8px;}
+.pe-cell input,.pe-cell select{width:100%;font-family:var(--font-sans);font-size:15px;font-weight:500;color:var(--ink);border:0;background:transparent;outline:none;padding:0;line-height:1.3;}
+.pe-cell input::placeholder{color:var(--ink-faint);font-weight:400;}
+.pe-cell input:focus{color:var(--teal-deep);}
+.pe-cell.sel{display:flex;flex-direction:column;}
+.pe-cell select{font-family:var(--font-display);cursor:pointer;appearance:none;-webkit-appearance:none;padding-right:22px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235C7B76' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right center;}
+.proj-foot a.lu.lnk{transition:color var(--t-fast) var(--ease);}
+.proj-foot a.lu.lnk:hover{color:var(--teal);}
+.proj-empty{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);padding:40px 24px;text-align:center;color:var(--ink-mute);font-family:var(--font-sans);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.proj-empty i{font-size:30px;color:var(--hair-strong);}
+@media(max-width:640px){.pe-grid{grid-template-columns:1fr;}}
+.measbox{margin-top:14px;border-top:1px dashed var(--hair-strong);padding-top:14px;}
+.meashead{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:10px;}
+.meashead i{font-size:16px;color:var(--teal);}
+.meashead .measnote{margin-left:auto;font-family:var(--font-sans);font-size:11px;font-weight:500;color:var(--ink-faint);text-align:right;}
+.measlist{display:flex;flex-direction:column;gap:6px;margin-bottom:11px;}
+.measrow{display:grid;grid-template-columns:1fr auto auto auto 30px;gap:10px;align-items:center;background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-sm);padding:8px 12px;}
+.measrow .mm{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-2);min-width:0;}
+.measrow .mv{font-family:var(--font-display);font-weight:600;font-size:13.5px;color:var(--ink);white-space:nowrap;}
+.measrow .md{font-family:var(--font-sans);font-size:12px;color:var(--ink-faint);white-space:nowrap;}
+.measrow .measdel{width:28px;height:28px;border-radius:7px;border:1px solid var(--hair);background:#fff;color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.measrow .measdel:hover{border-color:var(--error);color:var(--error);}
+.measempty{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-faint);padding:2px 0 6px;}
+.measadd{display:grid;grid-template-columns:1.3fr .8fr .9fr 1.3fr auto;gap:8px;align-items:center;}
+.measadd select,.measadd input{font-family:var(--font-sans);font-size:13px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:8px 10px;outline:none;width:100%;min-width:0;}
+.measadd select:focus,.measadd input:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.measadd .btn{white-space:nowrap;}
+@media(max-width:760px){.measadd{grid-template-columns:1fr 1fr;}.measrow{grid-template-columns:1fr auto 30px;}.measrow .md{display:none;}}
+</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="admin-console.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec">Pilotage</div>
+      <a class="nav-item" data-tip="Tableau de bord" href="admin-console.html"><i class="ti ti-layout-dashboard"></i><span>Tableau de bord</span></a>
+      <a class="nav-item" data-tip="Gestion de contenu" href="admin-contenus.html"><i class="ti ti-news"></i><span>Gestion de contenu</span></a>
+      <a class="nav-item" data-tip="Utilisateurs et rôles" href="admin-utilisateurs.html"><i class="ti ti-users"></i><span>Utilisateurs et rôles</span></a>
+      <a class="nav-item" data-tip="Appels à candidatures" href="admin-appels.html"><i class="ti ti-speakerphone"></i><span>Appels à candidatures</span></a>
+      <a class="nav-item" data-tip="Candidatures18" href="admin-candidatures.html"><i class="ti ti-file-text"></i><span>Candidatures</span><span class="badge tnum">18</span></a>
+      <div class="nav-item on" data-tip="Projets et indicateurs"><i class="ti ti-plant-2"></i><span>Projets et indicateurs</span></div>
+      <a class="nav-item" data-tip="Validation des indicateurs" href="admin-indicateurs.html"><i class="ti ti-rosette-discount-check"></i><span>Validation des indicateurs</span></a>
+      <a class="nav-item" data-tip="Médiathèque" href="admin-mediatheque.html"><i class="ti ti-photo"></i><span>Médiathèque</span></a>
+      <a class="nav-item" data-tip="Carte d'impact" href="admin-carte.html"><i class="ti ti-map-2"></i><span>Carte d'impact</span></a>
+      <a class="nav-item" data-tip="Contenu et indicateurs" href="admin-site.html"><i class="ti ti-chart-bar"></i><span>Contenu et indicateurs</span></a>
+      <div class="side-sec">Gouvernance</div>
+      <a class="nav-item" data-tip="Modération7" href="admin-moderation.html"><i class="ti ti-shield-check"></i><span>Modération</span><span class="badge tnum">7</span></a>
+      <a class="nav-item" data-tip="Permissions" href="admin-permissions.html"><i class="ti ti-key"></i><span>Permissions</span></a>
+      <a class="nav-item" data-tip="Journal d'audit" href="admin-journal-audit.html"><i class="ti ti-history"></i><span>Journal d'audit</span></a>
+      <a class="nav-item" data-tip="Paramètres système" href="admin-parametres.html"><i class="ti ti-settings"></i><span>Paramètres système</span></a>
+    </nav>
+    <div class="side-user"><div class="av">SH</div><div><div class="un">Saïfi Dawalbet Hamit</div><div class="ur">Super administratrice</div></div><a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a></div>
+  </aside>
+
+  <main class="main" data-screen-label="Gestion projets indicateurs">
+    <div class="topbar"><button class="cf-appburger" aria-label="Menu" type="button"><i class="ti ti-menu-2"></i></button><button class="cf-sidetoggle" id="cfSideToggle" aria-label="Réduire le menu" type="button"><i class="ti ti-layout-sidebar-left-collapse"></i></button><div class="tb-l" style="display:flex;align-items:center;gap:12px;"><span class="sec-badge"><i class="ti ti-shield-lock"></i>Session sécurisée</span><span id="cf-main" tabindex="-1"></span><h1>Projets et indicateurs</h1></div><span class="caption" id="capLine">Projets du programme · indicateurs par projet</span></div>
+    <div class="content">
+      <div class="toolbar">
+        <div class="fsel"><select id="fPays"><option value="all">Tous les pays</option><option value="Sénégal">Sénégal</option><option value="Ghana">Ghana</option><option value="Liberia">Liberia</option><option value="Guinée-Conakry">Guinée-Conakry</option><option value="Sierra Leone">Sierra Leone</option></select></div>
+        <div class="fsel"><select id="fType"><option value="all">Tous les types</option><option value="energie">Énergie renouvelable</option><option value="mangroves">Restauration de mangroves</option><option value="recyclage">Recyclage et déchets</option><option value="hub">Hub jeunesse</option><option value="entreprise">Entreprise verte</option></select></div>
+        <div class="fsel"><select id="fStatut"><option value="all">Tous les statuts</option><option value="Labellisé">Labellisé</option><option value="En incubation">En incubation</option><option value="Soumis">Soumis</option></select></div>
+        <div class="spacer"></div>
+        <span class="caption"><b id="count" style="color:var(--teal);font-family:var(--font-display)">10</b> projets</span>
+      </div>
+
+      <div class="grid">
+        <div id="projects"></div>
+
+        <div class="card">
+          <div class="card-h"><h3 class="display-sm">Historique des mises à jour</h3></div>
+          <div class="card-b" id="history">
+            <div class="hist"><div class="hi"><i class="ti ti-pencil"></i></div><div><div class="ht"><b>Mangrove Restore Initiative</b> : 10 → 12 ha en restauration</div><div class="hd">S. Dawalbet Hamit · 28 mai 2026</div></div></div>
+            <div class="hist"><div class="hi"><i class="ti ti-pencil"></i></div><div><div class="ht"><b>Dakar Solar Solutions</b> : 180 → 210 foyers raccordés</div><div class="hd">F. Camara · 30 mai 2026</div></div></div>
+            <div class="hist"><div class="hi"><i class="ti ti-pencil"></i></div><div><div class="ht"><b>ReCycle Accra</b> : 18 → 24 t collectées par mois</div><div class="hd">S. Dawalbet Hamit · 21 mai 2026</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="toast-wrap" id="toastWrap" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script>
+/* admin-projets : registre des projets piloté par la MÊME collection que admin-carte et la carte publique (localStorage cf-map-projects). Édite l'indicateur d'impact + le statut, persiste, la carte d'impact se met à jour. La géolocalisation/CRUD se gère dans admin-carte. */
+(function(){
+  var KEY='cf-map-projects';
+  var TYPE={
+    entreprise:{fr:'Entreprise verte',en:'Green business',icon:'ti-leaf'},
+    hub:{fr:'Hub jeunesse',en:'Youth hub',icon:'ti-building-community'},
+    mangroves:{fr:'Restauration de mangroves',en:'Mangrove restoration',icon:'ti-trees'},
+    recyclage:{fr:'Recyclage et déchets',en:'Recycling and waste',icon:'ti-recycle'},
+    energie:{fr:'Énergie renouvelable',en:'Renewable energy',icon:'ti-bolt'}
+  };
+  var STCLS={'Labellisé':'bdg-live','En incubation':'bdg-pend','Soumis':'bdg-teal'};
+  var ST={'Labellisé':{fr:'Labellisé',en:'Labelled'},'En incubation':{fr:'En incubation',en:'In incubation'},'Soumis':{fr:'Soumis',en:'Submitted'}};
+  /* B-05 : field measures, entered at source per project, dated + proof, validated,
+     aggregated to cf-site KPIs by cf-derive (FIELD_KEYS). Never a hand-typed total. */
+  var MEAS={
+    mangroves:{fr:'Mangroves restaurées',en:'Mangroves restored',unit:'ha'},
+    dechets:{fr:'Déchets valorisés',en:'Waste recovered',unit:'t'},
+    beneficiaires:{fr:'Bénéficiaires',en:'Beneficiaries',unit:'pers.'},
+    foyers:{fr:'Foyers raccordés',en:'Households connected',unit:'foyers'},
+    emplois:{fr:'Emplois verts',en:'Green jobs',unit:'emplois'}
+  };
+  var MT={
+    fr:{title:'Mesures terrain',note:'saisies à la source, datées, agrégées au tableau de bord',validated:'validé',empty:'Aucune mesure saisie pour ce projet.',add:'Ajouter la mesure',valph:'Valeur',proofph:'Référence (rapport, photo…)',added:'Mesure enregistrée et agrégée',del:'Mesure retirée',prooflbl:'réf.'},
+    en:{title:'Field measures',note:'entered at source, dated, aggregated to the dashboard',validated:'validated',empty:'No measure entered for this project.',add:'Add measure',valph:'Value',proofph:'Reference (report, photo…)',added:'Measure saved and aggregated',del:'Measure removed',prooflbl:'ref.'}
+  };
+  function fmtNum(v,L){var n=Number(v);if(isNaN(n))return v;return n.toLocaleString(L==='en'?'en-US':'fr-FR');}
+  function measRowsHtml(p,L){
+    var ms=p.measures||[];
+    if(!ms.length) return '<div class="measempty">'+MT[L].empty+'</div>';
+    return ms.map(function(m,i){
+      var def=MEAS[m.metric]||{fr:m.metric,en:m.metric,unit:''};
+      var proof=m.proof?(' · '+MT[L].prooflbl+' '+esc(m.proof)):'';
+      return '<div class="measrow"><span class="mm">'+esc(def[L])+proof+'</span>'
+        +'<span class="mv tnum">'+fmtNum(m.value,L)+' '+def.unit+'</span>'
+        +'<span class="md tnum">'+esc(m.date||'')+'</span>'
+        +'<span class="bdg bdg-live"><span class="dot"></span>'+MT[L].validated+'</span>'
+        +'<button class="measdel" data-del="'+i+'" aria-label="Retirer"><i class="ti ti-trash"></i></button></div>';
+    }).join('');
+  }
+  function measboxHtml(p,L){
+    var opts=Object.keys(MEAS).map(function(k){return '<option value="'+k+'">'+MEAS[k][L]+' ('+MEAS[k].unit+')</option>';}).join('');
+    var today=new Date().toISOString().slice(0,10);
+    return '<div class="measbox">'
+      +'<div class="meashead"><i class="ti ti-ruler-2"></i><span>'+MT[L].title+'</span><span class="measnote">'+MT[L].note+'</span></div>'
+      +'<div class="measlist" data-measlist>'+measRowsHtml(p,L)+'</div>'
+      +'<div class="measadd">'
+        +'<select data-m="metric">'+opts+'</select>'
+        +'<input data-m="value" type="number" min="0" step="0.1" placeholder="'+MT[L].valph+'">'
+        +'<input data-m="date" type="date" value="'+today+'">'
+        +'<input data-m="proof" type="text" placeholder="'+MT[L].proofph+'">'
+        +'<button class="btn btn-light btn-sm" data-addmeas><i class="ti ti-plus"></i>'+MT[L].add+'</button>'
+      +'</div></div>';
+  }
+  /* Seed identique à admin-carte.html : la collection partagée cf-map-projects */
+  var SEED=[
+    {id:1,name:'Dakar Solar Solutions',type:'energie',pays:'Sénégal',ville:'Dakar',statut:'Labellisé',lat:14.69,lng:-17.04,impact:'210 foyers raccordés'},
+    {id:2,name:'Climate Linguère Club',type:'hub',pays:'Sénégal',ville:'Linguère',statut:'Labellisé',lat:15.40,lng:-15.12,impact:'124 membres actifs'},
+    {id:3,name:'Mangrove Restore Initiative',type:'mangroves',pays:'Liberia',ville:'Monrovia',statut:'En incubation',lat:6.30,lng:-10.80,impact:'12 ha en restauration'},
+    {id:4,name:'Monrovia Eco Hub',type:'hub',pays:'Liberia',ville:'Monrovia',statut:'Labellisé',lat:6.33,lng:-10.76,impact:'90 membres actifs'},
+    {id:5,name:'ReCycle Accra',type:'recyclage',pays:'Ghana',ville:'Accra',statut:'Soumis',lat:5.56,lng:-0.20,impact:'24 t collectées par mois'},
+    {id:6,name:'Accra Green Hub',type:'hub',pays:'Ghana',ville:'Accra',statut:'Labellisé',lat:5.61,lng:-0.18,impact:'150 membres actifs'},
+    {id:7,name:'Conakry Youth Hub',type:'hub',pays:'Guinée-Conakry',ville:'Conakry',statut:'Labellisé',lat:9.64,lng:-13.58,impact:'110 membres actifs'},
+    {id:8,name:'Pêche bleue Conakry',type:'entreprise',pays:'Guinée-Conakry',ville:'Conakry',statut:'En incubation',lat:9.51,lng:-13.71,impact:'6 communautés de pêche'},
+    {id:9,name:'Freetown Climate Hub',type:'hub',pays:'Sierra Leone',ville:'Freetown',statut:'Labellisé',lat:8.48,lng:-13.23,impact:'124 membres actifs'},
+    {id:10,name:'AgriRésilience Freetown',type:'entreprise',pays:'Sierra Leone',ville:'Freetown',statut:'Soumis',lat:8.42,lng:-13.20,impact:'80 exploitations'}
+  ];
+  var T={
+    fr:{impact:"Indicateur d'impact",statut:'Statut du projet',update:'Mettre à jour',saved:'Enregistré',geo:"Coordonnées gérées dans la carte d'impact",histUpd:"indicateur d'impact mis à jour",now:"à l'instant",empty:'Aucun projet ne correspond aux filtres.',cap:'Projets du programme · indicateurs par projet',toast:function(n){return 'Projet « '+n+' » enregistré : la carte d\u2019impact est à jour.';}},
+    en:{impact:'Impact indicator',statut:'Project status',update:'Update',saved:'Saved',geo:'Coordinates managed on the impact map',histUpd:'impact indicator updated',now:'just now',empty:'No project matches the filters.',cap:'Programme projects · indicators per project',toast:function(n){return 'Project \u201c'+n+'\u201d saved: the impact map is up to date.';}}
+  };
+  function lang(){return (document.documentElement.lang||'fr').toLowerCase().indexOf('en')===0?'en':'fr';}
+  function load(){try{var s=localStorage.getItem(KEY);if(s){var a=JSON.parse(s);if(Array.isArray(a)&&a.length)return a;}}catch(e){}return SEED.map(function(p){return Object.assign({},p);});}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(projects));}catch(e){}}
+  function esc(s){return (''+s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  var projects=load();
+  var ROLE=(localStorage.getItem('cf-admin-role')||'super');
+  var MYC=(localStorage.getItem('cf-admin-country')||'');
+  function allowed(p){ return (ROLE!=='country'||!MYC)?true:(p.pays===MYC); }
+  var wrap=document.getElementById('projects');
+  var fPays=document.getElementById('fPays'),fType=document.getElementById('fType'),fStatut=document.getElementById('fStatut'),countEl=document.getElementById('count'),capEl=document.getElementById('capLine');
+
+  function toast(msg){var w=document.getElementById('toastWrap');var t=document.createElement('div');t.className='toast';t.innerHTML='<i class="ti ti-circle-check"></i><span>'+esc(msg)+'</span>';w.appendChild(t);requestAnimationFrame(function(){requestAnimationFrame(function(){t.classList.add('show');});});setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},300);},3200);}
+
+  function byId(id){for(var i=0;i<projects.length;i++){if(''+projects[i].id===''+id)return projects[i];}return null;}
+
+  function cardHtml(p){
+    var L=lang(),t=TYPE[p.type]||TYPE.entreprise,stc=STCLS[p.statut]||'bdg-teal';
+    var stext=ST[p.statut]?ST[p.statut][L]:p.statut;
+    var stOpts=Object.keys(ST).map(function(k){return '<option value="'+k+'"'+(k===p.statut?' selected':'')+'>'+ST[k][L]+'</option>';}).join('');
+    return '<div class="proj" data-id="'+p.id+'" data-pays="'+esc(p.pays)+'" data-type="'+esc(p.type)+'" data-statut="'+esc(p.statut)+'">'
+      +'<div class="proj-top"><div class="proj-id"><div class="pn">'+esc(p.name)+'</div>'
+      +'<div class="pm"><span class="bdg '+stc+'" data-badge><span class="dot"></span>'+esc(stext)+'</span>'
+      +'<span class="pt"><i class="ti ti-map-pin" style="font-size:13px"></i>'+esc(p.ville)+', '+esc(p.pays)+'</span>'
+      +'<span class="pt"><i class="ti '+t.icon+'" style="font-size:13px"></i>'+esc(t[L])+'</span></div></div></div>'
+      +'<div class="pe-grid">'
+      +'<div class="pe-cell"><label>'+T[L].impact+'</label><input type="text" data-f="impact" value="'+esc(p.impact||'')+'"></div>'
+      +'<div class="pe-cell sel"><label>'+T[L].statut+'</label><select data-f="statut">'+stOpts+'</select></div>'
+      +'</div>'
+      +measboxHtml(p,L)
+      +'<div class="proj-foot"><a class="lu lnk" href="admin-carte.html"><i class="ti ti-map-2"></i>'+T[L].geo+'</a>'
+      +'<div class="pa"><span class="save-state"><i class="ti ti-circle-check"></i>'+T[L].saved+'</span>'
+      +'<button class="btn btn-pri btn-sm" data-save disabled style="opacity:.4;pointer-events:none;"><i class="ti ti-device-floppy"></i>'+T[L].update+'</button></div></div>'
+      +'</div>';
+  }
+
+  function wire(proj){
+    var p=byId(proj.getAttribute('data-id'));if(!p)return;
+    var fields=[].slice.call(proj.querySelectorAll('[data-f]'));
+    var orig={};fields.forEach(function(f){orig[f.getAttribute('data-f')]=f.value;});
+    var saveBtn=proj.querySelector('[data-save]'),saveState=proj.querySelector('.save-state');
+    function check(){
+      var changed=fields.some(function(f){return f.value!==orig[f.getAttribute('data-f')];});
+      saveBtn.disabled=!changed;saveBtn.style.opacity=changed?'1':'.4';saveBtn.style.pointerEvents=changed?'auto':'none';
+      if(changed)saveState.classList.remove('show');
+      fields.forEach(function(f){f.closest('.pe-cell').classList.toggle('changed',f.value!==orig[f.getAttribute('data-f')]);});
+    }
+    fields.forEach(function(f){f.addEventListener('input',check);f.addEventListener('change',check);});
+    saveBtn.addEventListener('click',function(){
+      var L=lang();
+      fields.forEach(function(f){var k=f.getAttribute('data-f');p[k]=f.value;orig[k]=f.value;});
+      save();
+      proj.setAttribute('data-statut',p.statut);
+      var stc=STCLS[p.statut]||'bdg-teal',bdg=proj.querySelector('[data-badge]');
+      bdg.className='bdg '+stc;bdg.innerHTML='<span class="dot"></span>'+esc(ST[p.statut]?ST[p.statut][L]:p.statut);
+      check();saveState.classList.add('show');
+      addHistory(p.name);
+      toast(T[L].toast(p.name));
+      applyFilters();
+    });
+
+    /* B-05 : field measures add/remove */
+    var measlist=proj.querySelector('[data-measlist]');
+    function wireDel(){
+      [].slice.call(measlist.querySelectorAll('[data-del]')).forEach(function(b){
+        b.addEventListener('click',function(){
+          var i=parseInt(b.getAttribute('data-del'),10);
+          (p.measures||[]).splice(i,1); save(); measlist.innerHTML=measRowsHtml(p,lang()); wireDel();
+          if(window.CFDerive&&CFDerive.recompute) CFDerive.recompute();
+          if(window.CFAudit) CFAudit.log({action:'project.measure_remove',note:p.name});
+          toast(MT[lang()].del);
+        });
+      });
+    }
+    wireDel();
+    var addBtn=proj.querySelector('[data-addmeas]');
+    if(addBtn) addBtn.addEventListener('click',function(){
+      var L=lang();
+      var metric=proj.querySelector('[data-m="metric"]').value;
+      var valEl=proj.querySelector('[data-m="value"]');
+      var val=parseFloat(valEl.value);
+      var date=proj.querySelector('[data-m="date"]').value||new Date().toISOString().slice(0,10);
+      var proof=proj.querySelector('[data-m="proof"]').value.trim();
+      if(isNaN(val)||val<0){ valEl.focus(); valEl.style.borderColor='var(--error)'; return; }
+      valEl.style.borderColor='';
+      if(!p.measures) p.measures=[];
+      p.measures.push({metric:metric,value:val,unit:(MEAS[metric]||{}).unit||'',date:date,proof:proof,status:'validated',by:(localStorage.getItem('cf-admin-name')||'Coordination'),at:new Date().toISOString()});
+      save(); measlist.innerHTML=measRowsHtml(p,L); wireDel();
+      valEl.value=''; proj.querySelector('[data-m="proof"]').value='';
+      if(window.CFDerive&&CFDerive.recompute) CFDerive.recompute();
+      if(window.CFAudit) CFAudit.log({action:'project.measure_add',note:p.name+' · '+metric+' '+val});
+      addHistory(p.name+' : '+MEAS[metric][L]+' +'+fmtNum(val,L)+' '+(MEAS[metric].unit||''));
+      toast(MT[L].added);
+    });
+  }
+
+  function addHistory(name){
+    var L=lang(),h=document.getElementById('history');if(!h)return;
+    var el=document.createElement('div');el.className='hist';
+    el.innerHTML='<div class="hi"><i class="ti ti-pencil"></i></div><div><div class="ht"><b>'+esc(name)+'</b> : '+T[L].histUpd+'</div><div class="hd">S. Dawalbet Hamit · '+T[L].now+'</div></div>';
+    h.insertBefore(el,h.firstChild);
+  }
+
+  function applyFilters(){
+    var n=0;
+    [].slice.call(wrap.querySelectorAll('.proj')).forEach(function(p){
+      var ok=(fPays.value==='all'||p.getAttribute('data-pays')===fPays.value)&&(fType.value==='all'||p.getAttribute('data-type')===fType.value)&&(fStatut.value==='all'||p.getAttribute('data-statut')===fStatut.value);
+      p.style.display=ok?'':'none';if(ok)n++;
+    });
+    countEl.textContent=n;
+    fPays.classList.toggle('set',fPays.value!=='all');fType.classList.toggle('set',fType.value!=='all');fStatut.classList.toggle('set',fStatut.value!=='all');
+    var empty=wrap.querySelector('.proj-empty');
+    if(!n){if(!empty){empty=document.createElement('div');empty.className='proj-empty';wrap.appendChild(empty);}empty.innerHTML='<i class="ti ti-plant-2"></i>'+T[lang()].empty;empty.style.display='';}
+    else if(empty){empty.style.display='none';}
+  }
+
+  function render(){
+    var L=lang();
+    if(capEl)capEl.textContent=T[L].cap;
+    wrap.innerHTML=projects.filter(allowed).map(cardHtml).join('');
+    [].slice.call(wrap.querySelectorAll('.proj')).forEach(wire);
+    applyFilters();
+  }
+
+  [fPays,fType,fStatut].forEach(function(s){s.addEventListener('change',applyFilters);});
+  if(ROLE==='country'&&MYC){ fPays.value=MYC; fPays.disabled=true; fPays.classList.add('set'); }
+  render();
+  window.__cfRender=render;
+  new MutationObserver(function(){render();}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+})();
+</script>
+
+<script id="cf-i18n">(function(){var D={"Gestion de contenu":"Content management","Utilisateurs et rôles":"Users and roles","Médiathèque":"Media library","Gouvernance":"Governance","Modération":"Moderation","Permissions":"Permissions","Journal d'audit":"Audit log","Paramètres système":"System settings","Projets et indicateurs":"Projects and indicators","Super administratrice":"Super administrator","Console":"Console","Tableau de bord":"Dashboard","Admin":"Admin","Pilotage":"Steering","Système":"System","Sénégal":"Senegal","Ghana":"Ghana","Guinée-Conakry":"Guinea","Liberia":"Liberia","Sierra Leone":"Sierra Leone","projets":"projects","Projets · indicateurs par projet":"Projects · indicators per project","Mangrove Restore Initiative":"Mangrove Restore Initiative","Monrovia, Liberia":"Monrovia, Liberia","Surface restaurée":"Restored area","ha":"ha","Familles bénéf.":"Beneficiary families","Emplois verts":"Green jobs","Communautés":"Communities","Dernière mise à jour : 28 mai 2026":"Last updated: 28 May 2026","Enregistré":"Saved","Mini-réseaux solaires Petite Côte":"Petite Côte solar mini-grids","Petite Côte, Sénégal":"Petite Côte, Senegal","Énergie produite":"Energy produced","GWh":"GWh","Villages":"Villages","Dernière mise à jour : 30 mai 2026":"Last updated: 30 May 2026","ReCycle Accra":"ReCycle Accra","Accra, Ghana":"Accra, Ghana","Déchets valorisés":"Waste recovered","Coopératives":"Cooperatives","Points collecte":"Collection points","Dernière mise à jour : 21 mai 2026":"Last updated: 21 May 2026","Historique des mises à jour":"Update history","Mangrove Restore":"Mangrove Restore","; surface 15 → 18 ha":"; area 15 → 18 ha",": surface 15 → 18 ha":": area 15 → 18 ha","S. Dawalbet Hamit · 28 mai 2026":"S. Dawalbet Hamit · 28 May 2026","Mini-réseaux solaires":"Solar mini-grids",": 300 → 340 foyers":": 300 → 340 households","F. Camara · 30 mai 2026":"F. Camara · 30 May 2026",": déchets 36 → 42 t":": waste 36 → 42 t","S. Dawalbet Hamit · 21 mai 2026":"S. Dawalbet Hamit · 21 May 2026","Session sécurisée":"Secure session","Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Programme":"Programme","Contact":"Contact","À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Événements":"Events","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Accueil hub":"Hub home","Entrepreneurs":"Entrepreneurs","Mentors":"Mentors","Appels":"Calls","Carte":"Map","Postuler":"Apply","Postuler maintenant":"Apply now","Voir le profil":"View profile","Voir le détail":"View details","Voir la fiche":"View details","S'inscrire":"Register","Télécharger":"Download","Télécharger le PDF":"Download PDF","Tout voir":"See all","Suivant":"Next","Précédent":"Previous","Enregistrer":"Save","Annuler":"Cancel","Envoyer":"Send","Envoyer le message":"Send message","Contacter":"Contact","Découvrir":"Discover","Réinitialiser":"Reset","Continuer":"Continue","Confirmer":"Confirm","Approuver":"Approve","Décliner":"Decline","Rejeter":"Reject","Voir sur la carte":"View on map","Aperçu public":"Public preview","Nouvelle candidature":"New application","Mettre à jour":"Update","Labellisé":"Certified","En incubation":"In incubation","En revue":"Under review","Soumis":"Submitted","Brouillon":"Draft","Rejeté":"Rejected","Disponible":"Available","Indisponible":"Unavailable","Zone pilote":"Pilot zone","Hub jeunesse":"Youth hub","Présentiel":"In person","Virtuel":"Online","Hybride":"Hybrid","À la une":"Featured","À venir":"Upcoming","Passés":"Past","Clôturé":"Closed","Actif":"Active","Inactif":"Inactive","Toutes":"All","Tous":"All","Tous les pays":"All countries","Tous les secteurs":"All sectors","Tous les statuts":"All statuses","Toutes les expertises":"All areas of expertise","Tous les types":"All types","Tous les thèmes":"All themes","Toutes les années":"All years","Toutes les universités":"All universities","Disponibles uniquement":"Available only","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Recyclage et déchets":"Recycling and waste","Agriculture résiliente":"Resilient agriculture","Entreprise verte":"Green enterprise","Économie circulaire":"Circular economy","Finance verte":"Green finance","Impact investing":"Impact investing","Mentorat":"Mentoring","Entrepreneurs verts":"Green entrepreneurs","Projets actifs":"Active projects","Mangroves restaurées":"Mangroves restored","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Mentors et experts":"Mentors and experts","Partenaires engagés":"Engaged partners","Foyers raccordés":"Households connected","Emplois verts créés":"Green jobs created","Emplois créés":"Jobs created","Tableau de bord":"Dashboard","Tableau de bord impact":"Impact dashboard","Données en temps réel":"Real-time data","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Demandes":"Requests","Mes mentorés":"My mentees","Utilisateurs":"Users","Candidatures":"Applications","Projets et indicateurs":"Projects and indicators","Alertes":"Alerts","Paramètres":"Settings","Statistiques":"Statistics","Se déconnecter":"Sign out","Espace bailleurs PTF":"Donor area","Vue par pays":"By country","Vue consolidée":"Consolidated view","Exporter le rapport PDF":"Export PDF report","Mentor":"Mentor","Entrepreneur":"Entrepreneur","Partenaire":"Partner","Administratrice":"Administrator","Coordination du programme":"Programme coordination","candidatures ouvertes":"open calls","cinq pays, cinq hubs":"five countries, five hubs","une plateforme, quatre espaces":"one platform, four areas","vision et mission":"vision and mission","gouvernance":"governance","alignement stratégique":"strategic alignment","à propos du programme":"about the programme","calendrier sur douze mois, avril 2026 à mars 2027":"twelve-month calendar, april 2026 to march 2027","Page introuvable":"Page not found","Erreur serveur":"Server error","Retour à l'accueil":"Back to home","Réessayer":"Retry","Contacter le support":"Contact support","Notifications":"Notifications","Tout marquer lu":"Mark all as read","Prochains événements":"Upcoming events","Prochaines sessions":"Upcoming sessions","Mes mentorés actifs":"My active mentees","Demandes de contact":"Contact requests","Profil complété":"Profile completed","Activité récente":"Recent activity","Startups labellisées":"Certified startups","Mentors disponibles":"Available mentors"};var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});setLang(l);})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+<style id="cf-appnav">.cf-appburger{display:none;width:40px;height:40px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:10px;color:var(--ink,#0C2420);cursor:pointer;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;margin-right:4px;}.cf-appburger:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}.cf-appscrim{position:fixed;inset:0;background:rgba(8,28,24,.5);z-index:49;opacity:0;pointer-events:none;transition:opacity .28s cubic-bezier(.4,0,.2,1);}.cf-appscrim.show{opacity:1;pointer-events:auto;}@media(max-width:1080px){.app .side{display:flex !important;position:fixed;top:0;left:0;height:100vh;width:264px;z-index:50;transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);}.app .side.open{transform:translateX(0);}.cf-appburger{display:inline-flex;}}</style><script id="cf-appnav-js">(function(){var side=document.querySelector(".app .side");if(!side)return;var tb=document.querySelector(".topbar");if(!tb)return;var b=tb.querySelector(".cf-appburger");if(!b)return;var sc=document.createElement("div");sc.className="cf-appscrim";document.body.appendChild(sc);function open(){side.classList.add("open");sc.classList.add("show");}function close(){side.classList.remove("open");sc.classList.remove("show");}b.addEventListener("click",function(){side.classList.contains("open")?close():open();});sc.addEventListener("click",close);[].slice.call(side.querySelectorAll("a")).forEach(function(a){a.addEventListener("click",close);});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script id="cf-side-collapse-js">(function(){var app=document.querySelector(".app");if(!app)return;var K="cf-admin-side";try{if(localStorage.getItem(K)==="1")app.classList.add("cf-collapsed");}catch(e){}var b=document.getElementById("cfSideToggle");if(b)b.addEventListener("click",function(){app.classList.toggle("cf-collapsed");try{localStorage.setItem(K,app.classList.contains("cf-collapsed")?"1":"0");}catch(e){}});})();</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-site.js"></script>
+<script src="assets/cf-derive.js"></script>
+<script src="assets/cf-notif.js"></script>
+<script src="assets/cf-audit.js"></script>
+<script src="assets/cf-admin-auth.js"></script>
+<script src="assets/cf-admin-chrome.js"></script>
+<script src="assets/cf-admin-session.js"></script>
+</body>
+</html>

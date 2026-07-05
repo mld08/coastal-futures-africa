@@ -1,0 +1,197 @@
+"""Données de démonstration CMS (extrait fidèle de cf-collections.js) :
+actualités, événements, pages. Importées par seed.py dans la table `content`.
+Les corps d'articles sont raccourcis (le front rend le HTML tel quel).
+"""
+from .util import i18n
+
+# --- Actualités (news) ---
+NEWS = [
+    dict(id="lancement-dakar", pub="published", featured=True, date="2026-06-02",
+         author="Saïfi Dawalbet Hamit", role=i18n("Coordination du programme", "Programme coordination"),
+         readMin=5, cat=i18n("Événement", "Event"), catCode="evenement", country="Régional", paysCode="all",
+         img="assets/media/01-events/launch-ceremony-wide.webp",
+         heroImg="assets/media/01-events/launch-stage-panel.webp",
+         heroCaption=i18n("Répétition de la table ronde des jeunes innovateurs, à la veille du lancement à Dakar.",
+                          "Rehearsal of the young innovators panel, on the eve of the Dakar launch."),
+         tags=[i18n("Lancement", "Launch"), i18n("Dakar", "Dakar"), i18n("CEDEAO", "ECOWAS")],
+         title=i18n("Coastal Futures sera lancé officiellement à Dakar le 10 juin 2026",
+                    "Coastal Futures officially launches in Dakar on 10 June 2026"),
+         excerpt=i18n("Ministères, institutions régionales et partenaires techniques et financiers se réuniront pour ouvrir le programme et dévoiler la plateforme d'impact.",
+                      "Ministries, regional institutions and technical and financial partners will gather to open the programme and unveil the impact platform."),
+         body=i18n("<p>Le 10 juin 2026, Dakar accueillera le lancement officiel de Coastal Futures, sous l'égide de la Journée mondiale de l'environnement. La cérémonie réunira les représentants des cinq pays côtiers, la CEDEAO et la Commission de l'Union Africaine.</p><p>Le programme vise à former 4 000 jeunes entrepreneurs verts au Sénégal, au Ghana, en Guinée-Conakry, au Liberia et en Sierra Leone.</p>",
+                   "<p>On 10 June 2026, Dakar will host the official launch of Coastal Futures, under the banner of World Environment Day. The ceremony gathers the five coastal countries, ECOWAS and the African Union Commission.</p><p>The programme aims to train 4,000 young green entrepreneurs across Senegal, Ghana, Guinea, Liberia and Sierra Leone.</p>")),
+    dict(id="mangroves-monrovia", pub="published", date="2026-05-28", author="James Tuah",
+         role=i18n("Hub jeunesse, Monrovia", "Youth hub, Monrovia"), readMin=4,
+         cat=i18n("Impact", "Impact"), catCode="impact", country="Liberia", paysCode="liberia",
+         img="assets/media/07-library/scene-mangrove-restoration.webp",
+         heroImg="assets/media/02-mangroves/mangrove-restoration-hero.webp",
+         heroCaption=i18n("Le long du littoral de Mesurado, les premiers semis de palétuviers prennent racine.",
+                          "Along the Mesurado coast, the first mangrove seedlings take root."),
+         tags=[i18n("Mangroves", "Mangroves"), i18n("Liberia", "Liberia")],
+         title=i18n("Au Liberia, le hub jeunesse prépare la restauration des mangroves",
+                    "In Liberia, the youth hub prepares mangrove restoration"),
+         excerpt=i18n("À Monrovia, le hub jeunesse prépare les premiers chantiers de restauration des mangroves le long du littoral de Mesurado.",
+                      "In Monrovia, the youth hub is preparing the first mangrove restoration sites along the Mesurado coast."),
+         body=i18n("<p>À Monrovia, le hub jeunesse cartographie les zones dégradées et forme les jeunes volontaires aux techniques de plantation. Les mangroves protègent le trait de côte et abritent les nurseries de poissons.</p>",
+                   "<p>In Monrovia, the youth hub is mapping degraded areas and training young volunteers in planting techniques. Mangroves protect the coastline and shelter fish nurseries.</p>")),
+    dict(id="accra-dechets", pub="published", date="2026-05-21", author="Fatou Sarr",
+         role=i18n("Hub jeunesse, Accra", "Youth hub, Accra"), readMin=4,
+         cat=i18n("Économie circulaire", "Circular economy"), catCode="circulaire", country="Ghana", paysCode="ghana",
+         img="assets/media/07-library/scene-recycling-sorting.webp",
+         heroImg="assets/media/04-projects/recycling-waste-collection-accra.webp",
+         heroCaption=i18n("À Accra, les jeunes collecteurs trient les plastiques récupérés sur le littoral.",
+                          "In Accra, young collectors sort plastics recovered from the coast."),
+         tags=[i18n("Économie circulaire", "Circular economy"), i18n("Ghana", "Ghana")],
+         title=i18n("Ghana : le hub jeunesse mobilise les coopératives de l'économie circulaire",
+                    "Ghana: the youth hub mobilises circular-economy cooperatives"),
+         excerpt=i18n("À Accra, le hub jeunesse structure les coopératives de collecte pour transformer les plastiques du littoral et créer des emplois pour les jeunes.",
+                      "In Accra, the youth hub is organising collection cooperatives to transform coastal plastics and create jobs for young people."),
+         body=i18n("<p>À Accra, le hub jeunesse structure les coopératives de collecte qui récupèrent les plastiques le long du littoral, pour en faire une filière de revenus pour les jeunes des quartiers côtiers.</p>",
+                   "<p>In Accra, the youth hub is organising the collection cooperatives that recover plastics along the coast, turning waste recovery into a source of income for young people.</p>")),
+    dict(id="87-projets-incubation", pub="published", date="2026-05-06", author="Équipe programme",
+         role=i18n("Équipe du programme", "Programme team"), readMin=3,
+         cat=i18n("Hub jeunesse", "Youth hub"), catCode="hub", country="Régional", paysCode="all",
+         img="assets/media/09-extras/extra-training-leadership.webp",
+         heroImg="assets/media/01-events/workshop-in-room.webp",
+         heroCaption=i18n("Atelier d'accompagnement : les porteurs de projets préparent leur candidature.",
+                          "Support workshop: project leaders prepare their applications."),
+         tags=[i18n("Cohorte 1", "Cohort 1"), i18n("Inscriptions", "Registration")],
+         title=i18n("Cohorte 1 : les inscriptions sont ouvertes dans les cinq pays",
+                    "Cohort 1: registration is open across the five countries"),
+         excerpt=i18n("À travers les cinq pays, les jeunes porteurs de solutions vertes peuvent rejoindre la première cohorte et son réseau de mentors.",
+                      "Across the five countries, young green-solution leaders can join the first cohort and its network of mentors."),
+         body=i18n("<p>Les inscriptions à la première cohorte sont ouvertes dans les cinq pays côtiers. Les jeunes de 18 à 35 ans porteurs d'une solution verte en phase de démarrage peuvent candidater.</p>",
+                   "<p>Registration for the first cohort is open across the five coastal countries. Young people aged 18 to 35 leading an early-stage green solution can apply.</p>")),
+]
+
+# --- Événements (events) ---
+EVENTS = [
+    dict(id="lancement-dakar-ev", pub="published", featured=True, date="2026-06-10", author="Saïfi Dawalbet Hamit",
+         format=i18n("Présentiel", "In person"), fmtCode="presentiel", country="Sénégal",
+         place=i18n("Institut Africain de la Gouvernance, Dakar", "Africa Governance Institute, Dakar"),
+         capacity=200, img="assets/photos/Hero.jpg",
+         title=i18n("Lancement officiel de Coastal Futures", "Official launch of Coastal Futures"),
+         excerpt=i18n("Cérémonie d'ouverture du programme et présentation publique de la plateforme d'impact.",
+                      "Opening ceremony of the programme and public presentation of the impact platform.")),
+    dict(id="webinaire-labellisation", pub="published", date="2026-06-24", author="Fanta Camara",
+         format=i18n("Virtuel", "Virtual"), fmtCode="online", country="Régional", place=i18n("En ligne", "Online"),
+         capacity=0, img="assets/photos/Young-Entrepreneur.jpg",
+         title=i18n("Webinaire : monter un dossier de labellisation", "Webinar: building a certification application"),
+         excerpt=i18n("Les étapes clés pour préparer une candidature à la labellisation, animé par le comité.",
+                      "The key steps to prepare a certification application, led by the committee.")),
+    dict(id="atelier-mentors", pub="published", date="2026-07-08", author="Équipe programme",
+         format=i18n("Présentiel", "In person"), fmtCode="presentiel", country="Ghana",
+         place=i18n("Accra Green Hub, Accra", "Accra Green Hub, Accra"), capacity=60, img="assets/photos/Recycling.jpg",
+         title=i18n("Atelier mentors et entrepreneurs", "Mentors and entrepreneurs workshop"),
+         excerpt=i18n("Une journée de mise en relation entre mentors et porteurs de projets du hub.",
+                      "A day connecting mentors and project leaders from the hub.")),
+    dict(id="mangroves-terrain", pub="published", date="2026-07-22", author="James Tuah",
+         format=i18n("Présentiel", "In person"), fmtCode="presentiel", country="Liberia",
+         place=i18n("Monrovia Eco Hub, Monrovia", "Monrovia Eco Hub, Monrovia"), capacity=40, img="assets/photos/Mangrove.jpg",
+         title=i18n("Restauration de mangroves : journée terrain", "Mangrove restoration: field day"),
+         excerpt=i18n("Une journée sur le terrain autour des chantiers de restauration du littoral.",
+                      "A day in the field around the coastal restoration sites.")),
+    dict(id="cloture-cohorte-1", pub="published", date="2026-09-15", author="Sékou Camara",
+         format=i18n("Hybride", "Hybrid"), fmtCode="hybrid", country="Guinée-Conakry",
+         place=i18n("Conakry Youth Hub, Conakry", "Conakry Youth Hub, Conakry"), capacity=120, img="assets/photos/Fishing.jpg",
+         title=i18n("Clôture de la cohorte 1 et présentation des projets", "Cohort 1 closing and project showcase"),
+         excerpt=i18n("Présentation des projets de la première cohorte et bilan de l'incubation.",
+                      "Presentation of the first cohort projects and incubation review.")),
+    dict(id="forum-finance-verte", pub="published", date="2026-10-06", author="Saïfi Dawalbet Hamit",
+         format=i18n("Présentiel", "In person"), fmtCode="presentiel", country="Sierra Leone",
+         place=i18n("Freetown Climate Hub, Freetown", "Freetown Climate Hub, Freetown"), capacity=150, img="assets/photos/Agriculture.jpg",
+         title=i18n("Forum finance verte et impact investing", "Green finance and impact investing forum"),
+         excerpt=i18n("Rencontres entre entrepreneurs, investisseurs et partenaires techniques et financiers.",
+                      "Encounters between entrepreneurs, investors and technical and financial partners.")),
+]
+
+# --- Pages CMS (page) — aperçu du site, quelques-unes gérées par le CMS ---
+PAGES = [
+    dict(id="shared", kind="shared", pub="published", managed=True,
+         title=i18n("Contenus partagés", "Shared content"),
+         note=i18n("Blocs réutilisés sur plusieurs pages. Édités une fois, à jour partout.",
+                   "Blocks reused across several pages. Edited once, up to date everywhere."),
+         blocks=[dict(bid="prelaunch", type="banner",
+                      label=i18n("Bandeau de transparence", "Transparency banner"),
+                      used=i18n("Annuaire entrepreneurs, annuaire mentors", "Entrepreneurs directory, mentors directory"),
+                      fields=dict(icon="ti-info-circle",
+                                  bodyFr="Le programme vient de se lancer (10 juin 2026).",
+                                  bodyEn="The programme has just launched (10 June 2026).",
+                                  linkLabelFr="Définitions des indicateurs", linkLabelEn="Indicator definitions",
+                                  linkHref="methodologie-indicateurs.html"))],
+         history=[]),
+    dict(id="index", kind="page", pub="published", managed=False, path="index.html",
+         title=i18n("Accueil", "Home"), blocks=[], history=[]),
+    dict(id="a-propos", kind="page", pub="published", managed=False, path="a-propos.html",
+         title=i18n("À propos", "About"), blocks=[], history=[]),
+    dict(id="ecosysteme", kind="page", pub="published", managed=False, path="ecosysteme.html",
+         title=i18n("Écosystème", "Ecosystem"), blocks=[], history=[]),
+    dict(id="contact", kind="page", pub="published", managed=False, path="contact.html",
+         title=i18n("Contact", "Contact"), blocks=[], history=[]),
+]
+
+
+# --- Annuaire entrepreneurs (forme plate : n, s, sec, pays, st, av, desc{fr,en}) ---
+ENTREPRENEURS = [
+    dict(id="aminata-diallo", pub="published", n="Aminata Diallo", s="Dakar Solar Solutions", sec="energie", pays="Sénégal", st="Candidature soumise", av="DS",
+         desc=i18n("Mini-réseaux solaires pour les villages de pêcheurs de la Petite Côte, là où le réseau national n'arrive pas.",
+                   "Solar mini-grids for the fishing villages of the Petite Côte, where the national grid does not reach.")),
+    dict(id="mohamed-bangura", pub="published", n="Mohamed Bangura", s="Compost côtier", sec="recyclage", pays="Sierra Leone", st="Candidature soumise", av="CC",
+         desc=i18n("Collecte et valorisation des déchets organiques du littoral de Freetown en compost pour les maraîchers urbains.",
+                   "Collecting and turning Freetown's coastal organic waste into compost for urban market gardeners.")),
+    dict(id="kofi-mensah", pub="published", n="Kofi Mensah", s="ReCycle Accra", sec="recyclage", pays="Ghana", st="Inscrit", av="RA",
+         desc=i18n("Filière de collecte des plastiques côtiers d'Accra, transformés en matériaux de construction par des coopératives de jeunes.",
+                   "A collection chain for Accra's coastal plastics, turned into building materials by youth cooperatives.")),
+    dict(id="james-tuah", pub="published", n="James Tuah", s="Mangrove Restore Initiative", sec="mangroves", pays="Liberia", st="Candidature soumise", av="MR",
+         desc=i18n("Restauration des mangroves de la côte de Mesurado avec les communautés riveraines.",
+                   "Restoring the mangroves of the Mesurado coast with riverside communities.")),
+    dict(id="mariama-balde", pub="published", n="Mariama Baldé", s="Pêche bleue Conakry", sec="entreprise", pays="Guinée-Conakry", st="Inscrit", av="PB",
+         desc=i18n("Chaîne du froid solaire pour les femmes transformatrices de poisson de Conakry.",
+                   "A solar cold chain for Conakry's women fish processors.")),
+    dict(id="fatou-sarr", pub="published", n="Fatou Sarr", s="Téranga Agro", sec="agriculture", pays="Sénégal", st="Candidature soumise", av="TA",
+         desc=i18n("Agriculture maraîchère climato-résiliente sur la Petite Côte, avec irrigation économe et semences adaptées au sel.",
+                   "Climate-resilient market gardening on the Petite Côte, with water-saving irrigation and salt-tolerant seeds.")),
+    dict(id="ibrahim-koroma", pub="published", n="Ibrahim Koroma", s="AgriRésilience Freetown", sec="agriculture", pays="Sierra Leone", st="Inscrit", av="AF",
+         desc=i18n("Parcelles pilotes d'agriculture résiliente autour de Freetown.",
+                   "Pilot plots of resilient farming around Freetown.")),
+    dict(id="ama-owusu", pub="published", n="Ama Owusu", s="Plastic to Build", sec="recyclage", pays="Ghana", st="Candidature soumise", av="PB",
+         desc=i18n("Transformation des déchets plastiques côtiers en briques et mobilier urbain pour les communautés d'Accra.",
+                   "Turning coastal plastic waste into bricks and street furniture for Accra's communities.")),
+    dict(id="sekou-camara", pub="published", n="Sékou Camara", s="Solaire Conakry", sec="energie", pays="Guinée-Conakry", st="Inscrit", av="SC",
+         desc=i18n("Kits solaires domestiques en location-vente pour les quartiers non raccordés de Conakry.",
+                   "Home solar kits on lease-to-own for Conakry's off-grid neighbourhoods.")),
+    dict(id="grace-johnson", pub="published", n="Grace Johnson", s="Monrovia Eco Roots", sec="mangroves", pays="Liberia", st="Candidature soumise", av="ME",
+         desc=i18n("Pépinières communautaires de palétuviers et sensibilisation à la protection du littoral à Monrovia.",
+                   "Community mangrove nurseries and coastal-protection outreach in Monrovia.")),
+    dict(id="awa-ndoye", pub="published", n="Awa Ndoye", s="Sahel Clean Energy", sec="energie", pays="Sénégal", st="Inscrit", av="SE",
+         desc=i18n("Solutions d'accès à l'énergie propre pour les zones rurales du nord du Sénégal.",
+                   "Clean-energy access solutions for rural northern Senegal.")),
+    dict(id="joseph-kamara", pub="published", n="Joseph Kamara", s="Blue Coast SL", sec="entreprise", pays="Sierra Leone", st="Candidature soumise", av="BC",
+         desc=i18n("Économie bleue durable à Freetown : tourisme côtier responsable et valorisation des ressources marines.",
+                   "Sustainable blue economy in Freetown: responsible coastal tourism and marine-resource value.")),
+]
+
+# --- Annuaire mentors (n, org, pays, av, dispo, cat[], exp[]) ---
+MENTORS = [
+    dict(id="dr-kwame-asante", pub="published", n="Dr Kwame Asante", org="Green Economy Institute, Accra", pays="Ghana", av="KA", dispo=True, cat=["finance"], exp=["Finance verte", "Impact investing"]),
+    dict(id="aisha-bangura", pub="published", n="Aïsha Bangura", org="Climate Adaptation Lab, Freetown", pays="Sierra Leone", av="AB", dispo=True, cat=["agriculture"], exp=["Agriculture", "Résilience climatique"]),
+    dict(id="mariama-balde", pub="published", n="Mariama Baldé", org="Blue Economy Network, Conakry", pays="Guinée-Conakry", av="MB", dispo=False, cat=["bleue"], exp=["Pêche durable", "Mangroves"]),
+    dict(id="dr-sophie-mendy", pub="published", n="Dr Sophie Mendy", org="Énergie & Développement, Dakar", pays="Sénégal", av="SM", dispo=True, cat=["energie", "finance"], exp=["Énergie renouvelable", "Financement de projet"]),
+    dict(id="john-weah", pub="published", n="John Weah", org="Coastal Resilience Liberia, Monrovia", pays="Liberia", av="JW", dispo=True, cat=["bleue"], exp=["Restauration côtière", "Mangroves"]),
+    dict(id="akosua-boateng", pub="published", n="Akosua Boateng", org="Circular Ghana, Accra", pays="Ghana", av="AK", dispo=False, cat=["circulaire"], exp=["Économie circulaire", "Gestion des déchets"]),
+    dict(id="ousmane-fall", pub="published", n="Ousmane Fall", org="Impact Capital West Africa, Dakar", pays="Sénégal", av="OF", dispo=True, cat=["finance"], exp=["Finance verte", "Levée de fonds"]),
+    dict(id="fatima-sesay", pub="published", n="Fatima Sesay", org="AgriTech Sierra Leone, Freetown", pays="Sierra Leone", av="FS", dispo=True, cat=["agriculture"], exp=["Agriculture", "Technologie agricole"]),
+]
+
+
+def seed_content(Content, db):
+    """Insère les contenus manquants ; renvoie le nombre créé."""
+    n = 0
+    for kind, items in (("news", NEWS), ("event", EVENTS), ("page", PAGES),
+                        ("entrepreneur", ENTREPRENEURS), ("mentor", MENTORS)):
+        for obj in items:
+            slug = obj["id"]
+            if not Content.find(kind, slug):
+                db.session.add(Content(kind=kind, slug=slug).apply(obj))
+                n += 1
+    return n

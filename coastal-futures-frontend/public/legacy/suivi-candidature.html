@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Coastal Futures | Suivi de candidature</title>
+<meta name="description" content="Suivi de candidature · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="suivi-candidature.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396; --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --warning-bg:#FBF0DC; --error:#8F2A1A;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif; --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06); --shadow-2:0 8px 24px rgba(6,61,52,.08),0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);--t-fast:160ms;--t-micro:100ms;--t-base:280ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}img{display:block;max-width:100%;}
+.tnum{font-feature-settings:"tnum";}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:14px;font-weight:500;border-radius:var(--r-pill);padding:11px 18px;border:1px solid transparent;cursor:pointer;transition:all var(--t-fast) var(--ease);width:100%;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn i{transition:transform var(--t-fast) var(--ease);}.btn:hover i.ti-arrow-right{transform:translateX(3px);}
+
+/* ===== Shell B (connected space) — entrepreneur ===== */
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh;min-height:100dvh;}
+.app>.side{background:#fff;border-right:1px solid var(--hair);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;height:100dvh;}
+.side-logo{padding:22px 24px;border-bottom:1px solid var(--hair);}.side-logo img{height:26px;width:auto;}
+.side-nav{flex:1;padding:16px 14px;overflow-y:auto;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-mute);cursor:pointer;transition:all var(--t-fast) var(--ease);margin-bottom:2px;position:relative;}
+.nav-item i{font-size:20px;}
+.nav-item:hover{background:var(--canvas-soft);color:var(--ink);}
+.nav-item.on{background:var(--teal-bg);color:var(--teal-deep);}
+.side-user{padding:14px;border-top:1px solid var(--hair);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);}
+.side-user .ur{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.side-user .lo{margin-left:auto;color:var(--ink-faint);font-size:19px;cursor:pointer;}
+.side-user .lo:hover{color:var(--error);}
+.app>.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:flex-start;gap:16px;padding:14px 32px;background:rgba(248,251,250,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-bc{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-faint);display:flex;align-items:center;gap:8px;margin-right:auto;}
+.tb-bc a{color:var(--ink-mute);}.tb-bc a:hover{color:var(--teal);}.tb-bc i{font-size:14px;}
+.tb-right{display:flex;align-items:center;gap:10px;}
+.tb-user{display:flex;align-items:center;gap:9px;padding:5px 6px 5px 12px;border-radius:var(--r-pill);border:1px solid var(--hair);background:#fff;}
+.tb-user .un{font-family:var(--font-display);font-weight:500;font-size:13.5px;color:var(--ink);}
+.tb-user .av{width:30px;height:30px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:12px;}
+.content{padding:28px 32px 56px;max-width:1080px;width:100%;}
+.cf-sidetoggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--hair);background:#fff;border-radius:10px;color:var(--ink-2);cursor:pointer;font-size:18px;transition:all .16s ease;flex-shrink:0;}
+.cf-sidetoggle:hover{border-color:var(--teal);color:var(--teal);}
+.cf-appburger{display:none;width:40px;height:40px;border:1px solid var(--hair);background:#fff;border-radius:10px;color:var(--ink);cursor:pointer;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;}
+.cf-appburger:hover{border-color:var(--teal);color:var(--teal);}
+.cf-appscrim{position:fixed;inset:0;background:rgba(8,28,24,.5);z-index:49;opacity:0;pointer-events:none;transition:opacity .28s var(--ease);}
+.cf-appscrim.show{opacity:1;pointer-events:auto;}
+@media(min-width:1081px){.app.cf-collapsed{grid-template-columns:74px 1fr;}.app.cf-collapsed .side-logo{display:flex;justify-content:center;}.app.cf-collapsed .side-sec,.app.cf-collapsed .nav-item span,.app.cf-collapsed .side-user>div:not(.av),.app.cf-collapsed .side-user .lo{display:none;}.app.cf-collapsed .nav-item{justify-content:center;}.app.cf-collapsed .side-user{justify-content:center;}.app{transition:grid-template-columns .26s var(--ease);}}
+@media(max-width:1080px){.cf-sidetoggle{display:none;}.app{grid-template-columns:1fr;}.app>.side{display:flex!important;position:fixed;top:0;left:0;height:100vh;height:100dvh;width:264px;z-index:50;transform:translateX(-100%);transition:transform .28s var(--ease);}.app>.side.open{transform:translateX(0);}.cf-appburger{display:inline-flex;}}
+@media(max-width:640px){.topbar{padding:12px 18px;}.content{padding:22px 18px 44px;}.tb-user .un{display:none;}}
+
+.crumb{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-faint);margin-bottom:18px;}
+.crumb a:hover{color:var(--teal);}.crumb i{font-size:14px;}
+.hd{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:8px;}
+.hd .l{font-family:var(--font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--teal);}
+.hd h1{font-family:var(--font-display);font-weight:300;font-size:34px;letter-spacing:-1.4px;color:var(--ink);margin:6px 0 0;}
+.hd .meta{font-family:var(--font-sans);font-size:14px;color:var(--ink-mute);margin-top:8px;display:flex;gap:16px;flex-wrap:wrap;}
+.hd .meta b{color:var(--ink-2);font-weight:600;}
+.statuspill{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:13px;font-weight:600;padding:8px 16px;border-radius:var(--r-pill);background:var(--teal-bg);color:var(--teal-deep);}
+.statuspill .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:30px;align-items:start;margin-top:28px;}
+.grid>*{min-width:0;}
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);}
+.card-pad{padding:24px;}
+.card h2{font-family:var(--font-display);font-weight:600;font-size:16px;color:var(--ink);margin:0 0 20px;}
+.tl{position:relative;}
+.tr{display:grid;grid-template-columns:38px 1fr;gap:16px;padding-bottom:24px;position:relative;}
+.tr::before{content:"";position:absolute;left:18px;top:38px;bottom:-2px;width:2px;background:var(--hair);}
+.tr:last-child::before{display:none;}
+.tr .tn{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:1;font-family:var(--font-display);font-weight:600;font-feature-settings:"tnum";}
+.tr.done .tn{background:var(--success-bg);color:var(--success);}
+.tr.cur .tn{background:var(--teal);color:#fff;box-shadow:0 0 0 4px var(--teal-bg);}
+.tr.todo .tn{background:#fff;border:2px solid var(--hair-strong);color:var(--ink-faint);}
+.tr .tt{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);}
+.tr .tdate{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-faint);margin-top:2px;}
+.tr .td{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-mute);margin-top:7px;line-height:1.55;}
+.note{background:var(--teal-bg2);border:1px solid var(--hair);border-radius:var(--r-md);padding:16px;margin-top:14px;}
+.note .nh{display:flex;align-items:center;gap:9px;margin-bottom:8px;}
+.note .av{width:30px;height:30px;border-radius:50%;background:var(--teal-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:11px;}
+.note .nn{font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--ink);}
+.note .nr{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-mute);}
+.note p{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-2);line-height:1.6;margin:0;font-style:italic;}
+.docrow{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--hair);}
+.docrow:last-child{border-bottom:0;}
+.docrow .di{width:36px;height:36px;border-radius:9px;background:var(--canvas-soft);border:1px solid var(--hair);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.docrow .dn{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);}
+.docrow .ds{font-family:var(--font-sans);font-size:12px;color:var(--ink-faint);}
+.docrow .dst{margin-left:auto;font-family:var(--font-display);font-size:11px;font-weight:600;color:var(--success);display:flex;align-items:center;gap:4px;}
+.dside{display:flex;flex-direction:column;gap:18px;position:sticky;top:92px;}
+.dside .info .ir{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--hair);}
+.dside .info .ir:last-child{border-bottom:0;}
+.dside .info .k{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);}
+.dside .info .v{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--ink);}
+.side-action{background:var(--teal-bg);}
+.side-action h3{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);margin:0 0 6px;}
+.side-action p{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);line-height:1.5;margin:0 0 14px;}
+@media(max-width:860px){.grid{grid-template-columns:1fr;}.dside{position:static;}}
+@media(max-width:560px){.hd h1{font-size:27px;}}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.cf-sidetoggle,.cf-appburger{min-width:44px;min-height:44px;}button,a.btn,.btn{min-height:44px;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+<style id="cf-resp-core">.grid>*{min-width:0;}@media(max-width:640px){.btn{white-space:normal;text-align:center;line-height:1.25;}}img{max-width:100%;}html,body{overflow-x:clip;}</style>
+<style id="cf-resp-ios">@media(max-width:640px){input,select,textarea{font-size:16px!important;}}</style>
+<style id="cf-viewtrans">@view-transition{navigation:auto;}@media(prefers-reduced-motion:no-preference){::view-transition-old(root){animation:cfVtOut .08s linear both;}::view-transition-new(root){animation:cfVtIn .15s ease both;}@keyframes cfVtOut{to{opacity:0;}}@keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}}@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none!important;}}</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<script id="cf-member-guard">(function(){try{if(localStorage.getItem("cf-auth")!=="1"){try{localStorage.setItem("cf-after-login",(location.pathname.split("/").pop()||""));}catch(e){}location.replace("connexion.html");}}catch(e){}})();</script>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="tableau-de-bord.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec">Mon espace</div>
+      <a class="nav-item" data-tip="Tableau de bord" href="tableau-de-bord.html"><i class="ti ti-layout-dashboard"></i><span>Tableau de bord</span></a>
+      <a class="nav-item" data-tip="Mon profil" href="mon-profil.html"><i class="ti ti-user"></i><span>Mon profil</span></a>
+      <a class="nav-item on" data-tip="Mes candidatures" href="mes-candidatures.html"><i class="ti ti-file-text"></i><span>Mes candidatures</span></a>
+      <a class="nav-item" data-tip="Mes projets" href="espace-projets.html"><i class="ti ti-plant-2"></i><span>Mes projets</span></a>
+      <a class="nav-item" data-tip="Messages" href="messagerie-entrepreneur.html"><i class="ti ti-message-2"></i><span>Messages</span></a>
+      <a class="nav-item" data-tip="Paramètres" href="espace-parametres.html"><i class="ti ti-settings"></i><span>Paramètres</span></a>
+      <div class="side-sec">Explorer</div>
+      <a class="nav-item" data-tip="Carte d'impact" href="espace-carte.html"><i class="ti ti-map-2"></i><span>Carte d'impact</span></a>
+      <a class="nav-item" data-tip="Appels ouverts" href="espace-appels.html"><i class="ti ti-speakerphone"></i><span>Appels ouverts</span></a>
+      <a class="nav-item" data-tip="Mentors" href="espace-mentors.html"><i class="ti ti-users"></i><span>Mentors</span></a>
+      <a class="nav-item" data-tip="Ressources" href="espace-ressources.html"><i class="ti ti-folder"></i><span>Ressources</span></a>
+    </nav>
+    <div class="side-user">
+      <div class="av">AD</div>
+      <div><div class="un">Aminata Diallo</div><div class="ur">Entrepreneur</div></div>
+      <a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a>
+    </div>
+  </aside>
+
+  <main class="main" data-screen-label="Suivi de candidature">
+    <div class="topbar">
+      <button class="cf-appburger" aria-label="Menu" type="button"><i class="ti ti-menu-2"></i></button>
+      <button class="cf-sidetoggle" id="cfSideToggle" aria-label="Réduire le menu" type="button"><i class="ti ti-layout-sidebar-left-collapse"></i></button>
+      <div class="tb-bc"><a href="mes-candidatures.html">Mes candidatures</a><i class="ti ti-chevron-right"></i><span class="tnum">Dossier CF-2026-0463</span></div>
+      <div class="tb-right">
+        <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+        <div class="tb-user"><span class="un">Aminata</span><span class="av">AD</span></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="crumb"><a href="mes-candidatures.html">Mes candidatures</a><i class="ti ti-chevron-right"></i><span>Dossier CF-2026-0463</span></div>
+
+      <div class="hd">
+        <div>
+          <div class="l">Cohorte 2 : entreprises vertes</div>
+          <span id="cf-main" tabindex="-1"></span><h1>Sahel Clean Energy</h1>
+          <div class="meta"><span>Dossier <b class="tnum">CF-2026-0463</b></span><span>Soumis le <b class="tnum">28 mai 2026</b></span><span>Secteur <b>Énergie renouvelable</b></span></div>
+        </div>
+        <span class="statuspill"><span class="dot"></span>En évaluation</span>
+      </div>
+
+      <div class="grid">
+        <div>
+          <div class="card card-pad">
+            <h2>Processus de labellisation</h2>
+            <div class="tl">
+              <div class="tr done"><div class="tn"><i class="ti ti-check"></i></div><div><div class="tt">Candidature soumise</div><div class="tdate tnum">28 mai 2026</div><div class="td">Votre dossier a été enregistré, complet et recevable.</div></div></div>
+              <div class="tr done"><div class="tn"><i class="ti ti-check"></i></div><div><div class="tt">Recevabilité administrative</div><div class="tdate tnum">30 mai 2026</div><div class="td">Éligibilité confirmée par le secrétariat du programme.</div></div></div>
+              <div class="tr cur"><div class="tn"><i class="ti ti-eye"></i></div><div><div class="tt">Évaluation par le comité</div><div class="tdate">En cours, depuis le 4 juin 2026</div><div class="td">Votre projet est évalué sur son impact, sa viabilité et son ancrage local.</div>
+                <div class="note"><div class="nh"><div class="av">SH</div><div><div class="nn">Saïfi Dawalbet Hamit</div><div class="nr">Coordination du programme</div></div></div><p>« Projet solide, fort potentiel d'impact rural. Merci de préciser le modèle de maintenance des installations sur cinq ans. »</p></div>
+              </div></div>
+              <div class="tr todo"><div class="tn tnum">4</div><div><div class="tt">Décision et labellisation</div><div class="tdate">À venir</div><div class="td">Décision finale du comité et attribution éventuelle du label Coastal Futures.</div></div></div>
+            </div>
+          </div>
+
+          <div class="card card-pad" style="margin-top:18px;">
+            <h2>Documents soumis</h2>
+            <div class="docrow"><div class="di"><i class="ti ti-file-text"></i></div><div><div class="dn">Présentation du projet.pdf</div><div class="ds tnum">2,1 Mo · 28 mai 2026</div></div><div class="dst"><i class="ti ti-check"></i>Reçu</div></div>
+            <div class="docrow"><div class="di"><i class="ti ti-id"></i></div><div><div class="dn">Pièce d'identité.pdf</div><div class="ds tnum">0,8 Mo · 28 mai 2026</div></div><div class="dst"><i class="ti ti-check"></i>Reçu</div></div>
+            <div class="docrow"><div class="di"><i class="ti ti-file-certificate"></i></div><div><div class="dn">Justificatif de la structure.pdf</div><div class="ds tnum">1,3 Mo · 28 mai 2026</div></div><div class="dst"><i class="ti ti-check"></i>Reçu</div></div>
+          </div>
+        </div>
+
+        <aside class="dside">
+          <div class="card side-action card-pad">
+            <h3>Une précision est demandée</h3>
+            <p>Le comité souhaite des détails sur le modèle de maintenance. Complétez votre dossier pour accélérer l'évaluation.</p>
+            <a href="completer-dossier.html" class="btn btn-pri">Compléter mon dossier <i class="ti ti-arrow-right"></i></a>
+          </div>
+          <div class="card card-pad">
+            <h2 style="margin-bottom:4px;">Informations</h2>
+            <div class="info">
+              <div class="ir"><span class="k">Statut</span><span class="v">En évaluation</span></div>
+              <div class="ir"><span class="k">Appel</span><span class="v">Cohorte 2</span></div>
+              <div class="ir"><span class="k">Pays</span><span class="v">Sénégal</span></div>
+              <div class="ir"><span class="k">Réponse estimée</span><span class="v tnum">Mi-juillet 2026</span></div>
+            </div>
+          </div>
+          <div class="card card-pad">
+            <a href="messagerie-entrepreneur.html" class="btn btn-light"><i class="ti ti-mail"></i>Contacter le programme</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/cf-collections.js"></script>
+<script id="cf-suivi-reflect">(function(){
+  if(!window.CFCol) return;
+  var ST={submitted:{fr:'Soumise',en:'Submitted'},review:{fr:'En évaluation',en:'Under review'},incomplete:{fr:'À compléter',en:'To complete'},accepted:{fr:'Acceptée',en:'Accepted'},rejected:{fr:'Rejetée',en:'Rejected'}};
+  function lang(){return document.documentElement.lang==='en'?'en':'fr';}
+  function apply(){
+    var a=CFCol.get('applications','app-aminata-diallo'); if(!a) return;
+    var s=ST[a.status]||ST.review, lbl=(lang()==='en'?s.en:s.fr);
+    var p=a.projet||{};
+    var h1=document.querySelector('.hd h1'); if(h1&&p.nom) h1.textContent=p.nom;
+    var pill=document.querySelector('.statuspill'); if(pill) pill.innerHTML='<span class="dot"></span>'+lbl;
+    [].slice.call(document.querySelectorAll('.info .ir')).forEach(function(ir){ var k=ir.querySelector('.k'); if(k&&/Statut|Status/.test(k.textContent)){ var v=ir.querySelector('.v'); if(v) v.textContent=lbl; } });
+    var pc=document.querySelector('.side-action'); if(pc) pc.style.display=(a.status==='incomplete')?'':'none';
+    var trs=document.querySelectorAll('.tl .tr'); var last=trs[trs.length-1];
+    if(last&&(a.status==='accepted'||a.status==='rejected')){ last.className='tr done'; var tn=last.querySelector('.tn'); if(tn) tn.innerHTML='<i class="ti ti-check"></i>'; }
+  }
+  apply();
+  try{ new MutationObserver(apply).observe(document.documentElement,{attributes:true,attributeFilter:['lang']}); }catch(e){}
+})();</script>
+<script id="cf-i18n">(function(){var D={
+"Mon espace":"My space","Tableau de bord":"Dashboard","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Paramètres":"Settings","Explorer":"Explore","Carte d'impact":"Impact map","Appels ouverts":"Open calls","Mentors":"Mentors","Ressources":"Resources","Entrepreneur":"Entrepreneur",
+"Dossier CF-2026-0463":"File CF-2026-0463",
+"Cohorte 2 : entreprises vertes":"Cohort 2: green enterprises","Dossier":"File","Soumis le":"Submitted on","Secteur":"Sector","Énergie renouvelable":"Renewable energy","En évaluation":"Under review",
+"Processus de labellisation":"Certification process","Candidature soumise":"Application submitted","Votre dossier a été enregistré, complet et recevable.":"Your application was recorded, complete and eligible.",
+"Recevabilité administrative":"Administrative eligibility","Éligibilité confirmée par le secrétariat du programme.":"Eligibility confirmed by the programme secretariat.",
+"Évaluation par le comité":"Committee review","En cours, depuis le 4 juin 2026":"In progress, since 4 June 2026","Votre projet est évalué sur son impact, sa viabilité et son ancrage local.":"Your project is assessed on its impact, viability and local roots.",
+"Coordination du programme":"Programme coordination","« Projet solide, fort potentiel d'impact rural. Merci de préciser le modèle de maintenance des installations sur cinq ans. »":"\u201cStrong project with high rural impact potential. Please clarify the five-year maintenance model for the installations.\u201d",
+"Décision et labellisation":"Decision and certification","À venir":"Upcoming","Décision finale du comité et attribution éventuelle du label Coastal Futures.":"Final committee decision and possible award of the Coastal Futures label.",
+"Documents soumis":"Submitted documents","Reçu":"Received",
+"Une précision est demandée":"A clarification is requested","Le comité souhaite des détails sur le modèle de maintenance. Complétez votre dossier pour accélérer l'évaluation.":"The committee would like details on the maintenance model. Complete your application to speed up the review.","Compléter mon dossier":"Complete my application",
+"Informations":"Information","Statut":"Status","Appel":"Call","Pays":"Country","Réponse estimée":"Estimated response","Mi-juillet 2026":"Mid-July 2026","Contacter le programme":"Contact the programme"
+};
+var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}
+function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}
+var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");
+document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});
+setLang(l);})();</script>
+<script id="cf-appnav-js">(function(){var app=document.querySelector(".app");if(!app||app.classList.contains("app--focus"))return;var side=app.querySelector(":scope > .side");if(!side)return;var tb=document.querySelector(".topbar");if(!tb)return;var b=tb.querySelector(".cf-appburger");if(!b)return;var sc=document.createElement("div");sc.className="cf-appscrim";document.body.appendChild(sc);function open(){side.classList.add("open");sc.classList.add("show");}function close(){side.classList.remove("open");sc.classList.remove("show");}b.addEventListener("click",function(){side.classList.contains("open")?close():open();});sc.addEventListener("click",close);[].slice.call(side.querySelectorAll("a")).forEach(function(a){a.addEventListener("click",close);});document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script id="cf-side-collapse-js">(function(){var app=document.querySelector(".app");if(!app)return;var K="cf-member-side";try{if(localStorage.getItem(K)==="1")app.classList.add("cf-collapsed");}catch(e){}var b=document.getElementById("cfSideToggle");if(b)b.addEventListener("click",function(){app.classList.toggle("cf-collapsed");try{localStorage.setItem(K,app.classList.contains("cf-collapsed")?"1":"0");}catch(e){}});})();</script>
+<script src="assets/cf-forms.js"></script>
+<script id="cf-member-logout">(function(){function bind(el){el.addEventListener("click",function(e){e.preventDefault();try{localStorage.removeItem("cf-auth");localStorage.removeItem("cf-name");}catch(_){}location.href="deconnexion.html";});}[].slice.call(document.querySelectorAll("a,button")).forEach(function(el){if(/^\s*Se d\u00e9connecter\s*$/.test(el.textContent||""))bind(el);});[].slice.call(document.querySelectorAll(".side-user .lo,[data-cf-logout]")).forEach(bind);})();</script>
+<script src="assets/cf-session-name.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Coastal Futures | Appels à candidatures</title>
+<meta name="description" content="Appels à candidatures · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="appels-candidatures.html">
+<meta property="og:title" content="Coastal Futures | Appels à candidatures">
+<meta property="og:description" content="Appels à candidatures · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Appels à candidatures">
+<meta name="twitter:description" content="Appels à candidatures · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="appels-candidatures.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<link rel="stylesheet" href="assets/cf-nav.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --warning-bg:#FBF0DC; --error:#8F2A1A;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --t-micro:100ms; --t-fast:160ms; --t-base:280ms; --t-reveal:560ms;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--canvas);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+
+.display-xl{font-family:var(--font-display);font-size:42px;font-weight:300;line-height:1.05;letter-spacing:-1.8px;color:var(--ink);}
+.display-lg{font-family:var(--font-display);font-size:30px;font-weight:400;line-height:1.1;letter-spacing:-1px;color:var(--ink);}
+.display-md{font-family:var(--font-display);font-size:23px;font-weight:500;line-height:1.18;letter-spacing:-.5px;color:var(--ink);}
+.display-sm{font-family:var(--font-display);font-size:18px;font-weight:600;line-height:1.3;letter-spacing:-.3px;color:var(--ink);}
+.lead{font-family:var(--font-sans);font-size:18px;font-weight:300;line-height:1.6;letter-spacing:-.1px;color:var(--ink-2);}
+.body{font-family:var(--font-sans);font-size:16px;font-weight:400;line-height:1.65;color:var(--ink-2);}
+.body-sm{font-family:var(--font-sans);font-size:14px;font-weight:400;line-height:1.6;color:var(--ink-2);}
+.caption{font-family:var(--font-sans);font-size:13px;font-weight:400;line-height:1.5;color:var(--ink-mute);}
+.kicker{font-family:var(--font-display);font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--ink-faint);text-transform:lowercase;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:15px;font-weight:500;letter-spacing:-.1px;border-radius:var(--r-pill);padding:12px 22px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-sm{padding:8px 16px;font-size:13px;}
+.btn-pri{background:var(--teal);color:#fff;}
+.btn-pri:hover{background:var(--teal-deep);}
+.btn-sec{background:transparent;color:var(--teal);border-color:var(--hair-strong);}
+.btn-sec:hover{border-color:var(--teal);background:var(--teal-bg2);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}
+.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn-block{width:100%;}
+.btn i{transition:transform var(--t-fast) var(--ease);}
+.btn:hover i.ti-arrow-right{transform:translateX(3px);}
+
+.bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:12px;font-weight:500;padding:4px 12px;border-radius:var(--r-pill);letter-spacing:-.1px;white-space:nowrap;}
+.bdg-live{background:#E3F9F1;color:#066B52;}
+.bdg-pend{background:#FBF0DC;color:#8A5512;}
+.bdg-rej{background:#FBE6E2;color:#8F2A1A;}
+.bdg-teal{background:var(--teal-bg);color:var(--teal-deep);}
+.bdg-sand{background:#F5EBD8;color:var(--sand-deep);}
+.bdg-out{background:transparent;color:var(--ink-mute);border:1px solid var(--hair-strong);}
+.bdg .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+.cf-mesh{position:absolute;inset:0;opacity:.92;background:
+  radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.55) 0%,transparent 50%),
+  radial-gradient(90% 70% at 70% 5%,rgba(18,179,150,.45) 0%,transparent 55%),
+  radial-gradient(80% 90% at 95% 30%,rgba(201,163,94,.32) 0%,transparent 50%),
+  radial-gradient(70% 80% at 50% 65%,rgba(10,107,94,.60) 0%,transparent 60%);}
+.cf-mesh-surface{position:relative;background:var(--ink);color:#fff;overflow:hidden;}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity var(--t-reveal) var(--ease),transform var(--t-reveal) var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+/* Nav */
+.nav-outer{position:sticky;top:14px;z-index:30;}
+.cf-nav{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;border:1px solid var(--hair);border-radius:14px;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);max-width:1180px;margin:14px auto 0;box-shadow:var(--shadow-1);}.brand img{height:28px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:26px;}
+.nav-links a{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink-mute);transition:color var(--t-micro) var(--ease);}
+.nav-links a:hover,.nav-links a.on{color:var(--ink);}
+.nav-links a.nav-cta{color:#fff;}
+.lang{display:flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:13px;font-weight:500;}
+.lang b{color:var(--ink-faint);font-weight:500;}.lang b.on{color:var(--teal);}.lang .sep{color:var(--hair-strong);}
+
+/* Header */
+.dir-head{padding:48px 0 22px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-faint);margin-bottom:20px;}
+.breadcrumb a{color:var(--ink-mute);}.breadcrumb a:hover{color:var(--teal);}.breadcrumb i{font-size:14px;}
+.dir-head h1{margin:8px 0 0;}
+.dir-head .dh-sub{margin:14px 0 0;max-width:560px;}
+.tabs{display:inline-flex;background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-pill);padding:4px;margin-top:26px;}
+.tabs button{font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink-mute);background:transparent;border:0;border-radius:var(--r-pill);padding:9px 18px;cursor:pointer;transition:all var(--t-fast) var(--ease);white-space:nowrap;display:inline-flex;align-items:center;gap:7px;}
+.tabs button .cnt{font-size:12px;background:var(--hair);color:var(--ink-mute);border-radius:var(--r-pill);padding:1px 8px;font-feature-settings:"tnum";}
+.tabs button.active{background:#fff;color:var(--teal);box-shadow:var(--shadow-1);}
+.tabs button.active .cnt{background:var(--teal-bg);color:var(--teal-deep);}
+
+/* Featured call */
+.feat{display:grid;grid-template-columns:1.4fr 1fr;border:1px solid var(--hair);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-2);margin-top:8px;}
+.feat-body{padding:36px;}
+.feat-meta{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+.feat-body h2{margin:0 0 12px;}
+.feat-body .fdesc{margin:0 0 22px;max-width:560px;}
+.feat-crit{margin:0 0 24px;}
+.feat-crit .ct{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);margin-bottom:12px;}
+.crit-list{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+.crit-list .ci{display:flex;align-items:flex-start;gap:9px;font-family:var(--font-sans);font-size:14px;color:var(--ink-2);}
+.crit-list .ci i{color:var(--teal);font-size:18px;flex-shrink:0;margin-top:1px;}
+.feat-pays{margin-bottom:24px;}
+.feat-pays .ct{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);margin-bottom:10px;}
+.chips{display:flex;gap:7px;flex-wrap:wrap;}
+.chip-soft{display:inline-flex;align-items:center;gap:6px;background:var(--teal-bg);color:var(--teal-deep);font-family:var(--font-display);font-size:12.5px;font-weight:500;padding:5px 13px;border-radius:var(--r-pill);}
+.feat-side{position:relative;overflow:hidden;background:var(--ink);color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:center;}
+.feat-side .cf-mesh{opacity:.4;}
+.feat-side > *{position:relative;}
+.countdown{text-align:center;margin-bottom:24px;}
+.countdown .cd-n{font-family:var(--font-display);font-weight:300;font-size:72px;letter-spacing:-3px;color:#fff;line-height:1;font-feature-settings:"tnum";}
+.countdown .cd-l{font-family:var(--font-display);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);margin-top:6px;}
+.countdown .cd-d{font-family:var(--font-sans);font-size:13px;color:rgba(255,255,255,.66);margin-top:10px;}
+.feat-progress{margin-bottom:22px;}
+.feat-progress .fp-top{display:flex;justify-content:space-between;font-family:var(--font-sans);font-size:12.5px;color:rgba(255,255,255,.72);margin-bottom:8px;}
+.feat-progress .fp-top b{color:#fff;font-family:var(--font-display);font-weight:600;}
+.fbar{height:7px;border-radius:var(--r-pill);background:rgba(255,255,255,.16);overflow:hidden;}
+.fbar span{display:block;height:100%;width:0;border-radius:var(--r-pill);background:linear-gradient(90deg,var(--teal-soft),var(--teal-bright));transition:width 1.1s var(--ease);}
+
+/* Calls grid */
+.calls-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;}
+.call-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);padding:26px;transition:all var(--t-fast) var(--ease);}
+.call-card:hover{box-shadow:var(--shadow-2);transform:translateY(-3px);border-color:var(--hair-strong);}
+.cc-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+.call-card h3{margin:0 0 10px;}
+.call-card .ccd{margin:0 0 18px;flex:1;}
+.cc-pays{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;}
+.cc-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--hair);}
+.cc-foot .apps{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);}
+.cc-foot .apps b{font-family:var(--font-display);font-weight:600;color:var(--ink);}
+.deadline{display:inline-flex;align-items:center;gap:6px;}
+.call-card.closed{opacity:.66;}
+.calls-empty{display:none;padding:50px 0;text-align:center;color:var(--ink-mute);grid-column:1/-1;}
+.calls-empty i{font-size:34px;color:var(--ink-faint);display:block;margin-bottom:10px;}
+
+/* Footer */
+.footer{position:relative;margin-top:80px;overflow:hidden;color:#fff;background:var(--ink);}
+.footer .cf-mesh{opacity:.5;}
+.footer-in{position:relative;max-width:1180px;margin:0 auto;padding:64px 28px 30px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;}.footer-brand img{height:28px;margin-bottom:16px;width:auto;}
+.footer-brand p{color:rgba(255,255,255,.6);max-width:280px;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 14px;}
+.footer-col a{display:block;color:rgba(255,255,255,.72);font-size:14px;padding:5px 0;transition:color var(--t-micro) var(--ease);}
+.footer-col a:hover{color:#fff;}
+.footer-base{position:relative;max-width:1180px;margin:0 auto;padding:18px 28px 30px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.footer-base .caption{color:rgba(255,255,255,.5);}
+
+@media(max-width:1024px){
+  .nav-links a:not(.nav-cta){display:none;}
+  .feat{grid-template-columns:1fr;}
+  .crit-list{grid-template-columns:1fr;}
+  .calls-grid{grid-template-columns:1fr;}
+  .footer-in{grid-template-columns:1fr 1fr;}
+}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}.cf-nav .nav-glob,.cf-nav .nav-icn{width:44px!important;height:44px!important;flex:0 0 auto;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+<style id="cf-utilbar-css">
+.cf-utilbar{background:#fff;border-bottom:1px solid var(--hair);}
+.cf-utility{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:7px 28px;}
+.cf-util-aff{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.cf-util-aff i{font-size:15px;color:var(--teal);}
+.cf-util-aff b{font-weight:600;color:var(--ink-2);}
+.cf-util-right{display:flex;align-items:center;gap:2px;}
+.cf-util-link{font-family:var(--font-display);font-size:12px;font-weight:500;color:var(--ink-mute);padding:6px 11px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:color .16s ease;}
+.cf-util-link:hover{color:var(--teal);}
+.cf-util-sep{width:1px;height:14px;background:var(--hair-strong);margin:0 8px;}
+.cf-util-search{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:var(--ink-mute);font-size:17px;text-decoration:none;transition:color .16s ease,background .16s ease;}
+.cf-util-search:hover{color:var(--teal);background:rgba(125,150,145,.1);}
+@media(max-width:860px){.cf-util-aff,.cf-util-link,.cf-util-sep{display:none;}.cf-utility{justify-content:flex-end;padding:5px 16px;}}
+</style>
+<style id="cf-foot2">
+.footer-top{position:relative;max-width:1180px;margin:0 auto;padding:80px 28px 60px;display:grid;grid-template-columns:1.1fr 2fr;gap:80px;}
+.footer-brand img{height:30px;width:auto;margin-bottom:22px;}
+.footer-mission{color:rgba(255,255,255,.66);font-size:15px;line-height:1.7;max-width:330px;margin:0;}
+.footer-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.fcta-link{color:#fff;font-family:var(--font-display);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;}
+.fcta-link i{transition:transform .16s var(--ease);}.fcta-link:hover i{transform:translateX(3px);}
+.fcta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-family:var(--font-display);font-weight:600;font-size:14px;padding:13px 24px;border-radius:100px;}
+.fcta-btn:hover{background:var(--teal-soft);}.fcta-btn i{transition:transform .16s var(--ease);}.fcta-btn:hover i{transform:translateX(3px);}
+.footer-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:36px;}
+.footer-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 20px;letter-spacing:.01em;}
+.footer-col a,.footer-col span[role]{display:block;color:rgba(255,255,255,.7);font-size:14px;padding:9px 0;font-family:var(--font-sans);transition:color .14s var(--ease);cursor:pointer;}
+.footer-col a:hover,.footer-col span[role]:hover{color:#fff;}
+.footer-col .fnews{color:var(--teal-bright);font-family:var(--font-display);font-weight:600;margin-top:8px;display:inline-flex;align-items:center;gap:7px;}
+.footer-util{position:relative;max-width:1180px;margin:0 auto;padding:34px 28px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:16px 38px;}
+.footer-util a,.footer-util span[role]{color:rgba(255,255,255,.72);font-size:13.5px;font-family:var(--font-display);font-weight:500;cursor:pointer;transition:color .14s var(--ease);}
+.footer-util a:hover,.footer-util span[role]:hover{color:#fff;}
+.footer .footer-base{position:relative;max-width:1180px;margin:0 auto;padding:28px 28px 60px;border-top:0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+@media(max-width:980px){.footer-top{grid-template-columns:1fr;gap:40px;padding:60px 24px 40px;}.footer-cols{grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:560px){.footer-cols{grid-template-columns:1fr 1fr;gap:8px 20px;}.footer-col h4{margin:18px 0 10px;}.footer-col a,.footer-col span[role]{padding:9px 0;font-size:13.5px;}.footer-util{justify-content:center;gap:10px 22px;padding:24px 20px;}.footer .footer-base{flex-direction:column;align-items:flex-start;gap:10px;padding:22px 20px 40px;}}
+</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-nav-elevate">
+/* Public navbar — refined professional elevation (within the CF system) */
+.nav-outer{top:16px;}
+.nav-outer .cf-nav{padding:11px 14px 11px 24px;border:1px solid var(--hair);border-radius:16px;background:rgba(255,255,255,.7);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px);box-shadow:0 1px 2px rgba(6,61,52,.05),0 16px 36px -20px rgba(6,61,52,.24);transition:background .28s var(--ease),box-shadow .28s var(--ease),border-color .28s var(--ease);}
+.nav-outer .cf-nav.scrolled{background:rgba(255,255,255,.93);border-color:var(--hair-strong);box-shadow:0 1px 2px rgba(6,61,52,.06),0 12px 28px -18px rgba(6,61,52,.3);}
+.nav-outer .cf-nav .brand img{height:30px;}
+.nav-outer .nav-links{gap:3px;}
+.nav-outer .nav-links a:not(.nav-cta){position:relative;padding:9px 15px;font-weight:500;letter-spacing:-.1px;color:var(--ink-2);border-radius:10px;transition:color .18s var(--ease),background .18s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;opacity:0;transition:transform .28s var(--ease),opacity .2s var(--ease);}
+.nav-outer .nav-links a:not(.nav-cta):hover{color:var(--ink);background:rgba(10,107,94,.06);}
+.nav-outer .nav-links a:not(.nav-cta).on{color:var(--teal-deep);}
+.nav-outer .nav-links a:not(.nav-cta).on::after{transform:scaleX(1);opacity:1;}
+.nav-outer .nav-links a.nav-cta{margin-left:12px;padding:9px 20px;border-radius:100px;box-shadow:0 1px 2px rgba(6,61,52,.12);transition:background .16s var(--ease),transform .18s var(--ease),box-shadow .22s var(--ease);}
+.nav-outer .nav-links a.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(10,107,94,.55);}
+.nav-outer .nav-links a.nav-cta:active{transform:translateY(0);}
+.cf-util-link{position:relative;}
+.cf-util-link::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:1.5px;border-radius:2px;background:var(--teal);transform:scaleX(0);transform-origin:center;transition:transform .22s var(--ease);}
+.cf-util-link:hover::after{transform:scaleX(1);}
+@media(max-width:860px){.nav-outer .nav-links a.nav-cta{margin-left:0;}}
+</style>
+<script id="cf-nav-elevate-js">(function(){var n=document.querySelector('.nav-outer .cf-nav');if(!n)return;var f=function(){n.classList.toggle('scrolled',(window.pageYOffset||document.documentElement.scrollTop||0)>6);};f();window.addEventListener('scroll',f,{passive:true});})();</script>
+<script type="application/ld+json" id="ld-org">{"@context":"https://schema.org","@type":"Organization","name":"Coastal Futures Network","alternateName":"Réseau Coastal Futures","url":"https://coastalfutures.africagovernanceinstitute.org/","logo":"https://coastalfutures.africagovernanceinstitute.org/assets/logos/logo-horizontal-dark.svg","email":"contact@africagovernanceinstitute.org","description":"Programme régional de l'Institut Africain de la Gouvernance accompagnant 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest : Sénégal, Ghana, Guinée, Liberia et Sierra Leone.","parentOrganization":{"@type":"Organization","name":"Institut Africain de la Gouvernance","alternateName":"Africa Governance Institute"},"areaServed":[{"@type":"Country","name":"Senegal"},{"@type":"Country","name":"Ghana"},{"@type":"Country","name":"Guinea"},{"@type":"Country","name":"Liberia"},{"@type":"Country","name":"Sierra Leone"}]}</script>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<!-- ===== Nav ===== -->
+<!-- ===== Navigation unifiée ===== -->
+<div class="nav-outer">
+  <nav class="cf-nav" id="cfNav">
+    <div class="nav-inner">
+      <button class="cf-burger" id="cfBurger" aria-label="Menu" aria-expanded="false" type="button"><i class="ti ti-menu-2"></i></button>
+      <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network"></a>
+      <div class="nav-links">
+        <a href="a-propos.html" data-i18n="nav.prog">Le programme</a>
+        <a href="carte-impact.html" data-i18n="nav.map">Carte d'impact</a>
+        <a href="ecosysteme.html" class="on" data-i18n="nav.eco">Écosystème</a>
+        <a href="actualites.html" data-i18n="nav.res">Actualités</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-r">
+        <a href="recherche.html" class="nav-icn" aria-label="Rechercher"><i class="ti ti-search"></i></a>
+        <div class="nav-glob-wrap">
+          <button class="nav-glob" id="cfGlob" type="button" aria-label="Langue · Language" aria-haspopup="true" aria-expanded="false"><i class="ti ti-world"></i></button>
+          <div class="lang-pop" id="cfLangPop" hidden role="listbox" aria-label="Choisir la langue">
+            <button class="lang-opt" type="button" data-lang="fr" role="option"><span class="lang-name">Français</span><i class="ti ti-check lc" aria-hidden="true"></i></button>
+            <button class="lang-opt" type="button" data-lang="en" role="option"><span class="lang-name">English</span><i class="ti ti-check lc" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <a href="connexion.html" class="nav-cta" data-nav-espace>Mon espace</a>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Mobile drawer -->
+<div class="cf-mob" id="cfMob" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="mob-head">
+    <a class="brand" href="index.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures Network" style="height:28px;width:auto"></a>
+    <button class="mob-x" id="cfMobX" type="button" aria-label="Fermer"><i class="ti ti-x"></i></button>
+  </div>
+  <div class="mob-links">
+    <a href="index.html"><i class="ti ti-home"></i><span>Accueil</span></a>
+    <a href="a-propos.html"><i class="ti ti-info-circle"></i><span data-i18n="nav.prog">Le programme</span></a>
+    <a href="carte-impact.html"><i class="ti ti-map-2"></i><span data-i18n="nav.map">Carte d'impact</span></a>
+    <a href="ecosysteme.html" class="on"><i class="ti ti-plant-2"></i><span data-i18n="nav.eco">Écosystème</span></a>
+    <a href="actualites.html"><i class="ti ti-news"></i><span data-i18n="nav.res">Actualités</span></a>
+    <a href="contact.html"><i class="ti ti-mail"></i><span data-i18n="nav.contact">Contact</span></a>
+    <div class="mob-sep"></div>
+    <div class="mob-sec">Institut</div>
+    <a href="a-propos.html#partenaires"><i class="ti ti-heart-handshake"></i><span data-nav-espace-p="partners">Partenaires</span></a>
+    <a href="mediatheque.html"><i class="ti ti-photo"></i><span data-nav-espace-p="press">Espace presse</span></a>
+    <a href="plan-du-site.html"><i class="ti ti-sitemap"></i><span data-nav-espace-p="sitemap">Plan du site</span></a>
+  </div>
+  <div class="mob-foot">
+    <div class="mob-lang" id="cfMobLang">
+      <button type="button" class="active" data-mob-lang="fr">Français</button>
+      <button type="button" data-mob-lang="en">English</button>
+    </div>
+    <a href="connexion.html" class="mob-cta"><i class="ti ti-user-circle"></i><span data-nav-espace>Mon espace</span></a>
+  </div>
+</div>
+<div class="cf-scrim" id="cfScrim"></div>
+<main id="cf-content">
+
+<!-- ===== Header ===== -->
+<div class="wrap" data-screen-label="Appels à candidatures">
+  <div class="dir-head">
+    <div class="breadcrumb"><a href="ecosysteme.html">Écosystème</a><i class="ti ti-chevron-right"></i><span>Appels à candidatures</span></div>
+    <span id="cf-main" tabindex="-1"></span><h1 class="display-xl">Appels à candidatures</h1>
+    <p class="dh-sub lead">Bourses, incubation et financements pour les jeunes porteurs de solutions vertes du littoral. Trouvez l'appel fait pour votre projet.</p>
+    <div class="tabs" id="tabs">
+      <button class="active" data-tab="ouvert">Ouverts <span class="cnt">4</span></button>
+      <button data-tab="avenir">À venir <span class="cnt">2</span></button>
+      <button data-tab="cloture">Clôturés <span class="cnt">1</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Featured (ouvert) ===== -->
+<div class="wrap">
+  <div class="feat reveal grp grp-ouvert" data-deadline="2026-06-30">
+    <div class="feat-body">
+      <div class="feat-meta">
+        <span class="bdg bdg-teal">Entreprise verte</span>
+        <span class="bdg bdg-sand">À la une</span>
+        <span class="deadline bdg bdg-pend dl-badge"><span class="dot"></span>Clôture le 30 juin 2026</span>
+      </div>
+      <h2 class="display-md">Cohorte 1 : incubation des entreprises vertes</h2>
+      <p class="fdesc body">Douze semaines d'accompagnement intensif, accès au réseau de mentors, et soutien complet à la labellisation pour les jeunes entreprises vertes en phase de démarrage.</p>
+      <div class="feat-pays">
+        <div class="ct">Pays éligibles</div>
+        <div class="chips">
+          <span class="chip-soft">Sénégal</span><span class="chip-soft">Ghana</span><span class="chip-soft">Guinée-Conakry</span><span class="chip-soft">Liberia</span><span class="chip-soft">Sierra Leone</span>
+        </div>
+      </div>
+      <div class="feat-crit">
+        <div class="ct">Critères d'éligibilité</div>
+        <div class="crit-list">
+          <div class="ci"><i class="ti ti-circle-check"></i>Porteur âgé de 18 à 35 ans</div>
+          <div class="ci"><i class="ti ti-circle-check"></i>Projet vert en phase de démarrage</div>
+          <div class="ci"><i class="ti ti-circle-check"></i>Résider dans un pays du programme</div>
+          <div class="ci"><i class="ti ti-circle-check"></i>Impact mesurable sur le littoral</div>
+        </div>
+      </div>
+      <a href="parcours-entrepreneur.html" class="sel-link"><i class="ti ti-scale"></i><span>Ces conditions disent qui peut candidater. Voir les critères de sélection et le parcours</span><i class="ti ti-arrow-right"></i></a>
+      <a href="candidature.html" class="btn btn-pri">Postuler maintenant <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="feat-side">
+      <div class="cf-mesh"></div>
+      <div class="countdown">
+        <div class="cd-n tnum" data-days>28</div>
+        <div class="cd-l">jours restants</div>
+        <div class="cd-d">Clôture le mardi 30 juin 2026, 23h59 GMT</div>
+      </div>
+      <div class="feat-progress">
+        <div class="fp-top"><span>Candidatures déposées</span><b>42 / 60</b></div>
+        <div class="fbar"><span data-pct="70"></span></div>
+      </div>
+      <a href="candidature.html" class="btn btn-glass btn-block" style="background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.28);">Voir les détails complets</a>
+    </div>
+  </div>
+
+  <!-- ===== Other calls ===== -->
+  <div class="calls-grid" id="callsGrid">
+
+    <article class="call-card grp grp-ouvert" data-deadline="2026-07-15">
+      <div class="cc-meta"><span class="bdg bdg-teal">Restauration de mangroves</span><span class="deadline bdg bdg-pend dl-badge"><span class="dot"></span>30 juin</span></div>
+      <h3 class="display-sm">Bourse restauration de mangroves côtières</h3>
+      <p class="ccd body-sm">Financement de semis et suivi des indicateurs de surface restaurée pour les projets communautaires de protection du littoral.</p>
+      <div class="cc-pays"><span class="chip-soft">Liberia</span><span class="chip-soft">Sierra Leone</span></div>
+      <div class="cc-foot"><span class="apps"><b>19</b> candidatures</span><a href="candidature.html" class="btn btn-light btn-sm">Postuler <i class="ti ti-arrow-right"></i></a></div>
+    </article>
+
+    <article class="call-card grp grp-ouvert" data-deadline="2026-08-12">
+      <div class="cc-meta"><span class="bdg bdg-teal">Énergie renouvelable</span><span class="deadline bdg bdg-live dl-badge"><span class="dot"></span>12 août</span></div>
+      <h3 class="display-sm">Fonds énergie renouvelable jeunesse</h3>
+      <p class="ccd body-sm">Subventions d'amorçage pour les mini-réseaux solaires et solutions d'accès à l'énergie portées par des jeunes.</p>
+      <div class="cc-pays"><span class="chip-soft">Sénégal</span><span class="chip-soft">Ghana</span><span class="chip-soft">Guinée-Conakry</span></div>
+      <div class="cc-foot"><span class="apps"><b>27</b> candidatures</span><a href="candidature.html" class="btn btn-light btn-sm">Postuler <i class="ti ti-arrow-right"></i></a></div>
+    </article>
+
+    <article class="call-card grp grp-ouvert" data-deadline="2026-08-28">
+      <div class="cc-meta"><span class="bdg bdg-teal">Mentorat</span><span class="deadline bdg bdg-live dl-badge"><span class="dot"></span>28 août</span></div>
+      <h3 class="display-sm">Programme mentorat finance verte</h3>
+      <p class="ccd body-sm">Six mois d'accompagnement par des experts de la finance verte pour structurer votre modèle et préparer une levée de fonds.</p>
+      <div class="cc-pays"><span class="chip-soft">Tous les pays</span></div>
+      <div class="cc-foot"><span class="apps"><b>11</b> candidatures</span><a href="candidature.html" class="btn btn-light btn-sm">Postuler <i class="ti ti-arrow-right"></i></a></div>
+    </article>
+
+    <article class="call-card grp grp-avenir">
+      <div class="cc-meta"><span class="bdg bdg-teal">Économie circulaire</span><span class="bdg bdg-out"><i class="ti ti-clock" style="font-size:12px;"></i>Ouverture sept. 2026</span></div>
+      <h3 class="display-sm">Appel économie circulaire côtière</h3>
+      <p class="ccd body-sm">Soutien aux coopératives de collecte et de valorisation des déchets du littoral. Ouverture prochaine, préparez votre dossier.</p>
+      <div class="cc-pays"><span class="chip-soft">Ghana</span><span class="chip-soft">Sénégal</span></div>
+      <div class="cc-foot"><span class="apps">Notifications à l'ouverture</span><a href="contact.html" class="btn btn-light btn-sm">M'avertir <i class="ti ti-bell"></i></a></div>
+    </article>
+
+    <article class="call-card grp grp-avenir">
+      <div class="cc-meta"><span class="bdg bdg-teal">Agriculture résiliente</span><span class="bdg bdg-out"><i class="ti ti-clock" style="font-size:12px;"></i>Ouverture oct. 2026</span></div>
+      <h3 class="display-sm">Bourse agriculture climato-résiliente</h3>
+      <p class="ccd body-sm">Financement de parcelles pilotes et d'équipements pour les jeunes agriculteurs des zones côtières.</p>
+      <div class="cc-pays"><span class="chip-soft">Sierra Leone</span><span class="chip-soft">Liberia</span></div>
+      <div class="cc-foot"><span class="apps">Notifications à l'ouverture</span><a href="contact.html" class="btn btn-light btn-sm">M'avertir <i class="ti ti-bell"></i></a></div>
+    </article>
+
+    <article class="call-card closed grp grp-cloture">
+      <div class="cc-meta"><span class="bdg bdg-teal">Entreprise verte</span><span class="bdg bdg-rej"><span class="dot"></span>Clôturé</span></div>
+      <h3 class="display-sm">Manifestations d'intérêt, pré-lancement</h3>
+      <p class="ccd body-sm">Pré-inscriptions clôturées en avril 2026, en amont du lancement officiel. Elles ont préparé l'ouverture de la première cohorte.</p>
+      <div class="cc-pays"><span class="chip-soft">Tous les pays</span></div>
+      <div class="cc-foot"><span class="apps"><b>140</b> manifestations d'intérêt</span><a href="carte-impact.html" class="btn btn-light btn-sm">Voir la carte</a></div>
+    </article>
+
+    <div class="calls-empty" id="callsEmpty"><i class="ti ti-mailbox"></i>Aucun appel dans cette catégorie pour le moment.</div>
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<style id="cf-news-css">.cf-news{background:#F8FBFA;border-top:1px solid #DCE9E6;padding:74px 28px;}.cf-news-in{max-width:600px;margin:0 auto;text-align:center;display:block;}.cf-news-k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.16em;color:#0A6B5E;}.cf-news h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:300;font-size:34px;line-height:1.1;letter-spacing:-1.4px;color:#0C2420;margin:14px 0 10px;}.cf-news p{font-family:'DM Sans',system-ui,sans-serif;font-size:15.5px;line-height:1.6;color:#5C7B76;margin:0 auto;max-width:470px;}.cf-news-form{margin-top:30px;}.cf-news-row{display:flex;align-items:center;max-width:440px;margin:0 auto;border-bottom:1.5px solid #B4CDC8;transition:border-color .16s ease;}.cf-news-row:focus-within{border-color:#0A6B5E;}.cf-news-form input{flex:1;font-family:'DM Sans',system-ui,sans-serif;font-size:16px;color:#0C2420;background:transparent;border:0;padding:12px 2px;outline:none;}.cf-news-form input::placeholder{color:#5C7B76;}.cf-news-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;color:#0A6B5E;background:transparent;border:0;padding:12px 2px 12px 16px;cursor:pointer;white-space:nowrap;transition:color .16s ease;}.cf-news-btn:hover{color:#063D34;}.cf-news-btn i{transition:transform .16s ease;}.cf-news-btn:hover i{transform:translateX(3px);}.cf-news-note{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:#5C7B76;margin-top:14px;}.cf-news-err{display:none;font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:#8F2A1A;margin-top:12px;}.cf-news-err.show{display:block;}.cf-news-ok{display:none;align-items:center;justify-content:center;gap:7px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:500;color:#066B52;margin-top:14px;}.cf-news-ok.show{display:inline-flex;}@media(max-width:560px){.cf-news{padding:54px 24px;}.cf-news h2{font-size:27px;}}</style>
+<section class="cf-news" id="cf-news"><div class="cf-news-in"><div class="cf-news-txt"><div class="cf-news-k">NEWSLETTER</div><h2 id="cfnH"></h2><p id="cfnP"></p></div><form class="cf-news-form" id="cfnForm" novalidate><div class="cf-news-row"><input type="email" id="cfnEmail" autocomplete="email"><button type="submit" class="cf-news-btn" id="cfnBtn"></button></div><div class="cf-news-note" id="cfnNote"></div><div class="cf-news-err" id="cfnErr"></div><div class="cf-news-ok" id="cfnOk"></div></form></div></section>
+</main>
+<footer class="footer">
+  <div class="cf-mesh"></div>
+  <div class="cf-coastline cf-coastline--top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path pathLength="1" d="M-10,70 C80,62 140,50 196,52 C236,53 256,76 300,78 C356,81 392,54 458,58 C540,63 586,98 668,94 C730,91 772,62 850,65 C946,69 998,104 1092,98 C1166,93 1212,64 1296,68 C1372,71 1418,96 1452,90"></path></svg></div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures Network">
+      <p class="footer-mission">Coastal Futures Network repositionne 4 000 jeunes entrepreneurs verts au cœur de l'économie côtière d'Afrique de l'Ouest, à travers cinq nations.</p>
+      <p class="footer-affil" data-i18n="ft.affil" style="color:rgba(255,255,255,.85);font-family:var(--font-display);font-weight:600;font-size:13.5px;margin:14px 0 0;">Un programme de l'Institut Africain de la Gouvernance.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><h4>Programme</h4><a href="a-propos.html">À propos</a><a href="carte-impact.html">Carte d'impact</a><a href="actualites.html">Actualités</a><a href="evenements.html">Événements</a><a href="appels-candidatures.html">Appels à candidatures</a></div>
+      <div class="footer-col"><h4>Écosystème</h4><a href="ecosysteme.html">L'écosystème</a><a href="annuaire-entrepreneurs.html">Annuaire entrepreneurs</a><a href="annuaire-mentors.html">Annuaire mentors</a><a href="carte-impact.html">Pays d'intervention</a></div>
+      <div class="footer-col"><h4>Ressources</h4><a href="mediatheque.html">Médiathèque</a><a href="bibliotheque.html">Recherche-action</a><a href="methodologie-indicateurs.html">Méthodologie d'impact</a><a href="contact.html">Presse</a></div>
+      <div class="footer-col"><h4>Institut</h4><a href="a-propos.html">Institut Africain de la Gouvernance</a><a href="a-propos.html">Partenaires</a><a href="contact.html">Contact</a><a href="plan-du-site.html">Plan du site</a></div>
+      <div class="footer-col"><h4>Suivez le programme</h4><span role="button" tabindex="0">LinkedIn</span><span role="button" tabindex="0">X (Twitter)</span><span role="button" tabindex="0">YouTube</span><a href="contact.html" class="fnews">Newsletter <i class="ti ti-arrow-right"></i></a></div>
+    </div>
+  </div>
+  <div class="footer-util">
+    <a href="plan-du-site.html">Plan du site</a><a href="confidentialite.html">Confidentialité</a><a href="declaration-accessibilite.html">Accessibilité</a><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a><a href="connexion-bailleur.html">Espace bailleurs</a>
+  </div>
+  <div class="footer-base">
+    <span class="caption">© 2026 Coastal Futures Network · Institut Africain de la Gouvernance</span>
+    <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Live countdown (days remaining from today)
+  var today=new Date();
+  [].slice.call(document.querySelectorAll('[data-deadline]')).forEach(function(el){
+    var dl=new Date(el.getAttribute('data-deadline')+'T23:59:59');
+    var days=Math.max(0,Math.ceil((dl-today)/(1000*60*60*24)));
+    var dn=el.querySelector('[data-days]'); if(dn) dn.textContent=days;
+    // warning style if <30 days
+    var badge=el.querySelector('.dl-badge');
+    if(badge && days<30){ badge.classList.remove('bdg-live'); badge.classList.add('bdg-pend'); }
+  });
+
+  // Tabs
+  var tabs=document.getElementById('tabs');
+  var feat=document.querySelector('.feat');
+  var empty=document.getElementById('callsEmpty');
+  function setTab(t){
+    feat.style.display=(t==='ouvert')?'':'none';
+    var vis=0;
+    [].slice.call(document.querySelectorAll('.calls-grid .grp')).forEach(function(c){
+      var show=c.classList.contains('grp-'+t);
+      c.style.display=show?'':'none'; if(show)vis++;
+    });
+    empty.style.display=vis===0?'block':'none';
+  }
+  [].slice.call(tabs.querySelectorAll('button')).forEach(function(b){
+    b.addEventListener('click',function(){
+      [].slice.call(tabs.querySelectorAll('button')).forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active'); setTab(b.getAttribute('data-tab'));
+    });
+  });
+  setTab('ouvert');
+
+  // reveal + progress bar
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  var bar=document.querySelector('.fbar span');
+  if(reduce){ reveals.forEach(function(el){el.classList.add('in');}); if(bar)bar.style.width=bar.getAttribute('data-pct')+'%'; return; }
+  function inView(el){var r=el.getBoundingClientRect();var vh=window.innerHeight||document.documentElement.clientHeight;return r.top<vh*0.94&&r.bottom>0;}
+  var barDone=false;
+  function reveal(el){if(el.classList.contains('in'))return;el.classList.add('in');}
+  function check(){ reveals.forEach(function(el){ if(inView(el)) reveal(el); }); if(!barDone && bar && inView(bar)){ barDone=true; bar.style.width=bar.getAttribute('data-pct')+'%'; } }
+  check();
+  window.addEventListener('scroll', check, {passive:true});
+  window.addEventListener('load', check);
+  setTimeout(function(){ reveals.forEach(function(el){ if(inView(el)){el.style.transition='none';el.classList.add('in');} }); if(!barDone&&bar){bar.style.width=bar.getAttribute('data-pct')+'%';} }, 800);
+})();
+</script>
+
+<style id="cf-sellink">.sel-link{display:flex;align-items:center;gap:9px;margin:0 0 24px;padding-top:16px;border-top:1px solid var(--hair);font-family:var(--font-display);font-weight:500;font-size:13.5px;color:var(--teal-deep);transition:color .16s var(--ease);}
+.sel-link i:first-child{font-size:17px;color:var(--teal);flex-shrink:0;}
+.sel-link span{flex:1;line-height:1.4;}
+.sel-link i:last-child{font-size:16px;flex-shrink:0;color:var(--teal);transition:transform .16s var(--ease);}
+.sel-link:hover{color:var(--teal);}
+.sel-link:hover i:last-child{transform:translateX(3px);}
+@media(max-width:560px){.sel-link{font-size:13px;}}</style>
+<script id="cf-i18n">(function(){var D={"Un programme de l'Institut Africain de la Gouvernance.":"A programme of the Africa Governance Institute.","Ces conditions disent qui peut candidater. Voir les critères de sélection et le parcours":"These conditions say who may apply. See the selection criteria and the journey","Cohorte 1 : incubation des entreprises vertes":"Cohort 1: green enterprise incubation","Manifestations d'intérêt, pré-lancement":"Expressions of interest, pre-launch","Pré-inscriptions clôturées en avril 2026, en amont du lancement officiel. Elles ont préparé l'ouverture de la première cohorte.":"Pre-registrations closed in April 2026, ahead of the official launch. They prepared the opening of the first cohort.","manifestations d'intérêt":"expressions of interest","Voir la carte":"View map","Méthodologie d'impact":"Impact methodology","Espace bailleurs":"Donor area","Un programme de l'Institut Africain de la Gouvernance, qui repositionne la jeunesse au centre de la transition verte en Afrique de l'Ouest.":"A programme of the Africa Governance Institute, placing youth at the heart of the green transition in West Africa.","Sénégal":"Senegal","Guinée-Conakry":"Guinea","Bourses, incubation et financements pour les jeunes porteurs de solutions vertes du littoral. Trouvez l'appel fait pour votre projet.":"Grants, incubation and funding for young green solution leaders on the coast. Find the call made for your project.","Ouverts":"Open","Clôturés":"Closed","Clôture le 30 juin 2026":"Closes 30 June 2026","Cohorte 2 : incubation des entreprises vertes":"Cohort 2: green enterprise incubation","Douze semaines d'accompagnement intensif, accès au réseau de mentors, et soutien complet à la labellisation pour les jeunes entreprises vertes en phase de démarrage.":"Twelve weeks of intensive support, access to the mentor network, and full help towards certification for early-stage young green businesses.","Pays éligibles":"Eligible countries","Critères d'éligibilité":"Eligibility criteria","Porteur âgé de 18 à 35 ans":"Leader aged 18 to 35","Projet vert en phase de démarrage":"Early-stage green project","Résider dans un pays du programme":"Resident in a programme country","Impact mesurable sur le littoral":"Measurable impact on the coast","jours restants":"days left","Clôture le mardi 30 juin 2026, 23h59 GMT":"Closes Tuesday 30 June 2026, 23:59 GMT","Candidatures déposées":"Applications submitted","Voir les détails complets":"View full details","30 juin":"30 June","Bourse restauration de mangroves côtières":"Coastal mangrove restoration grant","Financement de semis et suivi des indicateurs de surface restaurée pour les projets communautaires de protection du littoral.":"Funding for seedlings and tracking of restored-area indicators for community coastal-protection projects.","candidatures":"applications","12 août":"12 August","Fonds énergie renouvelable jeunesse":"Youth renewable energy fund","Subventions d'amorçage pour les mini-réseaux solaires et solutions d'accès à l'énergie portées par des jeunes.":"Seed grants for youth-led solar mini-grids and energy-access solutions.","28 août":"28 August","Programme mentorat finance verte":"Green finance mentoring programme","Six mois d'accompagnement par des experts de la finance verte pour structurer votre modèle et préparer une levée de fonds.":"Six months of support from green-finance experts to structure your model and prepare a fundraise.","Ouverture sept. 2026":"Opens Sep. 2026","Appel économie circulaire côtière":"Coastal circular economy call","Soutien aux coopératives de collecte et de valorisation des déchets du littoral. Ouverture prochaine, préparez votre dossier.":"Support for coastal waste collection and recovery cooperatives. Opening soon, prepare your application.","Notifications à l'ouverture":"Notifications at opening","M'avertir":"Notify me","Ouverture oct. 2026":"Opens Oct. 2026","Bourse agriculture climato-résiliente":"Climate-resilient agriculture grant","Financement de parcelles pilotes et d'équipements pour les jeunes agriculteurs des zones côtières.":"Funding for pilot plots and equipment for young farmers in coastal areas.","Cohorte 1 : incubation des entreprises vertes":"Cohort 1: green enterprise incubation","Premier appel du programme, clôturé en avril 2026. La première cohorte est en cours de constitution.":"The programme's first call, closed in April 2026. The first cohort is being assembled.","candidatures reçues":"applications received","Voir les projets":"View the projects","Aucun appel dans cette catégorie pour le moment.":"No call in this category for now.","Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Programme":"Programme","Contact":"Contact","À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Événements":"Events","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Accueil hub":"Hub home","Entrepreneurs":"Entrepreneurs","Mentors":"Mentors","Appels":"Calls","Carte":"Map","Postuler":"Apply","Postuler maintenant":"Apply now","Voir le profil":"View profile","Voir le détail":"View details","Voir la fiche":"View details","S'inscrire":"Register","Télécharger":"Download","Télécharger le PDF":"Download PDF","Tout voir":"See all","Suivant":"Next","Précédent":"Previous","Enregistrer":"Save","Annuler":"Cancel","Envoyer":"Send","Envoyer le message":"Send message","Contacter":"Contact","Découvrir":"Discover","Réinitialiser":"Reset","Continuer":"Continue","Confirmer":"Confirm","Approuver":"Approve","Décliner":"Decline","Rejeter":"Reject","Voir sur la carte":"View on map","Aperçu public":"Public preview","Nouvelle candidature":"New application","Mettre à jour":"Update","Labellisé":"Certified","En incubation":"In incubation","En revue":"Under review","Soumis":"Submitted","Brouillon":"Draft","Rejeté":"Rejected","Disponible":"Available","Indisponible":"Unavailable","Zone pilote":"Pilot zone","Hub jeunesse":"Youth hub","Présentiel":"In person","Virtuel":"Online","Hybride":"Hybrid","À la une":"Featured","À venir":"Upcoming","Passés":"Past","Clôturé":"Closed","Actif":"Active","Inactif":"Inactive","Toutes":"All","Tous":"All","Tous les pays":"All countries","Tous les secteurs":"All sectors","Tous les statuts":"All statuses","Toutes les expertises":"All areas of expertise","Tous les types":"All types","Tous les thèmes":"All themes","Toutes les années":"All years","Toutes les universités":"All universities","Disponibles uniquement":"Available only","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Recyclage et déchets":"Recycling and waste","Agriculture résiliente":"Resilient agriculture","Entreprise verte":"Green enterprise","Économie circulaire":"Circular economy","Finance verte":"Green finance","Impact investing":"Impact investing","Mentorat":"Mentoring","Entrepreneurs verts":"Green entrepreneurs","Projets actifs":"Active projects","Mangroves restaurées":"Mangroves restored","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Mentors et experts":"Mentors and experts","Partenaires engagés":"Engaged partners","Foyers raccordés":"Households connected","Emplois verts créés":"Green jobs created","Emplois créés":"Jobs created","Tableau de bord":"Dashboard","Tableau de bord impact":"Impact dashboard","Données en temps réel":"Real-time data","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Demandes":"Requests","Mes mentorés":"My mentees","Utilisateurs":"Users","Candidatures":"Applications","Projets et indicateurs":"Projects and indicators","Alertes":"Alerts","Paramètres":"Settings","Statistiques":"Statistics","Se déconnecter":"Sign out","Espace bailleurs PTF":"Donor area","Vue par pays":"By country","Vue consolidée":"Consolidated view","Exporter le rapport PDF":"Export PDF report","Mentor":"Mentor","Entrepreneur":"Entrepreneur","Partenaire":"Partner","Administratrice":"Administrator","Coordination du programme":"Programme coordination","candidatures ouvertes":"open calls","cinq pays, cinq hubs":"five countries, five hubs","une plateforme, quatre espaces":"one platform, four areas","vision et mission":"vision and mission","gouvernance":"governance","alignement stratégique":"strategic alignment","à propos du programme":"about the programme","calendrier sur douze mois, avril 2026 à mars 2027":"twelve-month calendar, april 2026 to march 2027","Page introuvable":"Page not found","Erreur serveur":"Server error","Retour à l'accueil":"Back to home","Réessayer":"Retry","Contacter le support":"Contact support","Notifications":"Notifications","Tout marquer lu":"Mark all as read","Prochains événements":"Upcoming events","Prochaines sessions":"Upcoming sessions","Mes mentorés actifs":"My active mentees","Demandes de contact":"Contact requests","Profil complété":"Profile completed","Activité récente":"Recent activity","Startups labellisées":"Certified startups","Mentors disponibles":"Available mentors"};var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});setLang(l);})();</script>
+<style id="cf-auth-css">.nav-profile{display:inline-flex;align-items:center;gap:9px;padding:5px 15px 5px 6px;border-radius:100px;border:1px solid var(--hair,#DCE9E6);background:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--ink,#0C2420);cursor:pointer;transition:border-color .16s ease;text-decoration:none;}.nav-profile:hover{border-color:var(--teal,#0A6B5E);}.nav-profile .pa{width:30px;height:30px;border-radius:50%;background:var(--teal-deep,#063D34);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;}</style><script id="cf-auth-js">(function(){if(localStorage.getItem("cf-auth")==="1"){var b=document.querySelector("a.nav-cta");if(b){var nm=localStorage.getItem("cf-name")||"Mon espace";var ini=nm.split(" ").map(function(x){return x[0]||"";}).join("").slice(0,2).toUpperCase();var a=document.createElement("a");a.href="tableau-de-bord.html";a.className="nav-profile";a.innerHTML='<span class="pa">'+ini+'</span>'+nm;b.parentNode.replaceChild(a,b);}}})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+<script id="cf-news-js">(function(){
+var T={fr:{h:"Restez informé du programme",p:"Recevez les appels à candidatures, les événements et les actualités de Coastal Futures, une fois par mois.",b:"S'inscrire",ph:"Votre adresse e-mail",err:"Veuillez saisir une adresse e-mail valide.",ok:"Merci. Un e-mail de confirmation vient de vous être envoyé : ouvrez le lien pour confirmer votre inscription.",okp:"Merci, votre inscription est enregistrée.",confirm:"Confirmer mon inscription",already:"Cette adresse est déjà inscrite à la newsletter.",note:"Une fois par mois. Désinscription en un clic."},en:{h:"Stay informed about the programme",p:"Get calls for applications, events and news from Coastal Futures, once a month.",b:"Subscribe",ph:"Your email address",err:"Please enter a valid email address.",ok:"Thank you. A confirmation email has just been sent : open the link to confirm your subscription.",okp:"Thank you, your subscription is recorded.",confirm:"Confirm my subscription",already:"This address is already subscribed to the newsletter.",note:"Once a month. Unsubscribe in one click."}};
+var H=document.getElementById("cfnH"),P=document.getElementById("cfnP"),B=document.getElementById("cfnBtn"),E=document.getElementById("cfnEmail"),ER=document.getElementById("cfnErr"),OK=document.getElementById("cfnOk"),NOTE=document.getElementById("cfnNote");
+if(!H)return;
+function L(){return document.documentElement.lang==="en"?"en":"fr";}
+function render(){var t=T[L()];H.textContent=t.h;P.textContent=t.p;B.innerHTML=t.b+' <i class="ti ti-arrow-right"></i>';E.placeholder=t.ph;ER.textContent=t.err;if(NOTE)NOTE.textContent=t.note;}
+render();
+try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}
+document.getElementById("cfnForm").addEventListener("submit",function(e){
+  e.preventDefault();var v=E.value.trim().toLowerCase();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){ER.classList.add("show");OK.classList.remove("show");return;}
+  ER.classList.remove("show");
+  var t=T[L()],token=null,msg=t.okp,stored=false;
+  try{
+    if(window.CFCol){
+      var subs=CFCol.all("subscribers");
+      var ex=subs.filter(function(s){return s.email===v;})[0];
+      if(ex&&ex.status!=="unsubscribed"){ token=ex.token; msg=t.already; stored=true; }
+      else{
+        token="ntk-"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+        var rec={id:(ex?ex.id:("sub-"+CFCol.slug(v)+"-"+Date.now().toString(36))),email:v,lang:L(),status:"pending",consent:true,token:token,createdAt:new Date().toISOString().slice(0,10)};
+        CFCol.upsert("subscribers",rec); stored=true; msg=t.ok;
+      }
+    }
+  }catch(err){}
+  var link=(stored&&token)?(' <a href="newsletter.html?confirm='+encodeURIComponent(token)+'" style="color:var(--teal);text-decoration:underline;font-weight:600;">'+t.confirm+'</a>'):'';
+  OK.innerHTML='<i class="ti ti-circle-check"></i>'+msg+link;
+  OK.classList.add("show");
+  E.value="";
+});
+})();</script>
+<style id="cf-mobnav">.cf-burger{display:none;width:42px;height:42px;border:1px solid var(--hair,#DCE9E6);background:#fff;border-radius:12px;color:var(--ink,#0C2420);cursor:pointer;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-burger:hover{border-color:var(--teal,#0A6B5E);color:var(--teal,#0A6B5E);}.cf-mdrawer{position:fixed;inset:0;z-index:120;display:none;}.cf-mdrawer.open{display:block;}.cf-mdrawer .scrim{position:absolute;inset:0;background:rgba(8,28,24,.5);opacity:0;transition:opacity .28s cubic-bezier(.4,0,.2,1);}.cf-mdrawer.show .scrim{opacity:1;}.cf-mdrawer .panel{position:absolute;top:0;right:0;height:100%;width:min(86%,360px);background:#0C2420;overflow:hidden;transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;}.cf-mdrawer.show .panel{transform:translateX(0);}.cf-mdrawer .pm{position:absolute;inset:0;opacity:.5;background:radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.45) 0%,transparent 52%),radial-gradient(80% 70% at 92% 8%,rgba(201,163,94,.22) 0%,transparent 55%),radial-gradient(70% 90% at 60% 100%,rgba(10,107,94,.5) 0%,transparent 60%);}.cf-mdrawer .ph{position:relative;display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.1);}.cf-mdrawer .ph img{height:26px;width:auto;}.cf-mdrawer .pc{width:40px;height:40px;border-radius:11px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;}.cf-mdrawer .pl{position:relative;flex:1;overflow-y:auto;padding:14px 12px;}.cf-mdrawer .pl a{display:flex;align-items:center;min-height:52px;padding:8px 16px;border-radius:12px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:19px;font-weight:500;color:rgba(255,255,255,.86);text-decoration:none;}.cf-mdrawer .pl a:hover,.cf-mdrawer .pl a.on{background:rgba(62,203,176,.16);color:var(--teal-bright,#3ECBB0);}.cf-mdrawer .pf{position:relative;padding:16px 20px 24px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px;}.cf-mdrawer .pf .ml{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:8px 14px;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}.cf-mdrawer .pf .ml img{width:22px;height:15px;border-radius:3px;object-fit:cover;}.cf-mdrawer .pf .mc{flex:1;text-align:center;background:var(--teal,#0A6B5E);color:#fff;border-radius:100px;padding:11px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;}body.cf-noscroll{overflow:hidden;}@media(max-width:1024px){.cf-nav .nav-links{display:none !important;}.cf-nav .nav-r .nav-cta,.cf-nav .nav-r .nav-profile{display:none !important;}.cf-burger{display:inline-flex;}}</style><script id="cf-mobnav-js">(function(){var nav=document.querySelector(".cf-nav");if(!nav)return;var links=nav.querySelector(".nav-links");if(!links)return;var burger=nav.querySelector(".cf-burger");if(!burger){return;}var logo=(nav.querySelector(".brand img")||{}).src||"assets/logos/logo-horizontal-dark.svg";var anchors=[].slice.call(links.querySelectorAll("a")).filter(function(a){return !a.classList.contains("nav-cta");});var cta=links.querySelector(".nav-cta");var d=document.createElement("div");d.className="cf-mdrawer";d.id="cfMdrawer";var linksHtml=anchors.map(function(a){return '<a href="'+a.getAttribute("href")+'"'+(a.classList.contains("on")?' class="on"':'')+'>'+a.textContent.trim()+'</a>';}).join("");var ctaHtml=cta?'<a class="mc" href="'+cta.getAttribute("href")+'">'+cta.textContent.trim()+'</a>':"";var flag=document.querySelector(".cf-flag");var flagSrc=flag?flag.getAttribute("src"):"assets/flags/fr.png";var lc=(document.querySelector(".cf-lc")||{}).textContent||"FR";d.innerHTML='<div class="scrim" data-close></div><div class="panel"><div class="pm"></div><div class="ph"><img loading="lazy" decoding="async" src="'+logo+'" alt=""><button class="pc" data-close aria-label="Fermer"><i class="ti ti-x"></i></button></div><div class="pl">'+linksHtml+'</div><div class="pf"><button class="ml" data-mlang><img loading="lazy" decoding="async" src="'+flagSrc+'" alt=""><b>'+lc+'</b></button>'+ctaHtml+'</div></div>';document.body.appendChild(d);function open(){d.classList.add("open");document.body.classList.add("cf-noscroll");requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add("show");});});}function close(){d.classList.remove("show");document.body.classList.remove("cf-noscroll");setTimeout(function(){d.classList.remove("open");},300);}burger.addEventListener("click",open);[].slice.call(d.querySelectorAll("[data-close]")).forEach(function(x){x.addEventListener("click",close);});var ml=d.querySelector("[data-mlang]");if(ml)ml.addEventListener("click",function(){var t=document.querySelector("[data-cf-lang]");if(t)t.click();var f=document.querySelector(".cf-flag");ml.querySelector("img").src=f?f.getAttribute("src"):ml.querySelector("img").src;ml.querySelector("b").textContent=(document.querySelector(".cf-lc")||{}).textContent||ml.querySelector("b").textContent;});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&d.classList.contains("open"))close();});})();</script>
+<script id="cf-utilbar-js">(function(){var T={fr:{aff:"Un programme de l'<b>Institut Africain de la Gouvernance</b>",partners:"Partenaires",press:"Espace presse",sitemap:"Plan du site",contact:"Contact"},en:{aff:"A programme of the <b>Africa Governance Institute</b>",partners:"Partners",press:"Press room",sitemap:"Sitemap",contact:"Contact"}};function r(){var l=document.documentElement.lang==="en"?"en":"fr";document.querySelectorAll("[data-uk]").forEach(function(e){var k=e.getAttribute("data-uk");if(T[l][k]!=null)e.innerHTML=T[l][k];});}r();try{new MutationObserver(r).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}})();</script>
+<script src="assets/cf-collections.js"></script>
+<script id="cf-appels-cms">(function(){
+  if(!window.CFCol || !CFCol.overridden('calls')) return; // leave the static seed page untouched until an admin edits
+  var STATEGRP={open:'ouvert',upcoming:'avenir',closed:'cloture'};
+  var MONTHS={fr:['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'],en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']};
+  var L={fr:{ala:'À la une',pays:'Pays éligibles',crit:"Critères d'éligibilité",sel:'Ces conditions disent qui peut candidater. Voir les critères de sélection et le parcours',postuler:'Postuler maintenant',details:'Voir les détails complets',jr:'jours restants',depo:'Candidatures déposées',cloture:'Clôture le',cand:'candidatures',postu:'Postuler',notif:"Notifications à l'ouverture",avertir:"M'avertir",clot:'Clôturé',recues:'candidatures reçues',voirpro:'Voir les projets',vide:'Aucun appel dans cette catégorie pour le moment.'},
+         en:{ala:'Featured',pays:'Eligible countries',crit:'Eligibility criteria',sel:'These conditions say who may apply. See the selection criteria and the journey',postuler:'Apply now',details:'View full details',jr:'days left',depo:'Applications submitted',cloture:'Closes',cand:'applications',postu:'Apply',notif:'Notified at opening',avertir:'Notify me',clot:'Closed',recues:'applications received',voirpro:'View projects',vide:'No call in this category for now.'}};
+  function lang(){return document.documentElement.lang==='en'?'en':'fr';}
+  function t(f){return CFCol.t(f,lang());}
+  function fmt(d){ if(!d) return ''; var x=new Date(d+'T00:00:00'); return x.getDate()+' '+MONTHS[lang()][x.getMonth()]+' '+x.getFullYear(); }
+  function fmtShort(d){ if(!d) return ''; var x=new Date(d+'T00:00:00'); return x.getDate()+' '+MONTHS[lang()][x.getMonth()].replace('.',''); }
+  function days(d){ if(!d) return 0; return Math.max(0,Math.ceil((new Date(d+'T23:59:59')-new Date())/(864e5))); }
+  function chips(arr){ return (arr||[]).map(function(c){return '<span class="chip-soft">'+c+'</span>';}).join(''); }
+
+  function render(){
+    var l=lang(), x=L[l];
+    var all=CFCol.published('calls');
+    var feat=null;
+    for(var i=0;i<all.length;i++){ if(all[i].featured && all[i].state==='open'){ feat=all[i]; break; } }
+    if(!feat){ for(var j=0;j<all.length;j++){ if(all[j].state==='open'){ feat=all[j]; break; } } }
+
+    var wrap=document.querySelector('.feat');
+    var holder=wrap?wrap.parentNode:null;
+    if(feat && holder){
+      var dl=days(feat.deadline);
+      var crit=(feat.criteria&&feat.criteria.length)?('<div class="feat-crit"><div class="ct">'+x.crit+'</div><div class="crit-list">'+feat.criteria.map(function(c){return '<div class="ci"><i class="ti ti-circle-check"></i>'+t(c)+'</div>';}).join('')+'</div></div>'):'';
+      var prog='';
+      if(feat.cap){ var pct=Math.min(100,Math.round((parseInt(feat.apps,10)||0)/feat.cap*100)); prog='<div class="feat-progress"><div class="fp-top"><span>'+x.depo+'</span><b>'+(feat.apps||0)+' / '+feat.cap+'</b></div><div class="fbar"><span style="width:'+pct+'%"></span></div></div>'; }
+      var html='<div class="feat grp grp-ouvert">'+
+        '<div class="feat-body">'+
+          '<div class="feat-meta"><span class="bdg bdg-teal">'+t(feat.type)+'</span><span class="bdg bdg-sand">'+x.ala+'</span><span class="deadline bdg '+(dl<30?'bdg-pend':'bdg-live')+'"><span class="dot"></span>'+x.cloture+' '+fmt(feat.deadline)+'</span></div>'+
+          '<h2 class="display-md">'+t(feat.title)+'</h2>'+
+          '<p class="fdesc body">'+t(feat.desc)+'</p>'+
+          '<div class="feat-pays"><div class="ct">'+x.pays+'</div><div class="chips">'+chips(feat.countries)+'</div></div>'+
+          crit+
+          '<a href="parcours-entrepreneur.html" class="sel-link"><i class="ti ti-scale"></i><span>'+x.sel+'</span><i class="ti ti-arrow-right"></i></a>'+
+          '<a href="candidature.html" class="btn btn-pri">'+x.postuler+' <i class="ti ti-arrow-right"></i></a>'+
+        '</div>'+
+        '<div class="feat-side"><div class="cf-mesh"></div>'+
+          '<div class="countdown"><div class="cd-n tnum">'+dl+'</div><div class="cd-l">'+x.jr+'</div><div class="cd-d">'+x.cloture+' '+fmt(feat.deadline)+'</div></div>'+
+          prog+
+          '<a href="candidature.html" class="btn btn-glass btn-block" style="background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.28);">'+x.details+'</a>'+
+        '</div></div>';
+      var tmp=document.createElement('div'); tmp.innerHTML=html;
+      holder.replaceChild(tmp.firstChild, wrap);
+    }
+
+    var grid=document.getElementById('callsGrid');
+    var empty=document.getElementById('callsEmpty');
+    if(grid){
+      [].slice.call(grid.querySelectorAll('.call-card')).forEach(function(n){n.parentNode.removeChild(n);});
+      all.forEach(function(c){
+        if(feat && c.id===feat.id) return;
+        var grp=STATEGRP[c.state]||'ouvert';
+        var meta,foot,cls='call-card grp grp-'+grp;
+        if(c.state==='open'){
+          var dd=days(c.deadline);
+          meta='<span class="bdg bdg-teal">'+t(c.type)+'</span><span class="deadline bdg '+(dd<30?'bdg-pend':'bdg-live')+'"><span class="dot"></span>'+fmtShort(c.deadline)+'</span>';
+          foot='<span class="apps"><b>'+(c.apps||0)+'</b> '+x.cand+'</span><a href="candidature.html" class="btn btn-light btn-sm">'+x.postu+' <i class="ti ti-arrow-right"></i></a>';
+        } else if(c.state==='upcoming'){
+          meta='<span class="bdg bdg-teal">'+t(c.type)+'</span><span class="bdg bdg-out"><i class="ti ti-clock" style="font-size:12px;"></i>'+t(c.opens)+'</span>';
+          foot='<span class="apps">'+x.notif+'</span><a href="contact.html" class="btn btn-light btn-sm">'+x.avertir+' <i class="ti ti-bell"></i></a>';
+        } else {
+          cls+=' closed';
+          meta='<span class="bdg bdg-teal">'+t(c.type)+'</span><span class="bdg bdg-rej"><span class="dot"></span>'+x.clot+'</span>';
+          foot='<span class="apps"><b>'+(c.apps||0)+'</b> '+x.recues+'</span><a href="carte-impact.html" class="btn btn-light btn-sm">'+x.voirpro+'</a>';
+        }
+        var art=document.createElement('article'); art.className=cls;
+        art.innerHTML='<div class="cc-meta">'+meta+'</div><h3 class="display-sm">'+t(c.title)+'</h3><p class="ccd body-sm">'+t(c.desc)+'</p><div class="cc-pays">'+chips(c.countries)+'</div><div class="cc-foot">'+foot+'</div>';
+        grid.insertBefore(art, empty);
+      });
+      if(empty) empty.textContent=x.vide;
+    }
+
+    var counts={ouvert:0,avenir:0,cloture:0};
+    all.forEach(function(c){ counts[STATEGRP[c.state]||'ouvert']++; });
+    var tabsEl=document.getElementById('tabs');
+    if(tabsEl){ [].slice.call(tabsEl.querySelectorAll('button')).forEach(function(b){ var tt=b.getAttribute('data-tab'); var cn=b.querySelector('.cnt'); if(cn) cn.textContent=counts[tt]||0; }); }
+
+    if(tabsEl && !tabsEl.__cmsBound){
+      var clone=tabsEl.cloneNode(true); tabsEl.parentNode.replaceChild(clone,tabsEl); clone.id='tabs'; clone.__cmsBound=true;
+      function setTab(tb){
+        var f=document.querySelector('.feat'); if(f) f.style.display=(tb==='ouvert')?'':'none';
+        var vis=0;
+        [].slice.call(document.querySelectorAll('.calls-grid .call-card')).forEach(function(card){ var show=card.classList.contains('grp-'+tb); card.style.display=show?'':'none'; if(show)vis++; });
+        var em=document.getElementById('callsEmpty'); if(em) em.style.display=vis===0?'block':'none';
+      }
+      [].slice.call(clone.querySelectorAll('button')).forEach(function(b){ b.addEventListener('click',function(){ [].slice.call(clone.querySelectorAll('button')).forEach(function(z){z.classList.remove('active');}); b.classList.add('active'); setTab(b.getAttribute('data-tab')); }); });
+      var act=clone.querySelector('button.active'); setTab(act?act.getAttribute('data-tab'):'ouvert');
+    } else {
+      var cur=document.querySelector('#tabs button.active'); var ct=cur?cur.getAttribute('data-tab'):'ouvert';
+      var f2=document.querySelector('.feat'); if(f2) f2.style.display=(ct==='ouvert')?'':'none';
+      var v2=0; [].slice.call(document.querySelectorAll('.calls-grid .call-card')).forEach(function(card){ var sh=card.classList.contains('grp-'+ct); card.style.display=sh?'':'none'; if(sh)v2++; });
+      var em2=document.getElementById('callsEmpty'); if(em2) em2.style.display=v2===0?'block':'none';
+    }
+  }
+  render();
+  try{ new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']}); }catch(e){}
+})();</script>
+<script src="assets/cf-forms.js"></script>
+<script src="assets/cf-nav.js"></script>
+<script src="assets/cf-reveal-guard.js"></script>
+</body>
+</html>

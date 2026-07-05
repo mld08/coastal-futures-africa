@@ -1,0 +1,46 @@
+/* Styles globaux minimes de la coquille React.
+   Le design system complet (couleurs, typo, composants) provient
+   des feuilles de style d'origine chargées globalement dans
+   index.html (cf-fonts.css, cf-icons.css, cf-nav.css) et des
+   <style> inline ré-injectés par page. */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.cf-legacy-root {
+  display: contents;
+}
+
+/* Reset manquant dans les pages d'origine : sans cela, la marge par défaut
+   du navigateur (figure{margin:0 40px}) rétrécit les cartes <figure.m-card>
+   de la médiathèque et casse la grille responsive. */
+figure {
+  margin: 0;
+}
+
+.cf-legacy-error {
+  font-family: system-ui, sans-serif;
+  padding: 64px 24px;
+  text-align: center;
+  color: #244440;
+}
+
+/* Utilitaire d'accessibilité : visible des lecteurs d'écran uniquement. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script id="cf-ptf-guard">(function(){try{if(localStorage.getItem("cf-ptf-auth")!=="1"){localStorage.setItem("cf-ptf-next",(location.pathname.split("/").pop()||"tableau-de-bord-partenaire.html"));window.location.replace("connexion-bailleur.html");}}catch(e){}})();</script>
+<script src="assets/cf-ptf-session.js"></script>
+<script src="assets/cf-site.js"></script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-derive.js"></script>
+<title>Coastal Futures | Tableau de bord impact</title>
+<meta name="description" content="Tableau de bord impact · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coastal Futures Network">
+<meta property="og:url" content="tableau-de-bord-partenaire.html">
+<meta property="og:title" content="Coastal Futures | Tableau de bord impact">
+<meta property="og:description" content="Tableau de bord impact · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coastal Futures | Tableau de bord impact">
+<meta name="twitter:description" content="Tableau de bord impact · Coastal Futures Network, programme de l'Institut Africain de la Gouvernance pour 4 000 jeunes entrepreneurs verts sur cinq pays côtiers d'Afrique de l'Ouest.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="tableau-de-bord-partenaire.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<link rel="stylesheet" href="assets/cf-tour.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#5C7B76;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --warning:#8A5512; --error:#8F2A1A;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --t-micro:100ms; --t-fast:160ms; --t-base:280ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+
+.display-lg{font-family:var(--font-display);font-size:34px;font-weight:300;line-height:1.08;letter-spacing:-1.6px;}
+.display-sm{font-family:var(--font-display);font-size:17px;font-weight:600;line-height:1.3;letter-spacing:-.3px;color:var(--ink);}
+.caption{font-family:var(--font-sans);font-size:13px;font-weight:400;line-height:1.5;color:var(--ink-mute);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:14px;font-weight:500;letter-spacing:-.1px;border-radius:var(--r-pill);padding:10px 18px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn-glass{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.28);backdrop-filter:blur(8px);}
+.btn-glass:hover{background:rgba(255,255,255,.24);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}
+.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;background:rgba(210,210,215,.16);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.92);font-family:var(--font-display);font-size:12px;font-weight:500;padding:6px 13px;border-radius:var(--r-pill);}
+.chip .pulse{width:8px;height:8px;border-radius:50%;background:var(--teal-bright);position:relative;}
+.chip .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid var(--teal-bright);opacity:.6;display:none;}
+@keyframes lp{0%{transform:scale(.6);opacity:.7}70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
+
+.cf-mesh{position:absolute;inset:0;opacity:.92;background:
+  radial-gradient(120% 80% at 8% 0%,rgba(62,203,176,.55) 0%,transparent 50%),
+  radial-gradient(90% 70% at 70% 5%,rgba(18,179,150,.45) 0%,transparent 55%),
+  radial-gradient(80% 90% at 95% 30%,rgba(201,163,94,.32) 0%,transparent 50%),
+  radial-gradient(70% 80% at 50% 65%,rgba(10,107,94,.60) 0%,transparent 60%);}
+.cf-mesh-surface{position:relative;background:var(--ink);color:#fff;overflow:hidden;}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
+
+/* topbar */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 32px;max-width:1240px;margin:0 auto;}.brand img{height:28px;width:auto;}
+.tb-r{display:flex;align-items:center;gap:14px;}
+.tb-role{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--ink-mute);display:flex;align-items:center;gap:7px;}
+.tb-role i{font-size:17px;color:var(--teal);}
+.tb-user{display:flex;align-items:center;gap:9px;padding:5px 6px 5px 12px;border-radius:var(--r-pill);border:1px solid var(--hair);background:#fff;}
+.tb-user .un{font-family:var(--font-display);font-weight:500;font-size:13.5px;color:var(--ink);}
+.tb-user .av{width:30px;height:30px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:12px;}
+/* in-space donor nav */
+.ptf-nav{display:flex;align-items:center;gap:4px;}
+.ptf-nav a{font-family:var(--font-display);font-size:13.5px;font-weight:500;white-space:nowrap;color:var(--ink-mute);padding:8px 14px;border-radius:var(--r-pill);transition:all var(--t-fast) var(--ease);}
+.ptf-nav a:hover{color:var(--ink);background:var(--canvas-soft);}
+.ptf-nav a.on{color:var(--teal);background:var(--teal-bg);}
+@media(max-width:820px){.ptf-nav{display:none;}}
+
+/* account menu */
+.tb-r{position:relative;}
+.tb-user{font-family:inherit;cursor:pointer;transition:border-color var(--t-fast) var(--ease),background var(--t-fast) var(--ease);}
+.tb-user.on{border-color:var(--teal);background:var(--teal-bg);}
+.tb-user .chev{color:var(--ink-faint);font-size:16px;transition:transform var(--t-fast) var(--ease);}
+.tb-user.on .chev{transform:rotate(180deg);color:var(--teal);}
+.tb-pop{position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-2);z-index:60;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity var(--t-fast) var(--ease),transform var(--t-fast) var(--ease);overflow:hidden;}
+.tb-pop.open{opacity:1;transform:none;pointer-events:auto;}
+.tb-pop.menu{width:262px;}
+.um-id{display:flex;align-items:center;gap:11px;padding:15px 18px;border-bottom:1px solid var(--hair);}
+.um-id .av{width:40px;height:40px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:15px;flex-shrink:0;}
+.um-id .un{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);letter-spacing:-.2px;}
+.um-id .ue{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);margin-top:1px;}
+.um-list{padding:7px;}
+.um-item{display:flex;align-items:center;gap:11px;padding:9px 11px;border-radius:var(--r-md);font-family:var(--font-display);font-size:13.5px;font-weight:500;color:var(--ink-2);cursor:pointer;transition:background var(--t-fast) var(--ease),color var(--t-fast) var(--ease);}
+.um-item i{font-size:18px;color:var(--ink-mute);transition:color var(--t-fast) var(--ease);}
+.um-item:hover{background:var(--canvas-soft);color:var(--ink);}
+.um-item:hover i{color:var(--teal);}
+.um-sep{height:1px;background:var(--hair);margin:7px 9px;}
+.um-item.danger{color:var(--error);}
+.um-item.danger i{color:var(--error);}
+.um-item.danger:hover{background:rgba(143,42,26,.08);}
+.um-item.danger:hover i{color:var(--error);}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;}
+.hero-in{position:relative;max-width:1240px;margin:0 auto;padding:38px 32px 100px;}
+.hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.hero h1{font-family:var(--font-display);font-weight:300;font-size:36px;letter-spacing:-1.8px;color:#fff;margin:14px 0 0;}
+.hero .upd{font-family:var(--font-sans);font-size:13px;color:rgba(255,255,255,.6);margin-top:10px;display:flex;align-items:center;gap:7px;}
+.hero .upd i{font-size:15px;}
+.hero-act{display:flex;gap:10px;flex-wrap:wrap;}
+
+/* KPI band overlapping */
+.kpi{max-width:1240px;margin:-72px auto 0;padding:0 32px;position:relative;z-index:5;}
+.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-2);overflow:hidden;}
+.kpi-card{padding:28px 26px;border-left:1px solid var(--hair);}
+.kpi-card:first-child{border-left:0;}
+.kpi-card .ic{display:none;}
+.kpi-card .n{font-family:var(--font-display);font-weight:300;font-size:52px;letter-spacing:-2.8px;color:var(--ink);line-height:.95;font-feature-settings:"tnum";}
+.kpi-card .n b{color:var(--teal);font-weight:400;font-size:.4em;margin-left:2px;letter-spacing:0;}
+.kpi-card .l{font-family:var(--font-display);font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--ink-mute);margin-top:14px;}
+.kpi-card .delta{font-family:var(--font-display);font-size:11.5px;font-weight:600;color:var(--success);display:inline-flex;align-items:center;gap:3px;margin-top:10px;}
+
+/* charts */
+.charts{max-width:1240px;margin:24px auto 0;padding:0 32px 48px;}
+.charts-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;}
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);overflow:hidden;}
+.card-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px;border-bottom:1px solid var(--hair);}
+.card-h h3{margin:0;}
+.card-h .leg{display:flex;gap:14px;}
+.card-h .leg .lg{display:flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);}
+.card-h .leg .sw{width:9px;height:9px;border-radius:2px;}
+.card-b{padding:24px 22px;}
+
+/* area chart */
+.area-wrap{position:relative;}
+.area-svg{width:100%;height:240px;display:block;}
+.area-x{display:flex;justify-content:space-between;margin-top:8px;padding:0 4px;}
+.area-x span{font-family:var(--font-display);font-size:11.5px;font-weight:500;color:var(--ink-faint);font-feature-settings:"tnum";}
+
+/* bars */
+.bars{display:flex;align-items:flex-end;gap:18px;height:230px;padding-top:10px;}
+.bar-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:10px;}
+.bar-val{font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--ink);font-feature-settings:"tnum";}
+.bar{width:100%;max-width:46px;border-radius:7px 7px 0 0;background:linear-gradient(180deg,var(--teal-soft),var(--teal));height:0;transition:height 1s var(--ease);}
+.bar-lbl{font-family:var(--font-display);font-size:11.5px;font-weight:500;color:var(--ink-mute);text-align:center;}
+
+/* donut */
+.donut-row{display:flex;align-items:center;gap:28px;}
+.donut{width:160px;height:160px;flex-shrink:0;position:relative;}
+.donut svg{transform:rotate(-90deg);}
+.donut .dc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.donut .dc .n{font-family:var(--font-display);font-weight:300;font-size:32px;letter-spacing:-1.5px;color:var(--ink);font-feature-settings:"tnum";line-height:1;}
+.donut .dc .l{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-mute);margin-top:3px;}
+.donut-leg{flex:1;display:flex;flex-direction:column;gap:11px;}
+.donut-leg .dl{display:flex;align-items:center;gap:10px;font-family:var(--font-sans);font-size:13.5px;color:var(--ink-2);}
+.donut-leg .dl .sw{width:11px;height:11px;border-radius:3px;flex-shrink:0;}
+.donut-leg .dl .v{margin-left:auto;font-family:var(--font-display);font-weight:600;color:var(--ink);font-feature-settings:"tnum";}
+
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;}
+.country-row{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--hair);}
+.country-row:first-child{border-top:0;}
+.country-row .cn{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);width:120px;flex-shrink:0;}
+.country-row .ctrack{flex:1;height:8px;border-radius:var(--r-pill);background:var(--teal-bg);overflow:hidden;}
+.country-row .ctrack span{display:block;height:100%;border-radius:var(--r-pill);background:var(--teal);width:0;transition:width 1s var(--ease);}
+.country-row .cv{font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--ink-2);font-feature-settings:"tnum";width:34px;text-align:right;}
+
+@media(max-width:980px){
+  .kpi-grid{grid-template-columns:1fr 1fr;}
+  .kpi-card{border-left:0;border-top:1px solid var(--hair);}
+  .kpi-card:first-child,.kpi-card:nth-child(2){border-top:0;}
+  .kpi-card:nth-child(5){grid-column:1 / -1;}
+  .charts-grid,.bottom-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:28px;}
+}
+@media(max-width:560px){
+  .kpi-grid{grid-template-columns:1fr;}
+  .kpi-card{border-left:0;border-top:1px solid var(--hair);}
+  .kpi-card:first-child{border-top:0;}
+}
+</style>
+<style id="cf-sources">
+.sources-wrap{max-width:1240px;margin:28px auto 0;padding:0 32px;}
+.sources{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);overflow:hidden;}
+.sources-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 24px 14px;}
+.sources-h h2,.sources-h h3{margin:0;}
+.sec-title{margin:0 0 14px;font-family:var(--font-display);font-weight:300;font-size:22px;letter-spacing:-.7px;color:var(--ink);}
+.src-table{width:100%;border-collapse:collapse;}
+.src-table caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.src-fresh{display:flex;gap:10px;align-items:flex-start;padding:16px 24px 4px;font-family:var(--font-sans);font-size:13px;line-height:1.6;color:var(--ink-mute);}
+.src-fresh i{color:var(--teal);font-size:18px;flex-shrink:0;margin-top:1px;}
+.src-fresh b{color:var(--ink-2);font-family:var(--font-display);font-weight:600;}
+.src-table th,.src-table td{padding:13px 24px;border-top:1px solid var(--hair);text-align:left;vertical-align:middle;white-space:nowrap;}
+.src-table thead th{background:var(--canvas-soft);font-family:var(--font-display);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);}
+.src-table tbody th.si{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);white-space:normal;}
+.src-table .sv{font-family:var(--font-display);font-size:15px;color:var(--ink);font-feature-settings:"tnum";}
+.src-table .sd{font-family:var(--font-sans);font-size:13px;color:var(--ink-2);}
+.src-table .ss{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);white-space:normal;}
+@media(max-width:760px){.src-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}.src-table{min-width:600px;}}
+.src-row{display:grid;grid-template-columns:1.7fr .7fr .9fr 1.5fr;gap:18px;align-items:center;padding:13px 24px;border-top:1px solid var(--hair);}
+.src-row.src-head{background:var(--canvas-soft);}
+.src-row.src-head span{font-family:var(--font-display);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);}
+.src-row .si{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);}
+.src-row .sv{font-family:var(--font-display);font-size:15px;color:var(--ink);}
+.src-row .sd{font-family:var(--font-sans);font-size:13px;color:var(--ink-2);}
+.src-row .ss{font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);}
+.sources-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
+.src-link{font-family:var(--font-display);font-size:12.5px;font-weight:500;color:var(--teal);display:inline-flex;align-items:center;gap:5px;}
+.src-link:hover{color:var(--teal-deep);}
+.src-link i{font-size:15px;}
+.print-only{display:none;}
+.src-row>*{min-width:0;}
+@media(max-width:760px){.src-row{grid-template-columns:1fr 1fr;gap:8px 14px;}.src-row.src-head{display:none;}}
+@media(max-width:560px){.src-row{grid-template-columns:1fr;gap:2px;padding:14px 20px;}.src-row .si{font-size:15px;}.src-row .sv{font-size:18px;color:var(--teal-deep);}.src-row .sd,.src-row .ss{font-size:12.5px;}}
+@media print{
+  .topbar,.hero-act,#cfUserPop,.cf-tour-pop,.cf-tour-spotlight,.cf-coastline{display:none !important;}
+  body{background:#fff !important;}
+  .hero{background:#fff !important;color:var(--ink) !important;}
+  .hero .cf-mesh{display:none !important;}
+  .hero h1{color:var(--ink) !important;}
+  .hero .upd{color:var(--ink-mute) !important;}
+  .chip{background:var(--teal-bg) !important;color:var(--teal-deep) !important;border-color:var(--hair) !important;backdrop-filter:none !important;}
+  .kpi{margin-top:22px !important;}
+  .kpi-grid,.card,.sources{box-shadow:none !important;}
+  .print-only{display:block;max-width:1240px;margin:18px auto 0;padding:0 32px;font-family:var(--font-sans);font-size:12px;line-height:1.5;color:var(--ink-mute);}
+}
+</style>
+<style id="cf-upd">
+.upd-wrap{max-width:1240px;margin:18px auto 0;padding:0 32px;}
+.upd-card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);overflow:hidden;}
+.upd-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 24px 14px;}
+.upd-h h2,.upd-h h3{margin:0;}
+.upd-row{display:grid;grid-template-columns:118px 1fr auto;gap:18px;align-items:center;padding:13px 24px;border-top:1px solid var(--hair);}
+.upd-row .ud-date{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);font-feature-settings:"tnum";}
+.upd-row .ud-t{font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--ink);}
+.upd-row .ud-m{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);margin-top:2px;}
+.ud-tag{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:11.5px;font-weight:600;color:#066B52;background:#E3F9F1;border-radius:var(--r-pill);padding:3px 11px;white-space:nowrap;}
+@media(max-width:760px){.upd-row{grid-template-columns:1fr auto;}.upd-row .ud-date{grid-column:1/-1;}}
+@media print{.upd-card{box-shadow:none !important;}}
+</style>
+<style id="cf-a11y">
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+.area-wrap{padding-left:38px;}
+.area-y{position:absolute;left:0;top:0;bottom:26px;width:34px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;padding-right:8px;}
+.area-y span{font-family:var(--font-display);font-size:10.5px;font-weight:500;white-space:nowrap;color:var(--ink-faint);font-feature-settings:"tnum";line-height:1;}
+</style>
+<style id="cf-anim">@media (prefers-reduced-motion: no-preference){.cf-mesh{will-change:transform;animation:cfMeshDrift 28s ease-in-out infinite alternate;}@keyframes cfMeshDrift{0%{transform:scale(1.18) translate3d(-1.6%,-1.1%,0);}100%{transform:scale(1.18) translate3d(1.6%,1.3%,0);}}.btn i.ti-arrow-right,.btn i.ti-arrow-narrow-right{transition:transform .16s cubic-bezier(.4,0,.2,1);}.btn:hover i.ti-arrow-right,.btn:hover i.ti-arrow-narrow-right{transform:translateX(3px);}}</style>
+<style id="cf-skip-css">.cf-skip{position:absolute;left:-999px;top:0;z-index:200;background:#0A6B5E;color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;}.cf-skip:focus{left:0;}#cf-main{scroll-margin-top:90px;}</style>
+<style id="cf-tap44">@media(max-width:640px){.cf-langtog,.icobtn,.share a,.viewtog .vt,.cf-sidetoggle,.cf-appburger,.cf-burger,.eye,.clear,.x,.pages button,.seg button,.ftype button{min-width:44px;min-height:44px;}.icobtn,.share a,.viewtog .vt,.pages button{display:inline-flex !important;align-items:center;justify-content:center;}button,a.btn,.btn{min-height:44px;}input[type="checkbox"]+.box{min-width:24px;min-height:24px;}.footer-col a,.footer-util a,.tb-pop a{min-height:44px;display:flex;align-items:center;}}</style>
+<style id="cf-langtog-css">.cf-langtog{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:inherit;padding:7px 12px;border-radius:100px;line-height:1;opacity:.92;transition:opacity .16s ease,background .16s ease;}.cf-langtog:hover{opacity:1;background:rgba(125,150,145,.1);}.cf-langtog>.ti{font-size:16px;opacity:.7;}.cf-langtog .cf-seg{display:inline-flex;align-items:center;gap:5px;}.cf-langtog .l-fr,.cf-langtog .l-en{opacity:.42;transition:opacity .16s ease;}.cf-langtog .l-sep{opacity:.28;font-weight:400;}.cf-langtog:not(.is-en) .l-fr{opacity:1;}.cf-langtog.is-en .l-en{opacity:1;}</style>
+
+<style id="cf-resp-core">
+/* §2.1 neutralise le couple 1fr + nowrap (overflow horizontal) */
+.choose-grid>*,.odd-v2-grid>*,.call-row>*,.grid>*,.stat-row>*,.footer-top>*,.charts-grid>*,.kpi-grid>*,.messenger>*,.steps>*,.frow>*,.dir-grid>*,.eco-in>*,.statband>*,.pv2-grid>*,.cols>*,.tl-item>*,.proj-row>*,.codes>*,.filter-line>*{min-width:0;}
+@media(max-width:640px){
+  .btn{white-space:normal;text-align:center;line-height:1.25;}
+  .btn-block{width:100%;}
+}
+img{max-width:100%;}
+html,body{overflow-x:clip;}
+</style>
+<style id="cf-resp-tokens">
+@media(max-width:640px){
+  :root{--r-xl:18px;--r-lg:13px;}
+  .display-xxl{font-size:clamp(30px,9vw,38px)!important;letter-spacing:-1.4px!important;}
+  .display-xl,.odd-v2-h{font-size:clamp(27px,8vw,33px)!important;letter-spacing:-1.2px!important;}
+  .display-lg{font-size:clamp(24px,7vw,29px)!important;}
+}
+</style>
+<style id="cf-resp-ios">
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+.cf-cookie{bottom:calc(22px + env(safe-area-inset-bottom,0px));}
+.savebar{padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));}
+.toast-stack,.cf-toast,.toast{bottom:calc(18px + env(safe-area-inset-bottom,0px));}
+.cf-mdrawer .panel,.app .side{height:100vh;height:100dvh;}
+</style>
+<style id="cf-resp-touch">
+@media(hover:none){
+  .m .m-kebab{opacity:1;visibility:visible;}
+  .achip i{opacity:1;}
+  .ctry .cgo,.cgo{opacity:1;}
+  .pv3-logos img,.partner-logos img,.partner-row img,.pv3 img{filter:none;opacity:1;}
+  .article-go,.space-go{opacity:1;}
+}
+</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<link rel="stylesheet" href="assets/cf-splash.css">
+<link rel="stylesheet" href="assets/cf-a11y.css">
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<a href="#cf-main" class="cf-skip" data-i18n="a11y.skip">Aller au contenu</a>
+
+<!-- topbar -->
+<div class="topbar">
+  <a class="brand" href="tableau-de-bord-partenaire.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-light.svg" alt="Coastal Futures"></a>
+  <nav class="ptf-nav" aria-label="Espace bailleurs">
+    <a href="tableau-de-bord-partenaire.html" class="on" aria-current="page">Dashboard</a>
+    <a href="impact-par-pays.html">Vue par pays</a>
+    <a href="analyses-bailleur.html">Analyses</a>
+    <a href="aide-reporting.html">Aide &amp; calendrier</a>
+    <a href="espace-partenaire.html">Mon organisation</a>
+  </nav>
+  <div class="tb-r">
+    <span class="tb-role"><i class="ti ti-building-bank"></i>Espace bailleurs PTF</span>
+    <button class="cf-langtog" data-cf-lang type="button" aria-label="Choisir la langue, français ou anglais"><i class="ti ti-world"></i><span class="cf-seg"><b class="l-fr">FR</b><span class="l-sep">/</span><b class="l-en">EN</b></span></button>
+    <button class="tb-user" id="cfUserBtn" type="button" aria-haspopup="true" aria-expanded="false"><span class="un">Partenaire</span><span class="av">PF</span><i class="ti ti-chevron-down chev"></i></button>
+    <div class="tb-pop menu" id="cfUserPop" role="menu" aria-label="Compte">
+      <div class="um-id"><span class="av">PF</span><div><div class="un">Partenaire technique et financier</div><div class="ue">Espace bailleurs</div></div></div>
+      <div class="um-list">
+        <a class="um-item" href="tableau-de-bord-partenaire.html" role="menuitem"><i class="ti ti-chart-bar"></i>Dashboard consolidé</a>
+        <a class="um-item" href="impact-par-pays.html" role="menuitem"><i class="ti ti-map-2"></i>Vue par pays</a>
+        <a class="um-item" href="analyses-bailleur.html" role="menuitem"><i class="ti ti-chart-dots"></i>Analyses</a>
+        <a class="um-item" href="aide-reporting.html" role="menuitem"><i class="ti ti-calendar"></i>Aide &amp; calendrier</a>
+        <a class="um-item" href="espace-partenaire.html" role="menuitem"><i class="ti ti-building-bank"></i>Mon organisation</a>
+        <a class="um-item" href="espace-parametres-partenaire.html" role="menuitem"><i class="ti ti-settings"></i>Paramètres</a>
+        <div class="um-sep"></div>
+        <a class="um-item" href="contact.html" role="menuitem"><i class="ti ti-mail"></i>Contacter l'équipe</a>
+        <a class="um-item" href="#" data-cf-tour-start role="button"><i class="ti ti-route"></i>Revoir la visite guidée</a>
+        <div class="um-sep"></div>
+        <a class="um-item danger" href="connexion-bailleur.html" data-cf-logout role="menuitem"><i class="ti ti-logout"></i>Se déconnecter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- hero -->
+<main id="cf-content">
+<header class="hero cf-mesh-surface" data-screen-label="Dashboard PTF consolidé">
+  <div class="cf-mesh"></div>
+  <div class="cf-coastline" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path pathLength="1" d="M-10,70 C80,62 140,50 196,52 C236,53 256,76 300,78 C356,81 392,54 458,58 C540,63 586,98 668,94 C730,91 772,62 850,65 C946,69 998,104 1092,98 C1166,93 1212,64 1296,68 C1372,71 1418,96 1452,90"></path></svg></div>
+  <div class="hero-in">
+    <div class="hero-top">
+      <div>
+        <span class="chip"><i class="ti ti-lock" style="font-size:11px;margin-right:4px;"></i>Données confidentielles · accès PTF</span>
+        <span id="cf-main" tabindex="-1"></span><h1>Tableau de bord impact</h1>
+        <div class="upd"><i class="ti ti-info-circle"></i>Programme lancé le 10 juin 2026 · première publication des indicateurs prévue au T3 2026</div>
+      </div>
+      <div class="hero-act">
+        <button class="btn btn-glass" id="exportBtn"><i class="ti ti-file-export"></i>Exporter le rapport PDF</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- KPI -->
+<div class="kpi">
+  <h2 class="sr-only">Indicateurs clés</h2>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="n tnum"><span class="v" data-site="kpi.entrepreneurs" data-count="0">0</span></div><div class="l">Entrepreneurs verts accompagnés</div><span class="delta" style="background:var(--teal-bg);color:var(--teal-deep);"><i class="ti ti-target"></i>objectif 4 000</span></div>
+    <div class="kpi-card"><div class="n tnum"><span class="v" data-site="kpi.labellises" data-count="0">0</span></div><div class="l">Projets labellisés</div><span class="delta" style="background:var(--canvas-soft);color:var(--ink-mute);">dès la collecte</span></div>
+    <div class="kpi-card"><div class="n tnum"><span class="v" data-site="kpi.mangroves" data-count="0">0</span><b>ha</b></div><div class="l">Mangroves restaurées</div><span class="delta" style="background:var(--canvas-soft);color:var(--ink-mute);">dès la collecte</span></div>
+    <div class="kpi-card"><div class="n tnum"><span class="v" data-site="kpi.dechets" data-count="0">0</span><b>t</b></div><div class="l">Déchets recyclés</div><span class="delta" style="background:var(--canvas-soft);color:var(--ink-mute);">dès la collecte</span></div>
+    <div class="kpi-card"><div class="n tnum"><span class="v" data-site="kpi.beneficiaires" data-count="0">0</span></div><div class="l">Bénéficiaires directs</div><span class="delta" style="background:var(--canvas-soft);color:var(--ink-mute);">dès la collecte</span></div>
+  </div>
+</div>
+
+<!-- charts (launch state : no data collected yet) -->
+<div class="charts">
+  <div class="card" data-tour="area">
+    <div class="card-b" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:56px 28px;">
+      <span style="width:58px;height:58px;border-radius:50%;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;"><i class="ti ti-chart-histogram" style="font-size:28px;color:var(--teal);"></i></span>
+      <h2 class="display-sm" style="margin:0;">Le tableau de bord se remplira dès la collecte</h2>
+      <p class="caption" style="margin:0;color:var(--teal-deep);font-weight:600;font-family:var(--font-display);">Première publication prévue : troisième trimestre 2026</p>
+      <p style="max-width:580px;margin:0;font-family:var(--font-sans);font-size:14.5px;line-height:1.6;color:var(--ink-mute);">Le programme vient de se lancer le 10 juin 2026. Les graphiques d'impact (bénéficiaires, projets par pays, répartition, labellisation) s'afficheront ici dès que les premiers indicateurs auront été collectés, validés et publiés par la console programme.</p>
+      <a href="methodologie-indicateurs.html" class="btn btn-light btn-sm"><i class="ti ti-file-text"></i>Définitions et méthodologie</a>
+    </div>
+  </div>
+</div>
+
+<style id="cf-rf">
+.rf-wrap{max-width:1240px;margin:24px auto 0;padding:0 32px;}
+.rf{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);overflow:hidden;}
+.rf-h{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 24px 14px;}
+.rf-h h2{margin:0;}
+.rf-sub{margin:6px 0 0;font-family:var(--font-sans);font-size:13px;color:var(--ink-mute);max-width:560px;line-height:1.5;}
+.rf-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.rf-pub{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-size:12px;font-weight:600;color:var(--ink-2);background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-pill);padding:4px 11px;white-space:nowrap;}
+.rf-pub i{font-size:14px;color:var(--ink-mute);}
+.rf-table{width:100%;border-collapse:collapse;}
+.rf-table th,.rf-table td{padding:12px 24px;border-top:1px solid var(--hair);text-align:left;vertical-align:middle;white-space:nowrap;}
+.rf-table thead th{background:var(--canvas-soft);font-family:var(--font-display);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);}
+.rf-table tbody th.rf-i{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);white-space:normal;}
+.rf-table .tnum{font-feature-settings:"tnum";}
+.rf-as{display:block;font-family:var(--font-sans);font-size:11px;color:var(--ink-faint);font-weight:400;}
+.lvl{display:inline-block;font-family:var(--font-display);font-size:11px;font-weight:600;border-radius:var(--r-pill);padding:2px 9px;background:var(--teal-bg);color:var(--teal-deep);}
+.odd-badge{display:inline-block;margin-left:7px;font-family:var(--font-display);font-size:10px;font-weight:600;color:var(--sand-deep);background:var(--cream);border:1px solid #E7D9BD;border-radius:var(--r-pill);padding:1px 7px;vertical-align:1px;white-space:nowrap;}
+.dis{display:inline-block;margin:0 4px 0 0;font-family:var(--font-sans);font-size:11.5px;color:var(--ink-2);background:var(--canvas-soft);border:1px solid var(--hair);border-radius:var(--r-pill);padding:2px 8px;}
+.rf-note{margin:0;padding:13px 24px 18px;border-top:1px solid var(--hair);font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);line-height:1.5;}
+.rf-note i{color:var(--teal);margin-right:5px;}
+@media(max-width:860px){.rf-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}.rf-table{min-width:780px;}.rf-meta{align-items:flex-start;}}
+</style>
+<div class="wrap rf-wrap">
+  <section class="rf">
+    <div class="rf-h">
+      <div>
+        <h2 class="display-sm">Cadre de résultats</h2>
+        <p class="rf-sub">Niveau, référence, cible et fréquence de chaque indicateur. Les valeurs courantes figurent dans la table des sources ci-dessous.</p>
+      </div>
+      <div class="rf-meta">
+        <span class="rf-pub"><i class="ti ti-versions"></i>Publication n° 0 · aucune donnée publiée à ce jour</span>
+        <button class="btn btn-light btn-sm" id="csvBtn" type="button"><i class="ti ti-download"></i>Exporter les données (CSV)</button>
+      </div>
+    </div>
+    <div class="rf-table-wrap">
+    <table class="rf-table" id="rfTable">
+      <caption class="sr-only">Cadre de résultats : niveau, référence, cible, fréquence et désagrégations prévues par indicateur</caption>
+      <thead><tr><th scope="col">Indicateur</th><th scope="col">Niveau</th><th scope="col">Référence</th><th scope="col">Cible</th><th scope="col">Fréquence</th><th scope="col">Désagrégations prévues</th></tr></thead>
+      <tbody>
+        <tr><th scope="row" class="rf-i" data-csv="Entrepreneurs verts accompagnés (ODD 8)">Entrepreneurs verts accompagnés <span class="odd-badge">ODD 8</span></th><td data-label="Niveau"><span class="lvl">Effet</span></td><td class="tnum" data-label="Référence" data-csv="0 (juin 2026)">0 <span class="rf-as">juin 2026</span></td><td class="tnum" data-label="Cible">500</td><td data-label="Fréquence">Trimestrielle</td><td data-label="Désagrégations" data-csv="Sexe; Âge; Pays"><span class="dis">Sexe</span><span class="dis">Âge</span><span class="dis">Pays</span></td></tr>
+        <tr><th scope="row" class="rf-i" data-csv="Projets labellisés (ODD 8, 13)">Projets labellisés <span class="odd-badge">ODD 8 · 13</span></th><td data-label="Niveau"><span class="lvl">Produit</span></td><td class="tnum" data-label="Référence" data-csv="0 (juin 2026)">0 <span class="rf-as">juin 2026</span></td><td data-label="Cible">À définir</td><td data-label="Fréquence">Trimestrielle</td><td data-label="Désagrégations" data-csv="Pays; Filière"><span class="dis">Pays</span><span class="dis">Filière</span></td></tr>
+        <tr><th scope="row" class="rf-i" data-csv="Bénéficiaires directs (ODD 1, 8)">Bénéficiaires directs <span class="odd-badge">ODD 1 · 8</span></th><td data-label="Niveau"><span class="lvl">Effet</span></td><td class="tnum" data-label="Référence" data-csv="0 (juin 2026)">0 <span class="rf-as">juin 2026</span></td><td data-label="Cible">À définir</td><td data-label="Fréquence">Trimestrielle</td><td data-label="Désagrégations" data-csv="Sexe; Âge; Pays"><span class="dis">Sexe</span><span class="dis">Âge</span><span class="dis">Pays</span></td></tr>
+        <tr><th scope="row" class="rf-i" data-csv="Mangroves restaurées, ha (ODD 13, 14, 15)">Mangroves restaurées <span class="rf-as" style="display:inline;">(ha)</span> <span class="odd-badge">ODD 13 · 14 · 15</span></th><td data-label="Niveau"><span class="lvl">Impact</span></td><td class="tnum" data-label="Référence" data-csv="0 (juin 2026)">0 <span class="rf-as">juin 2026</span></td><td data-label="Cible">À définir</td><td data-label="Fréquence">Semestrielle</td><td data-label="Désagrégations" data-csv="Pays"><span class="dis">Pays</span></td></tr>
+        <tr><th scope="row" class="rf-i" data-csv="Déchets recyclés, t (ODD 13)">Déchets recyclés <span class="rf-as" style="display:inline;">(t)</span> <span class="odd-badge">ODD 13</span></th><td data-label="Niveau"><span class="lvl">Produit</span></td><td class="tnum" data-label="Référence" data-csv="0 (juin 2026)">0 <span class="rf-as">juin 2026</span></td><td data-label="Cible">À définir</td><td data-label="Fréquence">Trimestrielle</td><td data-label="Désagrégations" data-csv="Pays"><span class="dis">Pays</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="rf-note"><i class="ti ti-info-circle"></i>Cibles « à définir » : arrêtées avec les partenaires à l'issue de la phase de cadrage, jamais estimées par défaut. Les désagrégations (sexe, âge, pays, filière) seront disponibles dès la collecte. Niveaux de résultat : produit, effet, impact.</p>
+  </section>
+</div>
+
+<div class="wrap sources-wrap">
+  <section class="sources">
+    <div class="sources-h"><h2 class="display-sm">Sources et dates d'arrêté</h2><div class="sources-meta"><span class="caption">Première publication des indicateurs prévue au T3 2026, après la collecte de terrain</span><a class="src-link" href="methodologie-indicateurs.html"><i class="ti ti-file-text"></i>Définitions et méthodologie</a></div></div>
+    <div class="src-table-wrap">
+    <table class="src-table">
+      <caption class="sr-only">Sources et dates d'arrêté des indicateurs d'impact</caption>
+      <thead><tr><th scope="col">Indicateur</th><th scope="col">Valeur</th><th scope="col">Date d'arrêté</th><th scope="col">Source</th></tr></thead>
+      <tbody>
+        <tr><th scope="row" class="si">Entrepreneurs verts accompagnés</th><td class="sv tnum">—</td><td class="sd">en attente</td><td class="ss">Annuaire et candidatures</td></tr>
+        <tr><th scope="row" class="si">Projets labellisés</th><td class="sv tnum">—</td><td class="sd">en attente</td><td class="ss">Comité de labellisation</td></tr>
+        <tr><th scope="row" class="si">Bénéficiaires directs</th><td class="sv tnum">—</td><td class="sd">en attente</td><td class="ss">Agrégation projets (5 pays)</td></tr>
+        <tr><th scope="row" class="si">Mangroves restaurées</th><td class="sv tnum">—</td><td class="sd">en attente</td><td class="ss">Suivi terrain</td></tr>
+        <tr><th scope="row" class="si">Déchets recyclés</th><td class="sv tnum">—</td><td class="sd">en attente</td><td class="ss">Suivi terrain</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src-fresh"><i class="ti ti-refresh"></i><span><b>Fraîcheur des données :</b> les indicateurs d'activité (entrepreneurs, projets, labellisés, candidatures) sont dérivés en continu de l'activité de la plateforme. Les indicateurs de terrain (mangroves, déchets, bénéficiaires) sont saisis à la source par les coordinateurs pays, validés et datés avant publication, puis agrégés automatiquement. Aucun total n'est ressaisi à la main.</span></p>
+  </section>
+</div>
+<div class="wrap upd-wrap">
+  <section class="upd-card">
+    <div class="upd-h"><h2 class="display-sm">Journal des mises à jour des données</h2><span class="caption">Validées et publiées par la console programme · tracées au journal d'audit</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:36px 24px;color:var(--ink-mute);"><i class="ti ti-history" style="font-size:30px;color:var(--ink-faint);"></i><p style="margin:0;max-width:480px;">Aucune mise à jour publiée pour l'instant. Le journal se remplira dès la première validation d'indicateur par la console programme.</p></div>
+  </section>
+</div>
+<style id="cf-prog">
+.prog-wrap{max-width:1240px;margin:24px auto 0;padding:0 32px;}
+.prog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.prog-card{display:flex;flex-direction:column;gap:9px;background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow-1);color:inherit;transition:border-color var(--t-fast) var(--ease),transform var(--t-fast) var(--ease);}
+a.prog-card:hover{border-color:var(--hair-strong);transform:translateY(-2px);}
+.prog-card.is-note{background:var(--canvas-soft);box-shadow:none;}
+.pc-ic{width:38px;height:38px;border-radius:10px;background:var(--teal-bg);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:19px;}
+.prog-card.is-note .pc-ic{background:#fff;border:1px solid var(--hair);color:var(--ink-mute);}
+.pc-t{font-family:var(--font-display);font-weight:500;font-size:14px;color:var(--ink);}
+.pc-d{font-family:var(--font-sans);font-size:12.5px;line-height:1.5;color:var(--ink-mute);}
+a.prog-card .pc-t{display:flex;align-items:center;gap:6px;}
+a.prog-card .pc-t::after{content:"\2192";color:var(--teal);font-weight:400;}
+@media(max-width:980px){.prog-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.prog-grid{grid-template-columns:1fr;}}
+@media print{.prog-wrap{display:none !important;}}
+</style>
+<div class="wrap prog-wrap">
+  <h2 class="sr-only">Cadre programme et ressources</h2>
+  <div class="prog-grid">
+    <a class="prog-card" href="aide-reporting.html"><span class="pc-ic"><i class="ti ti-calendar"></i></span><div class="pc-t">Aide et calendrier de reporting</div><div class="pc-d">FAQ, calendrier des publications, glossaire et contacts suivi et évaluation.</div></a>
+    <a class="prog-card" href="espace-partenaire.html"><span class="pc-ic"><i class="ti ti-folder"></i></span><div class="pc-t">Documents et rapports</div><div class="pc-d">Convention, méthodologie et notes de cadrage, depuis votre organisation.</div></a>
+    <div class="prog-card is-note"><span class="pc-ic"><i class="ti ti-chart-bar"></i></span><div class="pc-t">Exécution financière</div><div class="pc-d">Engagements, décaissements et taux d'exécution sont transmis hors plateforme, par les canaux conventionnels.</div></div>
+    <div class="prog-card is-note"><span class="pc-ic"><i class="ti ti-shield-check"></i></span><div class="pc-t">Sauvegardes et mécanisme de plainte</div><div class="pc-d">Cadre de sauvegardes environnementales et sociales et mécanisme de gestion des plaintes en cours de formalisation avec les partenaires. Contact : suivi@africagovernanceinstitute.org.</div></div>
+  </div>
+</div>
+<div class="print-only">Document généré depuis le tableau de bord impact · Coastal Futures Network · Institut Africain de la Gouvernance. Programme lancé le 10 juin 2026 ; les indicateurs d'impact seront publiés dès la première collecte.</div>
+
+<div class="wrap" style="padding-bottom:48px;"><span class="caption">Source : plateforme Coastal Futures Network · Programme lancé le 10 juin 2026, collecte en cours · Institut Africain de la Gouvernance</span></div>
+
+</main>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function countUp(el){var t=parseInt(el.getAttribute('data-count'),10),s=null;function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/1100,1);el.textContent=Math.round((1-Math.pow(1-p,3))*t).toLocaleString('fr-FR');if(p<1)requestAnimationFrame(step);else el.textContent=t.toLocaleString('fr-FR');}requestAnimationFrame(step);}
+  var counters=[].slice.call(document.querySelectorAll('.v[data-count]'));
+  // Charts are in launch (empty) state : no data series to animate yet.
+  if(reduce){ counters.forEach(function(c){c.textContent=parseInt(c.getAttribute('data-count'),10).toLocaleString('fr-FR');}); return; }
+  setTimeout(function(){ counters.forEach(countUp); }, 250);
+  setTimeout(function(){ counters.forEach(function(c){ if(c.textContent==='0') c.textContent=parseInt(c.getAttribute('data-count'),10).toLocaleString('fr-FR'); }); }, 1500);
+})();
+</script>
+
+<script id="cf-csv">(function(){
+  function cell(c){var v=c.getAttribute('data-csv'); if(v==null) v=c.textContent; return '"'+String(v).replace(/\s+/g,' ').trim().replace(/"/g,'""')+'"';}
+  function tableCSV(tbl){return [].map.call(tbl.querySelectorAll('tr'),function(tr){return [].map.call(tr.querySelectorAll('th,td'),cell).join(',');}).join('\r\n');}
+  var btn=document.getElementById('csvBtn');
+  if(btn){btn.addEventListener('click',function(){
+    var rf=document.getElementById('rfTable'); if(!rf) return;
+    var en=document.documentElement.lang==='en';
+    var head=en?'Coastal Futures Network - Results framework (Publication no. 0, no data published yet)':'Coastal Futures Network - Cadre de resultats (Publication n0, aucune donnee publiee a ce jour)';
+    var csv='\ufeff'+head+'\r\n\r\n'+tableCSV(rf);
+    var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='coastal-futures-cadre-resultats.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},120);
+  });}
+})();</script>
+<script id="cf-topbar-pop">(function(){
+  var btn=document.getElementById('cfUserBtn'),pop=document.getElementById('cfUserPop');
+  if(btn&&pop){
+    var close=function(){pop.classList.remove('open');btn.classList.remove('on');btn.setAttribute('aria-expanded','false');};
+    btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var o=!pop.classList.contains('open');close();if(o){pop.classList.add('open');btn.classList.add('on');btn.setAttribute('aria-expanded','true');}});
+    document.addEventListener('click',function(e){if(!e.target.closest('#cfUserPop')&&!e.target.closest('#cfUserBtn'))close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  }
+  [].slice.call(document.querySelectorAll('[data-cf-logout]')).forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();try{localStorage.removeItem('cf-auth');localStorage.removeItem('cf-ptf-auth');localStorage.removeItem('cf-ptf-since');}catch(err){}window.location.href='connexion-bailleur.html';});});
+  /* export bailleur : géré par assets/cf-report.js (vrai rapport de marque, plus window.print direct) */
+})();</script>
+
+<script id="cf-tour-cfg">
+window.CF_TOUR = {
+  key: 'cf-tour-partenaire-v2',
+  steps: [
+    { center:true, icon:'ti-confetti',
+      fr:{ t:'Bienvenue dans votre espace bailleurs', b:'Ce tableau de bord consolide l\u2019impact du programme, arrêté et sourcé. Prenons deux minutes pour découvrir ses indicateurs, ses graphiques et ses sources. Vous pourrez le revoir depuis votre menu de compte.' },
+      en:{ t:'Welcome to your donor space', b:'This dashboard consolidates the programme\u2019s impact, dated and sourced. Let\u2019s take two minutes to walk through its indicators, charts and sources. You can replay it from your account menu.' } },
+    { sel:'.ptf-nav', place:'bottom', icon:'ti-compass', pad:6, radius:100,
+      fr:{ t:'Votre navigation bailleurs', b:'Trois vues cohérentes : le tableau de bord consolidé, la vue par pays et votre organisation. Sur mobile, elles sont reprises dans le menu de compte.' },
+      en:{ t:'Your donor navigation', b:'Three consistent views: the consolidated dashboard, the by-country view and your organisation. On mobile, they live in the account menu.' } },
+    { sel:'.kpi-grid', place:'bottom', icon:'ti-chart-bar', pad:6, radius:16,
+      fr:{ t:'Les indicateurs clés', b:'Entrepreneurs, projets labellisés, mangroves, déchets et bénéficiaires. Le programme vient de se lancer : ils sont à zéro avec la cible rappelée, et se rempliront dès la collecte.' },
+      en:{ t:'The key indicators', b:'Entrepreneurs, certified projects, mangroves, waste and beneficiaries. The programme has just launched: they start at zero with the target shown, filling in from the first collection.' } },
+    { sel:'[data-tour="area"]', place:'top', icon:'ti-chart-dots', pad:8,
+      fr:{ t:'Bénéficiaires dans le temps', b:'Cette courbe cumulera les bénéficiaires directs mois par mois. Un axe et une table accessibles accompagnent chaque graphique.' },
+      en:{ t:'Beneficiaries over time', b:'This area chart will accumulate direct beneficiaries month by month. An accessible axis and table accompany every chart.' } },
+    { center:true, icon:'ti-map-2',
+      fr:{ t:'Bientôt : d’autres graphiques', b:'Dès la collecte, le tableau accueillera la répartition des projets labellisés par pays, la ventilation par domaine et l’avancement de la labellisation, entre le Sénégal, le Ghana, la Guinée, le Liberia et la Sierra Leone.' },
+      en:{ t:'Coming soon: more charts', b:'From first collection, the dashboard will add the split of certified projects by country, the breakdown by domain and certification progress, across Senegal, Ghana, Guinea, Liberia and Sierra Leone.' } },
+    { sel:'.sources', place:'top', icon:'ti-rosette-discount-check', pad:8, radius:16,
+      fr:{ t:'Sources et dates d\u2019arrêté', b:'Chaque indicateur affiche sa valeur, sa date d\u2019arrêté et sa source. Tout est validé et publié par la console programme, et renvoie à la méthodologie.' },
+      en:{ t:'Sources and cutoff dates', b:'Each indicator shows its value, cutoff date and source. Everything is validated and published by the programme console, and links to the methodology.' } },
+    { sel:'.upd-card', place:'top', icon:'ti-history', pad:8, radius:16,
+      fr:{ t:'Journal des mises à jour', b:'L\u2019historique daté des changements de valeur : ancienne valeur, nouvelle valeur, qui a validé et publié, et la source. Il se remplira dès la première validation.' },
+      en:{ t:'Data update log', b:'The dated history of value changes: previous value, new value, who validated and published, and the source. It fills in from the first validation.' } },
+    { sel:'#exportBtn', place:'bottom', icon:'ti-file-export', pad:8, radius:100,
+      fr:{ t:'Exporter votre rapport', b:'Générez à tout moment un rapport PDF consolidé, daté et sourcé, prêt à partager avec vos instances.' },
+      en:{ t:'Export your report', b:'Generate a consolidated PDF report at any time, dated and sourced, ready to share with your boards.' } },
+    { sel:'#cfUserBtn', place:'bottom', icon:'ti-user-circle', pad:6, radius:100,
+      fr:{ t:'Votre compte', b:'Accédez à la vue par pays, contactez l\u2019équipe, rejouez cette visite ou déconnectez-vous depuis ce menu.' },
+      en:{ t:'Your account', b:'Open the by-country view, contact the team, replay this tour or sign out from this menu.' } },
+    { center:true, icon:'ti-route',
+      fr:{ t:'Vous êtes prêt(e)', b:'Les données sont arrêtées à date et sourcées. Pour revoir ce tour, ouvrez votre menu de compte puis « revoir la visite guidée ».' },
+      en:{ t:'You\u2019re all set', b:'The data is dated and sourced. To replay this tour, open your account menu then “replay the guided tour”.' } }
+  ]
+};
+</script>
+<script src="assets/cf-tour.js"></script>
+
+<script id="cf-i18n">(function(){var D={"Aide & calendrier":"Help & calendar","Accès sur invitation":"By invitation only",
+"Cadre de résultats":"Results framework",
+"Niveau, référence, cible et fréquence de chaque indicateur. Les valeurs courantes figurent dans la table des sources ci-dessous.":"Level, baseline, target and frequency for each indicator. Current values appear in the sources table below.",
+"Publication n° 0 · aucune donnée publiée à ce jour":"Publication no. 0 · no data published yet",
+"Exporter les données (CSV)":"Export data (CSV)",
+"Indicateur":"Indicator","Niveau":"Level","Référence":"Baseline","Cible":"Target","Fréquence":"Frequency","Désagrégations prévues":"Planned disaggregations",
+"objectif 4 000":"target 4,000","dès la collecte":"from first collection","Fraîcheur des données :":"Data freshness:","les indicateurs d'activité (entrepreneurs, projets, labellisés, candidatures) sont dérivés en continu de l'activité de la plateforme. Les indicateurs de terrain (mangroves, déchets, bénéficiaires) sont saisis à la source par les coordinateurs pays, validés et datés avant publication, puis agrégés automatiquement. Aucun total n'est ressaisi à la main.":" activity indicators (entrepreneurs, projects, certified, applications) are derived continuously from platform activity. Field indicators (mangroves, waste, beneficiaries) are entered at source by country coordinators, validated and dated before publication, then aggregated automatically. No total is ever retyped by hand.",
+"Effet":"Outcome","Produit":"Output","Impact":"Impact",
+"juin 2026":"June 2026","À définir":"To be defined","Trimestrielle":"Quarterly","Semestrielle":"Half-yearly",
+"Sexe":"Sex","Âge":"Age","Pays":"Country","Filière":"Sector",
+"ODD 8":"SDG 8","ODD 8 · 13":"SDG 8 · 13","ODD 1 · 8":"SDG 1 · 8","ODD 13 · 14 · 15":"SDG 13 · 14 · 15","ODD 13":"SDG 13",
+"Cibles « à définir » : arrêtées avec les partenaires à l'issue de la phase de cadrage, jamais estimées par défaut. Les désagrégations (sexe, âge, pays, filière) seront disponibles dès la collecte. Niveaux de résultat : produit, effet, impact.":"Targets marked “to be defined” are set with partners after the framing phase, never estimated by default. Disaggregations (sex, age, country, sector) will be available from first collection. Result levels: output, outcome, impact.",
+"Cadre programme et ressources":"Programme framework and resources",
+"Aide et calendrier de reporting":"Reporting help and calendar",
+"FAQ, calendrier des publications, glossaire et contacts suivi et évaluation.":"FAQ, publication calendar, glossary and monitoring & evaluation contacts.",
+"Documents et rapports":"Documents and reports",
+"Convention, méthodologie et notes de cadrage, depuis votre organisation.":"Agreement, methodology and framing notes, from your organisation.",
+"Exécution financière":"Financial execution",
+"Engagements, décaissements et taux d'exécution sont transmis hors plateforme, par les canaux conventionnels.":"Commitments, disbursements and execution rates are shared off-platform, through conventional channels.",
+"Sauvegardes et mécanisme de plainte":"Safeguards and grievance mechanism",
+"Sauvegardes environnementales et sociales et mécanisme de gestion des plaintes.":"Environmental and social safeguards and grievance redress mechanism.",
+"Cadre de sauvegardes environnementales et sociales et mécanisme de gestion des plaintes en cours de formalisation avec les partenaires. Contact : suivi@africagovernanceinstitute.org.":"A framework of environmental and social safeguards and a grievance redress mechanism is being formalised with partners. Contact: suivi@africagovernanceinstitute.org.",
+"Première publication prévue : troisième trimestre 2026":"First publication expected: third quarter 2026","Programme lancé le 10 juin 2026 · première publication des indicateurs prévue au T3 2026":"Programme launched on 10 June 2026 · first publication of indicators expected in Q3 2026","Entrepreneurs verts accompagnés":"Green entrepreneurs supported","objectif 500":"target 500","dès la collecte":"from first collection","Projets labellisés":"Certified projects","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Le tableau de bord se remplira dès la collecte":"The dashboard will fill in from the first data collection","Le programme vient de se lancer le 10 juin 2026. Les graphiques d'impact (bénéficiaires, projets par pays, répartition, labellisation) s'afficheront ici dès que les premiers indicateurs auront été collectés, validés et publiés par la console programme.":"The programme has just launched on 10 June 2026. The impact charts (beneficiaries, projects by country, breakdown, certification) will appear here once the first indicators have been collected, validated and published by the programme console.","Première publication des indicateurs prévue au T3 2026, après la collecte de terrain":"First publication of indicators expected in Q3 2026, after field data collection","en attente":"pending","Suivi terrain":"Field monitoring","Aucune mise à jour publiée pour l'instant. Le journal se remplira dès la première validation d'indicateur par la console programme.":"No update published yet. The log will fill in from the first indicator validation by the programme console.","Source : plateforme Coastal Futures Network · Programme lancé le 10 juin 2026, collecte en cours · Institut Africain de la Gouvernance":"Source: Coastal Futures Network platform · Programme launched on 10 June 2026, collection under way · Africa Governance Institute","Document généré depuis le tableau de bord impact · Coastal Futures Network · Institut Africain de la Gouvernance. Programme lancé le 10 juin 2026 ; les indicateurs d'impact seront publiés dès la première collecte.":"Document generated from the impact dashboard · Coastal Futures Network · Africa Governance Institute. Programme launched on 10 June 2026; impact indicators will be published from the first collection.","Bénéficiaires directs cumulés en 2026":"Direct beneficiaries, cumulative in 2026","Mois":"Month","Bénéficiaires":"Beneficiaries","Journal des mises à jour des données":"Data update log","Validées et publiées par la console programme · tracées au journal d'audit":"Validated and published by the programme console · recorded in the audit log","Publié":"Published","Bénéficiaires directs : 1 020 → 1 200":"Direct beneficiaries: 1,020 → 1,200","Validé et publié par Maty Ndiaye · agrégation projets (5 pays)":"Validated and published by Maty Ndiaye · projects aggregation (5 countries)","Projets actifs : 82 → 87":"Active projects: 82 → 87","Publié · registre projets":"Published · projects registry","Projets labellisés : 47 → 51":"Certified projects: 47 → 51","Publié · comité de labellisation":"Published · certification committee","Foyers raccordés : 480 → 520":"Households connected: 480 → 520","Publié · mini-réseaux solaires (Sénégal)":"Published · solar mini-grids (Senegal)","Mangroves restaurées : 15 → 18 ha":"Mangroves restored: 15 → 18 ha","Publié · suivi terrain (Liberia)":"Published · field monitoring (Liberia)","Déchets recyclés : 36 → 42 t":"Waste recycled: 36 → 42 t","Publié · ReCycle Accra (Ghana)":"Published · ReCycle Accra (Ghana)","30 mai 2026":"30 May 2026","Définitions et méthodologie":"Definitions and methodology","Sources et dates d'arrêté":"Sources and cut-off dates","Indicateurs validés et publiés par la console programme":"Indicators validated and published by the programme console","Indicateur":"Indicator","Valeur":"Value","Date d'arrêté":"Cut-off date","Source":"Source","Entrepreneurs verts":"Green entrepreneurs","Annuaire et candidatures":"Directory and applications","Registre projets":"Projects registry","Comité de labellisation":"Certification committee","Agrégation projets (5 pays)":"Projects aggregation (5 countries)","Mangroves restaurées":"Mangroves restored","Suivi terrain (Liberia)":"Field monitoring (Liberia)","Déchets recyclés":"Waste recycled","ReCycle Accra (Ghana)":"ReCycle Accra (Ghana)","2 juin 2026":"2 June 2026","28 mai 2026":"28 May 2026","21 mai 2026":"21 May 2026","Document généré depuis le tableau de bord impact · Coastal Futures Network · Institut Africain de la Gouvernance. Indicateurs validés et publiés par la console programme, arrêtés au 2 juin 2026.":"Document generated from the impact dashboard · Coastal Futures Network · Africa Governance Institute. Indicators validated and published by the programme console, as of 2 June 2026.","Mon organisation":"My organisation","Dashboard consolidé":"Consolidated dashboard","Espace bailleurs":"Donor area","Partenaire technique et financier":"Technical and financial partner","Vue par pays":"By country view","Contacter l'équipe":"Contact the team","Revoir la visite guidée":"Replay the guided tour","Se déconnecter":"Sign out","Fatoumata Camara":"Fatoumata Camara","F. Camara":"F. Camara","Dernière mise à jour : 2 juin 2026, 09h12 GMT":"Last updated: 2 June 2026, 09:12 GMT","+8% ce mois":"+8% this month","ha":"ha","+3 ha":"+3 ha","+6 t":"+6 t","Bénéficiaires directs dans le temps":"Direct beneficiaries over time","Jan":"Jan","Fév":"Feb","Mar":"Mar","Avr":"Apr","Mai":"May","Juin":"Jun","Projets par pays":"Projects by country","Sénégal":"Senegal","Ghana":"Ghana","Liberia":"Liberia","Guinée":"Guinea","S. Leone":"S. Leone","Répartition par type de projet":"Breakdown by project type","projets":"projects","Restauration mangroves":"Mangrove restoration","Avancement de la labellisation":"Certification progress","Guinée-Conakry":"Guinea","Sierra Leone":"Sierra Leone","Source : plateforme Coastal Futures Network · Données arrêtées au 2 juin 2026 · Institut Africain de la Gouvernance":"Source: Coastal Futures Network platform · Data as of 2 June 2026 · Africa Governance Institute","Données confidentielles · accès PTF":"Confidential data · donor access","Session sécurisée":"Secure session","Accueil":"Home","Le programme":"The programme","Carte d'impact":"Impact map","Écosystème":"Ecosystem","Ressources":"Resources","Se connecter":"Sign in","Programme":"Programme","Contact":"Contact","À propos":"About","Pays d'intervention":"Countries of operation","Actualités":"News","Événements":"Events","Médiathèque":"Media library","Recherche-action":"Action research","Dashboard bailleurs":"Donor dashboard","Annuaire entrepreneurs":"Entrepreneurs directory","Annuaire mentors":"Mentors directory","Appels à candidatures":"Calls for applications","Accueil hub":"Hub home","Entrepreneurs":"Entrepreneurs","Mentors":"Mentors","Appels":"Calls","Carte":"Map","Postuler":"Apply","Postuler maintenant":"Apply now","Voir le profil":"View profile","Voir le détail":"View details","Voir la fiche":"View details","S'inscrire":"Register","Télécharger":"Download","Télécharger le PDF":"Download PDF","Tout voir":"See all","Suivant":"Next","Précédent":"Previous","Enregistrer":"Save","Annuler":"Cancel","Envoyer":"Send","Envoyer le message":"Send message","Contacter":"Contact","Découvrir":"Discover","Réinitialiser":"Reset","Continuer":"Continue","Confirmer":"Confirm","Approuver":"Approve","Décliner":"Decline","Rejeter":"Reject","Voir sur la carte":"View on map","Aperçu public":"Public preview","Nouvelle candidature":"New application","Mettre à jour":"Update","Labellisé":"Certified","En incubation":"In incubation","En revue":"Under review","Soumis":"Submitted","Brouillon":"Draft","Rejeté":"Rejected","Disponible":"Available","Indisponible":"Unavailable","Zone pilote":"Pilot zone","Hub jeunesse":"Youth hub","Présentiel":"In person","Virtuel":"Online","Hybride":"Hybrid","À la une":"Featured","À venir":"Upcoming","Passés":"Past","Clôturé":"Closed","Actif":"Active","Inactif":"Inactive","Toutes":"All","Tous":"All","Tous les pays":"All countries","Tous les secteurs":"All sectors","Tous les statuts":"All statuses","Toutes les expertises":"All areas of expertise","Tous les types":"All types","Tous les thèmes":"All themes","Toutes les années":"All years","Toutes les universités":"All universities","Disponibles uniquement":"Available only","Énergie renouvelable":"Renewable energy","Restauration de mangroves":"Mangrove restoration","Recyclage et déchets":"Recycling and waste","Agriculture résiliente":"Resilient agriculture","Entreprise verte":"Green enterprise","Économie circulaire":"Circular economy","Finance verte":"Green finance","Impact investing":"Impact investing","Mentorat":"Mentoring","Entrepreneurs verts":"Green entrepreneurs","Projets actifs":"Active projects","Mangroves restaurées":"Mangroves restored","Déchets recyclés":"Waste recycled","Bénéficiaires directs":"Direct beneficiaries","Mentors et experts":"Mentors and experts","Partenaires engagés":"Engaged partners","Foyers raccordés":"Households connected","Emplois verts créés":"Green jobs created","Emplois créés":"Jobs created","Tableau de bord":"Dashboard","Tableau de bord impact":"Impact dashboard","Mon profil":"My profile","Mes candidatures":"My applications","Mes projets":"My projects","Messages":"Messages","Demandes":"Requests","Mes mentorés":"My mentees","Utilisateurs":"Users","Candidatures":"Applications","Projets et indicateurs":"Projects and indicators","Alertes":"Alerts","Paramètres":"Settings","Statistiques":"Statistics","Se déconnecter":"Sign out","Espace bailleurs PTF":"Donor area","Vue par pays":"By country","Vue consolidée":"Consolidated view","Exporter le rapport PDF":"Export PDF report","Mentor":"Mentor","Entrepreneur":"Entrepreneur","Partenaire":"Partner","Administratrice":"Administrator","Coordination du programme":"Programme coordination","candidatures ouvertes":"open calls","cinq pays, cinq hubs":"five countries, five hubs","une plateforme, quatre espaces":"one platform, four areas","vision et mission":"vision and mission","gouvernance":"governance","alignement stratégique":"strategic alignment","à propos du programme":"about the programme","calendrier sur douze mois, avril 2026 à mars 2027":"twelve-month calendar, april 2026 to march 2027","Page introuvable":"Page not found","Erreur serveur":"Server error","Retour à l'accueil":"Back to home","Réessayer":"Retry","Contacter le support":"Contact support","Notifications":"Notifications","Tout marquer lu":"Mark all as read","Prochains événements":"Upcoming events","Prochaines sessions":"Upcoming sessions","Mes mentorés actifs":"My active mentees","Demandes de contact":"Contact requests","Profil complété":"Profile completed","Activité récente":"Recent activity","Startups labellisées":"Certified startups","Mentors disponibles":"Available mentors"};var KEY="cf-lang";var arr=[];try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var t;while(t=w.nextNode()){var k=(t.nodeValue||"").trim();if(k&&D[k]){arr.push(t);t.__fr=t.nodeValue;}}}catch(e){}function setLang(l){arr.forEach(function(n){var k=n.__fr.trim();n.nodeValue=(l==="en")?n.__fr.replace(k,D[k]):n.__fr;});document.documentElement.lang=l;try{localStorage.setItem(KEY,l);}catch(e){}document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.classList.toggle("is-en",l==="en");});}var s=null;try{s=localStorage.getItem(KEY);}catch(e){}var l=s||(((navigator.language||"fr").toLowerCase().indexOf("en")===0)?"en":"fr");document.querySelectorAll("[data-cf-lang]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();setLang(document.documentElement.lang==="en"?"fr":"en");});});setLang(l);})();</script>
+<style id="cf-cookie-css">.cf-cookie{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(170%);width:min(720px,calc(100% - 28px));background:#0C2420;color:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);z-index:90;transition:transform .42s cubic-bezier(.4,0,.2,1);}.cf-cookie.show{transform:translateX(-50%) translateY(0);}.cf-cookie-in{display:flex;align-items:center;gap:18px;padding:18px 22px;flex-wrap:wrap;}.cf-cookie .ci{width:42px;height:42px;border-radius:12px;background:rgba(62,203,176,.16);color:#3ECBB0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}.cf-cookie .ct{flex:1;min-width:220px;}.cf-cookie .ct h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:14.5px;margin:0 0 3px;}.cf-cookie .ct p{font-family:'DM Sans',system-ui,sans-serif;font-size:12.5px;color:rgba(255,255,255,.72);margin:0;line-height:1.5;}.cf-cookie .ct a{color:#3ECBB0;text-decoration:underline;}.cf-cookie .ca{display:flex;gap:9px;flex-wrap:wrap;}.cf-cookie .cb{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:13px;font-weight:500;border-radius:100px;padding:9px 18px;cursor:pointer;border:1px solid transparent;}.cf-cookie .cb-a{background:#0A6B5E;color:#fff;}.cf-cookie .cb-a:hover{background:#063D34;}.cf-cookie .cb-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.3);}.cf-cookie .cb-s:hover{background:rgba(255,255,255,.12);}.cf-cookie .cset{padding:22px 24px;}.cf-cookie .cset-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;}.cf-cookie .cset-h h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0;}.cf-cookie .cset-h i{color:#3ECBB0;font-size:20px;}.cf-cookie .crow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}.cf-cookie .crow:last-of-type{border-bottom:0;}.cf-cookie .cn{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;font-size:13.5px;color:#fff;}.cf-cookie .cd{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;}.cf-cookie .calways{font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;font-weight:600;color:#3ECBB0;}.cf-cookie .sw{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,.22);position:relative;cursor:pointer;flex-shrink:0;transition:background .16s;}.cf-cookie .sw::after{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .16s;}.cf-cookie .sw.on{background:#0A6B5E;}.cf-cookie .sw.on::after{transform:translateX(18px);}.cf-cookie .cset-act{display:flex;gap:9px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}@media(max-width:560px){.cf-cookie .ca,.cf-cookie .cset-act{width:100%;}.cf-cookie .cb{flex:1;}}</style><script id="cf-cookie-js">(function(){var K="cf-cookies";var stored=null;try{stored=localStorage.getItem(K);}catch(e){}if(stored)return;var T={fr:{h:"Nous respectons votre vie privée",p1:"Nous utilisons des cookies pour mesurer l'audience et améliorer le site. Consultez notre ",p2:"politique de confidentialité",a:"Accepter",r:"Refuser",c:"Personnaliser",sh:"Préférences cookies",nec:"Strictement nécessaires",necd:"Indispensables au fonctionnement du site.",aud:"Mesure d'audience",audd:"Statistiques de visite anonymisées.",perso:"Personnalisation",persod:"Contenus adaptés à vos préférences.",always:"Toujours actif",save:"Enregistrer mes choix",all:"Tout accepter",back:"Retour"},en:{h:"We respect your privacy",p1:"We use cookies to measure audience and improve the site. See our ",p2:"privacy policy",a:"Accept",r:"Refuse",c:"Customise",sh:"Cookie preferences",nec:"Strictly necessary",necd:"Essential for the site to work.",aud:"Audience measurement",audd:"Anonymised visit statistics.",perso:"Personalisation",persod:"Content tailored to your preferences.",always:"Always on",save:"Save my choices",all:"Accept all",back:"Back"}};var el=document.createElement("div");el.className="cf-cookie";el.id="cfCookie";document.body.appendChild(el);var view="banner";var prefs={aud:true,perso:true};function lang(){return document.documentElement.lang==="en"?"en":"fr";}function done(v){try{localStorage.setItem(K,v);}catch(e){}el.classList.remove("show");setTimeout(function(){el.remove();},460);}function render(){var t=T[lang()];if(view==="banner"){el.innerHTML='<div class="cf-cookie-in"><div class="ci"><i class="ti ti-cookie"></i></div><div class="ct"><h4>'+t.h+'</h4><p>'+t.p1+'<a href="confidentialite.html">'+t.p2+'</a>.</p></div><div class="ca"><button class="cb cb-s" data-a="custom">'+t.c+'</button><button class="cb cb-s" data-a="refuse">'+t.r+'</button><button class="cb cb-a" data-a="accept">'+t.a+'</button></div></div>';}else{el.innerHTML='<div class="cset"><div class="cset-h"><i class="ti ti-adjustments-horizontal"></i><h4>'+t.sh+'</h4></div>'+'<div class="crow"><div><div class="cn">'+t.nec+'</div><div class="cd">'+t.necd+'</div></div><span class="calways">'+t.always+'</span></div>'+'<div class="crow"><div><div class="cn">'+t.aud+'</div><div class="cd">'+t.audd+'</div></div><span class="sw'+(prefs.aud?" on":"")+'" data-t="aud"></span></div>'+'<div class="crow"><div><div class="cn">'+t.perso+'</div><div class="cd">'+t.persod+'</div></div><span class="sw'+(prefs.perso?" on":"")+'" data-t="perso"></span></div>'+'<div class="cset-act"><button class="cb cb-s" data-a="back">'+t.back+'</button><button class="cb cb-s" data-a="save">'+t.save+'</button><button class="cb cb-a" data-a="all">'+t.all+'</button></div></div>';}[].slice.call(el.querySelectorAll("[data-t]")).forEach(function(s){s.addEventListener("click",function(){prefs[s.getAttribute("data-t")]=!prefs[s.getAttribute("data-t")];s.classList.toggle("on");});});[].slice.call(el.querySelectorAll("[data-a]")).forEach(function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-a");if(a==="accept"||a==="all")done("accepted");else if(a==="refuse")done("refused");else if(a==="save")done("custom:"+(prefs.aud?1:0)+(prefs.perso?1:0));else if(a==="custom"){view="prefs";render();}else if(a==="back"){view="banner";render();}});});}render();try{new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});}catch(e){}setTimeout(function(){el.classList.add("show");},700);})();</script>
+<script src="assets/cf-report.js"></script>
+<script src="assets/cf-splash.js"></script>
+<script src="assets/cf-ptf-identity.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# SPA React (Vite) sur hébergement Apache : sert les fichiers existants
+# (/assets, /legacy, /data, index.html…) et renvoie tout le reste vers
+# index.html pour que React Router gère les routes côté client.
+# Ce fichier est copié tel quel dans dist/ au build.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Ne pas réécrire un fichier ou dossier qui existe réellement.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Tout le reste -> index.html (routing SPA).
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Cache long pour les assets fingerprintés, court pour l'HTML.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|png|jpe?g|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

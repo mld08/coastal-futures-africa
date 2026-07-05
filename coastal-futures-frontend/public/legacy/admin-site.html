@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net; connect-src 'self' https:; worker-src 'self' blob:">
+<script>(function(){function swallow(e){var r=e&&e.reason;var m=((r&&(r.message||r))||"")+"";if(m.indexOf("Transition")>=0||m.indexOf("skipped")>=0||m.indexOf("view transition")>=0){e.preventDefault();}}addEventListener("unhandledrejection",swallow);function tame(v){if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){try{v[k]&&v[k].catch&&v[k].catch(function(){});}catch(_){}});}addEventListener("pageswap",function(e){tame(e&&e.viewTransition);});addEventListener("pagereveal",function(e){tame(e&&e.viewTransition);});})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script id="cf-admin-guard">(function(){try{var ok=localStorage.getItem("cf-admin-auth")==="1"&&localStorage.getItem("cf-admin-name")&&["super","content","country","moderator"].indexOf(localStorage.getItem("cf-admin-role"))>=0;if(!ok){["cf-admin-auth","cf-admin-role","cf-admin-name","cf-admin-email","cf-admin-country","cf-admin-since"].forEach(function(k){try{localStorage.removeItem(k);}catch(_e){}});var p=(location.pathname.split("/").pop()||"admin-console.html");localStorage.setItem("cf-admin-next",p);window.location.replace("connexion-admin.html");}}catch(e){}})();</script>
+<meta name="description" content="Console d'administration : contenu et indicateurs clés du site Coastal Futures Network.">
+<title>Coastal Futures | Console · Contenu du site</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="admin-site.html">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-press:#04271F; --teal-deep:#063D34; --teal:#0A6B5E; --teal-soft:#12B396;
+  --teal-bright:#3ECBB0; --teal-bg:#EAF6F3; --teal-bg2:#F4FBF9;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --ink-faint:#92ACA7;
+  --hair-strong:#B4CDC8; --hair:#DCE9E6; --canvas-soft:#F8FBFA; --canvas:#FFFFFF;
+  --sand-deep:#7A4F1A; --sand:#B8823A; --cream:#F5EEDF;
+  --success:#066B52; --success-bg:#E3F9F1; --warning:#8A5512; --warning-bg:#FBF0DC; --error:#8F2A1A; --error-bg:#FBEBE7;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-sm:8px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-pill:100px;
+  --shadow-1:0 1px 3px rgba(6,61,52,.06);
+  --shadow-2:0 8px 24px rgba(6,61,52,.08), 0 2px 6px rgba(6,61,52,.04);
+  --shadow-3:0 24px 60px -18px rgba(4,39,31,.4);
+  --ease:cubic-bezier(.4,0,.2,1); --t-fast:160ms; --t-base:280ms;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas-soft);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
+.tnum{font-feature-settings:"tnum";font-variant-numeric:tabular-nums;}
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh;}
+.side{background:#0C2420;color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;}
+.side-logo{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}.side-logo img{height:24px;width:auto;}
+.side-logo .adm{font-family:var(--font-display);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-bright);border:1px solid rgba(62,203,176,.4);border-radius:var(--r-pill);padding:2px 9px;}
+.side-nav{flex:1;padding:16px 14px;overflow-y:auto;}
+.side-sec{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.4);padding:14px 12px 8px;}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-md);font-family:var(--font-display);font-size:14px;font-weight:500;color:rgba(255,255,255,.7);cursor:pointer;}
+.nav-item i{font-size:20px;}.nav-item:hover{background:rgba(255,255,255,.08);color:#fff;}
+.nav-item.on{background:rgba(62,203,176,.16);color:var(--teal-bright);}
+.nav-item .badge{margin-left:auto;background:var(--error);color:#fff;font-size:11px;font-weight:600;border-radius:var(--r-pill);padding:1px 7px;}
+.side-user{padding:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:11px;}
+.side-user .av{width:38px;height:38px;border-radius:50%;background:var(--sand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;}
+.side-user .un{font-family:var(--font-display);font-weight:600;font-size:13.5px;color:#fff;}
+.side-user .ur{font-family:var(--font-sans);font-size:11.5px;color:rgba(255,255,255,.55);}
+.side-user .lo{margin-left:auto;color:rgba(255,255,255,.55);font-size:20px;display:flex;}.side-user .lo:hover{color:#fff;}
+
+.main{min-width:0;display:flex;flex-direction:column;}
+.topbar{height:66px;display:flex;align-items:center;gap:14px;padding:0 28px;background:#fff;border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20;}
+.tb-l h1{font-family:var(--font-display);font-weight:500;font-size:18px;letter-spacing:-.4px;color:var(--ink);margin:0;}
+.tb-l .crumb{font-family:var(--font-sans);font-size:12px;color:var(--ink-mute);margin-bottom:1px;}
+.tb-r{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.tb-role{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--teal-deep);background:var(--teal-bg);border:1px solid var(--hair);border-radius:var(--r-pill);padding:6px 13px;}
+.tb-role i{font-size:15px;color:var(--teal);}
+.content{padding:26px 28px 56px;max-width:1180px;width:100%;}
+.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px;}
+.pagehead .kk{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:lowercase;color:var(--ink-faint);}
+.pagehead h2{font-family:var(--font-display);font-weight:300;font-size:30px;letter-spacing:-1.2px;color:var(--ink);margin:6px 0 6px;}
+.pagehead p{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-mute);margin:0;max-width:560px;line-height:1.55;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:13.5px;font-weight:500;border-radius:var(--r-pill);padding:9px 17px;cursor:pointer;white-space:nowrap;border:1px solid transparent;transition:all var(--t-fast) var(--ease);}
+.btn i{font-size:17px;}
+.btn-pri{background:var(--teal);color:#fff;}.btn-pri:hover{background:var(--teal-deep);}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--hair-strong);}.btn-light:hover{border-color:var(--teal);color:var(--teal);}
+.btn-ghost{background:transparent;color:var(--ink-mute);}.btn-ghost:hover{color:var(--teal);background:var(--canvas-soft);}
+.btn-danger{background:#fff;color:var(--error);border-color:var(--hair-strong);}.btn-danger:hover{border-color:var(--error);background:var(--error-bg);}
+
+.card{background:#fff;border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow-1);margin-bottom:20px;overflow:hidden;}
+.card-h{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--hair);flex-wrap:wrap;}
+.card-h h3{font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);margin:0;}
+.card-h .cn{font-family:var(--font-sans);font-size:12.5px;color:var(--ink-mute);}
+.card-h .sp{flex:1;}
+.fsearch{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:0 11px;width:240px;max-width:100%;}
+.fsearch:focus-within{border-color:var(--teal);}
+.fsearch i{font-size:16px;color:var(--ink-faint);}
+.fsearch input{flex:1;min-width:0;border:0;outline:0;background:none;font-family:var(--font-sans);font-size:13.5px;color:var(--ink);padding:8px 0;}
+
+.tbl-wrap{overflow-x:auto;}
+table.tbl{width:100%;border-collapse:collapse;min-width:720px;}
+.tbl thead th{font-family:var(--font-display);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);text-align:left;padding:11px 18px;border-bottom:1px solid var(--hair);background:var(--canvas-soft);white-space:nowrap;}
+.tbl tbody td{padding:12px 18px;border-bottom:1px solid var(--hair);font-family:var(--font-sans);font-size:13px;color:var(--ink-2);vertical-align:middle;}
+.tbl tbody tr:last-child td{border-bottom:0;}
+.tbl tbody tr:hover{background:var(--canvas-soft);}
+.tbl .pn{font-family:var(--font-display);font-weight:600;font-size:13.5px;color:var(--ink);}
+.tbl .loc{color:var(--ink-mute);font-size:12px;}
+.tdot{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}
+.tdot .d{width:10px;height:10px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);flex-shrink:0;}
+.bdg{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-display);font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill);white-space:nowrap;}
+.bdg-live{background:#E3F9F1;color:#066B52;}.bdg-pend{background:#FBF0DC;color:#8A5512;}.bdg-teal{background:var(--teal-bg);color:var(--teal-deep);}
+.rowact{display:flex;gap:6px;justify-content:flex-end;}
+.iact{width:32px;height:32px;border-radius:8px;border:1px solid var(--hair);background:#fff;color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all var(--t-fast) var(--ease);}
+.iact:hover{border-color:var(--teal);color:var(--teal);}
+.iact.del:hover{border-color:var(--error);color:var(--error);}
+.coords{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-faint);font-feature-settings:"tnum";white-space:nowrap;}
+.empty{padding:44px 20px;text-align:center;color:var(--ink-mute);}
+.empty i{font-size:32px;color:var(--ink-faint);display:block;margin-bottom:10px;}
+
+/* settings */
+.setgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:18px 20px;}
+.field label{font-family:var(--font-display);font-size:12.5px;font-weight:500;color:var(--ink-2);margin-bottom:6px;display:block;}
+.field input,.field select,.field textarea{width:100%;font-family:var(--font-sans);font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--hair-strong);border-radius:var(--r-sm);padding:9px 11px;outline:none;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-bg);}
+.field .hint{font-family:var(--font-sans);font-size:11.5px;color:var(--ink-faint);margin-top:5px;}
+.sw{position:relative;width:42px;height:24px;flex-shrink:0;cursor:pointer;}
+.sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;}
+.sw .tr{position:absolute;inset:0;background:var(--hair-strong);border-radius:var(--r-pill);transition:background var(--t-fast) var(--ease);}
+.sw .tr::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform var(--t-fast) var(--ease);}
+.sw input:checked+.tr{background:var(--teal);}.sw input:checked+.tr::after{transform:translateX(18px);}
+.swrow{display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.swrow .l{font-family:var(--font-sans);font-size:13.5px;color:var(--ink-2);}
+
+/* drawer form */
+.drawer{position:fixed;inset:0;z-index:120;display:none;}
+.drawer.open{display:block;}
+.drawer .scrim{position:absolute;inset:0;background:rgba(8,28,24,.5);opacity:0;transition:opacity var(--t-base) var(--ease);}
+.drawer.show .scrim{opacity:1;}
+.drawer .panel{position:absolute;top:0;right:0;height:100%;width:min(460px,100%);background:#fff;box-shadow:var(--shadow-3);transform:translateX(100%);transition:transform var(--t-base) var(--ease);display:flex;flex-direction:column;}
+.drawer.show .panel{transform:translateX(0);}
+.drawer .ph{display:flex;align-items:center;gap:12px;padding:20px 22px;border-bottom:1px solid var(--hair);}
+.drawer .ph h3{font-family:var(--font-display);font-weight:600;font-size:16px;color:var(--ink);margin:0;}
+.drawer .px{margin-left:auto;width:34px;height:34px;border-radius:50%;border:1px solid var(--hair);background:#fff;color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.drawer .pb{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:15px;}
+.drawer .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.drawer .pf{display:flex;gap:10px;padding:16px 22px;border-top:1px solid var(--hair);}
+.drawer .pf .btn{flex:1;}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140%);background:var(--ink);color:#fff;font-family:var(--font-sans);font-size:13.5px;padding:12px 20px;border-radius:var(--r-pill);box-shadow:var(--shadow-3);z-index:200;display:flex;align-items:center;gap:9px;transition:transform var(--t-base) var(--ease);}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.toast i{color:var(--teal-bright);font-size:18px;}
+.cf-appburger,.cf-sidetoggle{display:none;}
+@media(max-width:1080px){.app{grid-template-columns:1fr;}.side{display:none;}.content{padding:20px 16px 48px;}.setgrid{grid-template-columns:1fr;}}
+@media(max-width:640px){input,select,textarea{font-size:16px!important;}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+<style id="cf-logo-fit">.side-logo img{height:auto !important;max-height:22px;max-width:132px;width:auto !important;}.side-logo{gap:8px;}.side-logo .adm{flex-shrink:0;white-space:nowrap;}</style>
+<style id="cf-viewtrans">
+@view-transition{navigation:auto;}
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:cfVtOut .08s linear both;}
+  ::view-transition-new(root){animation:cfVtIn .15s ease both;}
+  @keyframes cfVtOut{to{opacity:0;}}
+  @keyframes cfVtIn{from{opacity:0;}to{opacity:1;}}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
+</style>
+<style id="cf-topbar-mobile">
+/* §1.1 — no sidebar to collapse on mobile (it is a drawer), so the collapse toggle is meaningless */
+@media(max-width:1080px){.cf-sidetoggle{display:none !important;}}
+/* §1.2 — cramped mobile topbar: show the avatar only, drop name + chevron */
+@media(max-width:640px){
+  .tb-user .un,.tb-user .chev{display:none !important;}
+  .tb-user{min-width:44px !important;min-height:44px !important;padding:5px !important;gap:0 !important;justify-content:center;}
+}
+/* ≥44px tap targets in the topbar on mobile */
+@media(max-width:640px){.tb-icon,.tb-searchbtn{width:44px !important;height:44px !important;}}
+/* §1.3 — a pill input stretched full width reads as an oval: collapse to a magnifier that opens an overlay */
+.tb-searchbtn{display:none;}
+@media(max-width:640px){
+  .tb-search{display:none !important;}
+  .tb-searchbtn{display:inline-flex !important;}
+}
+.cf-searchov{position:fixed;inset:0;z-index:120;background:rgba(8,28,24,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);opacity:0;transition:opacity .2s var(--ease,cubic-bezier(.4,0,.2,1));display:none;align-items:flex-start;justify-content:center;padding:14px;}
+.cf-searchov:not([hidden]){display:flex;}
+.cf-searchov.show{opacity:1;}
+.cf-searchov-bar{display:flex;align-items:center;gap:10px;width:100%;max-width:560px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 30px 60px -20px rgba(4,39,31,.5);transform:translateY(-12px);transition:transform .2s var(--ease,cubic-bezier(.4,0,.2,1));}
+.cf-searchov.show .cf-searchov-bar{transform:none;}
+.cf-searchov-bar > i{color:var(--ink-faint,#92ACA7);font-size:20px;flex-shrink:0;}
+.cf-searchov-bar input{flex:1;border:0;outline:none;font-family:var(--font-sans,'DM Sans'),system-ui,sans-serif;font-size:16px;color:var(--ink,#0C2420);background:transparent;min-width:0;}
+.cf-searchov-x{width:38px;height:38px;border-radius:9px;border:1px solid var(--hair,#DCE9E6);background:#fff;color:var(--ink-mute,#5C7B76);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;}
+.cf-searchov-x:hover{border-color:var(--hair-strong,#B4CDC8);color:var(--ink,#0C2420);}
+@media(max-width:640px){.topbar{padding-left:14px !important;padding-right:14px !important;column-gap:8px !important;}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="side-logo"><a href="admin-console.html"><img decoding="async" width="1310" height="188" src="assets/logos/logo-horizontal-dark.svg" alt="Coastal Futures"></a></div>
+    <nav class="side-nav">
+      <div class="side-sec">Pilotage</div>
+      <a class="nav-item" href="admin-console.html"><i class="ti ti-layout-dashboard"></i><span>Tableau de bord</span></a>
+      <div class="nav-item on"><i class="ti ti-chart-bar"></i><span>Contenu et indicateurs</span></div>
+      <a class="nav-item" href="admin-contenus.html"><i class="ti ti-news"></i><span>Gestion de contenu</span></a>
+      <a class="nav-item" href="admin-utilisateurs.html"><i class="ti ti-users"></i><span>Utilisateurs et rôles</span></a>
+      <a class="nav-item" data-tip="Appels à candidatures" href="admin-appels.html"><i class="ti ti-speakerphone"></i><span>Appels à candidatures</span></a>
+      <a class="nav-item" href="admin-candidatures.html"><i class="ti ti-file-text"></i><span>Candidatures</span><span class="badge tnum">18</span></a>
+      <a class="nav-item" href="admin-projets.html"><i class="ti ti-plant-2"></i><span>Projets et indicateurs</span></a>
+      <a class="nav-item" href="admin-indicateurs.html"><i class="ti ti-rosette-discount-check"></i><span>Validation des indicateurs</span></a>
+      <a class="nav-item" href="admin-mediatheque.html"><i class="ti ti-photo"></i><span>Médiathèque</span></a>
+      <a class="nav-item" href="admin-carte.html"><i class="ti ti-map-2"></i><span>Carte d'impact</span></a>
+      <div class="side-sec">Gouvernance</div>
+      <a class="nav-item" href="admin-moderation.html"><i class="ti ti-shield-check"></i><span>Modération</span><span class="badge tnum">7</span></a>
+      <a class="nav-item" href="admin-permissions.html"><i class="ti ti-key"></i><span>Permissions</span></a>
+      <a class="nav-item" href="admin-journal-audit.html"><i class="ti ti-history"></i><span>Journal d'audit</span></a>
+      <a class="nav-item" href="admin-parametres.html"><i class="ti ti-settings"></i><span>Paramètres système</span></a>
+    </nav>
+    <div class="side-user"><div class="av">SH</div><div><div class="un">Saïfi Dawalbet Hamit</div><div class="ur">Super administratrice</div></div><a href="connexion.html" class="lo" aria-label="Se déconnecter"><i class="ti ti-logout"></i></a></div>
+  </aside>
+
+  <main class="main" data-screen-label="Console contenu et indicateurs">
+    <div class="topbar">
+      <div class="tb-l"><div class="crumb">Pilotage · Contenu du site</div><h1>Contenu du site</h1></div>
+      <div class="tb-r"><span class="tb-role"><i class="ti ti-rosette-discount-check"></i>Super administratrice</span><a class="btn btn-light" href="index.html"><i class="ti ti-external-link"></i>Voir le site</a></div>
+    </div>
+    <div class="content">
+      <div class="pagehead"><div><div class="kk">contenu éditorial du site</div><h2>Vue d'ensemble du site</h2><p>Toutes les pages du site et leurs contenus partagés. Ouvrez une page pour en éditer le contenu, en français et en anglais, sans toucher au code. Un bloc partagé est édité une fois et mis à jour partout où il s'affiche.</p></div></div>
+      <div class="card"><div class="card-h"><h3>Pages et contenus partagés</h3><span class="cn">ouvrez pour éditer</span><div class="sp"></div><div class="fsearch"><i class="ti ti-search"></i><input id="pageSearch" placeholder="Rechercher une page..."></div></div>
+        <div class="tbl-wrap"><table class="tbl" id="pageTbl" style="min-width:640px;"><thead><tr><th>Page</th><th>Type</th><th>État</th><th>Contenu éditable</th><th></th></tr></thead><tbody id="pageRows"></tbody></table></div>
+      </div>
+      <div class="pagehead" style="margin-top:8px;"><div><div class="kk">données affichées sur tout le site</div><h2>Indicateurs clés</h2><p>Ces chiffres alimentent l'accueil, la carte d'impact et les tableaux de bord. Chaque modification publiée se répercute partout où l'indicateur est affiché.</p></div></div>
+      <div class="card" style="background:var(--teal-bg2);border-color:var(--hair);box-shadow:none;"><div style="display:flex;gap:11px;align-items:flex-start;padding:14px 18px;"><i class="ti ti-info-circle" style="font-size:19px;color:var(--teal);flex-shrink:0;margin-top:1px;"></i><p style="margin:0;font-family:var(--font-sans);font-size:13px;color:var(--ink-2);line-height:1.55;">Source de vérité unique : ces indicateurs et ceux de <a href="admin-indicateurs.html" style="color:var(--teal);font-weight:600;">Validation des indicateurs</a> écrivent la même donnée (<code>cf-site</code>). Publier ici republie immédiatement sur tout le site. Le circuit de contrôle brouillon → soumis → validé → publié se gère depuis la validation des indicateurs.</p></div></div>
+      <div class="card"><div class="card-h"><h3>Indicateurs du programme</h3><span class="cn">répercutés sur tout le site</span></div>
+        <div class="setgrid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="field"><label>Entrepreneurs accompagnés</label><input id="k_entrepreneurs"></div>
+          <div class="field"><label>Projets actifs</label><input id="k_projets"></div>
+          <div class="field"><label>Bénéficiaires directs</label><input id="k_beneficiaires"></div>
+          <div class="field"><label>Mangroves restaurées (ha)</label><input id="k_mangroves"></div>
+          <div class="field"><label>Déchets valorisés (t)</label><input id="k_dechets"></div>
+          <div class="field"><label>Capital mobilisé</label><input id="k_capital"></div>
+          <div class="field"><label>Projets labellisés</label><input id="k_labellises"></div>
+          <div class="field"><label>Pays d'intervention</label><input id="k_pays"></div>
+          <div class="field"><label>Mentors</label><input id="k_mentors"></div>
+        </div>
+      </div>
+      <div class="card"><div class="card-h"><h3>Coordonnées et accroche</h3></div>
+        <div class="setgrid">
+          <div class="field"><label>Accroche du programme</label><textarea id="s_tagline" rows="3"></textarea></div>
+          <div class="field"><label>E-mail de contact</label><input id="s_email"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-pri" id="saveBtn"><i class="ti ti-device-floppy"></i>Enregistrer et publier</button>
+        <button class="btn btn-ghost" id="resetBtn"><i class="ti ti-refresh"></i>Réinitialiser aux valeurs par défaut</button>
+      </div>
+      
+    </div>
+  </main>
+</div>
+
+<!-- Drawer form -->
+<div class="drawer" id="drawer">
+  <div class="scrim" data-close></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-label="Édition de projet">
+    <div class="ph"><h3 id="drTitle">Ajouter un projet</h3><button class="px" data-close aria-label="Fermer"><i class="ti ti-x"></i></button></div>
+    <div class="pb">
+      <div class="field"><label>Nom du projet</label><input type="text" id="fName" placeholder="ex. Dakar Solar Solutions"></div>
+      <div class="row2">
+        <div class="field"><label>Type</label><select id="fType">
+          <option value="entreprise">Entreprise verte</option>
+          <option value="hub">Hub jeunesse</option>
+          <option value="mangroves">Restauration de mangroves</option>
+          <option value="recyclage">Recyclage et déchets</option>
+          <option value="energie">Énergie renouvelable</option>
+        </select></div>
+        <div class="field"><label>Statut</label><select id="fStatut">
+          <option value="Labellisé">Labellisé</option>
+          <option value="En incubation">En incubation</option>
+          <option value="Soumis">Soumis</option>
+        </select></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Pays</label><select id="fPays">
+          <option value="Sénégal">Sénégal</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Sierra Leone">Sierra Leone</option>
+          <option value="Guinée-Conakry">Guinée-Conakry</option>
+          <option value="Liberia">Liberia</option>
+        </select></div>
+        <div class="field"><label>Ville</label><input type="text" id="fVille" placeholder="ex. Dakar"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Latitude</label><input type="number" step="0.0001" id="fLat" placeholder="14.6900"></div>
+        <div class="field"><label>Longitude</label><input type="number" step="0.0001" id="fLng" placeholder="-17.0400"></div>
+      </div>
+      <div class="field"><label>Indicateur d'impact</label><input type="text" id="fImpact" placeholder="ex. 210 foyers raccordés"><div class="hint">Court résumé affiché dans la fiche au survol du point.</div></div>
+    </div>
+    <div class="pf">
+      <button class="btn btn-light" data-close>Annuler</button>
+      <button class="btn btn-pri" id="saveBtn"><i class="ti ti-check"></i>Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="ti ti-circle-check"></i><span id="toastMsg">Enregistré</span></div>
+
+<script src="assets/cf-site.js"></script>
+<script>(function(){
+  var KMAP={entrepreneurs:'k_entrepreneurs',projets:'k_projets',beneficiaires:'k_beneficiaires',mangroves:'k_mangroves',dechets:'k_dechets',capital:'k_capital',labellises:'k_labellises',pays:'k_pays',mentors:'k_mentors'};
+  function fill(){ var d=CFSite.get(); Object.keys(KMAP).forEach(function(k){ var el=document.getElementById(KMAP[k]); if(el) el.value=(d.kpi[k]!=null?d.kpi[k]:''); }); document.getElementById('s_tagline').value=d.settings.tagline||''; document.getElementById('s_email').value=d.settings.email||''; }
+  fill();
+  var toastEl=document.getElementById('toast'),tt; function toast(m){document.getElementById('toastMsg').textContent=m;toastEl.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('show');},2600);}
+  document.getElementById('saveBtn').addEventListener('click',function(){ var kpi={}; Object.keys(KMAP).forEach(function(k){ kpi[k]=document.getElementById(KMAP[k]).value.trim(); }); CFSite.set({kpi:kpi,settings:{tagline:document.getElementById('s_tagline').value.trim(),email:document.getElementById('s_email').value.trim()}}); toast('Indicateurs publiés sur tout le site'); });
+  document.getElementById('resetBtn').addEventListener('click',function(){ if(!confirm('Réinitialiser tous les indicateurs et coordonnées ?'))return; CFSite.reset(); fill(); toast('Réinitialisé aux valeurs par défaut'); });
+})();</script>
+<script src="assets/cf-collections.js"></script>
+<script src="assets/cf-notif.js"></script>
+<script src="assets/cf-audit.js"></script>
+<script src="assets/cf-admin-auth.js"></script>
+<script src="assets/cf-admin-chrome.js"></script>
+<script src="assets/cf-admin-session.js"></script>
+<script id="cf-site-overview">(function(){
+  if(!window.CFCol) return;
+  var tbody=document.getElementById('pageRows'), search=document.getElementById('pageSearch');
+  function rows(){
+    var pages=CFCol.all('pages')||[];
+    // shared content first, then site pages
+    pages.sort(function(a,b){ return (a.kind==='shared'?0:1)-(b.kind==='shared'?0:1); });
+    var q=(search&&search.value||'').trim().toLowerCase();
+    tbody.innerHTML='';
+    var shown=0;
+    pages.forEach(function(p){
+      var name=(p.title&&p.title.fr)||p.id;
+      if(q && name.toLowerCase().indexOf(q)<0 && (p.path||'').toLowerCase().indexOf(q)<0) return;
+      shown++;
+      var tr=document.createElement('tr');
+      var typeLbl=p.kind==='shared'?'Contenu partagé':'Page';
+      var pub=(p.pub||'published')==='published';
+      var stateBdg=pub?'<span class="bdg bdg-live"><i class="ti ti-check"></i>Publiée</span>':'<span class="bdg bdg-pend">Brouillon</span>';
+      var nblocks=(p.blocks||[]).length;
+      var cms=p.managed
+        ? '<span class="bdg bdg-teal"><i class="ti ti-edit"></i>'+nblocks+' bloc'+(nblocks>1?'s':'')+'</span>'
+        : '<span class="loc">à migrer</span>';
+      var loc=p.kind==='shared'?'réutilisé sur plusieurs pages':(p.path||'');
+      var act=p.managed
+        ? '<a class="btn btn-light" href="admin-editeur-page.html?id='+encodeURIComponent(p.id)+'"><i class="ti ti-edit"></i>Éditer</a>'
+        : '<button class="btn btn-light" disabled style="opacity:.5;cursor:not-allowed;" title="Migration prévue : ce contenu sera bientôt éditable ici.">Bientôt</button>';
+      tr.innerHTML='<td><div class="pn">'+name+'</div><div class="loc">'+loc+'</div></td>'+
+        '<td>'+typeLbl+'</td>'+
+        '<td>'+stateBdg+'</td>'+
+        '<td>'+cms+'</td>'+
+        '<td><div class="rowact">'+act+'</div></td>';
+      tbody.appendChild(tr);
+    });
+    if(!shown){ tbody.innerHTML='<tr><td colspan="5"><div class="empty"><i class="ti ti-search-off"></i>Aucune page ne correspond.</div></td></tr>'; }
+  }
+  rows();
+  if(search) search.addEventListener('input',rows);
+  window.addEventListener('storage',function(e){ if(!e.key||e.key==='cf-col-pages') rows(); });
+})();</script>
+</body>
+</html>
