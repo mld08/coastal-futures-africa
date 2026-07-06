@@ -32,8 +32,17 @@ def send_email(to, subject, body):
             msg["From"] = sender
             msg["To"] = to
             msg.set_content(body)
-            with smtplib.SMTP(cfg["MAIL_SERVER"], cfg.get("MAIL_PORT", 587), timeout=15) as s:
-                if cfg.get("MAIL_USE_TLS"):
+            host = cfg["MAIL_SERVER"]
+            port = int(cfg.get("MAIL_PORT", 587))
+            # Port 465 (ou MAIL_USE_SSL) = TLS implicite -> SMTP_SSL.
+            # Port 587 = connexion claire puis STARTTLS.
+            use_ssl = cfg.get("MAIL_USE_SSL") or port == 465
+            if use_ssl:
+                smtp = smtplib.SMTP_SSL(host, port, timeout=20)
+            else:
+                smtp = smtplib.SMTP(host, port, timeout=20)
+            with smtp as s:
+                if not use_ssl and cfg.get("MAIL_USE_TLS"):
                     s.starttls()
                 if cfg.get("MAIL_USERNAME"):
                     s.login(cfg["MAIL_USERNAME"], cfg.get("MAIL_PASSWORD", ""))
