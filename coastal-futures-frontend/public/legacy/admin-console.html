@@ -340,6 +340,10 @@ html,body{overflow-x:clip;}
   // count-up
   function animateCount(el,target){var dur=900,start=0,t0=null;function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=Math.round(start+(target-start)*e).toLocaleString('fr-FR');if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.__cfAnimateCount=function(el,t){ if(reduce){el.textContent=(t||0).toLocaleString('fr-FR');} else animateCount(el,t); };
+  // Avec l'API, les chiffres réels sont posés par #cf-dash-stats -> on n'anime
+  // pas les valeurs de démonstration (évite un flash 581 -> valeur réelle).
+  if(window.CFApi&&CFApi.useApi){ [].slice.call(document.querySelectorAll('[data-count]')).forEach(function(el){el.textContent='—';}); return; }
   [].slice.call(document.querySelectorAll('[data-count]')).forEach(function(el){var t=parseInt(el.getAttribute('data-count'),10);if(reduce){el.textContent=t.toLocaleString('fr-FR');}else animateCount(el,t);});
 })();
 </script>
@@ -408,6 +412,54 @@ setLang(l);
   var mm=document.getElementById('msgMark'); if(mm) mm.addEventListener('click',function(){ CFCol.all('contact_messages').forEach(function(m){ if(!m.read){m.read=true;CFCol.upsert('contact_messages',m);} }); renderMsgs(); });
   var sc=document.getElementById('subCsv'); if(sc) sc.addEventListener('click',function(){ var list=CFCol.all('subscribers'); if(!list.length){return;} var csv='\ufeffemail,date,source\n'+list.map(function(s){return '"'+(s.email||'')+'","'+(s.date||'')+'","'+(s.source||'')+'"';}).join('\n'); var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}); var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='abonnes-newsletter.csv'; a.click(); });
   renderMsgs(); renderSubs();
+})();</script>
+<script id="cf-dash-stats">(function(){
+  // Tableau de bord SUPER : chiffres et listes réels (API). Sans API : no-op,
+  // la maquette d'origine reste affichée.
+  if(!(window.CFApi && CFApi.useApi)) return;
+  function en(){return document.documentElement.lang==='en';}
+  function esc(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function ini(n){return (n||'').split(/\s+/).map(function(x){return x[0]||'';}).join('').slice(0,2).toUpperCase();}
+  function emptyRow(t){return '<div class="row"><div class="ri" style="background:var(--canvas-soft);color:var(--ink-faint)"><i class="ti ti-inbox"></i></div><div><div class="rd">'+esc(t)+'</div></div></div>';}
+  var RB={super:['Super admin','Super admin'],content:['Admin contenu','Content admin'],country:['Coord. pays','Country coord.'],moderator:['Modérateur','Moderator'],entrepreneur:['Entrepreneur','Entrepreneur'],mentor:['Mentor','Mentor'],partenaire:['Bailleur','Funder']};
+
+  // --- listes réelles (CFCol déjà hydraté par le pont) ---
+  function renderLatestUsers(){
+    var h=document.querySelector('[data-i18n="c.users"]'); if(!h) return; var b=h.closest('.card').querySelector('.card-b');
+    var list=[]; try{list=CFCol.all('users');}catch(e){}
+    if(!list.length){ b.innerHTML=emptyRow(en()?'No registered users yet.':'Aucun utilisateur inscrit pour le moment.'); return; }
+    b.innerHTML='';
+    list.slice(0,4).forEach(function(u){
+      var r=(RB[u.role]||[u.role,u.role]); var lbl=en()?r[1]:r[0];
+      var row=document.createElement('div'); row.className='row';
+      row.innerHTML='<div class="av-sm" style="background:var(--teal-deep)">'+ini(u.name)+'</div><div><div class="rt"><b>'+esc(u.name)+'</b></div><div class="rd">'+esc(u.pays||'—')+'</div></div><div class="rx"><span class="bdg" style="background:var(--teal-bg);color:var(--teal-deep)">'+esc(lbl)+'</span></div>';
+      b.appendChild(row);
+    });
+  }
+  function renderPending(){
+    var h=document.querySelector('[data-i18n="c.pending"]'); if(!h) return; var b=h.closest('.card').querySelector('.card-b');
+    var items=[]; try{items=CFCol.all('news').concat(CFCol.all('events')).filter(function(x){return x.pub&&x.pub!=='published';});}catch(e){}
+    if(!items.length){ b.innerHTML=emptyRow(en()?'No content pending publication.':'Aucun contenu en attente de publication.'); return; }
+    b.innerHTML='';
+    items.slice(0,4).forEach(function(x){
+      var t=(x.title&&(en()?(x.title.en||x.title.fr):(x.title.fr||x.title.en)))||x.id||'—';
+      var row=document.createElement('div'); row.className='row';
+      row.innerHTML='<div class="ri" style="background:var(--teal-bg);color:var(--teal)"><i class="ti ti-news"></i></div><div><div class="rt"><b>'+esc(t)+'</b></div><div class="rd">'+esc(x.pays||'')+'</div></div><div class="rx"><span class="bdg bdg-pend">'+(en()?'Draft':'Brouillon')+'</span></div>';
+      b.appendChild(row);
+    });
+  }
+  renderLatestUsers(); renderPending();
+
+  // --- tuiles KPI (chiffres réels via /admin/stats) ---
+  CFApi.get('/admin/stats').then(function(s){
+    var tiles=document.querySelectorAll('#superView [data-count]'); // [users, apps, content]
+    var vals=[s.usersTotal, s.applicationsOpen, s.contentPending];
+    [].forEach.call(tiles,function(el,i){ var v=vals[i]||0; if(window.__cfAnimateCount)window.__cfAnimateCount(el,v); else el.textContent=(v).toLocaleString('fr-FR'); });
+    var w=document.querySelectorAll('#superView .widgets .widget');
+    if(w[0]){var d=w[0].querySelector('.delta'); if(d)d.innerHTML='<i class="ti ti-trending-up"></i>+'+(s.usersNew30d||0);}
+    var urg=document.querySelector('[data-i18n="w.urgent"]'); if(urg){urg.textContent=(s.applicationsUrgent||0)+(en()?' urgent':' urgentes'); urg.removeAttribute('data-i18n');}
+    var bil=document.querySelector('[data-i18n="w.bilingue"]'); if(bil){bil.textContent=(s.contentWithoutEN||0)+(en()?' without EN version':' sans version EN'); bil.removeAttribute('data-i18n');}
+  }).catch(function(){});
 })();</script>
 <script src="assets/cf-notif.js"></script>
 <script src="assets/cf-audit.js"></script>

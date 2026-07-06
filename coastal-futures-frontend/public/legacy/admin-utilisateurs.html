@@ -284,7 +284,7 @@ html,body{overflow-x:clip;}
 </div>
 
 <script id="cf-users-table">(function(){
-var ROLES={super:{fr:"Super administrateur",en:"Super administrator"},content:{fr:"Administrateur de contenu",en:"Content administrator"},country:{fr:"Coordinateur pays",en:"Country coordinator"},moderator:{fr:"Modérateur",en:"Moderator"},entrepreneur:{fr:"Entrepreneur",en:"Entrepreneur"},mentor:{fr:"Mentor",en:"Mentor"}};
+var ROLES={super:{fr:"Super administrateur",en:"Super administrator"},content:{fr:"Administrateur de contenu",en:"Content administrator"},country:{fr:"Coordinateur pays",en:"Country coordinator"},moderator:{fr:"Modérateur",en:"Moderator"},entrepreneur:{fr:"Entrepreneur",en:"Entrepreneur"},mentor:{fr:"Mentor",en:"Mentor"},partenaire:{fr:"Bailleur",en:"Funder"}};
 var ST={active:{cls:"bdg-live",fr:"Actif",en:"Active"},suspended:{cls:"bdg-warn",fr:"Suspendu",en:"Suspended"},pending:{cls:"bdg-mute",fr:"En attente",en:"Pending"}};
 var PAL=["var(--teal-deep)","var(--sand)","var(--teal)","#2A4D8F","var(--teal-soft)","#7A4F1A"];
 function ini(n){return (n||"").split(/\s+/).map(function(x){return x[0]||"";}).join("").slice(0,2).toUpperCase();}
@@ -292,8 +292,18 @@ function colOf(s){var x=0;for(var i=0;i<(s||"").length;i++)x=(x*31+s.charCodeAt(
 function lang(){return document.documentElement.lang==="en"?"en":"fr";}
 function fmtJoined(iso){if(!iso)return "—";try{var d=new Date(iso);return (lang()==="en"?"joined ":"inscrit le ")+d.toLocaleDateString(lang()==="en"?"en-GB":"fr-FR",{day:"numeric",month:"short"});}catch(e){return "—";}}
 var curRole="",curPays="";
-function rows(){var out=[];try{var dir=window.CFAdmin?CFAdmin.directory():{};Object.keys(dir).forEach(function(em){var d=dir[em];out.push({id:"staff:"+em,n:d.name,e:em,role:d.role,pays:d.country||"Régional",status:"active",staff:true});});}catch(e){}try{if(window.CFCol)CFCol.all("users").forEach(function(u){out.push({id:u.id,n:u.name,e:u.email,role:u.role,pays:u.pays,status:u.status||"active",joinedAt:u.joinedAt,staff:false});});}catch(e){}return out;}
-function render(){var l=lang(),q=(document.getElementById("q").value||"").toLowerCase();var tb=document.getElementById("tbody");tb.innerHTML="";var all=rows();var fr2=all.filter(function(u){if(curRole&&u.role!==curRole)return false;if(curPays&&u.pays!==curPays)return false;if(q&&((u.n||"")+" "+(u.e||"")).toLowerCase().indexOf(q)<0)return false;return true;});
+var ADMR=["super","content","country","moderator"];
+function apiOn(){return !!(window.CFApi&&CFApi.useApi);}
+// Avec l'API, /users renvoie DÉJÀ tous les comptes (membres + admins) : on
+// n'ajoute plus l'annuaire de démo CFAdmin.directory(). Les rôles admin ne
+// sont pas suspendables depuis cette table (staff=true).
+function rows(){var out=[];
+if(!apiOn()){try{var dir=window.CFAdmin?CFAdmin.directory():{};Object.keys(dir).forEach(function(em){var d=dir[em];out.push({id:"staff:"+em,n:d.name,e:em,role:d.role,pays:d.country||"Régional",status:"active",staff:true});});}catch(e){}}
+try{if(window.CFCol)CFCol.all("users").forEach(function(u){out.push({id:u.id,n:u.name,e:u.email,role:u.role,pays:u.pays,status:u.status||"active",joinedAt:u.joinedAt||u.lastActivity,staff:apiOn()?ADMR.indexOf(u.role)>=0:false});});}catch(e){}return out;}
+// Compteurs des 4 cartes de rôle, calculés sur les vrais comptes.
+function updateCards(all){var c={super:0,content:0,country:0,moderator:0};all.forEach(function(u){if(c[u.role]!=null)c[u.role]++;});var map={r1:"super",r2:"content",r3:"country",r4:"moderator"};Object.keys(map).forEach(function(rk){var el=document.querySelector(".rl."+rk+" .rc .tnum");if(el)el.textContent=c[map[rk]];});}
+function roleMatch(u){if(!curRole)return true;if(curRole==="mod")return u.role==="moderator";if(curRole==="member")return ADMR.indexOf(u.role)<0;return u.role===curRole;}
+function render(){var l=lang(),q=(document.getElementById("q").value||"").toLowerCase();var tb=document.getElementById("tbody");tb.innerHTML="";var all=rows();if(apiOn())updateCards(all);var fr2=all.filter(function(u){if(!roleMatch(u))return false;if(curPays&&u.pays!==curPays)return false;if(q&&((u.n||"")+" "+(u.e||"")).toLowerCase().indexOf(q)<0)return false;return true;});
 fr2.forEach(function(u){var st=ST[u.status]||ST.active;var rl=(ROLES[u.role]||{})[l]||u.role||"";var tr=document.createElement("tr");var sus=u.staff?"":('<button class="icobtn danger" data-act="sus" title="'+(u.status==="suspended"?"Réactiver":"Suspendre")+'"><i class="ti '+(u.status==="suspended"?"ti-check":"ti-ban")+'"></i></button>');
 tr.innerHTML='<td><div class="u-cell"><div class="av" style="background:'+colOf(u.n)+'">'+ini(u.n)+'</div><div><div class="un">'+u.n+'</div><div class="ue">'+u.e+'</div></div></div></td><td>'+rl+'</td><td>'+u.pays+'</td><td><span class="bdg '+st.cls+'">'+st[l]+'</span></td><td>'+(u.staff?"—":fmtJoined(u.joinedAt))+'</td><td><div class="acts"><button class="icobtn" data-act="msg" title="Message"><i class="ti ti-mail"></i></button>'+sus+'</div></td>';
 var mb=tr.querySelector('[data-act=msg]');if(mb)mb.addEventListener("click",function(){if(window.__cfOpenMsg)window.__cfOpenMsg(u);});
@@ -301,7 +311,10 @@ var sb=tr.querySelector('[data-act=sus]');if(sb)sb.addEventListener("click",func
 tb.appendChild(tr);});
 var sh=document.getElementById("shown");if(sh)sh.textContent=fr2.length;var tot=document.getElementById("total");if(tot)tot.textContent=all.length;}
 function boot(){window.__cfRender=render;var q=document.getElementById("q");if(q)q.addEventListener("input",render);var rs=document.getElementById("roleSel");if(rs)rs.addEventListener("change",function(){curRole=this.value;render();});var ps=document.getElementById("paysSel");if(ps)ps.addEventListener("change",function(){curPays=this.value;render();});render();}
-if(window.CFCol&&window.CFAdmin){boot();}else{document.addEventListener("DOMContentLoaded",boot);}
+// Démarrage robuste : CFCol/CFAdmin sont chargés APRÈS ce script, et en
+// contexte SPA la page est injectée une fois DOMContentLoaded déjà passé
+// (l'écouteur ne se redéclencherait jamais). On attend leur présence.
+(function wait(n){ if(window.CFCol&&window.CFAdmin){boot();return;} if(n>120)return; setTimeout(function(){wait(n+1);},50); })(0);
 })();</script>
 
 <script id="cf-invite-live">

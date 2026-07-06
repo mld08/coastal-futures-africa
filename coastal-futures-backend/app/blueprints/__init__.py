@@ -12,6 +12,7 @@ def register_blueprints(app):
     from .mentorship import bp as mentorship_bp
     from .projects import bp as projects_bp
     from .invites import bp as invites_bp
+    from .users import bp as users_bp
 
     app.register_blueprint(health_bp)
     app.register_blueprint(auth_bp)
@@ -23,6 +24,7 @@ def register_blueprints(app):
     app.register_blueprint(mentorship_bp)
     app.register_blueprint(projects_bp)
     app.register_blueprint(invites_bp)
+    app.register_blueprint(users_bp)
 
     # Collections éditoriales CMS (modèle document Content).
     app.register_blueprint(content_blueprint("news", "news"))

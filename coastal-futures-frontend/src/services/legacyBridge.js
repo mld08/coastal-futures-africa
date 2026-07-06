@@ -95,7 +95,8 @@ function installRawWriteBack() {
 const HYDRATE = {
   'admin-candidatures': ['applications', 'calls'],
   'admin-appels': ['calls'],
-  'admin-console': ['applications', 'contact_messages', 'subscribers'],
+  'admin-console': ['applications', 'contact_messages', 'subscribers', 'users', 'news', 'events'],
+  'admin-utilisateurs': ['users'],
   'admin-newsletter': ['subscribers'],
   'appels-candidatures': ['calls'],
   candidature: ['calls'],
@@ -156,6 +157,8 @@ const WRITE_BACK = {
   // Newsletter : l'admin ne fait que supprimer (remove -> DELETE) ; l'abonnement
   // public passe par le contrôleur React, pas par CFCol -> upsert ignoré.
   subscribers: { path: '/newsletters', upsert: 'skip' },
+  // Comptes : l'admin (dé)suspend -> PATCH /users/<id> {status} uniquement.
+  users: { path: '/users', patchKeys: ['status'] },
 };
 
 /**
