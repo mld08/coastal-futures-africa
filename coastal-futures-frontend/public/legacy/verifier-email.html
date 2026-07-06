@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Coastal Futures | Vérification de l'e-mail</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/cf-fonts.css">
+<link rel="stylesheet" href="assets/cf-icons.css">
+<style>
+:root{
+  --teal-deep:#063D34; --teal:#0A6B5E; --teal-bg:#EAF6F3;
+  --ink:#0C2420; --ink-2:#244440; --ink-mute:#5C7B76; --hair:#DCE9E6; --canvas:#FFFFFF;
+  --success:#066B52; --success-bg:#E3F9F1; --error:#8F2A1A; --error-bg:#FBE6E2;
+  --font-display:'Plus Jakarta Sans', system-ui, sans-serif; --font-sans:'DM Sans', system-ui, sans-serif;
+  --r-md:10px; --r-pill:100px;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--canvas);font-family:var(--font-sans);color:var(--ink-2);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+.card{width:100%;max-width:440px;text-align:center;}
+.state-ic{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;}
+.state-ic.ok{background:var(--success-bg);color:var(--success);}
+.state-ic.err{background:var(--error-bg);color:var(--error);}
+.state-ic.wait{background:var(--teal-bg);color:var(--teal);}
+h1{font-family:var(--font-display);font-size:25px;font-weight:500;line-height:1.18;letter-spacing:-.5px;color:var(--ink);margin:0 0 8px;}
+p{font-size:14px;line-height:1.6;color:var(--ink-mute);margin:0 0 22px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--font-display);font-size:15px;font-weight:500;border-radius:var(--r-pill);padding:13px 24px;cursor:pointer;border:1px solid transparent;background:var(--teal);color:#fff;text-decoration:none;}
+.btn:hover{background:var(--teal-deep);}
+.spin{animation:sp 1s linear infinite;}@keyframes sp{to{transform:rotate(360deg);}}
+.step{display:none;}.step.on{display:block;}
+</style>
+</head>
+<body>
+<main class="card" data-screen-label="Vérification de l'e-mail">
+  <div class="step on" data-step="wait">
+    <div class="state-ic wait"><i class="ti ti-loader-2 spin"></i></div>
+    <h1>Vérification en cours…</h1>
+    <p>Nous confirmons votre adresse e-mail.</p>
+  </div>
+  <div class="step" data-step="ok">
+    <div class="state-ic ok"><i class="ti ti-mail-check"></i></div>
+    <h1>Adresse confirmée</h1>
+    <p>Merci ! Votre adresse e-mail est vérifiée. Vous pouvez vous connecter à votre espace.</p>
+    <a href="connexion.html" class="btn">Se connecter <i class="ti ti-arrow-right"></i></a>
+  </div>
+  <div class="step" data-step="err">
+    <div class="state-ic err"><i class="ti ti-alert-triangle"></i></div>
+    <h1>Lien invalide ou expiré</h1>
+    <p>Ce lien de vérification a déjà été utilisé ou n'est plus valable. Connectez-vous : un nouveau lien pourra vous être envoyé.</p>
+    <a href="connexion.html" class="btn">Aller à la connexion <i class="ti ti-arrow-right"></i></a>
+  </div>
+</main>
+<script>
+(function(){
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  function show(name){ steps.forEach(function(s){ s.classList.toggle('on', s.getAttribute('data-step')===name); }); }
+  var token=new URLSearchParams(location.search).get('token');
+  var API = window.CFApi && CFApi.useApi;
+  if(!API){ /* maquette : on montre le succès pour rester utilisable */ show('ok'); return; }
+  if(!token){ show('err'); return; }
+  CFApi.post('/auth/verify-email',{token:token}).then(function(){ show('ok'); }, function(){ show('err'); });
+})();
+</script>
+</body>
+</html>

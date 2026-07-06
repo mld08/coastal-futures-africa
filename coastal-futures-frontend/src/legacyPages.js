@@ -73,6 +73,7 @@
   'index',
   'inscription',
   'inscription-evenement',
+  'invitation-admin',
   'invitation-bailleur',
   'manifeste-media',
   'mediatheque',
@@ -102,5 +103,6 @@
   'tableau-de-bord',
   'tableau-de-bord-mentor',
   'tableau-de-bord-partenaire',
+  'verifier-email',
 ];
 
