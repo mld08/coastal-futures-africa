@@ -20,6 +20,14 @@
   function lastMsg(tid){ var m=msgsOf(tid); return m[m.length-1]||null; }
   function unread(tid){ return CFCol.all('messages').filter(function(m){return m.threadId===tid && !m.read && !isTeam(m.from);}).length; }
   function subj(t){ return CFCol.t(t.subject,lang())||t.with||''; }
+  function buildBubbles(msgs){
+    var bubbles='', lastDay='';
+    msgs.forEach(function(m){ var day=fmtDay(m.at); if(day!==lastDay){ bubbles+='<div class="m-day">'+day+'</div>'; lastDay=day; }
+      var team=isTeam(m.from);
+      bubbles+='<div class="m-row'+(team?' me':'')+'"><div class="m-bub">'+esc(m.body)+'<span class="m-meta">'+(team?(esc(m.from.name)+(m.from.verified?' <i class="ti ti-rosette-discount-check vchk"></i>':'')+' · '):'')+fmtTime(m.at)+'</span></div></div>';
+    });
+    return bubbles;
+  }
 
   function renderList(){
     var threads=CFCol.all('threads').slice().sort(function(a,b){ var la=lastMsg(a.id),lb=lastMsg(b.id); return new Date((lb&&lb.at)||0)-new Date((la&&la.at)||0); });
@@ -49,11 +57,7 @@
     var conv=$('mConv');
     if(!t){ conv.innerHTML='<div class="m-placeholder"><i class="ti ti-messages"></i><div>'+T('Sélectionnez une conversation.','Select a conversation.')+'</div></div>'; return; }
     var msgs=msgsOf(t.id);
-    var bubbles=''; var lastDay='';
-    msgs.forEach(function(m){ var day=fmtDay(m.at); if(day!==lastDay){ bubbles+='<div class="m-day">'+day+'</div>'; lastDay=day; }
-      var team=isTeam(m.from);
-      bubbles+='<div class="m-row'+(team?' me':'')+'"><div class="m-bub">'+esc(m.body)+'<span class="m-meta">'+(team?(esc(m.from.name)+(m.from.verified?' <i class="ti ti-rosette-discount-check vchk"></i>':'')+' · '):'')+fmtTime(m.at)+'</span></div></div>';
-    });
+    var bubbles=buildBubbles(msgs);
     var composer = t.closed
       ? '<div class="m-closed"><i class="ti ti-lock"></i>'+T('Conversation close. Rouvrez-la pour répondre.','Conversation closed. Reopen it to reply.')+'</div>'
       : '<div class="m-composer"><textarea id="mInput" placeholder="'+T('Écrire une réponse…','Write a reply…')+'" rows="1"></textarea><button class="btn btn-pri btn-sm" id="mSend"><i class="ti ti-send"></i>'+T('Envoyer','Send')+'</button></div>';
@@ -61,7 +65,7 @@
       '<div class="m-chead"><button class="m-back" id="mBack" aria-label="Retour"><i class="ti ti-arrow-left"></i></button><div class="m-av">'+esc(ini(t.with))+'</div><div class="m-cht"><div class="m-cn">'+esc(t.with)+'</div><div class="m-cs">'+esc(subj(t))+(t.withEmail?(' · '+esc(t.withEmail)):'')+'</div></div>'+
         '<button class="btn btn-light btn-sm" id="mClose">'+(t.closed?('<i class="ti ti-lock-open"></i>'+T('Rouvrir','Reopen')):('<i class="ti ti-lock"></i>'+T('Clore','Close')))+'</button></div>'+
       '<div class="m-stream" id="mStream">'+bubbles+'</div>'+composer;
-    var stream=$('mStream'); if(stream) stream.scrollTop=stream.scrollHeight;
+    var stream=$('mStream'); if(stream){ stream.setAttribute('data-n', String(msgs.length)); stream.scrollTop=stream.scrollHeight; }
     var back=$('mBack'); if(back) back.addEventListener('click',function(){ state.open=null; var w=document.querySelector('.messenger'); if(w) w.classList.remove('conv-open'); renderList(); renderConv(); });
     var send=$('mSend'); if(send) send.addEventListener('click',sendReply);
     var inp=$('mInput'); if(inp){ inp.addEventListener('keydown',function(e){ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); sendReply(); } }); inp.addEventListener('input',function(){ this.style.height='auto'; this.style.height=Math.min(this.scrollHeight,140)+'px'; }); inp.focus(); }
@@ -80,9 +84,54 @@
     renderConv(); renderList();
   }
 
+  // ---- polling « temps réel » (backend API) ---------------------------
+  // Rafraîchit fils + messages toutes les POLL_PERIOD ms (onglet visible) en
+  // FUSIONNANT (union par id) : on ne perd pas une réponse tout juste envoyée.
+  // Seul le flux #mStream de la conversation ouverte est mis à jour -> le
+  // composer et son texte en cours de saisie sont préservés.
+  var POLL_PERIOD=5000, polling=false;
+  function apiOn(){ return !!(window.CFApi && window.CFApi.useApi); }
+  function mergeCol(name, fresh){
+    try{
+      var local=CFCol.all(name)||[];
+      var ids={}; fresh.forEach(function(x){ if(x&&x.id) ids[x.id]=1; });
+      var extra=local.filter(function(x){ return x&&x.id&&!ids[x.id]; }); // local-only (optimiste)
+      localStorage.setItem('cf-col-'+name, JSON.stringify(fresh.concat(extra)));
+    }catch(e){}
+  }
+  function updateStream(){
+    if(!state.open) return;
+    var t=CFCol.get('threads',state.open); if(!t) return;
+    var stream=$('mStream'); if(!stream) return;               // fil clos -> pas de flux à MAJ
+    // marquer lus les nouveaux messages entrants (le fil est ouvert)
+    CFCol.all('messages').forEach(function(m){ if(m.threadId===state.open && !m.read && !isTeam(m.from)){ try{ CFCol.patch('messages',m.id,{read:true}); }catch(e){} } });
+    var msgs=msgsOf(t.id);
+    if(String(msgs.length)===(stream.getAttribute('data-n')||'')) return; // rien de nouveau
+    var nearBottom=stream.scrollTop+stream.clientHeight >= stream.scrollHeight-48, prev=stream.scrollTop;
+    stream.innerHTML=buildBubbles(msgs);
+    stream.setAttribute('data-n', String(msgs.length));
+    stream.scrollTop = nearBottom ? stream.scrollHeight : prev;
+  }
+  function pollRefresh(){
+    if(polling || !apiOn() || document.hidden) return;
+    polling=true;
+    Promise.all([ CFApi.get('/threads').catch(function(){return null;}), CFApi.get('/messages').catch(function(){return null;}) ])
+      .then(function(r){
+        var changed=false;
+        if(Array.isArray(r[0])){ mergeCol('threads', r[0]); changed=true; }
+        if(Array.isArray(r[1])){ mergeCol('messages', r[1]); changed=true; }
+        if(changed){ renderList(); updateStream(); }
+      }).then(function(){ polling=false; }, function(){ polling=false; });
+  }
+  function startPolling(){
+    setInterval(function(){ if(document.visibilityState==='visible') pollRefresh(); }, POLL_PERIOD);
+    document.addEventListener('visibilitychange', function(){ if(document.visibilityState==='visible') pollRefresh(); });
+  }
+
   function init(){
     [].slice.call(document.querySelectorAll('.m-filter [data-f]')).forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('.m-filter [data-f]').forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); state.filter=b.getAttribute('data-f'); renderList(); }); });
     renderList(); renderConv();
+    if(apiOn()) startPolling();
     try{ new MutationObserver(function(){ renderList(); renderConv(); }).observe(document.documentElement,{attributes:true,attributeFilter:['lang']}); }catch(e){}
   }
   if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);

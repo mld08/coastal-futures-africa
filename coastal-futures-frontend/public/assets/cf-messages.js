@@ -476,10 +476,50 @@
     // re-render on language change
     try{new MutationObserver(rerender).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});}catch(e){}
   }
+  // ---- polling « temps réel » (backend API) ---------------------------
+  // Rafraîchit les fils toutes les PERIOD ms quand l'onglet est visible, en
+  // fusionnant SANS écraser : on n'ajoute que les messages réellement nouveaux
+  // (par __id), ce qui préserve la saisie du composer et les envois optimistes.
+  var POLL_PERIOD=5000, polling=false;
+  function mergeConvs(fresh){
+    var byId={}; CONVS.forEach(function(c){ byId[c.id]=c; });
+    var activeC = state.active ? find(state.active) : null;
+    var prevScroll=0, nearBottom=true, activeNew=false;
+    if(activeC && els.thread){
+      prevScroll=els.thread.scrollTop;
+      nearBottom=(els.thread.scrollTop+els.thread.clientHeight >= els.thread.scrollHeight-48);
+    }
+    (fresh||[]).forEach(function(fc){
+      var ex=byId[fc.id];
+      if(!ex){ CONVS.push(fc); return; }           // nouveau fil (ex. l'équipe démarre une conversation)
+      var seen={}; (ex.msgs||[]).forEach(function(m){ if(m.__id) seen[m.__id]=1; });
+      var added=(fc.msgs||[]).filter(function(m){ return m.__id && !seen[m.__id]; });
+      if(added.length){ ex.msgs=(ex.msgs||[]).concat(added); }   // append-only -> pas de doublon ni de perte d'optimiste
+      ex.closed=fc.closed;
+      if(state.active===ex.id){ ex.unread=0; if(added.length) activeNew=true; }
+      else { ex.unread=fc.unread; }
+    });
+    renderList();
+    if(activeC && activeNew){
+      renderThread(activeC,null);
+      if(nearBottom) scrollBottom(); else els.thread.scrollTop=prevScroll;
+    }
+  }
+  function pollOnce(){
+    if(polling || !apiOn() || document.hidden) return;
+    polling=true;
+    buildConvsFromApi().then(function(fresh){ try{ mergeConvs(fresh); }catch(e){} }, function(){})
+      .then(function(){ polling=false; });
+  }
+  function startPolling(){
+    setInterval(function(){ if(document.visibilityState==='visible') pollOnce(); }, POLL_PERIOD);
+    document.addEventListener('visibilitychange', function(){ if(document.visibilityState==='visible') pollOnce(); });
+  }
+
   // Backend réel : on hydrate les conversations depuis l'API avant de rendre.
   function boot(){
     if(apiOn()){
-      buildConvsFromApi().then(function(convs){ CONVS=convs; init(); }, function(){ init(); });
+      buildConvsFromApi().then(function(convs){ CONVS=convs; init(); startPolling(); }, function(){ init(); });
     } else { init(); }
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
