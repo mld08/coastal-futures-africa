@@ -16,6 +16,14 @@
       return entry;
     },
     all:function(){ try{ return window.CFCol?CFCol.all('admin_notifs'):[]; }catch(e){ return []; } },
+    /* Backend réel : remplace le seed par les notifications du serveur (GET /notifications). */
+    hydrate:function(){
+      if(!(window.CFApi && CFApi.useApi)) return Promise.resolve(false);
+      return CFApi.get('/notifications').then(function(list){
+        if(Array.isArray(list)){ try{ localStorage.setItem('cf-col-admin_notifs', JSON.stringify(list)); }catch(e){} return true; }
+        return false;
+      }, function(){ return false; });
+    },
     /* notifications a given role (and country, for coordinators) is allowed to see.
        super sees everything; a targeted role sees its own + untargeted ones. */
     visible:function(role,country){

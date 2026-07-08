@@ -401,6 +401,9 @@ html,body{overflow-x:clip;}
     try{
       localStorage.setItem('cf-ptf-auth','1');
       localStorage.setItem('cf-ptf-since', String(Date.now()));
+      // Réinitialise la dernière activité : sinon un cf-ptf-last périmé (session
+      // précédente) ferait expirer immédiatement la nouvelle session (cf-ptf-session.js).
+      localStorage.setItem('cf-ptf-last', String(Date.now()));
       localStorage.setItem('cf-auth','1');
       if(u){ localStorage.setItem('cf-ptf-org', u.name||''); localStorage.setItem('cf-ptf-contact', u.email||''); }
     }catch(e){}

@@ -96,7 +96,8 @@ const HYDRATE = {
   'admin-candidatures': ['applications', 'calls'],
   'admin-appels': ['calls'],
   'admin-console': ['applications', 'contact_messages', 'subscribers', 'users', 'news', 'events'],
-  'admin-utilisateurs': ['users'],
+  'admin-utilisateurs': ['users', 'admin_invites'],
+  'admin-journal-audit': ['audit_log'],
   'admin-newsletter': ['subscribers'],
   'appels-candidatures': ['calls'],
   candidature: ['calls'],
@@ -134,7 +135,13 @@ const HYDRATE = {
 const RAW_KEYS = { projects: 'cf-map-projects' };
 const RAW_WRITE = { 'cf-map-projects': '/projects' };
 // Collections dont le nom CFCol diffère du chemin REST (pour l'hydratation).
-const COLL_PATH = { contact_messages: '/contacts', subscribers: '/newsletters' };
+const COLL_PATH = {
+  contact_messages: '/contacts',
+  subscribers: '/newsletters',
+  admin_notifs: '/notifications',
+  audit_log: '/audit',
+  admin_invites: '/admin/invites',
+};
 let suppressRawWriteBack = false; // vrai pendant l'hydratation (évite un PUT en boucle)
 
 // Collections dont les écritures CFCol sont répercutées vers l'API.
@@ -159,6 +166,8 @@ const WRITE_BACK = {
   subscribers: { path: '/newsletters', upsert: 'skip' },
   // Comptes : l'admin (dé)suspend -> PATCH /users/<id> {status} uniquement.
   users: { path: '/users', patchKeys: ['status'] },
+  // Notifications : l'admin marque « lu » -> PATCH /notifications/<id> {read}.
+  admin_notifs: { path: '/notifications', patchKeys: ['read'] },
 };
 
 /**

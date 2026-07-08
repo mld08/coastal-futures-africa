@@ -25,6 +25,28 @@
 
   function cnt(name, pred){ try{ return CFCol.count(name, pred); }catch(e){ return 0; } }
 
+  /* ---- Registre projets réel (partagé carte publique / admin-projets / admin-carte) ----
+     Les projets vivent dans cf-map-projects (pas dans CFCol('projects'), vide). On lit
+     ce registre, on normalise le statut FR (« Labellisé », « En incubation », « Soumis »)
+     et on EXCLUT les hubs jeunesse (type 'hub') : ce sont des infrastructures du
+     programme, pas des projets entrepreneuriaux labellisables. */
+  function mapProjects(){
+    var arr=[];
+    try{ var raw=localStorage.getItem('cf-map-projects'); if(raw){ arr=JSON.parse(raw)||[]; } }catch(e){}
+    if(!Array.isArray(arr) || !arr.length){ try{ arr=CFCol.all('projects')||[]; }catch(e){ arr=[]; } } // repli
+    return Array.isArray(arr)?arr:[];
+  }
+  function isVenture(p){ return String((p&&p.type)||'').toLowerCase()!=='hub'; }
+  function statutOf(p){
+    var s=String((p&&(p.statut||p.status))||'').toLowerCase();
+    if(s.indexOf('labell')>=0 || s.indexOf('certif')>=0) return 'labellise';
+    if(s.indexOf('incub')>=0) return 'incubation';
+    if(s.indexOf('soumis')>=0 || s.indexOf('submit')>=0) return 'soumis';
+    if(s.indexOf('revue')>=0 || s.indexOf('review')>=0) return 'revue';
+    return s;
+  }
+  function ventures(){ return mapProjects().filter(isVenture); }
+
   /* one rule per derived key. Every rule is a pure count over a collection, so the
      number can only ever equal what the platform actually holds. */
   var RULES = {
@@ -32,10 +54,10 @@
     candidatures : function(){ return cnt('applications'); },
     /* entrepreneurs accompanied = applications admitted into the programme. */
     entrepreneurs: function(){ return cnt('applications', function(a){ return ACCEPTED.indexOf(a.status) >= 0; }); },
-    /* active projects in the registry (no project records yet at launch -> 0). */
-    projets      : function(){ return cnt('projects', function(p){ return (p.pub||'published')==='published'; }); },
-    /* projects that cleared certification. */
-    labellises   : function(){ return cnt('projects', function(p){ return p.status==='labellise' || p.status==='certified'; }); },
+    /* projets actifs = projets (hors hub) admis au programme (labellisés ou en incubation). */
+    projets      : function(){ return ventures().filter(function(p){ var s=statutOf(p); return s==='labellise' || s==='incubation'; }).length; },
+    /* projets ayant obtenu la labellisation. */
+    labellises   : function(){ return ventures().filter(function(p){ return statutOf(p)==='labellise'; }).length; },
     /* published mentor profiles in the directory. */
     mentors      : function(){ return cnt('mentors', function(m){ return (m.pub||'published')==='published'; }); },
     /* registered members only (entrepreneurs + mentors) — staff (super/team/moderator)

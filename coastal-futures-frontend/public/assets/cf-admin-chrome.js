@@ -205,6 +205,8 @@
     tbr.insertBefore(grp, tbr.firstChild);
 
     buildHelp(); renderBell();
+    // Backend réel : la cloche affiche les VRAIES notifications (plus de seed).
+    if(window.CFNotif && CFNotif.hydrate){ CFNotif.hydrate().then(function(ok){ if(ok) renderBell(); }); }
     bellBtn.addEventListener('click',function(e){ e.stopPropagation(); var open=bellPop.classList.contains('show'); closeAll(); if(!open){ renderBell(); bellPop.classList.add('show'); } });
     helpBtn.addEventListener('click',function(e){ e.stopPropagation(); var open=helpPop.classList.contains('show'); closeAll(); if(!open){ buildHelp(); helpPop.classList.add('show'); } });
     document.addEventListener('click',function(e){ if(!e.target.closest('.cf-acg')) closeAll(); });
