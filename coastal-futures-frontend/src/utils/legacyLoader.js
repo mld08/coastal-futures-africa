@@ -62,6 +62,14 @@ function isModernDrawerScript(scriptEl) {
   return (scriptEl.textContent || '').includes('cfMdrawer');
 }
 
+// Guard d'authentification PTF : redirige via window.location.replace vers
+// connexion-bailleur.html. Dans le contexte React Router, ce rechargement
+// plein casse la navigation SPA. On neutralise le script ici et on délègue
+// la protection à <PtfRoute> au niveau des routes React.
+function isPtfGuardScript(scriptEl) {
+  return scriptEl.id === 'cf-ptf-guard';
+}
+
 function isExecutableScript(scriptEl) {
   const type = (scriptEl.getAttribute('type') || '').toLowerCase();
   return (
@@ -145,6 +153,7 @@ export async function mountLegacyPage(container, doc, opts = {}) {
     if (!isExecutableScript(old)) continue; // ignore ld+json, importmap…
     if (isNewsletterScript(old)) continue; // géré par newsletterController
     if (hasWhiteDrawer && isModernDrawerScript(old)) continue; // drawer blanc partout
+    if (isPtfGuardScript(old)) continue; // protection déléguée à <PtfRoute>
     await runScript(old, container);
   }
 }

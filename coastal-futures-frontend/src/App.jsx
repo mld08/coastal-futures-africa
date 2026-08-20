@@ -2,10 +2,21 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import RootLayout from './layouts/RootLayout';
 import PublicLayout from './layouts/PublicLayout';
 import LegacyPage from './components/LegacyPage';
+import PtfRoute from './components/PtfRoute';
 import InscriptionFermee from './pages/InscriptionFermee';
 import { routes, NOT_FOUND_SLUG, slugToPath, OVERRIDDEN_SLUGS } from './routes';
 
 const overridden = new Set(OVERRIDDEN_SLUGS);
+
+// Pages de l'espace bailleurs protégées par PtfRoute
+const PTF_PROTECTED = new Set([
+  'tableau-de-bord-partenaire',
+  'impact-par-pays',
+  'analyses-bailleur',
+  'aide-reporting',
+  'espace-partenaire',
+  'espace-parametres-partenaire',
+]);
 
 export default function App() {
   return (
@@ -22,7 +33,15 @@ export default function App() {
         {routes
           .filter(({ slug }) => !overridden.has(slug))
           .map(({ slug, path }) => (
-            <Route key={slug} path={path} element={<LegacyPage slug={slug} />} />
+            <Route
+              key={slug}
+              path={path}
+              element={
+                PTF_PROTECTED.has(slug)
+                  ? <PtfRoute><LegacyPage slug={slug} /></PtfRoute>
+                  : <LegacyPage slug={slug} />
+              }
+            />
           ))}
 
         {/* Compatibilité : les anciens liens en /xxx.html redirigent vers /xxx */}

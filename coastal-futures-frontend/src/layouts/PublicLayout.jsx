@@ -12,12 +12,15 @@ import '../styles/chrome.css';
 export default function PublicLayout() {
   return (
     <LanguageProvider>
-      <AnnouncementBar />
-      <Navbar />
-      <main id="cf-content">
-        <Outlet />
-      </main>
-      <Footer />
+      <div className="cf-public-layout">
+        <AnnouncementBar />
+        <Navbar />
+        <main id="cf-content">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </LanguageProvider>
   );
 }
+
